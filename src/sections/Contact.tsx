@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { Input } from '../ui/Input';
 import { TextArea } from '../ui/TextArea';
 import { Card } from '../ui/Card';
+import { Button } from '../ui/Button';
+import { Button as ButtonLink } from '../ui/Button';
+import { SOCIAL_LINKS, COMPANY_INFO } from '../../data/constants';
 
 export function ContactSection() {
   const [serverError, setServerError] = useState('');
@@ -76,7 +79,7 @@ export function ContactSection() {
         </div>
         <Input label="Subject" required id="cnt-subject" />
         <TextArea label="Message" required rows={5} id="cnt-message" />
-        <button type="submit" id="contact-submit-btn" className="w-full bg-primary text-on-primary font-bold py-5 rounded-xl hover:bg-primary/90 active:scale-[0.98] transition-all shadow-lg shadow-primary/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2">Send Message</button>
+        <Button type="submit" size="lg" className="w-full" id="contact-submit-btn">Send Message</Button>
       </form>
     </div>
   );
