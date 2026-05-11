@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Focus visible for accessibility */
 *:focus-visible {
-  outline: 2px solid #005ab5;
+  outline: 2px solid #218bf6;
   outline-offset: 2px;
 }
 
@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Text gradient utility */
 .text-gradient {
-  background: linear-gradient(135deg, #005ab5 0%, #06D6A0 100%);
+  background: linear-gradient(135deg, #218bf6 0%, #06D6A0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -134,7 +134,7 @@ section {
 
 .badge--primary {
   background-color: rgba(0, 90, 181, 0.1);
-  color: #005ab5;
+  color: #218bf6;
 }
 
 .badge--secondary {

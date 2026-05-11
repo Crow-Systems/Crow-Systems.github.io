@@ -160,14 +160,14 @@ export const SERVICES: Service[] = [
 ];
 
 export const STEPS = [
-  { number: '01', title: 'Triage', description: 'Our lead architects review your submission within 4 business hours.' },
+  { number: '01', title: 'Triage', description: 'Our lead architects review your submission within 1 business hour.' },
   { number: '02', title: 'Discovery', description: 'A 30-minute call to align on constraints, goals, and KPIs.' },
   { number: '03', title: 'Proposal', description: 'A comprehensive roadmap with fixed-fee options delivered within 48 hours.' },
 ];
 
 export const STATS = [
-  { value: '240+', label: 'Projects Delivered' },
-  { value: '99%', label: 'System Uptime' },
-  { value: '15+', label: 'Senior Engineers' },
-  { value: '4hrs', label: 'Avg. Response Time' },
+  { value: '99%', label: 'System Uptime', desc: 'Reliable infrastructure you can count on' },
+  { value: '< 1hr', label: 'Initial Triage', desc: 'During business hours, 8AM–6PM PDT' },
+  { value: 'Senior Only', label: 'Engineering Team', desc: 'No juniors, no handoffs, no compromises' },
+  { value: 'Zero Lock-In', label: 'Your IP, Always', desc: 'Your code, your stack, no vendor dependencies' },
 ];

@@ -34,6 +34,23 @@ const pageUrl = Astro.url.pathname;
     />
     {ogImage && <meta property="og:image" content={ogImage} />}
     <title>{title}</title>
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/android-chrome-512x512.png"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -75,24 +92,24 @@ const pageUrl = Astro.url.pathname;
             aria-label="Crow Systems Home">CROW SYSTEMS</a
           >
           <div class="hidden md:flex items-center gap-6">
-          {
-            NAV_ITEMS.map((item) => {
-              const isActive = activeNav === item.label;
-              return (
-                <a
-                  href={item.href}
-                  class={`text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-sm ${isActive ? "text-primary font-bold border-b-2 border-primary pb-1" : ""}`}
-                >
-                  {item.label}
-                </a>
-              );
-            })
-          }
+            {
+              NAV_ITEMS.map((item) => {
+                const isActive = activeNav === item.label;
+                return (
+                  <a
+                    href={item.href}
+                    class={`text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-sm ${isActive ? "text-primary font-bold border-b-2 border-primary pb-1" : ""}`}
+                  >
+                    {item.label}
+                  </a>
+                );
+              })
+            }
           </div>
         </div>
         <a
           href="/consulting"
-          class="ml-auto bg-primary text-on-primary font-bold px-5 py-2 rounded-lg text-sm hover:bg-primary/90 transition-all active:scale-95 shadow-sm"
+          class="ml-auto bg-primary text-white font-bold px-5 py-2 rounded-lg text-sm hover:bg-primary/90 transition-all active:scale-95 shadow-sm"
           >Get Started</a
         >
       </div>
@@ -134,7 +151,8 @@ const pageUrl = Astro.url.pathname;
             >CROW SYSTEMS</span
           >
           <p class="font-body text-sm text-on-surface-variant">
-            &copy; 2024 Crow Systems. Engineering Solutions for Growing Businesses.
+            &copy; 2024 Crow Systems. Engineering Solutions for Growing
+            Businesses.
           </p>
         </div>
         <div class="flex gap-6 flex-wrap justify-center">
@@ -201,7 +219,7 @@ const pageUrl = Astro.url.pathname;
           }
         });
         // Close menu when a nav link is clicked
-        menu?.querySelectorAll("a").forEach(link => {
+        menu?.querySelectorAll("a").forEach((link) => {
           link.addEventListener("click", () => {
             menuOpen = false;
             menu.classList.add("hidden");

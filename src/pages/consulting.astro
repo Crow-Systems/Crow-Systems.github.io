@@ -110,24 +110,10 @@ import DefaultLayout from "../components/layout/DefaultLayout.astro";
               </button>
               <button
                 id="record-btn"
-                class="w-20 h-20 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg shadow-primary/20 active:scale-95 transition-all"
+                class="w-20 h-20 rounded-full text-4xl bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/20 active:scale-95 transition-all"
                 aria-label="Start recording"
               >
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  id="record-icon"
-                  ><path d="M12 2a3 3 0 00-3 3v7a3 3 0 006 0V5a3 3 0 00-3-3z"
-                  ></path><path
-                    d="M19 10a1 1 0 012 0 7 7 0 01-2.516 5.482 1 1 0 01-1.464-1.464A5 5 0 0019 10z"
-                  ></path><path
-                    d="M5 10a1 1 0 01-2 0 7 7 0 012.516-5.482A1 1 0 017.516 6a5 5 0 00-.016 10z"
-                  ></path><path
-                    d="M12 18a2 2 0 002-2v-1a2 2 0 00-4 0v1a2 2 0 002 2z"
-                  ></path></svg
-                >
+                🎙️
               </button>
               <button
                 id="play-btn"
@@ -175,7 +161,7 @@ import DefaultLayout from "../components/layout/DefaultLayout.astro";
           </div>
           <button
             id="submit-audio"
-            class="w-full mt-6 bg-primary text-on-primary font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all hover:bg-primary/90 shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed"
+            class="w-full mt-6 bg-primary text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all hover:bg-primary/90 shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed"
             disabled
           >
             <span id="submit-audio-text">Submit Audio Idea</span>
@@ -321,39 +307,10 @@ import DefaultLayout from "../components/layout/DefaultLayout.astro";
                 class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none font-body text-sm"
               ></textarea>
             </div>
-            <div class="space-y-2">
-              <label
-                class="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
-                >Budget Range</label
-              >
-              <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-                <button
-                  type="button"
-                  class="budget-btn px-4 py-2 border border-outline-variant rounded-lg text-sm hover:bg-surface/50 hover:border-primary transition-all text-on-surface"
-                  >$10k - $25k</button
-                >
-                <button
-                  type="button"
-                  class="budget-btn px-4 py-2 border border-primary bg-primary/10 text-primary rounded-lg text-sm font-bold"
-                  >$25k - $50k</button
-                >
-                <button
-                  type="button"
-                  class="budget-btn px-4 py-2 border border-outline-variant rounded-lg text-sm hover:bg-surface/50 hover:border-primary transition-all text-on-surface"
-                  >$50k - $100k</button
-                >
-                <button
-                  type="button"
-                  class="budget-btn px-4 py-2 border border-outline-variant rounded-lg text-sm hover:bg-surface/50 hover:border-primary transition-all text-on-surface"
-                  >$100k+</button
-                >
-              </div>
-              <input type="hidden" id="c-budget" value="$25k-$50k" />
-            </div>
             <button
               type="submit"
               id="consult-submit-btn"
-              class="w-full bg-primary text-on-primary font-bold py-5 rounded-xl flex items-center justify-center gap-2 transition-all hover:bg-primary/90 shadow-lg shadow-primary/20"
+              class="w-full bg-primary text-white font-bold py-5 rounded-xl flex items-center justify-center gap-2 transition-all hover:bg-primary/90 shadow-lg shadow-primary/20"
             >
               <span id="consult-btn-text">Submit Consulting Request</span>
               <svg
@@ -487,7 +444,7 @@ import DefaultLayout from "../components/layout/DefaultLayout.astro";
                     class="text-primary mt-0.5 shrink-0"
                     ><circle cx="12" cy="12" r="10"></circle><path
                       d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"
-                    /><circle cx="12" cy="12" r="3" /></svg
+                    ></path><circle cx="12" cy="12" r="3"></circle></svg
                   ><p class="text-on-surface-variant text-sm">
                     Local, Regional, Remote &amp; International consulting
                   </p>
@@ -502,8 +459,8 @@ import DefaultLayout from "../components/layout/DefaultLayout.astro";
                     strokeWidth="2"
                     class="text-primary mt-0.5 shrink-0"
                     ><rect width="20" height="16" x="2" y="4" rx="2"
-                    /><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"
-                    /></svg
+                    ></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"
+                    ></path></svg
                   ><p class="text-on-surface-variant text-sm">
                     consulting@crowsys.chrislabs.net
                   </p>

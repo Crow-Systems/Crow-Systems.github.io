@@ -32,10 +32,10 @@ export const COMPANY_INFO = {
 };
 
 export const STATS = [
-  { value: '240+', label: 'Projects Delivered' },
-  { value: '99%', label: 'System Uptime' },
-  { value: '15+', label: 'Senior Engineers' },
-  { value: '4hrs', label: 'Avg. Response Time' },
+  { value: '99%', label: 'System Uptime', desc: 'Reliable infrastructure you can count on' },
+  { value: '< 1hr', label: 'Initial Triage', desc: 'During business hours, 8AM–6PM PDT' },
+  { value: 'Senior Only', label: 'Engineering Team', desc: 'No juniors, no handoffs, no compromises' },
+  { value: 'Zero Lock-In', label: 'Your IP, Always', desc: 'Your code, your stack, no vendor dependencies' },
 ];
 
 export const MAX_RECORDING_DURATION = 300;

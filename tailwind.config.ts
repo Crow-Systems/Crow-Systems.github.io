@@ -6,11 +6,11 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#005ab5',
-          light: '#0072e3',
-          dark: '#00458e',
-          muted: '#d7e3ff',
-          mutedDim: '#aac7ff',
+          DEFAULT: '#218bf6',
+          light: '#4ea8f8',
+          dark: '#1a6fc4',
+          muted: '#d6eefb',
+          mutedDim: '#b3d5f2',
         },
         accent: {
           DEFAULT: '#06D6A0',
