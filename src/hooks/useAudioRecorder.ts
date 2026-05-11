@@ -1,195 +1,173 @@
-import { useState, useCallback, useRef, useEffect } from 'react'
-import type { AudioRecorderState } from '@/types'
+import { useState, useRef, useCallback, useEffect } from 'react';
+import { MAX_RECORDING_DURATION, AUDIO_MIME_TYPES } from '../data/constants';
+import { uploadAudio } from '../api/client';
 
-const MAX_RECORDING_MS = 5 * 60 * 1000 // 5 minutes
+export function useAudioRecorder() {
+  const [isRecording, setIsRecording] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [audioBlob, setAudioBlob] = useState<Blob | null>(null);
+  const [audioUrl, setAudioUrl] = useState<string | null>(null);
+  const [duration, setDuration] = useState(0);
+  const [error, setError] = useState<string | null>(null);
+  const [isUploading, setIsUploading] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [description, setDescription] = useState('');
 
-export function useAudioRecorder(): AudioRecorderState & {
-  start: () => Promise<void>
-  stop: () => void
-  togglePause: () => void
-  deleteRecording: () => void
-  download: () => void
-} {
-  const [state, setState] = useState<AudioRecorderState>({
-    isRecording: false,
-    isPaused: false,
-    duration: 0,
-    blob: null,
-    url: null,
-    error: null,
-    permissionDenied: false,
-  })
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const chunksRef = useRef<BlobPart[]>([]);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const mediaRecorderRef = useRef<MediaRecorder | null>(null)
-  const chunksRef = useRef<Blob[]>([])
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
-  const startTimeRef = useRef<number>(0)
-
-  const clearTimer = useCallback(() => {
-    if (timerRef.current) {
-      clearInterval(timerRef.current)
-      timerRef.current = null
+  const resetRecording = useCallback(() => {
+    if (audioUrl) {
+      URL.revokeObjectURL(audioUrl);
     }
-  }, [])
+    setAudioBlob(null);
+    setAudioUrl(null);
+    setDuration(0);
+    setError(null);
+    setIsSubmitted(false);
+    setDescription('');
+    chunksRef.current = [];
+  }, [audioUrl]);
 
-  const stop = useCallback(() => {
-    clearTimer()
-    if (mediaRecorderRef.current && state.isRecording) {
-      try {
-        mediaRecorderRef.current.stop()
-      } catch {
-        // Already stopped
-      }
-    }
-    setState((prev) => ({ ...prev, isRecording: false, isPaused: false }))
-  }, [clearTimer, state.isRecording])
-
-  // Auto-stop at 5 minutes
-  useEffect(() => {
-    if (state.duration >= MAX_RECORDING_MS) {
-      stop()
-    }
-  }, [state.duration, stop])
-
-  // Cleanup on unmount
-  useEffect(() => {
-    return () => {
-      clearTimer()
-      if (mediaRecorderRef.current) {
-        try {
-          mediaRecorderRef.current.stop()
-        } catch {
-          // Ignore
-        }
-      }
-      if (state.url) {
-        URL.revokeObjectURL(state.url)
-      }
-    }
-  }, [clearTimer, state.url])
-
-  const start = useCallback(async () => {
-    setState((prev) => ({
-      ...prev,
-      isRecording: false,
-      error: null,
-      permissionDenied: false,
-    }))
-
+  const startRecording = useCallback(async () => {
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
-      mediaRecorderRef.current = new MediaRecorder(stream, {
-        mimeType: 'audio/webm;codecs=opus',
-      })
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const mimeType = AUDIO_MIME_TYPES.find((t) => MediaRecorder.isTypeSupported(t)) || 'audio/webm';
+      const mediaRecorder = new MediaRecorder(stream, { mimeType });
+      mediaRecorderRef.current = mediaRecorder;
+      chunksRef.current = [];
 
-      chunksRef.current = []
-
-      mediaRecorderRef.current.ondataavailable = (event) => {
+      mediaRecorder.ondataavailable = (event) => {
         if (event.data.size > 0) {
-          chunksRef.current.push(event.data)
+          chunksRef.current.push(event.data);
         }
-      }
+      };
 
-      mediaRecorderRef.current.onstop = () => {
-        const blob = new Blob(chunksRef.current, { type: 'audio/webm' })
-        const url = URL.createObjectURL(blob)
+      mediaRecorder.onstop = () => {
+        const blob = new Blob(chunksRef.current, { type: mimeType });
+        setAudioBlob(blob);
+        const url = URL.createObjectURL(blob);
+        setAudioUrl(url);
+        stream.getTracks().forEach((track) => track.stop());
+      };
 
-        // Clean up stream tracks
-        stream.getTracks().forEach((track) => track.stop())
-
-        setState((prev) => ({
-          ...prev,
-          blob,
-          url,
-          isRecording: false,
-          isPaused: false,
-        }))
-      }
-
-      mediaRecorderRef.current.start(100)
-      startTimeRef.current = Date.now()
+      mediaRecorder.start();
+      setIsRecording(true);
+      setError(null);
 
       timerRef.current = setInterval(() => {
-        const elapsed = Date.now() - startTimeRef.current
-        setState((prev) => ({ ...prev, duration: elapsed, isRecording: true }))
-      }, 100)
-
-      setState((prev) => ({ ...prev, isRecording: true, isPaused: false, error: null }))
+        setDuration((prev) => {
+          if (prev >= MAX_RECORDING_DURATION) {
+            stopRecording();
+            return MAX_RECORDING_DURATION;
+          }
+          return prev + 1;
+        });
+      }, 1000);
     } catch (err) {
-      const msg =
-        err instanceof Error &&
-        (err.name === 'NotAllowedError' || err.name === 'PermissionDeniedError')
-          ? 'Microphone access denied. Please enable microphone permissions to use this feature.'
-          : err instanceof Error
-            ? err.message
-            : 'Failed to access microphone'
-
-      setState((prev) => ({
-        ...prev,
-        error: msg,
-        permissionDenied:
-          err instanceof Error &&
-          (err.name === 'NotAllowedError' || err.name === 'PermissionDeniedError'),
-      }))
+      setError('Microphone access denied. Please allow microphone permission to record audio, or use the text description instead.');
+      setIsRecording(false);
     }
-  }, [])
+  }, []);
 
-  const togglePause = useCallback(() => {
-    if (!mediaRecorderRef.current) return
-
-    if (state.isRecording && !state.isPaused) {
-      mediaRecorderRef.current.pause()
-      clearTimer()
-      setState((prev) => ({ ...prev, isPaused: true }))
-    } else if (state.isRecording && state.isPaused) {
-      mediaRecorderRef.current.resume()
-      startTimeRef.current = Date.now() - state.duration
-      timerRef.current = setInterval(() => {
-        const elapsed = Date.now() - startTimeRef.current
-        setState((prev) => ({ ...prev, duration: elapsed }))
-      }, 100)
-      setState((prev) => ({ ...prev, isPaused: false }))
+  const stopRecording = useCallback(() => {
+    if (mediaRecorderRef.current && isRecording) {
+      mediaRecorderRef.current.stop();
     }
-  }, [state.isRecording, state.isPaused, clearTimer])
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+    setIsRecording(false);
+  }, [isRecording]);
+
+  const toggleRecording = useCallback(() => {
+    if (isRecording) {
+      stopRecording();
+    } else {
+      startRecording();
+    }
+  }, [isRecording, startRecording, stopRecording]);
+
+  const playRecording = useCallback(() => {
+    if (!audioUrl) return;
+    if (!audioRef.current) {
+      audioRef.current = new Audio();
+    }
+    audioRef.current.src = audioUrl;
+    audioRef.current.play();
+    setIsPlaying(true);
+    audioRef.current.onended = () => setIsPlaying(false);
+  }, [audioUrl]);
 
   const deleteRecording = useCallback(() => {
-    clearTimer()
-    if (state.url) {
-      URL.revokeObjectURL(state.url)
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.src = '';
+      setIsPlaying(false);
     }
-    if (mediaRecorderRef.current && state.isRecording) {
-      try {
-        mediaRecorderRef.current.stop()
-      } catch {
-        // Ignore
-      }
-    }
-    chunksRef.current = []
-    setState({
-      isRecording: false,
-      isPaused: false,
-      duration: 0,
-      blob: null,
-      url: null,
-      error: null,
-      permissionDenied: false,
-    })
-  }, [state.isRecording, state.url, clearTimer])
+    resetRecording();
+  }, [resetRecording]);
 
-  const download = useCallback(() => {
-    if (!state.blob || !state.url) return
-    const a = document.createElement('a')
-    a.href = state.url
-    a.download = `crow-idea-${Date.now()}.webm`
-    a.click()
-  }, [state.blob, state.url])
+  const handleSubmit = useCallback(async (descriptionText?: string) => {
+    if (!audioBlob) return { success: false, message: 'No audio recorded' };
+
+    setIsUploading(true);
+    setError(null);
+    try {
+      const result = await uploadAudio({
+        audioBlob,
+        description: descriptionText || description,
+        duration,
+        mimeType: audioBlob.type,
+      });
+      if (result.success) {
+        setIsSubmitted(true);
+      } else {
+        setError(result.message || 'Upload failed. Please try again.');
+      }
+      return result;
+    } catch {
+      setError('Network error. Please check your connection and try again.');
+      return { success: false, message: 'Network error' };
+    } finally {
+      setIsUploading(false);
+    }
+  }, [audioBlob, description, duration]);
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+      if (audioUrl) URL.revokeObjectURL(audioUrl);
+    };
+  }, [audioUrl]);
+
+  const formatDuration = (secs: number): string => {
+    const mins = Math.floor(secs / 60);
+    const secsRemainder = secs % 60;
+    return `${String(mins).padStart(2, '0')}:${String(secsRemainder).padStart(2, '0')}`;
+  };
 
   return {
-    ...state,
-    start,
-    stop,
-    togglePause,
+    isRecording,
+    isPlaying,
+    audioBlob,
+    audioUrl,
+    duration,
+    error,
+    isUploading,
+    isSubmitted,
+    description,
+    setDescription,
+    startRecording,
+    stopRecording,
+    toggleRecording,
+    playRecording,
     deleteRecording,
-    download,
-  }
+    handleSubmit,
+    formatDuration,
+    resetRecording,
+  };
 }

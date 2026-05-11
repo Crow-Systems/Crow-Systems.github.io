@@ -1,8 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
+Sitemap: https://crowsys.chrislabs.net/sitemap-index.xml
 
-Sitemap: https://crowsystems.com/sitemap.xml
-
-# Disallow sensitive paths
+# Block sensitive paths
+User-agent: *
 Disallow: /admin/
-Disallow: /api/
+Disallow: /api/admin/

@@ -1,93 +1,91 @@
-import type { ApiResponse } from '@/types'
+import type { ApiResponse, ContactFormData, ConsultationFormData, AudioSubmissionData } from '../types';
 
-const getBaseUrl = () => {
-  const config = import.meta.env.VITE_API_BASE_URL || 'https://crowsys.chrislabs.net/api/v1'
-  return config.replace(/\/+$/, '')
-}
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? 'https://crowsys.chrislabs.net/api/v1';
+const API_TIMEOUT = 15000;
 
-async function request<T>(
+async function apiRequest<T>(
   endpoint: string,
-  options?: RequestInit
+  options: RequestInit = {}
 ): Promise<ApiResponse<T>> {
-  const url = `${getBaseUrl()}${endpoint}`
+  const url = `${API_BASE_URL}${endpoint.startsWith('/') ? endpoint : `/${endpoint}`}`;
 
-  const config: RequestInit = {
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-      ...options?.headers,
-    },
-    ...options,
-  }
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), API_TIMEOUT);
 
-  try {
-    const response = await fetch(url, config)
-    const data: ApiResponse<T> = await response.json().catch(() => ({
-      success: false,
-      message: 'Invalid JSON response',
-    }))
-
-    if (!response.ok && !data.success) {
-      return {
-        success: false,
-        message: data.message || `HTTP Error: ${response.status}`,
-      }
-    }
-
-    return data
-  } catch (error) {
-    console.error(`API request to ${endpoint} failed:`, error)
-    return {
-      success: false,
-      message: error instanceof Error ? error.message : 'Network error',
-    }
-  }
-}
-
-export async function apiHealthCheck(): Promise<ApiResponse> {
-  return request('/health')
-}
-
-export async function submitContact(data: Record<string, unknown>): Promise<ApiResponse> {
-  return request('/contact', {
-    method: 'POST',
-    body: JSON.stringify(data),
-  })
-}
-
-export async function submitConsultation(data: Record<string, unknown>): Promise<ApiResponse> {
-  return request('/consultation', {
-    method: 'POST',
-    body: JSON.stringify(data),
-  })
-}
-
-export async function uploadAudio(
-  blob: Blob,
-  metadata: Record<string, unknown>
-): Promise<ApiResponse> {
-  const formData = new FormData()
-  formData.append('audio', blob, 'recording.webm')
-  Object.entries(metadata).forEach(([key, value]) => {
-    formData.append(key, String(value))
-  })
-
-  const url = `${getBaseUrl()}/audio/upload`
   try {
     const response = await fetch(url, {
+      ...options,
+      signal: controller.signal,
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        ...options.headers,
+      },
+    });
+
+    clearTimeout(timeoutId);
+
+    if (response.status === 204) {
+      return { success: true, message: 'Success' } as ApiResponse<T>;
+    }
+
+    const data: ApiResponse<T> = await response.json();
+
+    if (!response.ok) {
+      return {
+        success: false,
+        message: data?.message ?? `HTTP Error: ${response.status}`,
+        data: data?.data,
+      };
+    }
+
+    return data;
+  } catch (error) {
+    clearTimeout(timeoutId);
+    if (error instanceof Error && error.name === 'AbortError') {
+      return { success: false, message: 'Request timed out' };
+    }
+    return { success: false, message: error instanceof Error ? error.message : 'Unknown error occurred' };
+  }
+}
+
+export async function submitContact(data: ContactFormData): Promise<ApiResponse> {
+  return apiRequest('/contact', {
+    method: 'POST',
+    body: JSON.stringify(data),
+  });
+}
+
+export async function submitConsultation(data: ConsultationFormData): Promise<ApiResponse> {
+  return apiRequest('/consultation', {
+    method: 'POST',
+    body: JSON.stringify(data),
+  });
+}
+
+export async function uploadAudio(data: AudioSubmissionData): Promise<ApiResponse> {
+  const formData = new FormData();
+  formData.append('audio', data.audioBlob, `recording_${Date.now()}.${data.mimeType.split('/')[1]}`);
+  if (data.description) {
+    formData.append('description', data.description);
+  }
+
+  try {
+    const response = await fetch(`${API_BASE_URL}/audio/upload`, {
       method: 'POST',
       body: formData,
-    })
-    const data: ApiResponse = await response.json().catch(() => ({
-      success: false,
-      message: 'Invalid JSON response',
-    }))
-    return data
-  } catch (error) {
-    console.error('Audio upload failed:', error)
-    return {
-      success: false,
-      message: error instanceof Error ? error.message : 'Upload failed',
+    });
+
+    const result: ApiResponse = await response.json();
+    if (!response.ok) {
+      return { success: false, message: result?.message ?? 'Upload failed' };
     }
+    return result;
+  } catch (error) {
+    return { success: false, message: error instanceof Error ? error.message : 'Unknown error' };
   }
+}
+
+export async function checkHealth(): Promise<ApiResponse> {
+  return apiRequest('/health');
 }
