@@ -8,7 +8,9 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "ghp-import -d dist -b main",
+    "prepare": "npm install"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.4",

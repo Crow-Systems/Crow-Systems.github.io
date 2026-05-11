@@ -1,61 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact Crow Systems for technology consulting, systems audits, and strategic partnerships." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://crowsys.chrislabs.net/contact" />
-  <meta property="og:title" content="Contact — CROW SYSTEMS" />
-  <meta property="og:description" content="Contact Crow Systems for technology consulting, systems audits, and strategic partnerships." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://crowsys.chrislabs.net/contact" />
-  <title>Contact — CROW SYSTEMS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-</head>
-<body class="bg-background text-on-surface selection:bg-primary/20 font-body grid-bg min-h-screen">
+---
+import DefaultLayout from '../components/layout/DefaultLayout.astro';
+---
 
-  <nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30" role="navigation" aria-label="Main navigation">
-    <div class="flex justify-between items-center w-full px-6 md:px-8 py-4 max-w-7xl mx-auto">
-      <a href="/" class="font-heading text-xl font-black tracking-tighter text-primary">CROW SYSTEMS</a>
-      <div class="hidden md:flex items-center gap-6">
-        <a href="/#services" class="text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-sm">Services</a>
-        <a href="/#ideas" class="text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-sm">Ideas</a>
-        <a href="/consulting" class="text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-sm">Consulting</a>
-        <a href="/about" class="text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-sm">About</a>
-        <a href="/contact" class="text-primary font-bold border-b-2 border-primary pb-1 text-sm">Contact</a>
-      </div>
-      <a href="#contact-form" class="bg-primary text-on-primary font-bold px-5 py-2 rounded-lg text-sm hover:bg-primary/90 transition-all active:scale-95 shadow-sm">Get Started</a>
-      <button class="md:hidden p-2 text-on-surface" aria-label="Toggle menu" id="menu-btn-contact">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
-    </div>
-  </nav>
-
-  <main class="pt-32 pb-24 px-6 max-w-7xl mx-auto" aria-labelledby="contact-heading">
+<DefaultLayout
+  title="Contact — CROW SYSTEMS"
+  description="Contact Crow Systems for technology consulting, systems audits, and strategic partnerships."
+  activeNav="Contact"
+>
+  <div class="pt-32 pb-24 px-6 max-w-7xl mx-auto" aria-labelledby="contact-heading">
     <header class="mb-16">
       <span class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block">Get In Touch</span>
       <h1 id="contact-heading" class="font-heading text-4xl md:text-6xl font-bold text-on-surface tracking-tighter mb-6">Contact Us</h1>
-      <p class="text-on-surface-variant max-w-2xl text-lg leading-relaxed font-body">Whether you need a full systems audit or a strategic consultation, our engineers are ready to deploy.</p>
+      <p class="text-on-surface-variant max-w-2xl text-lg leading-relaxed font-body">Whether you need a full systems audit, a strategic consultation, or an engineering partner for your next project, our team is ready to help.</p>
     </header>
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
       <div class="lg:col-span-5 space-y-8">
         <div>
-          <h3 class="font-heading text-2xl font-bold mb-4 text-on-surface">Establish Contact</h3>
-          <p class="text-on-surface-variant font-body leading-relaxed">Whether you need a full systems audit or a strategic consultation, our engineers are ready to deploy.</p>
+          <h3 class="font-heading text-2xl font-bold mb-4 text-on-surface">Start a Conversation</h3>
+          <p class="text-on-surface-variant font-body leading-relaxed">Have a technical challenge or project idea? We'd like to hear about it. Our engineers will review your inquiry and respond within 4 business hours.</p>
         </div>
 
         <div class="space-y-6">
           <div class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-primary mt-1" style="font-size:22px">mail</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="text-primary mt-1"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
             <div>
               <p class="font-bold text-sm text-on-surface">Inquiries</p>
               <p class="text-sm text-on-surface-variant font-body">solutions@crowsystems.tech</p>
             </div>
           </div>
           <div class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-primary mt-1" style="font-size:22px">schedule</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="text-primary mt-1"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             <div>
               <p class="font-bold text-sm text-on-surface">Business Hours</p>
               <p class="text-sm text-on-surface-variant font-body">Mon — Fri: 08:00 - 18:00 EST</p>
@@ -63,7 +38,7 @@
             </div>
           </div>
           <div class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-primary mt-1" style="font-size:22px">public</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="text-primary mt-1"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
             <div>
               <p class="font-bold text-sm text-on-surface">Regions Served</p>
               <p class="text-sm text-on-surface-variant font-body">North America, European Union, &amp; APAC</p>
@@ -72,9 +47,9 @@
         </div>
 
         <div class="pt-6 border-t border-outline-variant/50 flex gap-6">
-          <a href="#" class="text-sm text-on-surface-variant hover:text-primary transition-colors font-medium">LinkedIn</a>
-          <a href="#" class="text-sm text-on-surface-variant hover:text-primary transition-colors font-medium">Twitter</a>
-          <a href="#" class="text-sm text-on-surface-variant hover:text-primary transition-colors font-medium">GitHub</a>
+          <a href="https://www.linkedin.com/company/crowsystems" class="text-sm text-on-surface-variant hover:text-primary transition-colors font-medium" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.x.com/@crowsystems" class="text-sm text-on-surface-variant hover:text-primary transition-colors font-medium" target="_blank" rel="noopener noreferrer">Twitter</a>
+          <a href="https://www.instagram.com/@crowsystems" class="text-sm text-on-surface-variant hover:text-primary transition-colors font-medium" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
 
@@ -110,22 +85,7 @@
         </form>
       </div>
     </div>
-  </main>
-
-  <footer class="bg-surface-container-lowest border-t border-outline-variant/20" role="contentinfo">
-    <div class="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-8 py-10 max-w-7xl mx-auto gap-6">
-      <div class="flex flex-col gap-2">
-        <span class="font-heading text-base font-bold text-primary">CROW SYSTEMS</span>
-        <p class="font-body text-sm text-on-surface-variant">© 2024 Crow Systems. Precision-Engineered Consulting.</p>
-      </div>
-      <div class="flex gap-6 flex-wrap justify-center">
-        <a href="#" class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors">LinkedIn</a>
-        <a href="#" class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors">Twitter</a>
-        <a href="#privacy" class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors">Privacy Policy</a>
-        <a href="#terms" class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors">Terms of Service</a>
-      </div>
-    </div>
-  </footer>
+  </div>
 
   <script>
     document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -176,5 +136,4 @@
       }
     });
   </script>
-</body>
-</html>
+</DefaultLayout>

@@ -4,7 +4,8 @@ import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  site: 'https://crowsys.chrislabs.net',
+  site: 'https://crow-systems.github.io',
+  base: '/',
   integrations: [
     react(),
     tailwind({ applyBaseStyles: true }),

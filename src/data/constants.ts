@@ -1,5 +1,5 @@
 export const NAV_ITEMS = [
-  { label: 'Services', href: '/#services' },
+  { label: 'Services', href: '/services' },
   { label: 'About', href: '/about' },
   { label: 'Consulting', href: '/consulting' },
   { label: 'Contact', href: '/contact' },
@@ -26,14 +26,16 @@ export const COMPANY_INFO = {
     saturday: 'Saturday: By appointment',
     sunday: 'Sunday: Closed',
   },
-  regions: 'Local businesses, Regional SMEs, Remote & International consulting',
+  regions: 'North America, European Union, & APAC',
+  mission: 'To help companies reduce technical complexity, improve operational efficiency, and accelerate development.',
+  description: 'A specialized engineering team focused on transforming complex technical challenges into practical, scalable, and reliable solutions for growing businesses.',
 };
 
 export const STATS = [
-  { value: '240+', label: 'Projects Completed' },
-  { value: '99%', label: 'Operational Uptime' },
+  { value: '240+', label: 'Projects Delivered' },
+  { value: '99%', label: 'System Uptime' },
   { value: '15+', label: 'Senior Engineers' },
-  { value: '4hrs', label: 'Avg. Triage Response' },
+  { value: '4hrs', label: 'Avg. Response Time' },
 ];
 
 export const MAX_RECORDING_DURATION = 300;

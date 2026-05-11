@@ -10,7 +10,7 @@ export function ConsultingSection() {
           <Card hover className="p-8">
             <h3 className="font-heading text-xl font-bold mb-6 text-on-surface">Schedule a Consultation</h3>
             <p className="text-on-surface-variant font-body mb-6 leading-relaxed text-sm">
-              Submit your consulting request below. Our team will review it and get back to you within 4 business hours to schedule a discovery call.
+              Submit your consulting request below. Our team of specialized engineers will review it and get back to you within 4 business hours to schedule a discovery call. Whether you need secure system communications, scalable architecture, or expert technical guidance — we provide the engineering expertise to move your business forward.
             </p>
             <div id="consult-error" className="hidden mb-6 p-4 bg-red-50 text-red-600 rounded-lg text-sm font-medium" role="alert"></div>
             <div id="consult-success" className="hidden mb-6 p-4 bg-green-50 text-green-700 rounded-lg text-sm font-medium font-bold" role="status"></div>
@@ -28,11 +28,12 @@ export function ConsultingSection() {
               </div>
               <select id="c-problem" required className="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none cursor-pointer text-sm">
                 <option value="">Business Problem *</option>
-                <option>Operational Inefficiency</option>
+                <option>Technical Complexity Reduction</option>
                 <option>Digital Transformation</option>
-                <option>Market Entry Strategy</option>
+                <option>Infrastructure Modernization</option>
                 <option>Technical Debt Reduction</option>
                 <option>Infrastructure Scaling</option>
+                <option>Software Architecture &amp; Development</option>
                 <option>Other</option>
               </select>
               <p className="hidden text-xs text-red-500 mt-1" id="c-problem-err">Please select a business problem</p>
@@ -57,9 +58,9 @@ export function ConsultingSection() {
             <h4 className="font-heading text-lg font-bold mb-6 text-on-surface">The Crow Engagement Method</h4>
             <div className="space-y-6">
               {[
-                { step: '01', title: 'Triage', desc: 'Our lead architects review your audio submission and brief within 4 business hours.' },
-                { step: '02', title: 'Discovery', desc: 'A 30-minute high-fidelity call to align on technical constraints and KPI targets.' },
-                { step: '03', title: 'Proposal', desc: 'A comprehensive roadmap with fixed-fee options delivered in 48 hours.' },
+                { step: '01', title: 'Triage', desc: 'Our lead architects review your submission within 4 business hours.' },
+                { step: '02', title: 'Discovery', desc: 'A 30-minute call to align on constraints, goals, and KPIs.' },
+                { step: '03', title: 'Proposal', desc: 'A comprehensive roadmap with fixed-fee options delivered within 48 hours.' },
               ].map(item => (
                 <div key={item.step} className="flex gap-4">
                   <div className="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0 font-bold text-sm">{item.step}</div>

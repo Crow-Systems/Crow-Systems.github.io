@@ -41,6 +41,10 @@ export interface Service {
   icon: string;
   title: string;
   description: string;
+  fullDescription: string;
+  features: string[];
+  idealFor: string;
+  technologies: string[];
   cta: string;
 }
 

@@ -47,7 +47,7 @@ export function ContactSection() {
       });
       const result = await res.json();
       if (result.success) {
-        setServerSuccess('Thank you! Your message has been sent. We will get back to you soon.');
+        setServerSuccess('Thank you! Your message has been sent. Our team will review your inquiry and get back to you within 4 business hours.');
         setServerError('');
         (document.getElementById('contact-form') as HTMLFormElement)?.reset();
       } else { throw new Error(result.message); }
@@ -78,7 +78,7 @@ export function ContactSection() {
           <Input label="Email" type="email" required id="cnt-email" />
         </div>
         <Input label="Subject" required id="cnt-subject" />
-        <TextArea label="Message" required rows={5} id="cnt-message" />
+        <TextArea label="Message" required rows={5} id="cnt-message" placeholder="Tell us about your project or challenge..." />
         <Button type="submit" size="lg" className="w-full" id="contact-submit-btn">Send Message</Button>
       </form>
     </div>

@@ -1,119 +1,66 @@
 ---
-title: 'CROW SYSTEMS — Technology Solutions for Growing Businesses'
-description: 'We help small and medium-sized companies improve operations, modernize systems, and solve technology challenges without unnecessary complexity.'
+import DefaultLayout from '../components/layout/DefaultLayout.astro';
+
+const COMPANY_DESCRIPTION = 'We are a specialized engineering team focused on transforming complex technical challenges into practical, scalable, and reliable solutions for growing businesses. Our mission is to help companies reduce technical complexity, improve operational efficiency, accelerate development, and confidently bring new ideas to life.';
+
+const STATS_DATA = [
+  { value: '240+', label: 'Projects Delivered', desc: 'Across industries and technologies' },
+  { value: '99%', label: 'System Uptime', desc: 'Reliable infrastructure you can count on' },
+  { value: '15+', label: 'Senior Engineers', desc: 'Experienced hands, not junior staff' },
+  { value: '4hrs', label: 'Avg. Response Time', desc: 'Fast triage, rapid engagement' },
+];
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://crowsys.chrislabs.net/" />
-  <meta property="og:title" content="CROW SYSTEMS — Technology Solutions for Growing Businesses" />
-  <meta property="og:description" content="We help small and medium-sized companies improve operations, modernize systems, and solve technology challenges without unnecessary complexity." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://crowsys.chrislabs.net/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="CROW SYSTEMS — Technology Solutions for Growing Businesses" />
-  <meta name="twitter:description" content="We help small and medium-sized companies improve operations, modernize systems, and solve technology challenges without unnecessary complexity." />
-  <title>CROW SYSTEMS — Technology Solutions for Growing Businesses</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/_astro/index.B74nlT63.css" />
-</head>
-<body class="bg-surface text-on-surface selection:bg-primary/20 font-body grid-bg min-h-screen">
-  <nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30" role="navigation" aria-label="Main navigation">
-    <div class="flex justify-between items-center w-full px-6 md:px-8 py-4 max-w-7xl mx-auto">
-      <a href="/" class="font-heading text-xl font-black tracking-tighter text-primary" aria-label="Crow Systems Home">CROW SYSTEMS</a>
-      <div class="hidden md:flex items-center gap-6">
-        <a href="#services" class="text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-sm">Services</a>
-        <a href="#ideas" class="text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-sm">Ideas</a>
-        <a href="/consulting" class="text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-sm">Consulting</a>
-        <a href="/about" class="text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-sm">About</a>
-        <a href="/contact" class="text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-sm">Contact</a>
-      </div>
-      <a href="/consulting" class="bg-primary text-on-primary font-bold px-6 py-2 rounded-lg text-sm hover:bg-primary/90 transition-all active:scale-95 shadow-sm">Get Started</a>
-      <button class="md:hidden p-2 text-on-surface" aria-label="Toggle menu" id="menu-btn">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
-    </div>
-  </nav>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="pt-36 pb-24 px-6 md:px-8 max-w-7xl mx-auto" aria-labelledby="hero-heading">
-      <div class="max-w-4xl">
-        <span class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block">Technology Consulting for Growing Businesses</span>
-        <h1 id="hero-heading" class="font-heading text-4xl md:text-6xl font-bold tracking-tighter mb-6 text-on-surface leading-tight">
-          Technology Solutions for<br class="hidden md:block" /> Growing Businesses
-        </h1>
-        <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 max-w-2xl font-body">
-          We help small and medium-sized companies improve operations, modernize systems, and solve technology challenges without unnecessary complexity.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="/consulting" class="bg-primary text-on-primary font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-all active:scale-[0.98] shadow-lg shadow-primary/20 text-center text-sm">Start a Consultation</a>
-          <a href="#services" class="border border-primary text-primary font-bold px-8 py-4 rounded-xl hover:bg-primary/10 transition-all active:scale-[0.98] text-center text-sm">Explore Services</a>
-        </div>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-12 border-t border-outline-variant/30">
-        <div class="text-center">
-          <p class="font-heading text-2xl md:text-3xl font-bold text-primary">240+</p>
-          <p class="text-xs text-on-surface-variant mt-1 font-body">Projects Completed</p>
-        </div>
-        <div class="text-center">
-          <p class="font-heading text-2xl md:text-3xl font-bold text-primary">99%</p>
-          <p class="text-xs text-on-surface-variant mt-1 font-body">Operational Uptime</p>
-        </div>
-        <div class="text-center">
-          <p class="font-heading text-2xl md:text-3xl font-bold text-primary">15+</p>
-          <p class="text-xs text-on-surface-variant mt-1 font-body">Senior Engineers</p>
-        </div>
-        <div class="text-center">
-          <p class="font-heading text-2xl md:text-3xl font-bold text-primary">4hrs</p>
-          <p class="text-xs text-on-surface-variant mt-1 font-body">Avg. Response</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Banner -->
-    <section class="mx-6 md:mx-8 mb-20 relative overflow-hidden bg-primary rounded-xl p-12 md:p-20">
-      <div class="relative z-10 max-w-2xl">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-on-primary mb-4">Ready to Optimize?</h2>
-        <p class="text-primary-fixed-dim text-lg mb-8 font-body">Schedule a technical audit with our lead consultants to identify high-impact opportunities.</p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="/consulting" class="bg-secondary text-on-secondary font-bold px-8 py-4 rounded-xl hover:brightness-110 transition-all text-center text-sm">Request Info</a>
-          <a href="#services" class="border border-on-primary text-on-primary px-8 py-4 rounded-xl hover:bg-on-primary/10 transition-all text-center text-sm font-bold">Services</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-surface-container-lowest border-t border-outline-variant/20" role="contentinfo">
-    <div class="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-8 py-10 max-w-7xl mx-auto gap-6">
-      <div class="flex flex-col gap-2">
-        <span class="font-heading text-base font-bold text-primary">CROW SYSTEMS</span>
-        <p class="font-body text-sm text-on-surface-variant">&copy; 2024 Crow Systems. Precision-Engineered Consulting.</p>
-      </div>
-      <div class="flex gap-6 flex-wrap justify-center">
-        <a href="/about" class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors">About</a>
-        <a href="/#services" class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors">Services</a>
-        <a href="/contact" class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors">Contact</a>
-        <a href="/privacy" class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors">Privacy</a>
-        <a href="/terms" class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors">Terms</a>
+<DefaultLayout
+  title="CROW SYSTEMS — Engineering Solutions for Real-World Challenges"
+  description="We help companies solve technical problems that are slowing down their business. From secure communications to scalable software architecture, we provide the engineering expertise to design and deliver the right solution."
+  activeNav="Services"
+>
+  <!-- Hero Section -->
+  <section class="pt-36 pb-24 px-6 md:px-8 max-w-7xl mx-auto" aria-labelledby="hero-heading">
+    <div class="max-w-4xl">
+      <span class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block">Engineering Solutions for Real-World Challenges</span>
+      <h1 id="hero-heading" class="font-heading text-4xl md:text-6xl font-bold tracking-tighter mb-6 text-on-surface leading-tight">
+        We Help Companies<br class="hidden md:block" />
+        Solve Technical Problems
+      </h1>
+      <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 max-w-2xl font-body">
+        {COMPANY_DESCRIPTION}
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/consulting" class="bg-primary text-on-primary font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-all active:scale-[0.98] shadow-lg shadow-primary/20 text-center text-sm">Start a Consultation</a>
+        <a href="/services" class="border border-primary text-primary font-bold px-8 py-4 rounded-xl hover:bg-primary/10 transition-all active:scale-[0.98] text-center text-sm">Explore Services</a>
       </div>
     </div>
-  </footer>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-12 border-t border-outline-variant/30">
+      <div class="text-center">
+        <p class="font-heading text-2xl md:text-3xl font-bold text-primary">240+</p>
+        <p class="text-xs text-on-surface-variant mt-1 font-body">Projects Delivered</p>
+      </div>
+      <div class="text-center">
+        <p class="font-heading text-2xl md:text-3xl font-bold text-primary">99%</p>
+        <p class="text-xs text-on-surface-variant mt-1 font-body">System Uptime</p>
+      </div>
+      <div class="text-center">
+        <p class="font-heading text-2xl md:text-3xl font-bold text-primary">15+</p>
+        <p class="text-xs text-on-surface-variant mt-1 font-body">Senior Engineers</p>
+      </div>
+      <div class="text-center">
+        <p class="font-heading text-2xl md:text-3xl font-bold text-primary">4hrs</p>
+        <p class="text-xs text-on-surface-variant mt-1 font-body">Avg. Response Time</p>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    document.getElementById('menu-btn')?.addEventListener('click', () => {
-      const nav = document.querySelector('[role="navigation"]');
-      const existing = document.getElementById('mobile-menu');
-      if (existing) { existing.remove(); return; }
-      const menu = document.createElement('div');
-      menu.id = 'mobile-menu';
-      menu.className = 'border-t border-outline-variant/30 bg-surface';
-      menu.innerHTML = '<div class="px-6 py-4 space-y-3"><a href="#services" class="block text-on-surface-variant hover:text-primary text-sm font-medium py-1">Services</a><a href="#ideas" class="block text-on-surface-variant hover:text-primary text-sm font-medium py-1">Ideas</a><a href="/consulting" class="block text-on-surface-variant hover:text-primary text-sm font-medium py-1">Consulting</a><a href="/about" class="block text-on-surface-variant hover:text-primary text-sm font-medium py-1">About</a><a href="/contact" class="block text-on-surface-variant hover:text-primary text-sm font-medium py-1">Contact</a></div>';
-      nav.appendChild(menu);
-    });
-  </script>
-</body>
-</html>
+  <!-- CTA Banner -->
+  <section class="mx-6 md:mx-8 mb-20 relative overflow-hidden bg-primary rounded-xl p-12 md:p-20">
+    <div class="relative z-10 max-w-2xl">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-on-primary mb-4">Ready to Solve Your Technical Challenges?</h2>
+      <p class="text-primary-fixed-dim text-lg mb-8 font-body">Whether you need secure system communications, scalable architecture, or expert technical guidance — we provide the engineering expertise to move your business forward.</p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/consulting" class="bg-secondary text-on-secondary font-bold px-8 py-4 rounded-xl hover:brightness-110 transition-all text-center text-sm">Request a Consultation</a>
+        <a href="/services" class="border border-on-primary text-on-primary px-8 py-4 rounded-xl hover:bg-on-primary/10 transition-all text-center text-sm font-bold">Our Services</a>
+      </div>
+    </div>
+  </section>
+</DefaultLayout>
