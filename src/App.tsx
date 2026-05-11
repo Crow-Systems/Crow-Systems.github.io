@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useLocation } from 'react-router-dom'
 import { HeroSection } from './sections/HeroSection'
 import { ServicesSection } from './sections/ServicesSection'
 import { ConsultingSection } from './sections/ConsultingSection'
@@ -9,12 +8,9 @@ import { ContactSection } from './sections/ContactSection'
 import { Footer } from './components/layout/Footer'
 
 function App() {
-  const location = useLocation()
-
   return (
     <AnimatePresence mode="wait">
       <motion.div
-        key={location.pathname}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
