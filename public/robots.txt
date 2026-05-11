@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crowsystems.com/sitemap.xml
+
+# Disallow sensitive paths
+Disallow: /admin/
+Disallow: /api/

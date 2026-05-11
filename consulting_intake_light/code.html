@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Consulting Intake | CROW SYSTEMS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "tertiary-fixed-dim": "#c4c7c9",
+                "on-secondary-fixed": "#002116",
+                "on-error": "#ffffff",
+                "surface-container": "#e6eeff",
+                "primary-fixed": "#d7e3ff",
+                "secondary-fixed-dim": "#27e0a9",
+                "secondary-container": "#51fac1",
+                "on-error-container": "#93000a",
+                "surface-container-lowest": "#ffffff",
+                "on-primary": "#ffffff",
+                "on-secondary-fixed-variant": "#00513b",
+                "on-primary-fixed": "#001b3e",
+                "tertiary": "#595c5e",
+                "outline": "#717785",
+                "on-primary-fixed-variant": "#00458e",
+                "on-surface-variant": "#414754",
+                "surface-bright": "#f8f9ff",
+                "error": "#ba1a1a",
+                "outline-variant": "#c1c6d6",
+                "surface-tint": "#005cba",
+                "inverse-primary": "#aac7ff",
+                "on-tertiary-container": "#fbfdff",
+                "inverse-surface": "#233144",
+                "surface-container-low": "#eff4ff",
+                "primary-fixed-dim": "#aac7ff",
+                "on-secondary": "#ffffff",
+                "surface-container-high": "#dce9ff",
+                "surface": "#f8f9ff",
+                "surface-dim": "#ccdbf3",
+                "tertiary-container": "#727577",
+                "on-background": "#0d1c2e",
+                "tertiary-fixed": "#e0e3e5",
+                "primary": "#005ab5",
+                "primary-container": "#0072e3",
+                "surface-container-highest": "#d5e3fc",
+                "background": "#f8f9ff",
+                "secondary-fixed": "#54fdc4",
+                "on-secondary-container": "#007152",
+                "surface-variant": "#d5e3fc",
+                "on-tertiary": "#ffffff",
+                "error-container": "#ffdad6",
+                "inverse-on-surface": "#eaf1ff",
+                "secondary": "#006c4f",
+                "on-tertiary-fixed-variant": "#444749",
+                "on-surface": "#0d1c2e",
+                "on-primary-container": "#fefcff",
+                "on-tertiary-fixed": "#191c1e"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "margin-mobile": "16px",
+                "gutter": "24px",
+                "sm": "1rem",
+                "md": "1.5rem",
+                "xs": "0.5rem",
+                "lg": "2rem",
+                "xl": "3rem",
+                "base": "4px",
+                "margin-desktop": "64px"
+        },
+        "fontFamily": {
+                "headline-lg-mobile": ["Space Grotesk"],
+                "label-md": ["Inter"],
+                "label-sm": ["Inter"],
+                "headline-lg": ["Space Grotesk"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Space Grotesk"],
+                "display-lg": ["Space Grotesk"],
+                "headline": ["Space Grotesk"],
+                "display": ["Space Grotesk"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+        },
+        "fontSize": {
+                "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+        }
+      },
+    },
+  }
+</script>
+<style>
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+}
+body {
+    background-color: #f8f9ff;
+    color: #0d1c2e;
+}
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem
+}
+</style>
+</head>
+<body class="font-body selection:bg-primary/30 selection:text-primary">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="font-headline text-xl font-black tracking-tighter text-on-surface">CROW SYSTEMS</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant hover:text-primary font-medium transition-colors duration-300" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-primary font-medium transition-colors duration-300" href="#">Ideas</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Consulting</a>
+<a class="text-on-surface-variant hover:text-primary font-medium transition-colors duration-300" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary font-medium transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary font-bold px-6 py-2 rounded-lg transition-transform duration-200 active:scale-95 shadow-sm hover:shadow-md">Get Started</button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 max-w-7xl mx-auto relative overflow-hidden">
+<div class="absolute top-0 right-0 -z-10 w-1/2 h-1/2 bg-primary/5 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-0 left-0 -z-10 w-1/3 h-1/3 bg-secondary/5 blur-[100px] rounded-full"></div>
+<header class="mb-16">
+<span class="text-primary font-mono text-sm tracking-widest uppercase mb-4 block font-bold">Consultation Portal</span>
+<h1 class="font-headline text-5xl md:text-7xl font-bold text-on-surface tracking-tighter mb-6">
+                Articulate Your Vision. <br/>
+<span class="text-outline">We Engineer the Rest.</span>
+</h1>
+<p class="text-on-surface-variant max-w-2xl text-lg leading-relaxed">
+                Provide the foundations of your business challenge. Use our high-fidelity audio capture to explain complex nuances, or detail your requirements through our structured technical brief.
+            </p>
+</header>
+<div class="bento-grid">
+<section class="col-span-12 lg:col-span-7 space-y-6">
+<div class="bg-surface-container-low border border-outline-variant/50 rounded-xl p-8 relative overflow-hidden group shadow-sm">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-on-surface">mic</span>
+</div>
+<div class="flex items-center gap-3 mb-8">
+<div class="w-3 h-3 bg-error rounded-full animate-pulse"></div>
+<h2 class="font-headline text-2xl font-bold text-on-surface">Audio Idea Submission</h2>
+</div>
+<div class="bg-surface-container/50 rounded-xl p-12 border border-outline-variant/30 mb-8 flex flex-col items-center justify-center text-center">
+<div class="flex gap-4 items-center mb-8">
+<div class="w-1 h-8 bg-outline-variant/40 rounded-full"></div>
+<div class="w-1 h-12 bg-outline-variant/60 rounded-full"></div>
+<div class="w-1 h-16 bg-primary/60 rounded-full"></div>
+<div class="w-1 h-24 bg-primary rounded-full"></div>
+<div class="w-1 h-12 bg-primary/60 rounded-full"></div>
+<div class="w-1 h-14 bg-outline-variant/60 rounded-full"></div>
+<div class="w-1 h-6 bg-outline-variant/40 rounded-full"></div>
+</div>
+<div class="flex items-center gap-6">
+<button class="w-12 h-12 rounded-full border border-outline-variant/50 flex items-center justify-center text-on-surface-variant hover:border-error hover:text-error transition-all bg-surface">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+<button class="w-20 h-20 rounded-full bg-error text-white flex items-center justify-center shadow-lg shadow-error/30 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-4xl" data-icon="mic" data-weight="fill">mic</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant/50 flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary transition-all bg-surface">
+<span class="material-symbols-outlined" data-icon="play_arrow" data-weight="fill">play_arrow</span>
+</button>
+</div>
+<p class="mt-6 font-mono text-sm text-on-surface-variant">00:00 / 05:00</p>
+</div>
+<div class="space-y-4">
+<label class="block text-sm font-bold text-on-surface-variant uppercase tracking-widest">Additional Context (Optional)</label>
+<textarea class="w-full bg-white border border-outline-variant rounded-lg p-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none min-h-[160px] transition-all" placeholder="Describe any technical constraints or specific outcomes you're looking for..."></textarea>
+</div>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/50 rounded-xl p-8 shadow-sm">
+<h3 class="font-headline text-xl font-bold mb-6 text-on-surface">Consulting Request Form</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase">Full Name</label>
+<input class="w-full bg-white border border-outline-variant rounded-lg px-4 py-3 text-on-surface focus:border-primary outline-none transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase">Company</label>
+<input class="w-full bg-white border border-outline-variant rounded-lg px-4 py-3 text-on-surface focus:border-primary outline-none transition-all" placeholder="Acme Corp" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase">Work Email</label>
+<input class="w-full bg-white border border-outline-variant rounded-lg px-4 py-3 text-on-surface focus:border-primary outline-none transition-all" placeholder="j.doe@acme.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase">Phone</label>
+<input class="w-full bg-white border border-outline-variant rounded-lg px-4 py-3 text-on-surface focus:border-primary outline-none transition-all" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div class="col-span-full space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase">Business Problem</label>
+<select class="w-full bg-white border border-outline-variant rounded-lg px-4 py-3 text-on-surface focus:border-primary outline-none transition-all">
+<option>Operational Inefficiency</option>
+<option>Digital Transformation</option>
+<option>Market Entry Strategy</option>
+<option>Technical Debt Reduction</option>
+<option>Other</option>
+</select>
+</div>
+<div class="col-span-full space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase">Budget Range</label>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+<button class="px-4 py-2 border border-outline-variant rounded-lg text-sm hover:bg-primary-fixed hover:border-primary transition-all text-on-surface"> $10k - $25k</button>
+<button class="px-4 py-2 border border-primary bg-primary-container/30 text-primary rounded-lg text-sm font-bold">$25k - $50k</button>
+<button class="px-4 py-2 border border-outline-variant rounded-lg text-sm hover:bg-primary-fixed hover:border-primary transition-all text-on-surface"> $50k - $100k</button>
+<button class="px-4 py-2 border border-outline-variant rounded-lg text-sm hover:bg-primary-fixed hover:border-primary transition-all text-on-surface">$100k+</button>
+</div>
+</div>
+</div>
+<button class="w-full mt-10 py-5 bg-primary text-on-primary font-bold rounded-xl flex items-center justify-center gap-2 group transition-all hover:bg-primary/90 shadow-lg shadow-primary/20">
+                        Submit Consulting Request
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+<aside class="col-span-12 lg:col-span-5 space-y-6">
+<div class="bg-white rounded-xl overflow-hidden border border-outline-variant/50 shadow-sm">
+<img alt="Modern corporate boardroom" class="w-full h-64 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAySuLLuDFjdPWYNsP8aWixJs559cGfA5CmY2mXTqXw-jbiU0xQm0vjPxURMoRiwP9gwYKyCVpw5vCed6688C0IsOHjt2uu4JrdwMXkAjlmb1Vc6ES5M-rpRHT2y5EBw3jOnNnLHROdNb17KQN09f__dnUhElSlyQpFOd3-t8Pbrxd0GM7u2YF2ZaPVOhC1FrPUl7hhik5QXBGmDEhIYw8Ik13hg9aYEra1nKCwl96oOGFq5iodfHxTEfIelCChqVXv0L4ZD2tiR0M"/>
+<div class="p-8">
+<h4 class="font-headline text-lg font-bold mb-4 text-on-surface">The Crow Engagement Method</h4>
+<ul class="space-y-4">
+<li class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0 font-bold text-xs">01</div>
+<p class="text-sm text-on-surface-variant"><span class="text-on-surface font-bold">Triage:</span> Our lead architects review your audio submission and brief within 4 business hours.</p>
+</li>
+<li class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0 font-bold text-xs">02</div>
+<p class="text-sm text-on-surface-variant"><span class="text-on-surface font-bold">Discovery:</span> A 30-minute high-fidelity call to align on technical constraints and KPI targets.</p>
+</li>
+<li class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0 font-bold text-xs">03</div>
+<p class="text-sm text-on-surface-variant"><span class="text-on-surface font-bold">Proposal:</span> A comprehensive roadmap with fixed-fee options delivered in 48 hours.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="bg-secondary-container/20 border border-secondary/20 rounded-xl p-8 relative shadow-sm">
+<div class="mb-6">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="security" data-weight="fill">security</span>
+</div>
+<h4 class="font-headline text-xl font-bold mb-2 text-on-surface">Corporate-Grade Security</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                        All submissions, including audio files, are encrypted using AES-256 at rest and TLS 1.3 in transit. We prioritize your intellectual property. Standard NDAs are available upon request during the discovery phase.
+                    </p>
+</div>
+<div class="bg-white border border-outline-variant/50 rounded-xl p-8 shadow-sm">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary-fixed">
+<img alt="Marcus Thorne Portrait" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1010-HA1iNNdUpSIT5LymnEYRVKVzmOSmlZnrMxBM2YbAOD2t_GH7Km8YwVXnL5Vh03K-L3zh5BR43BVl42LlDtOn5LN51GcmhicptJkxFLsb_4OdBEsksCQLX-YJ9647VTJoPfdMDb6ColRFJAd1__6YhHhsJVAm04S-myUQcJrlgB19uVLE-LbrF2aNDZUfkKMb1GbIMNkWnvvRyC22lUl9yHbwHczachxeVm4mLqG-61-zOHpsRno3V8EZq2eHNtRZSi2Yr4g"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Marcus Thorne</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-tighter font-semibold">Managing Partner, Crow Systems</p>
+</div>
+</div>
+<p class="italic text-on-surface-variant text-sm leading-relaxed border-l-2 border-primary-fixed pl-4">
+                        "We built this intake system to capture the 'why' behind the problem. Audio allows us to hear the priorities that spreadsheets often hide."
+                    </p>
+</div>
+</aside>
+</div>
+</main>
+<footer class="bg-surface-container border-t border-outline-variant/50">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 max-w-7xl mx-auto gap-8">
+<div class="space-y-4 text-center md:text-left">
+<div class="font-headline text-lg font-bold text-on-surface">CROW SYSTEMS</div>
+<p class="font-body text-label-md text-on-surface-variant max-w-xs">© 2024 Crow Systems. Precision-Engineered Consulting. Globally Distributed.</p>
+</div>
+<div class="flex gap-8 flex-wrap justify-center">
+<a class="font-body text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">LinkedIn</a>
+<a class="font-body text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Twitter</a>
+<a class="font-body text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="font-body text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>
