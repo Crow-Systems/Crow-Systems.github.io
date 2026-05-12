@@ -17,72 +17,205 @@ void LOCALE_JSON;
   activeNav={data.nav.contact}
   locale={locale}
 >
-  <div class="pt-32 pb-24 px-6 max-w-7xl mx-auto" aria-labelledby="contact-heading">
+  <div
+    class="pt-32 pb-24 px-6 max-w-7xl mx-auto"
+    aria-labelledby="contact-heading"
+  >
     <header class="mb-16">
-      <span class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block">{FORM_FIELDS.getInTouch}</span>
-      <h1 id="contact-heading" class="font-heading text-4xl md:text-6xl font-bold text-on-surface tracking-tighter mb-6">{FORM_FIELDS.heading}</h1>
-      <p class="text-on-surface-variant max-w-2xl text-lg leading-relaxed font-body">{FORM_FIELDS.description2}</p>
+      <span
+        class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block"
+        >{FORM_FIELDS.getInTouch}</span
+      >
+      <h1
+        id="contact-heading"
+        class="font-heading text-4xl md:text-6xl font-bold text-on-surface tracking-tighter mb-6"
+      >
+        {FORM_FIELDS.heading}
+      </h1>
+      <p
+        class="text-on-surface-variant max-w-2xl text-lg leading-relaxed font-body"
+      >
+        {FORM_FIELDS.description2}
+      </p>
     </header>
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
       <div class="lg:col-span-5 space-y-8">
         <div>
-          <h3 class="font-heading text-2xl font-bold mb-4 text-on-surface">{FORM_FIELDS.startConversation}</h3>
-          <p class="text-on-surface-variant font-body leading-relaxed">{FORM_FIELDS.inquiryDescription}</p>
+          <h3 class="font-heading text-2xl font-bold mb-4 text-on-surface">
+            {FORM_FIELDS.startConversation}
+          </h3>
+          <p class="text-on-surface-variant font-body leading-relaxed">
+            {FORM_FIELDS.inquiryDescription}
+          </p>
         </div>
 
         <div class="space-y-6">
           <div class="flex items-start gap-4">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M22 7l-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"></path></svg>
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="text-primary mt-1"
+              ><rect x="2" y="4" width="20" height="16" rx="2"></rect><path
+                d="M22 7l-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"></path></svg
+            >
             <div>
-              <p class="font-bold text-sm text-on-surface">{FORM_FIELDS.inquiries}</p>
-              <p class="text-sm text-on-surface-variant font-body">solutions@crowsystems.tech</p>
+              <p class="font-bold text-sm text-on-surface">
+                {FORM_FIELDS.inquiries}
+              </p>
+              <p class="text-sm text-on-surface-variant font-body">
+                solutions@crowsystems.tech
+              </p>
             </div>
           </div>
           <div class="flex items-start gap-4">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="text-primary mt-1"
+              ><circle cx="12" cy="12" r="10"></circle><polyline
+                points="12 6 12 12 16 14"></polyline></svg
+            >
             <div>
-              <p class="font-bold text-sm text-on-surface">{FORM_FIELDS.businessHours}</p>
-              <p class="text-sm text-on-surface-variant font-body">{data.pages.contact.monFri}</p>
-              <p class="text-sm text-on-surface-variant font-body">{data.pages.contact.sat}</p>
+              <p class="font-bold text-sm text-on-surface">
+                {FORM_FIELDS.businessHours}
+              </p>
+              <p class="text-sm text-on-surface-variant font-body">
+                {data.pages.contact.monFri}
+              </p>
+              <p class="text-sm text-on-surface-variant font-body">
+                {data.pages.contact.sat}
+              </p>
             </div>
           </div>
           <div class="flex items-start gap-4">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary mt-1"><circle cx="12" cy="12" r="10"></circle><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="text-primary mt-1"
+              ><circle cx="12" cy="12" r="10"></circle><path
+                d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path><circle
+                cx="12"
+                cy="12"
+                r="3"></circle></svg
+            >
             <div>
-              <p class="font-bold text-sm text-on-surface">{FORM_FIELDS.regions}</p>
-              <p class="text-sm text-on-surface-variant font-body">{data.pages.contact.regionsText}</p>
+              <p class="font-bold text-sm text-on-surface">
+                {FORM_FIELDS.regions}
+              </p>
+              <p class="text-sm text-on-surface-variant font-body">
+                {data.pages.contact.regionsText}
+              </p>
             </div>
           </div>
         </div>
       </div>
 
       <div class="lg:col-span-7">
-        <div class="bg-surface-container-lowest border border-outline-variant/50 rounded-2xl p-8 shadow-sm">
-          <div id="contact-success" class="hidden mb-6 p-4 bg-green-50 text-green-700 rounded-lg text-sm font-bold" role="status"></div>
-          <div id="contact-error" class="hidden mb-6 p-4 bg-red-50 text-red-600 rounded-lg text-sm font-medium" role="alert"></div>
+        <div
+          class="bg-surface-container-lowest border border-outline-variant/50 rounded-2xl p-8 shadow-sm"
+        >
+          <div
+            id="contact-success"
+            class="hidden mb-6 p-4 bg-green-50 text-green-700 rounded-lg text-sm font-bold"
+            role="status"
+          >
+          </div>
+          <div
+            id="contact-error"
+            class="hidden mb-6 p-4 bg-red-50 text-red-600 rounded-lg text-sm font-medium"
+            role="alert"
+          >
+          </div>
           <form id="contact-form" class="space-y-6" novalidate>
             <div class="space-y-2">
-              <label for="cnt-name" class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">{FORM_FIELDS.name} <span class="text-error">*</span></label>
-              <input id="cnt-name" type="text" required class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-sm" />
-              <p class="hidden text-xs text-red-500 mt-1" id="cnt-name-err">{FORM_FIELDS.nameRequired}</p>
+              <label
+                for="cnt-name"
+                class="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
+                >{FORM_FIELDS.name} <span class="text-error">*</span></label
+              >
+              <input
+                id="cnt-name"
+                type="text"
+                required
+                class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-sm"
+              />
+              <p class="hidden text-xs text-red-500 mt-1" id="cnt-name-err">
+                {FORM_FIELDS.nameRequired}
+              </p>
             </div>
             <div class="space-y-2">
-              <label for="cnt-email" class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">{FORM_FIELDS.email} <span class="text-error">*</span></label>
-              <input id="cnt-email" type="email" required class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-sm" />
-              <p class="hidden text-xs text-red-500 mt-1" id="cnt-email-err">{FORM_FIELDS.emailRequired}</p>
+              <label
+                for="cnt-email"
+                class="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
+                >{FORM_FIELDS.email} <span class="text-error">*</span></label
+              >
+              <input
+                id="cnt-email"
+                type="email"
+                required
+                class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-sm"
+              />
+              <p class="hidden text-xs text-red-500 mt-1" id="cnt-email-err">
+                {FORM_FIELDS.emailRequired}
+              </p>
             </div>
             <div class="space-y-2">
-              <label for="cnt-subject" class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">{FORM_FIELDS.subject} <span class="text-error">*</span></label>
-              <input id="cnt-subject" type="text" required class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-sm" />
-              <p class="hidden text-xs text-red-500 mt-1" id="cnt-subject-err">{FORM_FIELDS.subjectRequired}</p>
+              <label
+                for="cnt-subject"
+                class="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
+                >{FORM_FIELDS.subject} <span class="text-error">*</span></label
+              >
+              <input
+                id="cnt-subject"
+                type="text"
+                required
+                class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-sm"
+              />
+              <p class="hidden text-xs text-red-500 mt-1" id="cnt-subject-err">
+                {FORM_FIELDS.subjectRequired}
+              </p>
             </div>
             <div class="space-y-2">
-              <label for="cnt-message" class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">{FORM_FIELDS.message} <span class="text-error">*</span></label>
-              <textarea id="cnt-message" rows="5" required class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none font-body text-sm"></textarea>
-              <p class="hidden text-xs text-red-500 mt-1" id="cnt-message-err">{FORM_FIELDS.messageRequired}</p>
+              <label
+                for="cnt-message"
+                class="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
+                >{FORM_FIELDS.message} <span class="text-error">*</span></label
+              >
+              <textarea
+                id="cnt-message"
+                rows="5"
+                required
+                class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none font-body text-sm"
+              ></textarea>
+              <p class="hidden text-xs text-red-500 mt-1" id="cnt-message-err">
+                {FORM_FIELDS.messageRequired}
+              </p>
             </div>
-            <button type="submit" id="contact-submit-btn" class="w-full bg-primary text-on-primary font-bold py-5 rounded-xl flex items-center justify-center gap-2 transition-all hover:bg-primary/90 shadow-lg shadow-primary/20">{FORM_FIELDS.sendMessage}</button>
+            <button
+              type="submit"
+              id="contact-submit-btn"
+              class="w-full bg-primary text-white font-bold py-5 rounded-xl flex items-center justify-center gap-2 transition-all hover:bg-primary/90 shadow-lg shadow-primary/20"
+              >{FORM_FIELDS.sendMessage}</button
+            >
           </form>
         </div>
       </div>

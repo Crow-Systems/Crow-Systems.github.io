@@ -45,22 +45,22 @@
         "uptime": {
           "value": "99%",
           "label": "Disponibilidad del Sistema",
-          "desc": "Infraestructura confiable en la que puede confiar"
+          "desc": "Infraestructura confiable"
         },
         "triage": {
           "value": "< 1 hr",
-          "label": "Triaje Inicial",
-          "desc": "Durante horario laboral, 8AM–6PM PDT"
+          "label": "Diagnóstico Inicial",
+          "desc": "En horario de 8AM a 6PM (PDT)"
         },
         "team": {
           "value": "Solo Senior",
           "label": "Equipo de Ingeniería",
-          "desc": "Sin juniors, sin transferencias, sin compromisos"
+          "desc": "Sin transferencias, sin compromisos"
         },
         "lockin": {
           "value": "Sin Bloqueo",
           "label": "Su IP, Siempre",
-          "desc": "Su código, su pila, sin dependencias de proveedor"
+          "desc": "Sin dependencias de proveedor"
         }
       },
       "cta": {
@@ -83,7 +83,7 @@
         "steps": [
           {
             "title": "Comparta su Desafío",
-            "description": "Cuéntenos sobre su problema de negocio a través de nuestro formulario de contacto o envío de audio. Respondemos dentro de 4 horas hábiles."
+            "description": "Cuéntenos sobre su problema de negocio a través de nuestro formulario de contacto o envío de audio. Respondemos dentro de 1 hora hábil."
           },
           {
             "title": "Descubrimiento y Análisis",
@@ -158,8 +158,8 @@
       "getInTouch": "Contáctenos",
       "heading": "Contáctenos",
       "description2": "Ya sea que necesite una auditoría de sistemas completa, una consulta estratégica o un socio de ingeniería para su próximo proyecto, nuestro equipo está listo para ayudarle.",
-      "startConversation": "Iniciar una Conversación",
-      "inquiryDescription": "¿Tiene un desafío técnico o una idea de proyecto? Nos encantaría saber de ello. Nuestros ingenieros revisarán su consulta y responderán dentro de 4 horas hábiles.",
+      "startConversation": "Conversemos",
+      "inquiryDescription": "¿Tiene un desafío técnico o una idea de proyecto? Nos encantaría saber de ello. Nuestros ingenieros revisarán su consulta y responderán dentro de 1 hora hábil.",
       "inquiries": "Consultas",
       "businessHours": "Horario de Atención",
       "regions": "Regiones Atendidas",
@@ -175,8 +175,8 @@
       "sending": "Enviando...",
       "success": "¡Gracias! Su mensaje ha sido enviado. Nos comunicaremos con usted pronto.",
       "failed": "Error al enviar. Por favor, inténtelo de nuevo.",
-      "monFri": "Lun — Vie: 08:00 - 18:00 EST",
-      "sat": "Sáb: 10:00 - 14:00 EST (solo guardia)",
+      "monFri": "Lun — Vie: 08:00 - 18:00 PDT",
+      "sat": "Sáb: 10:00 - 14:00 PDT (solo guardia)",
       "regionsText": "Norteamérica, Unión Europea y Asia-Pacífico"
     },
     "consulting": {
@@ -191,7 +191,7 @@
       "submitAudio": "Enviar Idea de Audio",
       "uploading": "Subiendo...",
       "submitted": "✓ ¡Enviado!",
-      "audioSuccess": "✓ ¡Su idea de audio ha sido enviada! La revisaremos dentro de 4 horas hábiles.",
+      "audioSuccess": "✓ ¡Su idea de audio ha sido enviada! La revisaremos dentro de 1 hora hábil.",
       "recordDeleteLabel": "Eliminar grabación",
       "recordStartLabel": "Iniciar grabación",
       "recordStopLabel": "Detener grabación",
@@ -225,38 +225,31 @@
         "Otro"
       ],
       "goalsPlaceholder": "¿Qué espera lograr?",
-      "budgetOptions": [
-        "Rango de Presupuesto (opcional)",
-        "$10k - $25k",
-        "$25k - $50k",
-        "$50k - $100k",
-        "$100k+"
-      ],
       "method": "El Método de Colaboración de Crow",
       "steps": [
         {
-          "title": "Triaje",
-          "desc": "Nuestros arquitectos líderes revisan su solicitud dentro de 4 horas hábiles."
+          "title": "Diagnóstico Inicial",
+          "desc": "Nuestros arquitectos líderes evalúan su solicitud y prioridades operativas dentro de 1 hora hábil."
         },
         {
           "title": "Descubrimiento",
-          "desc": "Una llamada de 30 minutos para alinear restricciones, objetivos e indicadores clave de rendimiento."
+          "desc": "Una llamada estratégica de 30 minutos para alinear objetivos, restricciones e indicadores clave de rendimiento."
         },
         {
           "title": "Propuesta",
-          "desc": "Una hoja de ruta integral con opciones de tarifa fija, entregada dentro de las 48 horas posteriores al descubrimiento."
+          "desc": "Entregamos una hoja de ruta clara y accionable con opciones de tarifa fija dentro de las 48 horas posteriores al descubrimiento."
         }
       ],
       "officeHours": "Horario de Oficina",
       "monFriHours": "Lun — Vie: 9:00 AM — 6:00 PM",
       "satHours": "Sábado: Por cita",
-      "consultingEmail": "consulting@crowsys.chrislabs.net",
+      "consultingEmail": "hablemos@crowsys.com.mx",
       "securityTitle": "Seguridad Corporativa",
       "securityDesc": "Todos los envíos, incluidos los archivos de audio, se cifran mediante AES-256 en reposo y TLS 1.3 en tránsito. Priorizamos su propiedad intelectual. Se pueden proporcionar NDA estándar durante la fase de descubrimiento.",
       "marcusThorne": "Marcus Thorne",
       "managingPartner": "Socio Gerente, Crow Systems",
-      "quote": "Construimos este sistema de captura para descubrir el 'por qué' detrás del problema. El audio nos permite escuchar las prioridades que las hojas de cálculo a menudo ocultan.",
-      "consultSuccess": "¡Gracias! Su solicitud de consulta ha sido enviada. Nos comunicaremos dentro de 4 horas hábiles.",
+      "quote": "Creamos este proceso para entender realmente qué está frenando al negocio. Las conversaciones nos ayudan a descubrir prioridades y necesidades que rara vez aparecen en información o datos.",
+      "consultSuccess": "¡Gracias! Su solicitud de consulta ha sido enviada. Nos comunicaremos dentro de 1 hora hábil.",
       "audioNoBlob": "Por favor, grabe audio primero."
     },
     "privacy": {
@@ -377,7 +370,7 @@
         },
         {
           "title": "4. Solicitudes de Consultoría",
-          "content": "El envío de una solicitud de consultoría no establece una relación comercial formal ni un acuerdo contractual. El trabajo del proyecto, los precios, los cronogramas y los entregables requieren acuerdos escritos por separado. Nuestro equipo revisará su solicitud y responderá dentro de 4 horas hábiles."
+          "content": "El envío de una solicitud de consultoría no establece una relación comercial formal ni un acuerdo contractual. El trabajo del proyecto, los precios, los cronogramas y los entregables requieren acuerdos escritos por separado. Nuestro equipo revisará su solicitud y responderá dentro de 1 hora hábil."
         },
         {
           "title": "5. Envíos de Audio",
@@ -467,8 +460,7 @@
       "technologies": [
         "AWS",
         "Azure",
-        "Terraform",
-        "Kubernetes",
+        "Google Cloud",
         "Administración de Linux"
       ],
       "cta": "Más Información"

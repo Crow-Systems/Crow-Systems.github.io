@@ -12,7 +12,14 @@ const techLabel = data.pages.services.technologies;
 const getStartedLabel = data.pages.services.getStarted;
 
 type ServiceKeys = keyof typeof data.services;
-const serviceKeys: ServiceKeys[] = ["systemsConsulting", "itInfrastructure", "softwareSolutions", "technicalStrategy", "digitalTransformation", "automationConsulting"];
+const serviceKeys: ServiceKeys[] = [
+  "systemsConsulting",
+  "itInfrastructure",
+  "softwareSolutions",
+  "technicalStrategy",
+  "digitalTransformation",
+  "automationConsulting",
+];
 const services = serviceKeys.map((key) => data.services[key]);
 ---
 
@@ -22,80 +29,175 @@ const services = serviceKeys.map((key) => data.services[key]);
   activeNav={data.nav.services}
   locale={locale}
 >
-  <section class="pt-32 pb-20 px-6 max-w-7xl mx-auto" aria-labelledby="services-hero-heading">
+  <section
+    class="pt-32 pb-20 px-6 max-w-7xl mx-auto"
+    aria-labelledby="services-hero-heading"
+  >
     <div class="max-w-3xl">
-      <span class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block">{data.pages.services.hero.subtitle}</span>
-      <h1 id="services-hero-heading" class="font-heading text-4xl md:text-6xl font-bold tracking-tighter mb-6 text-on-surface leading-tight" set:html={data.pages.services.hero.title}></h1>
-      <p class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-2xl font-body">{data.pages.services.hero.description}</p>
+      <span
+        class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block"
+        >{data.pages.services.hero.subtitle}</span
+      >
+      <h1
+        id="services-hero-heading"
+        class="font-heading text-4xl md:text-6xl font-bold tracking-tighter mb-6 text-on-surface leading-tight"
+        set:html={data.pages.services.hero.title}
+      />
+      <p
+        class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-2xl font-body"
+      >
+        {data.pages.services.hero.description}
+      </p>
     </div>
   </section>
 
-  <section class="pb-24 px-6 max-w-7xl mx-auto" aria-labelledby="services-heading">
+  <section
+    class="pb-24 px-6 max-w-7xl mx-auto"
+    aria-labelledby="services-heading"
+  >
     <h2 id="services-heading" class="sr-only">Our Services</h2>
     <div id="services-grid" class="grid grid-cols-1 gap-8">
-      {services.map((service) => (
-        <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm hover:border-primary/50 transition-all duration-300 hover:shadow-md" aria-label={service.title}>
-          <div class="p-8 flex flex-col">
-            <h3 class="font-heading text-2xl font-bold text-on-surface mb-4">{service.title}</h3>
-            <p class="text-on-surface-variant font-body leading-relaxed text-sm mb-6">{service.fullDescription}</p>
-            <div class="space-y-5">
-              <div>
-                <h4 class="font-heading text-sm font-bold text-on-surface mb-3 uppercase tracking-wider">{includedLabel}</h4>
-                <ul class="space-y-2">
-                  {service.features.map((f: string) => (
-                    <li class="flex items-start gap-3 text-sm text-on-surface-variant font-body">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent mt-0.5 shrink-0"><path d="M20 6L9 17l-5-5"></path></svg>
-                      <span>{f}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 class="font-heading text-sm font-bold text-on-surface mb-2 uppercase tracking-wider">{idealForLabel}</h4>
-                <p class="text-sm text-on-surface-variant font-body leading-relaxed">{service.idealFor}</p>
-              </div>
-              <div>
-                <h4 class="font-heading text-sm font-bold text-on-surface mb-2 uppercase tracking-wider">{techLabel}</h4>
-                <div class="flex flex-wrap gap-2 mt-1">
-                  {service.technologies.map((t: string) => (
-                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-accent/10 text-accent border border-accent/20">{t}</span>
-                  ))}
+      {
+        services.map((service) => (
+          <div
+            class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm hover:border-primary/50 transition-all duration-300 hover:shadow-md"
+            aria-label={service.title}
+          >
+            <div class="p-8 flex flex-col">
+              <h3 class="font-heading text-2xl font-bold text-on-surface mb-4">
+                {service.title}
+              </h3>
+              <p class="text-on-surface-variant font-body leading-relaxed text-sm mb-6">
+                {service.fullDescription}
+              </p>
+              <div class="space-y-5">
+                <div>
+                  <h4 class="font-heading text-sm font-bold text-on-surface mb-3 uppercase tracking-wider">
+                    {includedLabel}
+                  </h4>
+                  <ul class="space-y-2">
+                    {service.features.map((f: string) => (
+                      <li class="flex items-start gap-3 text-sm text-on-surface-variant font-body">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="text-accent mt-0.5 shrink-0"
+                        >
+                          <path d="M20 6L9 17l-5-5" />
+                        </svg>
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
-              <div class="pt-4 border-t border-outline-variant/30 mt-4">
-                <a href={data.routes.consulting} class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:text-accent transition-colors group">
-                  {getStartedLabel}{service.title}
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-x-1 transition-transform"><path d="M22 2L11 13"></path><path d="M22 2L15 22L11 13L2 9L22 2Z"></path></svg>
-                </a>
+                <div>
+                  <h4 class="font-heading text-sm font-bold text-on-surface mb-2 uppercase tracking-wider">
+                    {idealForLabel}
+                  </h4>
+                  <p class="text-sm text-on-surface-variant font-body leading-relaxed">
+                    {service.idealFor}
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-heading text-sm font-bold text-on-surface mb-2 uppercase tracking-wider">
+                    {techLabel}
+                  </h4>
+                  <div class="flex flex-wrap gap-2 mt-1">
+                    {service.technologies.map((t: string) => (
+                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-accent/10 text-accent border border-accent/20">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div class="pt-4 border-t border-outline-variant/30 mt-4">
+                  <a
+                    href={data.routes.consulting}
+                    class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:text-accent transition-colors group"
+                  >
+                    {getStartedLabel} {service.title}
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      class="group-hover:translate-x-1 transition-transform"
+                    >
+                      <>
+                        <path d="M22 2L11 13" />
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" />
+                      </>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </section>
 
-  <section class="pb-24 px-6 max-w-7xl mx-auto" aria-labelledby="process-heading">
-    <h2 id="process-heading" class="font-heading text-3xl font-bold text-on-surface text-center mb-12">{data.pages.services.process.title}</h2>
+  <section
+    class="pb-24 px-6 max-w-7xl mx-auto"
+    aria-labelledby="process-heading"
+  >
+    <h2
+      id="process-heading"
+      class="font-heading text-3xl font-bold text-on-surface text-center mb-12"
+    >
+      {data.pages.services.process.title}
+    </h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {[0,1,2].map((i) => {
-        const title = data.pages.services.process.steps[i]?.title;
-        const desc = data.pages.services.process.steps[i]?.description;
-        return <div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/30 text-center hover:border-primary/50 transition-all hover:shadow-md">
-          <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6"><span class="font-heading text-xl font-bold text-primary">{String(i+1).padStart(2,"0")}</span></div>
-          <h4 class="font-heading text-lg font-bold text-on-surface mb-3">{title}</h4>
-          <p class="text-on-surface-variant text-sm font-body leading-relaxed">{desc}</p>
-        </div>;
-      })}
+      {
+        [0, 1, 2].map((i) => {
+          const title = data.pages.services.process.steps[i]?.title;
+          const desc = data.pages.services.process.steps[i]?.description;
+          return (
+            <div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/30 text-center hover:border-primary/50 transition-all hover:shadow-md">
+              <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                <span class="font-heading text-xl font-bold text-primary">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              </div>
+              <h4 class="font-heading text-lg font-bold text-on-surface mb-3">
+                {title}
+              </h4>
+              <p class="text-on-surface-variant text-sm font-body leading-relaxed">
+                {desc}
+              </p>
+            </div>
+          );
+        })
+      }
     </div>
   </section>
 
-  <section class="mx-6 md:mx-8 mb-20 relative overflow-hidden bg-primary rounded-xl p-12 md:p-20">
+  <section
+    class="mx-6 md:mx-8 mb-20 relative overflow-hidden bg-primary rounded-xl p-12 md:p-20"
+  >
     <div class="relative z-10 max-w-2xl">
-      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4" set:html={data.pages.services.cta.title}></h2>
-      <p class="text-white text-lg mb-8 font-body">{data.pages.services.cta.description}</p>
+      <h2
+        class="font-heading text-3xl md:text-4xl font-bold text-white mb-4"
+        set:html={data.pages.services.cta.title}
+      />
+      <p class="text-white text-lg mb-8 font-body">
+        {data.pages.services.cta.description}
+      </p>
       <div class="flex flex-col sm:flex-row gap-4">
-        <a href={data.routes.consulting} class="border border-white text-white px-8 py-4 rounded-xl hover:bg-on-primary/10 transition-all text-center text-sm font-bold">{data.pages.services.cta.startConsultation}</a>
+        <a
+          href={data.routes.consulting}
+          class="border border-white text-white px-8 py-4 rounded-xl hover:bg-on-primary/10 transition-all text-center text-sm font-bold"
+          >{data.pages.services.cta.startConsultation}</a
+        >
       </div>
     </div>
   </section>

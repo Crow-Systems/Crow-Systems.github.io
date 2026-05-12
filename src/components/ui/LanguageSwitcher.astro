@@ -3,35 +3,45 @@ import en from "../../locales/en.json";
 import es from "../../locales/es.json";
 
 const locale = Astro.url.pathname.split("/")[1] === "es" ? "es" : "en";
-const otherLocale = locale === "en" ? "es" : "en";
-const localeLabel = locale === "en" ? "ES" : "EN";
-const currentLabel = locale === "en" ? "EN" : "ES";
 const data = locale === "es" ? es : en;
-const otherData = otherLocale === "es" ? es : en;
 
 const normalizedPath = Astro.url.pathname.replace(/\/$/, "") || "/";
 let currentRouteKey: string | null = null;
 for (const [key, routePath] of Object.entries(data.routes)) {
-  if (routePath === normalizedPath || routePath.replace(/\/$/, "") === normalizedPath) {
+  if (
+    routePath === normalizedPath ||
+    routePath.replace(/\/$/, "") === normalizedPath
+  ) {
     currentRouteKey = key;
     break;
   }
 }
 const routeKey = currentRouteKey as keyof typeof en.routes | null;
-const otherPath = routeKey && otherData.routes[routeKey]
-  ? otherData.routes[routeKey]
-  : otherLocale === "en" ? "/" : "/es/";
+const enPath = routeKey && en.routes[routeKey] ? en.routes[routeKey] : "/";
+const esPath = routeKey && es.routes[routeKey] ? es.routes[routeKey] : "/es/";
 ---
 
-<div class="flex items-center gap-2" role="group" aria-label="Language selector">
-  <span class="text-xs text-on-surface-variant/60 uppercase tracking-wider font-semibold">
-    {currentLabel}
-  </span>
+<div
+  class="inline-flex items-center gap-px bg-surface-container/80 rounded-full p-1 shadow-sm shadow-black/5"
+  role="radiogroup"
+  aria-label="Language selector"
+>
   <a
-    href={otherPath}
-    class="text-xs font-bold text-primary hover:text-accent transition-colors duration-300 uppercase tracking-wider px-2 py-1 rounded-md hover:bg-primary/10"
-    aria-label={`Switch to ${otherLocale === "en" ? "English" : "Español"}`}
+    href={enPath}
+    class={`${locale === "en" ? "bg-primary text-white shadow-sm shadow-black/10" : "text-on-surface-variant hover:bg-primary/10"} text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full transition-all duration-300`}
+    role="radio"
+    aria-checked={locale === "en"}
+    aria-label="English"
   >
-    {localeLabel}
+    EN
+  </a>
+  <a
+    href={esPath}
+    class={`${locale === "es" ? "bg-primary text-white shadow-sm shadow-black/10" : "text-on-surface-variant hover:bg-primary/10"} text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full transition-all duration-300`}
+    role="radio"
+    aria-checked={locale === "es"}
+    aria-label="Español"
+  >
+    ES
   </a>
 </div>

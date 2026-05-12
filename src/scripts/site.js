@@ -149,68 +149,6 @@ export function initConsultForm(localeData) {
   });
 }
 
-// Audio submit handler
-export function initAudioSubmit(localeData) {
-  const t = (key) => { const keys = key.split("."); let r = localeData; for (const k of keys) { if (!r) return key; r = r[k]; } return typeof r === "string" ? r : key; };
-  const submitBtn = document.getElementById("submit-audio");
-  const submitText = document.getElementById("submit-audio-text");
-  const errorEl = document.getElementById("audio-error");
-  const successEl = document.getElementById("audio-success");
-  if (!submitBtn) return;
-
-  submitBtn.addEventListener("click", function (e) {
-    e.preventDefault();
-    let audioBlob = window._audioBlob || null;
-    if (!audioBlob) { errorEl.textContent = t("pages.consulting.audioNoBlob"); errorEl.classList.remove("hidden"); return; }
-    var desc = document.getElementById("audio-description").value;
-    submitBtn.disabled = true;
-    submitText.textContent = t("pages.consulting.uploading");
-    var fd = new FormData();
-    fd.append("audio", audioBlob, "rec_" + Date.now() + ".webm");
-    if (desc) fd.append("description", desc);
-    var base = import.meta.env.VITE_API_BASE_URL || "https://crowsys.chrislabs.net/api/v1";
-    fetch(base + "/audio/upload", { method: "POST", body: fd })
-      .then(function (res) { return res.json(); })
-      .then(function (data) {
-        if (data.success) {
-          successEl.textContent = t("pages.consulting.audioSuccess");
-          successEl.classList.remove("hidden");
-          submitText.textContent = t("pages.consulting.submitted");
-          setTimeout(function () { document.getElementById("delete-rec").click(); }, 3000);
-        } else { throw new Error(data.message); }
-      })
-      .catch(function (err) {
-        errorEl.textContent = err.message || t("pages.consulting.failed");
-        errorEl.classList.remove("hidden");
-        submitBtn.disabled = false;
-        submitText.textContent = t("pages.consulting.submitAudio");
-      });
-  });
-}
-
-// Mobile menu toggle
-export function initMobileMenu() {
-  let menuOpen = false;
-  const menu = document.getElementById("mobile-menu");
-  document.getElementById("menu-btn")?.addEventListener("click", (e) => {
-    e.stopPropagation(); menuOpen = !menuOpen;
-    if (menuOpen) menu?.classList.remove("hidden"); else menu?.classList.add("hidden");
-  });
-  menu?.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => { menuOpen = false; menu.classList.add("hidden"); });
-  });
-}
-
-// Smooth scroll
-export function initSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach((a) => {
-    a.addEventListener("click", (e) => {
-      const target = document.querySelector(a.getAttribute("href"));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: "smooth" }); }
-    });
-  });
-}
-
 // Contact form handler
 export function initContactForm(localeData) {
   const form = document.getElementById("contact-form");

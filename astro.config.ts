@@ -12,4 +12,15 @@ export default defineConfig({
     sitemap(),
   ],
   output: 'static',
+  vite: {
+    build: {
+      sourcemap: false,
+      cssCodeSplit: true,
+    },
+    optimizeDeps: {
+      esbuildOptions: {
+        target: 'es2022',
+      },
+    },
+  },
 });
