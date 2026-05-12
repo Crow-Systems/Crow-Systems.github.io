@@ -1,0 +1,563 @@
+{
+  "routes": {
+    "home": "/",
+    "services": "/services",
+    "about": "/about",
+    "consulting": "/consulting",
+    "contact": "/contact",
+    "privacy": "/privacy",
+    "terms": "/terms"
+  },
+  "common": {
+    "changeLanguage": "Change Language",
+    "selectLanguage": "Select Language"
+  },
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "consulting": "Consulting",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "pages": {
+    "index": {
+      "title": "CROW SYSTEMS — Engineering Solutions for Real-World Challenges",
+      "description": "We help companies solve technical problems that are slowing down their business. From secure communications to scalable software architecture, we provide the engineering expertise to design and deliver the right solution.",
+      "subtitle": "Engineering Solutions for Real-World Challenges",
+      "hero": {
+        "title": "We Help Companies<br />Solve Technical Problems",
+        "description": "We are a specialized engineering team focused on transforming complex technical challenges into practical, scalable, and reliable solutions for growing businesses. Our mission is to help companies reduce technical complexity, improve operational efficiency, accelerate development, and confidently bring new ideas to life.",
+        "startConsultation": "Start a Consultation",
+        "exploreServices": "Explore Services"
+      },
+      "stats": {
+        "uptime": {
+          "value": "99%",
+          "label": "System Uptime",
+          "desc": "Reliable infrastructure you can count on"
+        },
+        "triage": {
+          "value": "< 1hr",
+          "label": "Initial Triage",
+          "desc": "During business hours, 8AM–6PM PDT"
+        },
+        "team": {
+          "value": "Senior Only",
+          "label": "Engineering Team",
+          "desc": "No juniors, no handoffs, no compromises"
+        },
+        "lockin": {
+          "value": "Zero Lock-In",
+          "label": "Your IP, Always",
+          "desc": "Your code, your stack, no vendor dependencies"
+        }
+      },
+      "cta": {
+        "title": "Ready to Solve Your Technical Challenges?",
+        "description": "Whether you need secure system communications, scalable architecture, or expert technical guidance — we provide the engineering expertise to move your business forward.",
+        "consultation": "Request a Consultation",
+        "services": "Our Services"
+      }
+    },
+    "services": {
+      "title": "Services — CROW SYSTEMS",
+      "description": "Explore our technology consulting services including systems consulting, IT infrastructure, software solutions, technical strategy, digital transformation, and automation consulting.",
+      "hero": {
+        "subtitle": "What We Offer",
+        "title": "Engineering Solutions<br />Built for Your Business",
+        "description": "From secure communications to scalable software architecture, we provide end-to-end technology services designed to solve real operational challenges. Each service is built around practical outcomes — not technical jargon."
+      },
+      "process": {
+        "title": "How We Work",
+        "steps": [
+          {
+            "title": "Share Your Challenge",
+            "description": "Tell us about your business problem through our contact form or audio submission. We respond within 4 business hours."
+          },
+          {
+            "title": "Discovery & Analysis",
+            "description": "A 30-minute call to align on constraints, goals, and KPIs. We map the technical landscape and propose the right service category."
+          },
+          {
+            "title": "Roadmap & Proposal",
+            "description": "A comprehensive proposal with phased deliverables, timeline, and fixed-fee options — delivered within 48 hours of discovery."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready to Solve Your Technical Challenges?",
+        "description": "Whether you need secure system communications, scalable architecture, or expert technical guidance — we provide the engineering expertise to move your business forward.",
+        "startConsultation": "Start a Consultation"
+      },
+      "included": "What's Included",
+      "idealFor": "Ideal For",
+      "technologies": "Technologies",
+      "getStarted": "Get Started with"
+    },
+    "about": {
+      "title": "About — CROW SYSTEMS",
+      "description": "We are a specialized engineering team focused on transforming complex technical challenges into practical, scalable, and reliable solutions for growing businesses.",
+      "whoWeAre": "Who We Are",
+      "heading": "We Transform Complex Technical Challenges<br />Into Practical Solutions",
+      "description1": "We are a specialized engineering team focused on transforming complex technical challenges into practical, scalable, and reliable solutions for growing businesses. Our mission is to help companies reduce technical complexity, improve operational efficiency, accelerate development, and confidently bring new ideas to life.",
+      "description2": "We work closely with startups, micro businesses, and medium-sized companies that need experienced technical leadership without the overhead of building large internal engineering teams.",
+      "missionVision": "Mission, Vision & Values",
+      "mission": "Mission",
+      "missionText": "To help companies reduce technical complexity, improve operational efficiency, and accelerate development — bringing practical, scalable, and reliable engineering solutions to growing businesses without the overhead of large internal teams.",
+      "vision": "Vision",
+      "visionText": "Technology should empower businesses, not slow them down. We envision a world where companies of all sizes can access the engineering expertise needed to transform ideas into real-world solutions and grow with confidence.",
+      "values": "Core Values",
+      "valueItems": [
+        "Reliable, maintainable technology decisions",
+        "Clear communication and transparency",
+        "Practical, outcome-focused solutions",
+        "Long-term scalability and value"
+      ],
+      "expertise": "Our Expertise",
+      "networking": {
+        "title": "Networking & Infrastructure Engineering",
+        "description": "Specializing in secure communications, networking architecture, systems integration, and infrastructure design. Focused on ensuring systems can communicate efficiently, securely, and reliably in real-world environments.",
+        "items": [
+          "Secure network design",
+          "System connectivity and communications",
+          "Hardware/software integration",
+          "Distributed systems",
+          "Reliable transport protocols",
+          "Infrastructure optimization",
+          "Cybersecurity-oriented architecture"
+        ]
+      },
+      "software": {
+        "title": "Software & Data Systems Engineering",
+        "description": "Specializing in complex software systems, large-scale data processing, backend architecture, and business logic implementation. Focused on transforming complex operational requirements into maintainable and scalable software solutions.",
+        "items": [
+          "High-performance backend systems",
+          "Data processing pipelines",
+          "Scalable application architecture",
+          "API and platform development",
+          "Complex business logic implementation",
+          "Codebase optimization",
+          "Developer experience improvements"
+        ]
+      }
+    },
+    "contact": {
+      "title": "Contact — CROW SYSTEMS",
+      "description": "Contact Crow Systems for technology consulting, systems audits, and strategic partnerships.",
+      "getInTouch": "Get In Touch",
+      "heading": "Contact Us",
+      "description2": "Whether you need a full systems audit, a strategic consultation, or an engineering partner for your next project, our team is ready to help.",
+      "startConversation": "Start a Conversation",
+      "inquiryDescription": "Have a technical challenge or project idea? We'd like to hear about it. Our engineers will review your inquiry and respond within 4 business hours.",
+      "inquiries": "Inquiries",
+      "businessHours": "Business Hours",
+      "regions": "Regions Served",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "sendMessage": "Send Message",
+      "nameRequired": "Name is required",
+      "emailRequired": "Valid email required",
+      "subjectRequired": "Subject is required",
+      "messageRequired": "Message is required (min 10 characters)",
+      "sending": "Sending...",
+      "success": "Thank you! Your message has been sent. We will get back to you soon.",
+      "failed": "Submission failed. Please try again.",
+      "monFri": "Mon — Fri: 08:00 - 18:00 EST",
+      "sat": "Sat: 10:00 - 14:00 EST (On-call only)",
+      "regionsText": "North America, European Union, & APAC"
+    },
+    "consulting": {
+      "title": "Consulting — CROW SYSTEMS",
+      "description": "Submit a consulting request to Crow Systems. Get a technical audit, strategic consultation, or roadmap for your business.",
+      "portal": "Consultation Portal",
+      "heading": "Articulate Your Vision.<br /><span class=\"text-surface-variant\">We Engineer the Rest.</span>",
+      "description2": "Provide the foundations of your business challenge. Use our high-fidelity audio capture to explain complex nuances, or detail your requirements through our structured technical brief.",
+      "audioSubmission": "Audio Idea Submission",
+      "additionalContext": "Additional Context <span class=\"text-on-surface-variant/60 italic\">(Optional)</span>",
+      "placeholder": "Describe any technical constraints or specific outcomes...",
+      "submitAudio": "Submit Audio Idea",
+      "uploading": "Uploading...",
+      "submitted": "✓ Submitted!",
+      "audioSuccess": "✓ Your audio idea has been submitted! We will review it within 4 business hours.",
+      "recordDeleteLabel": "Delete recording",
+      "recordStartLabel": "Start recording",
+      "recordStopLabel": "Stop recording",
+      "playLabel": "Play recording",
+      "consultSuccess": "Thank you! Your consultation request has been submitted. We will be in touch within 4 business hours.",
+      "audioNoBlob": "Please record audio first.",
+      "consultForm": {
+        "heading": "Consulting Request Form",
+        "fullName": "Full Name",
+        "company": "Company",
+        "email": "Work Email",
+        "phone": "Phone",
+        "problem": "Business Problem",
+        "goals": "Project Goals",
+        "budget": "Budget Range",
+        "submit": "Submit Consulting Request",
+        "submitting": "Submitting..."
+      },
+      "validation": {
+        "nameRequired": "Name must be at least 2 characters",
+        "companyRequired": "Company name is required",
+        "emailRequired": "Valid email required",
+        "problemRequired": "Please select a business problem"
+      },
+      "problems": [
+        "Select a business problem",
+        "Technical Complexity Reduction",
+        "Digital Transformation",
+        "Infrastructure Modernization",
+        "Technical Debt Reduction",
+        "Infrastructure Scaling",
+        "Software Architecture & Development",
+        "Other"
+      ],
+      "goalsPlaceholder": "What do you hope to achieve?",
+      "budgetOptions": [
+        "Budget Range (optional)",
+        "$10k - $25k",
+        "$25k - $50k",
+        "$50k - $100k",
+        "$100k+"
+      ],
+      "method": "The Crow Engagement Method",
+      "steps": [
+        {
+          "title": "Triage",
+          "desc": "Our lead architects review your submission within 4 business hours."
+        },
+        {
+          "title": "Discovery",
+          "desc": "A 30-minute call to align on constraints, goals, and KPIs."
+        },
+        {
+          "title": "Proposal",
+          "desc": "A comprehensive roadmap with fixed-fee options delivered within 48 hours."
+        }
+      ],
+      "officeHours": "Office Hours",
+      "monFriHours": "Mon — Fri: 9:00 AM — 6:00 PM",
+      "satHours": "Saturday: By appointment",
+      "consultingEmail": "consulting@crowsys.chrislabs.net",
+      "securityTitle": "Corporate-Grade Security",
+      "securityDesc": "All submissions, including audio files, are encrypted using AES-256 at rest and TLS 1.3 in transit. We prioritize your intellectual property. Standard NDAs are available upon request during the discovery phase.",
+      "marcusThorne": "Christian Camacho",
+      "managingPartner": "Managing Partner, Crow Systems",
+      "quote": "We built this intake system to capture the 'why' behind the problem. Audio allows us to hear the priorities that spreadsheets often hide.",
+      "consultSuccess": "Thank you! Your consultation request has been submitted. We will be in touch within 4 business hours.",
+      "audioNoBlob": "Please record audio first."
+    },
+    "privacy": {
+      "title": "Privacy Policy — CROW SYSTEMS",
+      "description": "Read the Privacy Policy for Crow Systems to understand how we collect, use, and protect your personal information.",
+      "heading": "Privacy Policy",
+      "intro": "This Privacy Policy explains how Crow Systems collects, uses, and protects your personal information when you use our website and services.",
+      "sections": [
+        {
+          "title": "1. Introduction",
+          "content": "Crow Systems respects user privacy and is committed to protecting personal information. This Privacy Policy explains how information is collected, used, and protected when you visit our website or engage our consulting services."
+        },
+        {
+          "title": "2. Information We Collect",
+          "intro": "We may collect the following information:",
+          "items": [
+            "Name and company information",
+            "Email address and phone number",
+            "Consultation and project details",
+            "Audio submissions (if provided)",
+            "Technical browser and device information",
+            "Website usage analytics"
+          ]
+        },
+        {
+          "title": "3. How Information Is Used",
+          "intro": "Collected information may be used to:",
+          "items": [
+            "Respond to inquiries and consultation requests",
+            "Provide and improve our consulting services",
+            "Improve website functionality and user experience",
+            "Process submissions and manage projects",
+            "Send requested communications and updates",
+            "Maintain security and reliability of our systems"
+          ],
+          "extra": "Crow Systems does not sell personal information to third parties."
+        },
+        {
+          "title": "4. Audio Submission Handling",
+          "content": "Audio recordings submitted through the website may be temporarily stored and processed for consultation review purposes. Users should avoid submitting highly sensitive, confidential, or regulated information unless a formal agreement is in place."
+        },
+        {
+          "title": "5. Cookies & Analytics",
+          "intro": "The website may use:",
+          "items": [
+            "Essential cookies for site functionality",
+            "Performance analytics",
+            "Anonymous usage tracking"
+          ],
+          "extra": "Analytics data is used to improve user experience and website performance."
+        },
+        {
+          "title": "6. Third-Party Providers",
+          "content": "Crow Systems may use third-party providers for hosting, file storage, form processing, analytics, and email delivery. These providers process data according to their own privacy policies and applicable regulations."
+        },
+        {
+          "title": "7. Data Security",
+          "content": "Crow Systems implements reasonable technical and organizational measures to protect submitted information. This includes encryption of data in transit and at rest. However, no online system can guarantee absolute security."
+        },
+        {
+          "title": "8. Data Retention",
+          "content": "Information is retained only as long as necessary for business operations, legal obligations, service delivery, and security monitoring. Unused or outdated information may be periodically deleted."
+        },
+        {
+          "title": "9. User Rights",
+          "intro": "Users may request:",
+          "items": [
+            "Access to their personal information",
+            "Correction of inaccurate data",
+            "Deletion requests where applicable",
+            "Communication preferences updates"
+          ],
+          "extra": "Requests may be submitted to privacy@crowsys.chrislabs.net."
+        },
+        {
+          "title": "10. International Users",
+          "content": "Users accessing the website from outside the operating region acknowledge that information may be processed in jurisdictions different from their own, in accordance with applicable data protection regulations."
+        },
+        {
+          "title": "11. Children's Privacy",
+          "content": "The website and services are not intended for children under 13 years of age. Crow Systems does not knowingly collect information from children."
+        },
+        {
+          "title": "12. Changes to Privacy Policy",
+          "content": "This Privacy Policy may be updated periodically. Updates will be posted on this page with a revised effective date."
+        },
+        {
+          "title": "13. Contact Information",
+          "content": "Questions regarding privacy may be directed to privacy@crowsys.chrislabs.net."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service — CROW SYSTEMS",
+      "description": "Read the Terms of Service for Crow Systems technology consulting services and website usage.",
+      "heading": "Terms of Service",
+      "intro": "Please read these terms carefully before using our website or services.",
+      "sections": [
+        {
+          "title": "1. Acceptance of Terms",
+          "content": "By accessing or using the Crow Systems website and services, you agree to comply with these Terms of Service. If you do not agree with these terms, you should not use the website or services."
+        },
+        {
+          "title": "2. Services",
+          "content": "Crow Systems provides technology consulting, advisory services, digital solution planning, and related professional services. Services include systems consulting, IT infrastructure, software solutions, technical strategy, digital transformation, and automation consulting. All services are provided subject to availability and project scope agreements."
+        },
+        {
+          "title": "3. Use of Website",
+          "intro": "Users agree to:",
+          "items": [
+            "Use the website lawfully and in accordance with these terms.",
+            "Avoid submitting malicious, abusive, or misleading content.",
+            "Avoid attempting unauthorized access to systems or infrastructure.",
+            "Avoid misuse of forms, APIs, or upload systems.",
+            "Provide accurate and complete information when submitting inquiries or requests."
+          ],
+          "extra": "Crow Systems reserves the right to block or restrict access to abusive users."
+        },
+        {
+          "title": "4. Consultation Requests",
+          "content": "Submitting a consultation request does not establish a formal business relationship or contractual agreement. Project work, pricing, timelines, and deliverables require separate written agreements. Our team will review your submission and respond within 4 business hours."
+        },
+        {
+          "title": "5. Audio Submissions",
+          "intro": "Users may voluntarily submit audio recordings through the website. By submitting audio content, users confirm:",
+          "items": [
+            "They own or have rights to the submitted content.",
+            "The content does not violate laws or third-party rights.",
+            "The content does not contain malicious or prohibited material."
+          ],
+          "extra": "Crow Systems reserves the right to reject or remove inappropriate submissions. Audio recordings are handled securely and used solely for consultation review purposes."
+        },
+        {
+          "title": "6. Intellectual Property",
+          "content": "All website content, branding, design elements, text, graphics, and materials are the property of Crow Systems unless otherwise stated. Users may not reproduce, distribute, or reuse materials without prior written permission."
+        },
+        {
+          "title": "7. Limitation of Liability",
+          "intro": "Crow Systems is not liable for:",
+          "items": [
+            "Indirect or consequential damages",
+            "Business interruption or loss of profits",
+            "Data loss",
+            "Third-party service outages",
+            "Temporary website unavailability"
+          ],
+          "extra": "All services are provided on an \"as available\" basis."
+        },
+        {
+          "title": "8. Third-Party Services",
+          "content": "The website may integrate with third-party providers including hosting, form processing, storage, analytics, and communication platforms. Crow Systems is not responsible for third-party service interruptions, policies, or data handling practices."
+        },
+        {
+          "title": "9. Privacy",
+          "content": "Use of the website is also governed by our Privacy Policy."
+        },
+        {
+          "title": "10. Changes to Terms",
+          "content": "Crow Systems may update these Terms of Service periodically. Continued use of the website after changes constitutes acceptance of updated terms."
+        },
+        {
+          "title": "11. Contact",
+          "content": "Questions regarding these Terms may be sent to legal@crowsys.chrislabs.net."
+        }
+      ]
+    },
+    "404": {
+      "title": "404 — CROW SYSTEMS",
+      "heading": "Page Not Found",
+      "description": "The page you are looking for does not exist or has been moved.",
+      "home": "Return to Home"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Crow Systems. Engineering Solutions for Growing Businesses.",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter/X",
+    "instagram": "Instagram"
+  },
+  "services": {
+    "systemsConsulting": {
+      "title": "Systems Consulting",
+      "description": "We audit and optimize your technology infrastructure to reduce operational friction and eliminate technical silos across departments.",
+      "fullDescription": "Our Systems Consulting service provides a comprehensive analysis of your existing technology infrastructure, workflows, and operational processes. We identify bottlenecks, redundancies, and misalignments that hinder productivity, then deliver actionable roadmaps to streamline operations. Whether you are dealing with legacy systems, fragmented tools, or disconnected departments, we bring clarity and structure to complex environments.",
+      "features": [
+        "Comprehensive technology stack audit",
+        "Workflow mapping and process optimization",
+        "Cross-departmental integration strategy",
+        "Vendor evaluation and consolidation",
+        "Custom reporting and KPI dashboards"
+      ],
+      "idealFor": "Growing businesses experiencing operational friction, duplicated efforts across teams, or those relying on outdated manual processes that no longer scale.",
+      "technologies": [
+        "Enterprise Architecture",
+        "Process Mining",
+        "API Integration",
+        "Cloud Migration",
+        "DevOps Practices"
+      ],
+      "cta": "Learn More"
+    },
+    "itInfrastructure": {
+      "title": "IT Infrastructure",
+      "description": "We build resilient, scalable network foundations that ensure reliable uptime and enterprise-grade security for your critical data.",
+      "fullDescription": "Reliable infrastructure is the backbone of any modern business. Our IT Infrastructure services cover everything from network design and server architecture to cloud provisioning and disaster recovery. We architect solutions that are resilient, scalable, and cost-effective — ensuring your systems stay operational even under peak demand. We focus on building foundations that grow with your business, not against it.",
+      "features": [
+        "Network architecture design and optimization",
+        "Cloud infrastructure provisioning (AWS, Azure, GCP)",
+        "Disaster recovery and business continuity planning",
+        "Server and database administration",
+        "24/7 monitoring and proactive alerting"
+      ],
+      "idealFor": "Businesses that depend on always-on systems, handle sensitive data, or are scaling infrastructure to meet growing demand.",
+      "technologies": [
+        "AWS",
+        "Azure",
+        "Terraform",
+        "Kubernetes",
+        "Linux Administration"
+      ],
+      "cta": "Learn More"
+    },
+    "softwareSolutions": {
+      "title": "Software Solutions",
+      "description": "Custom-engineered software tools designed to solve specific bottlenecks, allowing your team to focus on high-value output.",
+      "fullDescription": "Off-the-shelf software often creates more problems than it solves. Our Software Solutions team designs and builds custom applications tailored to your exact workflows and business rules. From internal tools and dashboards to customer-facing platforms and automated pipelines, we engineer solutions that fit like a glove. Every line of code is written with maintainability, performance, and your long-term goals in mind.",
+      "features": [
+        "Custom web and mobile application development",
+        "Internal tooling and automation scripts",
+        "API design and integration layer development",
+        "Legacy application modernization",
+        "Performance optimization and code auditing"
+      ],
+      "idealFor": "Teams with unique workflows that generic software cannot address, or organizations looking to replace brittle legacy tools.",
+      "technologies": [
+        "TypeScript",
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Python"
+      ],
+      "cta": "Learn More"
+    },
+    "technicalStrategy": {
+      "title": "Technical Strategy",
+      "description": "We align your technology roadmap with long-term business growth to future-proof your organization against market shifts.",
+      "fullDescription": "Technology decisions made today will shape your business capabilities for years to come. Our Technical Strategy service helps leadership teams make informed, future-proof decisions about architecture, tooling, and investment priorities. We translate business goals into technical plans, evaluate trade-offs clearly, and create phased roadmaps that balance speed with sustainability. No vendor lock-in, no hype — just sound engineering judgment.",
+      "features": [
+        "Technology stack evaluation and recommendations",
+        "Architecture review and design advisory",
+        "Technical debt assessment and prioritization",
+        "Scalability and performance forecasting",
+        "Vendor and open-source selection guidance"
+      ],
+      "idealFor": "CTOs, VPs of Engineering, and growth-stage companies navigating complex technology decisions without in-house senior expertise.",
+      "technologies": [
+        "System Design",
+        "Microservices",
+        "Event-Driven Architecture",
+        "Data Strategy",
+        "Platform Engineering"
+      ],
+      "cta": "Learn More"
+    },
+    "digitalTransformation": {
+      "title": "Digital Transformation",
+      "description": "We modernize legacy systems and integrate advanced data analytics to drive informed, evidence-based decision making.",
+      "fullDescription": "Digital transformation is not about replacing everything — it is about strategically modernizing the right systems to unlock measurable business value. We help organizations migrate from legacy platforms to modern architectures, integrate data silos into unified analytics environments, and implement tools that empower teams with real-time insights. Our approach ensures continuity while accelerating your move toward a data-driven operating model.",
+      "features": [
+        "Legacy system modernization and migration",
+        "Data warehouse and lake architecture",
+        "Business intelligence and analytics dashboards",
+        "Process automation and workflow digitization",
+        "Change management and team training"
+      ],
+      "idealFor": "Established businesses with aging systems looking to modernize operations, unlock data insights, and improve decision-making speed.",
+      "technologies": [
+        "ETL Pipelines",
+        "dbt",
+        "Looker",
+        "Apache Airflow",
+        "Snowflake"
+      ],
+      "cta": "Learn More"
+    },
+    "automationConsulting": {
+      "title": "Automation Consulting",
+      "description": "We automate repetitive tasks to significantly increase your operational velocity and reduce human error.",
+      "fullDescription": "Repetitive manual processes are silent killers of productivity and morale. Our Automation Consulting service identifies high-impact opportunities to eliminate manual work through intelligent automation. From CI/CD pipelines and infrastructure-as-code to robotic process automation and scheduled data workflows, we build systems that free your team to focus on creative, strategic work that actually moves the needle.",
+      "features": [
+        "CI/CD pipeline design and implementation",
+        "Infrastructure as Code (IaC) adoption",
+        "Robotic Process Automation (RPA)",
+        "Scheduled data processing and ETL automation",
+        "Automated testing and quality assurance"
+      ],
+      "idealFor": "Operations-heavy teams spending excessive time on repetitive tasks, deployment-heavy engineering teams, or businesses preparing to scale without proportional headcount growth.",
+      "technologies": [
+        "GitHub Actions",
+        "Terraform",
+        "Ansible",
+        "Python Scripting",
+        "Jenkins"
+      ],
+      "cta": "Learn More"
+    }
+  }
+}

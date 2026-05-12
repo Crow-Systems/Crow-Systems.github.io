@@ -1,112 +1,62 @@
 ---
-import DefaultLayout from '../components/layout/DefaultLayout.astro';
+import DefaultLayout from "../components/layout/DefaultLayout.astro";
+import en from "../locales/en.json";
+import es from "../locales/es.json";
+
+const locale = Astro.url.pathname.split("/")[1] === "es" ? "es" : "en";
+const data = locale === "es" ? es : en;
+
+function t(key: string): string {
+  const keys = key.split(".");
+  let result: any = data;
+  for (const k of keys) {
+    if (result === undefined || result === null) return key;
+    result = result[k];
+  }
+  return typeof result === "string" ? result : key;
+}
+
+const localePrefix = locale === "en" ? "" : `/${locale}`;
+const sections = data.pages.privacy.sections;
 ---
 
 <DefaultLayout
-  title="Privacy Policy — CROW SYSTEMS"
-  description="Read the Privacy Policy for Crow Systems to understand how we collect, use, and protect your personal information."
+  title={t("pages.privacy.title")}
+  description={t("pages.privacy.description")}
+  activeNav={t("nav.contact")}
+  locale={locale}
+  localePrefix={localePrefix}
 >
   <div class="pt-32 pb-24 px-6 max-w-4xl mx-auto">
     <header class="mb-12">
       <span class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block">Legal</span>
-      <h1 class="font-heading text-4xl md:text-5xl font-bold text-on-surface tracking-tight mb-4">Privacy Policy</h1>
-      <p class="text-on-surface-variant text-lg leading-relaxed font-body">This Privacy Policy explains how Crow Systems collects, uses, and protects your personal information when you use our website and services.</p>
+      <h1 class="font-heading text-4xl md:text-5xl font-bold text-on-surface tracking-tight mb-4">
+        {t("pages.privacy.heading")}
+      </h1>
+      <p class="text-on-surface-variant text-lg leading-relaxed font-body">
+        {t("pages.privacy.intro")}
+      </p>
     </header>
 
     <div class="space-y-10">
-      <section>
-        <h2 class="font-heading text-2xl font-bold text-on-surface mb-4">1. Introduction</h2>
-        <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm">Crow Systems respects user privacy and is committed to protecting personal information. This Privacy Policy explains how information is collected, used, and protected when you visit our website or engage our consulting services.</p>
-      </section>
-
-      <section>
-        <h2 class="font-heading text-2xl font-bold text-on-surface mb-4">2. Information We Collect</h2>
-        <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm mb-4">We may collect the following information:</p>
-        <ul class="space-y-2 text-on-surface-variant/80 font-body text-sm list-disc pl-6">
-          <li>Name and company information</li>
-          <li>Email address and phone number</li>
-          <li>Consultation and project details</li>
-          <li>Audio submissions (if provided)</li>
-          <li>Technical browser and device information</li>
-          <li>Website usage analytics</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="font-heading text-2xl font-bold text-on-surface mb-4">3. How Information Is Used</h2>
-        <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm mb-4">Collected information may be used to:</p>
-        <ul class="space-y-2 text-on-surface-variant/80 font-body text-sm list-disc pl-6">
-          <li>Respond to inquiries and consultation requests</li>
-          <li>Provide and improve our consulting services</li>
-          <li>Improve website functionality and user experience</li>
-          <li>Process submissions and manage projects</li>
-          <li>Send requested communications and updates</li>
-          <li>Maintain security and reliability of our systems</li>
-        </ul>
-        <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm"><strong>Crow Systems does not sell personal information to third parties.</strong></p>
-      </section>
-
-      <section>
-        <h2 class="font-heading text-2xl font-bold text-on-surface mb-4">4. Audio Submission Handling</h2>
-        <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm">Audio recordings submitted through the website may be temporarily stored and processed for consultation review purposes. Users should avoid submitting highly sensitive, confidential, or regulated information unless a formal agreement is in place.</p>
-      </section>
-
-      <section>
-        <h2 class="font-heading text-2xl font-bold text-on-surface mb-4">5. Cookies &amp; Analytics</h2>
-        <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm mb-4">The website may use:</p>
-        <ul class="space-y-2 text-on-surface-variant/80 font-body text-sm list-disc pl-6">
-          <li>Essential cookies for site functionality</li>
-          <li>Performance analytics</li>
-          <li>Anonymous usage tracking</li>
-        </ul>
-        <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm mt-4">Analytics data is used to improve user experience and website performance.</p>
-      </section>
-
-      <section>
-        <h2 class="font-heading text-2xl font-bold text-on-surface mb-4">6. Third-Party Providers</h2>
-        <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm">Crow Systems may use third-party providers for hosting, file storage, form processing, analytics, and email delivery. These providers process data according to their own privacy policies and applicable regulations.</p>
-      </section>
-
-      <section>
-        <h2 class="font-heading text-2xl font-bold text-on-surface mb-4">7. Data Security</h2>
-        <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm">Crow Systems implements reasonable technical and organizational measures to protect submitted information. This includes encryption of data in transit and at rest. However, no online system can guarantee absolute security.</p>
-      </section>
-
-      <section>
-        <h2 class="font-heading text-2xl font-bold text-on-surface mb-4">8. Data Retention</h2>
-        <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm">Information is retained only as long as necessary for business operations, legal obligations, service delivery, and security monitoring. Unused or outdated information may be periodically deleted.</p>
-      </section>
-
-      <section>
-        <h2 class="font-heading text-2xl font-bold text-on-surface mb-4">9. User Rights</h2>
-        <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm mb-4">Users may request:</p>
-        <ul class="space-y-2 text-on-surface-variant/80 font-body text-sm list-disc pl-6 mb-4">
-          <li>Access to their personal information</li>
-          <li>Correction of inaccurate data</li>
-          <li>Deletion requests where applicable</li>
-          <li>Communication preferences updates</li>
-        </ul>
-        <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm">Requests may be submitted to <a href="mailto:privacy@crowsys.chrislabs.net" class="text-primary hover:underline font-medium">privacy@crowsys.chrislabs.net</a>.</p>
-      </section>
-
-      <section>
-        <h2 class="font-heading text-2xl font-bold text-on-surface mb-4">10. International Users</h2>
-        <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm">Users accessing the website from outside the operating region acknowledge that information may be processed in jurisdictions different from their own, in accordance with applicable data protection regulations.</p>
-      </section>
-
-      <section>
-        <h2 class="font-heading text-2xl font-bold text-on-surface mb-4">11. Children's Privacy</h2>
-        <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm">The website and services are not intended for children under 13 years of age. Crow Systems does not knowingly collect information from children.</p>
-      </section>
-
-      <section>
-        <h2 class="font-heading text-2xl font-bold text-on-surface mb-4">12. Changes to Privacy Policy</h2>
-        <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm">This Privacy Policy may be updated periodically. Updates will be posted on this page with a revised effective date.</p>
-      </section>
-
-      <section>
-        <h2 class="font-heading text-2xl font-bold text-on-surface mb-4">13. Contact Information</h2>
-        <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm">Questions regarding privacy may be directed to <a href="mailto:privacy@crowsys.chrislabs.net" class="text-primary hover:underline font-medium">privacy@crowsys.chrislabs.net</a>.</p>
-      </section>
+      {sections.map((section) => (
+        <section>
+          <h2 class="font-heading text-2xl font-bold text-on-surface mb-4">{section.title}</h2>
+          {"items" in section ? (
+            <>
+              <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm mb-4">{section.intro}</p>
+              <ul class="space-y-2 text-on-surface-variant/80 font-body text-sm list-disc pl-6 mb-4">
+                {section.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+              {section.extra && <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm">{section.extra}</p>}
+            </>
+          ) : (
+            <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm">{section.content}</p>
+          )}
+        </section>
+      ))}
     </div>
+  </div>
 </DefaultLayout>

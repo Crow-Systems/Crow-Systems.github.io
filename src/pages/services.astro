@@ -1,359 +1,125 @@
 ---
 import DefaultLayout from "../components/layout/DefaultLayout.astro";
+import en from "../locales/en.json";
+import es from "../locales/es.json";
+
+const locale = Astro.url.pathname.split("/")[1] === "es" ? "es" : "en";
+const data = locale === "es" ? es : en;
+
+function t(key: string): string {
+  const keys = key.split(".");
+  let result: any = data;
+  for (const k of keys) {
+    if (result === undefined || result === null) return key;
+    result = result[k];
+  }
+  return typeof result === "string" ? result : key;
+}
+
+const localePrefix = locale === "en" ? "" : `/${locale}`;
+
+const includedLabel = data.pages.services.included;
+const idealForLabel = data.pages.services.idealFor;
+const techLabel = data.pages.services.technologies;
+const getStartedLabel = data.pages.services.getStarted;
+
+const ICONS: Record<string, string> = {
+  hub: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z",
+  dns: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z",
+  terminal: "M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM8 15H6v-2h2v2zm0-4H6V9h2v2zm0-4H6V5h2v2zm10 8h-8v-2h8v2zm0-4h-8V9h8v2zm0-4h-8V5h8v2z",
+  architecture: "M3 3v18h18V3H3zm16 16H5V5h14v14zM7 9h2v2H7V9zm0 4h2v2H7v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2z",
+  database: "M12 2C8.13 2 5 4.69 5 8c0 3.31 3.13 6 7 6s7-2.69 7-6c0-3.31-3.13-6-7-6zm0 10c-2.76 0-5-1.79-5-4s2.24-4 5-4 5 1.79 5 4-2.24 4-5 4zm0 2c-3.87 0-7-2.69-7-6v4c0 3.31 3.13 6 7 6s7-2.69 7-6v-4c0 3.31-3.13 6-7 6z",
+  robot_2: "M22 14h-1v-3c0-1.1-.9-2-2-2h-3V7c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H5c-1.1 0-2 .9-2 2v3H2c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1h1v1c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-1h1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1zm-11-7h2v2h-2V7zm-4 4h10v3H7v-3zm-2 7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm14 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z",
+};
+
+const serviceKeys = ["systemsConsulting", "itInfrastructure", "softwareSolutions", "technicalStrategy", "digitalTransformation", "automationConsulting"];
+const services = serviceKeys.map((key) => data.services[key]);
 ---
 
 <DefaultLayout
-  title="Services — CROW SYSTEMS"
-  description="Explore our technology consulting services including systems consulting, IT infrastructure, software solutions, technical strategy, digital transformation, and automation consulting."
-  activeNav="Services"
+  title={data.pages.services.title}
+  description={data.pages.services.description}
+  activeNav={data.nav.services}
+  locale={locale}
+  localePrefix={localePrefix}
 >
-  <!-- Services Hero -->
-  <section
-    class="pt-32 pb-20 px-6 max-w-7xl mx-auto"
-    aria-labelledby="services-hero-heading"
-  >
+  <section class="pt-32 pb-20 px-6 max-w-7xl mx-auto" aria-labelledby="services-hero-heading">
     <div class="max-w-3xl">
-      <span
-        class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block"
-        >What We Offer</span
-      >
-      <h1
-        id="services-hero-heading"
-        class="font-heading text-4xl md:text-6xl font-bold tracking-tighter mb-6 text-on-surface leading-tight"
-      >
-        Engineering Solutions<br class="hidden md:block" />
-        Built for Your Business
-      </h1>
-      <p
-        class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-2xl font-body"
-      >
-        From secure communications to scalable software architecture, we provide
-        end-to-end technology services designed to solve real operational
-        challenges. Each service is built around practical outcomes — not
-        technical jargon.
-      </p>
+      <span class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block">{data.pages.services.hero.subtitle}</span>
+      <h1 id="services-hero-heading" class="font-heading text-4xl md:text-6xl font-bold tracking-tighter mb-6 text-on-surface leading-tight" set:html={data.pages.services.hero.title}></h1>
+      <p class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-2xl font-body">{data.pages.services.hero.description}</p>
     </div>
   </section>
 
-  <!-- Services Grid -->
-  <section
-    class="pb-24 px-6 max-w-7xl mx-auto"
-    aria-labelledby="services-heading"
-  >
+  <section class="pb-24 px-6 max-w-7xl mx-auto" aria-labelledby="services-heading">
     <h2 id="services-heading" class="sr-only">Our Services</h2>
-    <div id="services-grid" class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+    <div id="services-grid" class="grid grid-cols-1 gap-8">
+      {services.map((service) => (
+        <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm hover:border-primary/50 transition-all duration-300 hover:shadow-md" aria-label={service.title}>
+          <div class="p-8 flex flex-col">
+            <h3 class="font-heading text-2xl font-bold text-on-surface mb-4">{service.title}</h3>
+            <p class="text-on-surface-variant font-body leading-relaxed text-sm mb-6">{service.fullDescription}</p>
+            <div class="space-y-5">
+              <div>
+                <h4 class="font-heading text-sm font-bold text-on-surface mb-3 uppercase tracking-wider">{includedLabel}</h4>
+                <ul class="space-y-2">
+                  {service.features.map((f: string) => (
+                    <li class="flex items-start gap-3 text-sm text-on-surface-variant font-body">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent mt-0.5 shrink-0"><path d="M20 6L9 17l-5-5"></path></svg>
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-heading text-sm font-bold text-on-surface mb-2 uppercase tracking-wider">{idealForLabel}</h4>
+                <p class="text-sm text-on-surface-variant font-body leading-relaxed">{service.idealFor}</p>
+              </div>
+              <div>
+                <h4 class="font-heading text-sm font-bold text-on-surface mb-2 uppercase tracking-wider">{techLabel}</h4>
+                <div class="flex flex-wrap gap-2 mt-1">
+                  {service.technologies.map((t: string) => (
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-accent/10 text-accent border border-accent/20">{t}</span>
+                  ))}
+                </div>
+              </div>
+              <div class="pt-4 border-t border-outline-variant/30 mt-4">
+                <a href={data.routes.consulting} class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:text-accent transition-colors group">
+                  {getStartedLabel}{service.title}
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-x-1 transition-transform"><path d="M22 2L11 13"></path><path d="M22 2L15 22L11 13L2 9L22 2Z"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   </section>
 
-  <!-- How It Works -->
-  <section
-    class="pb-24 px-6 max-w-7xl mx-auto"
-    aria-labelledby="process-heading"
-  >
-    <h2
-      id="process-heading"
-      class="font-heading text-3xl font-bold text-on-surface text-center mb-12"
-    >
-      How We Work
-    </h2>
+  <section class="pb-24 px-6 max-w-7xl mx-auto" aria-labelledby="process-heading">
+    <h2 id="process-heading" class="font-heading text-3xl font-bold text-on-surface text-center mb-12">{t("pages.services.process.title")}</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div
-        class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/30 text-center hover:border-primary/50 transition-all hover:shadow-md"
-      >
-        <div
-          class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6"
-        >
-          <span class="font-heading text-xl font-bold text-primary">01</span>
-        </div>
-        <h4 class="font-heading text-lg font-bold text-on-surface mb-3">
-          Share Your Challenge
-        </h4>
-        <p class="text-on-surface-variant text-sm font-body leading-relaxed">
-          Tell us about your business problem through our contact form or audio
-          submission. We respond within 4 business hours.
-        </p>
-      </div>
-      <div
-        class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/30 text-center hover:border-primary/50 transition-all hover:shadow-md"
-      >
-        <div
-          class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6"
-        >
-          <span class="font-heading text-xl font-bold text-primary">02</span>
-        </div>
-        <h4 class="font-heading text-lg font-bold text-on-surface mb-3">
-          Discovery &amp; Analysis
-        </h4>
-        <p class="text-on-surface-variant text-sm font-body leading-relaxed">
-          A 30-minute call to align on constraints, goals, and KPIs. We map the
-          technical landscape and propose the right service category.
-        </p>
-      </div>
-      <div
-        class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/30 text-center hover:border-primary/50 transition-all hover:shadow-md"
-      >
-        <div
-          class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6"
-        >
-          <span class="font-heading text-xl font-bold text-primary">03</span>
-        </div>
-        <h4 class="font-heading text-lg font-bold text-on-surface mb-3">
-          Roadmap &amp; Proposal
-        </h4>
-        <p class="text-on-surface-variant text-sm font-body leading-relaxed">
-          A comprehensive proposal with phased deliverables, timeline, and
-          fixed-fee options — delivered within 48 hours of discovery.
-        </p>
-      </div>
+      {[0,1,2].map((i) => {
+        const title = data.pages.services.process.steps[i].title;
+        const desc = data.pages.services.process.steps[i].description;
+        return <div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/30 text-center hover:border-primary/50 transition-all hover:shadow-md">
+          <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6"><span class="font-heading text-xl font-bold text-primary">{String(i+1).padStart(2,"0")}</span></div>
+          <h4 class="font-heading text-lg font-bold text-on-surface mb-3">{title}</h4>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed">{desc}</p>
+        </div>;
+      })}
     </div>
   </section>
 
-  <!-- CTA -->
-  <section
-    class="mx-6 md:mx-8 mb-20 relative overflow-hidden bg-primary rounded-xl p-12 md:p-20"
-  >
+  <section class="mx-6 md:mx-8 mb-20 relative overflow-hidden bg-primary rounded-xl p-12 md:p-20">
     <div class="relative z-10 max-w-2xl">
-      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
-        Ready to Solve Your Technical Challenges?
-      </h2>
-      <p class="text-white text-lg mb-8 font-body">
-        Whether you need secure system communications, scalable architecture, or
-        expert technical guidance — we provide the engineering expertise to move
-        your business forward.
-      </p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4" set:html={data.pages.services.cta.title}></h2>
+      <p class="text-white text-lg mb-8 font-body">{data.pages.services.cta.description}</p>
       <div class="flex flex-col sm:flex-row gap-4">
-        <a
-          href="/consulting"
-          class="border border-white text-white px-8 py-4 rounded-xl hover:bg-on-primary/10 transition-all text-center text-sm font-bold"
-          >Start a Consultation</a
-        >
+        <a href={data.routes.consulting} class="border border-white text-white px-8 py-4 rounded-xl hover:bg-on-primary/10 transition-all text-center text-sm font-bold">{data.pages.services.cta.startConsultation}</a>
       </div>
     </div>
   </section>
 </DefaultLayout>
 
-<script>
-  // Service data - kept in sync with src/data/services.tsx
-  const SERVICES = [
-    {
-      icon: "hub",
-      title: "Systems Consulting",
-      description:
-        "We audit and optimize your technology infrastructure to reduce operational friction and eliminate technical silos across departments.",
-      fullDescription:
-        "Our Systems Consulting service provides a comprehensive analysis of your existing technology infrastructure, workflows, and operational processes. We identify bottlenecks, redundancies, and misalignments that hinder productivity, then deliver actionable roadmaps to streamline operations. Whether you are dealing with legacy systems, fragmented tools, or disconnected departments, we bring clarity and structure to complex environments.",
-      features: [
-        "Comprehensive technology stack audit",
-        "Workflow mapping and process optimization",
-        "Cross-departmental integration strategy",
-        "Vendor evaluation and consolidation",
-        "Custom reporting and KPI dashboards",
-      ],
-      idealFor:
-        "Growing businesses experiencing operational friction, duplicated efforts across teams, or those relying on outdated manual processes that no longer scale.",
-      technologies: [
-        "Enterprise Architecture",
-        "Process Mining",
-        "API Integration",
-        "Cloud Migration",
-        "DevOps Practices",
-      ],
-    },
-    {
-      icon: "dns",
-      title: "IT Infrastructure",
-      description:
-        "We build resilient, scalable network foundations that ensure reliable uptime and enterprise-grade security for your critical data.",
-      fullDescription:
-        "Reliable infrastructure is the backbone of any modern business. Our IT Infrastructure services cover everything from network design and server architecture to cloud provisioning and disaster recovery. We architect solutions that are resilient, scalable, and cost-effective — ensuring your systems stay operational even under peak demand. We focus on building foundations that grow with your business, not against it.",
-      features: [
-        "Network architecture design and optimization",
-        "Cloud infrastructure provisioning (AWS, Azure, GCP)",
-        "Disaster recovery and business continuity planning",
-        "Server and database administration",
-        "24/7 monitoring and proactive alerting",
-      ],
-      idealFor:
-        "Businesses that depend on always-on systems, handle sensitive data, or are scaling infrastructure to meet growing demand.",
-      technologies: [
-        "AWS",
-        "Azure",
-        "Terraform",
-        "Kubernetes",
-        "Linux Administration",
-      ],
-    },
-    {
-      icon: "terminal",
-      title: "Software Solutions",
-      description:
-        "Custom-engineered software tools designed to solve specific bottlenecks, allowing your team to focus on high-value output.",
-      fullDescription:
-        "Off-the-shelf software often creates more problems than it solves. Our Software Solutions team designs and builds custom applications tailored to your exact workflows and business rules. From internal tools and dashboards to customer-facing platforms and automated pipelines, we engineer solutions that fit like a glove. Every line of code is written with maintainability, performance, and your long-term goals in mind.",
-      features: [
-        "Custom web and mobile application development",
-        "Internal tooling and automation scripts",
-        "API design and integration layer development",
-        "Legacy application modernization",
-        "Performance optimization and code auditing",
-      ],
-      idealFor:
-        "Teams with unique workflows that generic software cannot address, or organizations looking to replace brittle legacy tools.",
-      technologies: ["TypeScript", "React", "Node.js", "PostgreSQL", "Python"],
-    },
-    {
-      icon: "architecture",
-      title: "Technical Strategy",
-      description:
-        "We align your technology roadmap with long-term business growth to future-proof your organization against market shifts.",
-      fullDescription:
-        "Technology decisions made today will shape your business capabilities for years to come. Our Technical Strategy service helps leadership teams make informed, future-proof decisions about architecture, tooling, and investment priorities. We translate business goals into technical plans, evaluate trade-offs clearly, and create phased roadmaps that balance speed with sustainability. No vendor lock-in, no hype — just sound engineering judgment.",
-      features: [
-        "Technology stack evaluation and recommendations",
-        "Architecture review and design advisory",
-        "Technical debt assessment and prioritization",
-        "Scalability and performance forecasting",
-        "Vendor and open-source selection guidance",
-      ],
-      idealFor:
-        "CTOs, VPs of Engineering, and growth-stage companies navigating complex technology decisions without in-house senior expertise.",
-      technologies: [
-        "System Design",
-        "Microservices",
-        "Event-Driven Architecture",
-        "Data Strategy",
-        "Platform Engineering",
-      ],
-    },
-    {
-      icon: "database",
-      title: "Digital Transformation",
-      description:
-        "We modernize legacy systems and integrate advanced data analytics to drive informed, evidence-based decision making.",
-      fullDescription:
-        "Digital transformation is not about replacing everything — it is about strategically modernizing the right systems to unlock measurable business value. We help organizations migrate from legacy platforms to modern architectures, integrate data silos into unified analytics environments, and implement tools that empower teams with real-time insights. Our approach ensures continuity while accelerating your move toward a data-driven operating model.",
-      features: [
-        "Legacy system modernization and migration",
-        "Data warehouse and lake architecture",
-        "Business intelligence and analytics dashboards",
-        "Process automation and workflow digitization",
-        "Change management and team training",
-      ],
-      idealFor:
-        "Established businesses with aging systems looking to modernize operations, unlock data insights, and improve decision-making speed.",
-      technologies: [
-        "ETL Pipelines",
-        "dbt",
-        "Looker",
-        "Apache Airflow",
-        "Snowflake",
-      ],
-    },
-    {
-      icon: "robot_2",
-      title: "Automation Consulting",
-      description:
-        "We automate repetitive tasks to significantly increase your operational velocity and reduce human error.",
-      fullDescription:
-        "Repetitive manual processes are silent killers of productivity and morale. Our Automation Consulting service identifies high-impact opportunities to eliminate manual work through intelligent automation. From CI/CD pipelines and infrastructure-as-code to robotic process automation and scheduled data workflows, we build systems that free your team to focus on creative, strategic work that actually moves the needle.",
-      features: [
-        "CI/CD pipeline design and implementation",
-        "Infrastructure as Code (IaC) adoption",
-        "Robotic Process Automation (RPA)",
-        "Scheduled data processing and ETL automation",
-        "Automated testing and quality assurance",
-      ],
-      idealFor:
-        "Operations-heavy teams spending excessive time on repetitive tasks, deployment-heavy engineering teams, or businesses preparing to scale without proportional headcount growth.",
-      technologies: [
-        "GitHub Actions",
-        "Terraform",
-        "Ansible",
-        "Python Scripting",
-        "Jenkins",
-      ],
-    },
-  ];
-
-  const ICON_SVGS = {
-    hub: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/><circle cx="5" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><path d="M7.05 7.05 12 12l-4.95 4.95"/><path d="M16.95 16.95 12 12l4.95-4.95"/><path d="M16.95 7.05 12 12l4.95 4.95"/><path d="M7.05 16.95 12 12l-4.95-4.95"/></svg>',
-    dns: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><rect x="4" y="4" width="16" height="16" rx="2"/></svg>',
-    terminal:
-      '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>',
-    architecture:
-      '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>',
-    database:
-      '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>',
-    robot_2:
-      '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3"/><path d="M8 8l0-4"/><path d="M16 8l0-4"/><path d="M12 16v3"/></svg>',
-  };
-
-  function createServiceCard(service) {
-    const grid = document.getElementById("services-grid");
-    const colSpan = grid.classList.contains("lg:grid-cols-12")
-      ? "lg:col-span-6"
-      : "";
-
-    const card = document.createElement("div");
-    card.className = `bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm hover:border-primary/50 transition-all duration-300 hover:shadow-md ${colSpan} flex flex-col`;
-    card.setAttribute("aria-label", service.title);
-
-    card.innerHTML = `
-      <div class="p-8 flex flex-col h-full">
-        <div class="w-14 h-14 flex items-center justify-center bg-accent/10 text-accent mb-6 rounded-lg shrink-0">
-          ${ICON_SVGS[service.icon]}
-        </div>
-        <h3 class="font-heading text-2xl font-bold text-on-surface mb-4">${service.title}</h3>
-        <p class="text-on-surface-variant font-body leading-relaxed text-sm mb-6 flex-grow">${service.fullDescription}</p>
-        <div class="space-y-5">
-          <div>
-            <h4 class="font-heading text-sm font-bold text-on-surface mb-3 uppercase tracking-wider">What's Included</h4>
-            <ul class="space-y-2">
-              ${service.features
-                .map(
-                  (f) => `
-                <li class="flex items-start gap-3 text-sm text-on-surface-variant font-body">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent mt-0.5 shrink-0"><path d="M20 6L9 17l-5-5"/></svg>
-                  <span>${f}</span>
-                </li>
-              `,
-                )
-                .join("")}
-            </ul>
-          </div>
-          <div>
-            <h4 class="font-heading text-sm font-bold text-on-surface mb-2 uppercase tracking-wider">Ideal For</h4>
-            <p class="text-sm text-on-surface-variant font-body leading-relaxed">${service.idealFor}</p>
-          </div>
-          <div>
-            <h4 class="font-heading text-sm font-bold text-on-surface mb-2 uppercase tracking-wider">Technologies</h4>
-            <div class="flex flex-wrap gap-2 mt-1">
-              ${service.technologies
-                .map(
-                  (t) => `
-                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-accent/10 text-accent border border-accent/20">${t}</span>
-              `,
-                )
-                .join("")}
-            </div>
-          </div>
-          <div class="pt-4 border-t border-outline-variant/30 mt-4">
-            <a href="/consulting" class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:text-accent transition-colors group">
-              Get Started with ${service.title}
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-x-1 transition-transform"><path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    `;
-
-    return card;
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const grid = document.getElementById("services-grid");
-    SERVICES.forEach((service) => {
-      grid.appendChild(createServiceCard(service));
-    });
-  });
-</script>
+<script type="module" src="../scripts/site.js"></script>

@@ -1,17 +1,39 @@
 ---
-import DefaultLayout from '../components/layout/DefaultLayout.astro';
+import DefaultLayout from "../components/layout/DefaultLayout.astro";
+import en from "../locales/en.json";
+import es from "../locales/es.json";
+
+const locale = Astro.url.pathname.split("/")[1] === "es" ? "es" : "en";
+const data = locale === "es" ? es : en;
+
+function t(key: string): string {
+  const keys = key.split(".");
+  let result: any = data;
+  for (const k of keys) {
+    if (result === undefined || result === null) return key;
+    result = result[k];
+  }
+  return typeof result === "string" ? result : key;
+}
+
+const localePrefix = locale === "en" ? "" : `/${locale}`;
 ---
 
-<DefaultLayout title="404 — CROW SYSTEMS">
+<DefaultLayout title={data.pages["404"].title} locale={locale} localePrefix={localePrefix}>
   <div class="flex-1 flex items-center justify-center pt-28 px-6">
     <div class="text-center max-w-2xl mx-auto">
       <p class="font-heading text-8xl font-bold text-primary/20 mb-4">404</p>
-      <h1 class="font-heading text-3xl md:text-4xl font-bold text-on-surface mb-4">Page Not Found</h1>
+      <h1 class="font-heading text-3xl md:text-4xl font-bold text-on-surface mb-4">
+        {data.pages["404"].heading}
+      </h1>
       <p class="text-on-surface-variant text-lg font-body mb-8">
-        The page you are looking for does not exist or has been moved.
+        {data.pages["404"].description}
       </p>
-      <a href="/" class="bg-primary text-on-primary font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-all active:scale-[0.98] shadow-lg shadow-primary/20 inline-block">
-        Return to Home
+      <a href={data.routes.home} class="bg-primary text-on-primary font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-all active:scale-[0.98] shadow-lg shadow-primary/20 inline-block">
+        {data.pages["404"].home}
       </a>
     </div>
+  </div>
 </DefaultLayout>
+
+<script type="module" src="../scripts/site.js"></script>
