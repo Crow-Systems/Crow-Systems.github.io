@@ -25,7 +25,7 @@ export function initAudioRecorder() {
     }
     try {
       navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
-        var mt = ["audio/webm","audio/mp3","audio/wav","audio/ogg"].find(function(t){return MediaRecorder.isTypeSupported(t);}) || "audio/webm";
+        const mt = ["audio/webm", "audio/mp3", "audio/wav", "audio/ogg"].find(function (t) { return MediaRecorder.isTypeSupported(t); }) || "audio/webm";
         mediaRecorder = new MediaRecorder(stream, { mimeType: mt }); chunks = []; duration = 0;
         mediaRecorder.ondataavailable = function (e) { if (e.data.size > 0) chunks.push(e.data); };
         mediaRecorder.onstop = function () {
@@ -88,31 +88,31 @@ export function initConsultForm(localeData) {
   if (!form) return;
   const t = (key) => { const keys = key.split("."); let r = localeData; for (const k of keys) { if (!r) return key; r = r[k]; } return typeof r === "string" ? r : key; };
 
-  var budgetBtns = document.querySelectorAll(".budget-btn");
+  const budgetBtns = document.querySelectorAll(".budget-btn");
   budgetBtns.forEach(function (btn) {
     btn.addEventListener("click", function () {
-      budgetBtns.forEach(function (b) { b.classList.remove("border-primary","bg-primary/10","text-primary","font-bold"); b.classList.add("border-outline-variant","text-on-surface","hover:bg-surface/50","hover:border-primary"); });
-      btn.classList.remove("border-outline-variant","text-on-surface","hover:bg-surface/50","hover:border-primary");
-      btn.classList.add("border-primary","bg-primary/10","text-primary","font-bold");
+      budgetBtns.forEach(function (b) { b.classList.remove("border-primary", "bg-primary/10", "text-primary", "font-bold"); b.classList.add("border-outline-variant", "text-on-surface", "hover:bg-surface/50", "hover:border-primary"); });
+      btn.classList.remove("border-outline-variant", "text-on-surface", "hover:bg-surface/50", "hover:border-primary");
+      btn.classList.add("border-primary", "bg-primary/10", "text-primary", "font-bold");
       document.getElementById("c-budget").value = btn.textContent.trim();
     });
   });
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    var name = document.getElementById("c-fullname").value.trim();
-    var company = document.getElementById("c-company").value.trim();
-    var email = document.getElementById("c-email").value.trim();
-    var problem = document.getElementById("c-problem").value;
-    ["c-fullname","c-company","c-email","c-problem"].forEach(function (id) { var el = document.getElementById(id + "-err"); if (el) el.classList.add("hidden"); });
+    const name = document.getElementById("c-fullname").value.trim();
+    const company = document.getElementById("c-company").value.trim();
+    const email = document.getElementById("c-email").value.trim();
+    const problem = document.getElementById("c-problem").value;
+    ["c-fullname", "c-company", "c-email", "c-problem"].forEach(function (id) { const el = document.getElementById(id + "-err"); if (el) el.classList.add("hidden"); });
     document.getElementById("consult-error").classList.add("hidden");
-    var valid = true;
+    const valid = true;
     if (name.length < 2) { document.getElementById("c-fullname-err").classList.remove("hidden"); valid = false; }
     if (!company) { document.getElementById("c-company-err").classList.remove("hidden"); valid = false; }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { document.getElementById("c-email-err").classList.remove("hidden"); valid = false; }
     if (!problem) { document.getElementById("c-problem-err").classList.remove("hidden"); valid = false; }
     if (!valid) return;
-    var data = {
+    const data = {
       fullName: name, company: company, email: email,
       phone: document.getElementById("c-phone").value.trim(),
       businessProblem: problem,
@@ -122,7 +122,7 @@ export function initConsultForm(localeData) {
     try {
       document.getElementById("consult-btn-text").textContent = t("pages.consulting.consultForm.submitting");
       document.getElementById("consult-submit-btn").disabled = true;
-      var base = import.meta.env.VITE_API_BASE_URL || "https://crowsys.chrislabs.net/api/v1";
+      const base = import.meta.env.VITE_API_BASE_URL || "https://crowsys.chrislabs.net/api/v1";
       fetch(base + "/consultation", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) })
         .then(function (res) { return res.json(); })
         .then(function (result) {
@@ -130,8 +130,8 @@ export function initConsultForm(localeData) {
             document.getElementById("consult-success").textContent = t("pages.consulting.consultSuccess");
             document.getElementById("consult-success").classList.remove("hidden");
             document.getElementById("consult-form").reset();
-            budgetBtns.forEach(function (b) { b.classList.remove("border-primary","bg-primary/10","text-primary","font-bold"); b.classList.add("border-outline-variant","text-on-surface","hover:bg-surface/50","hover:border-primary"); });
-            budgetBtns[1].classList.add("border-primary","bg-primary/10","text-primary","font-bold");
+            budgetBtns.forEach(function (b) { b.classList.remove("border-primary", "bg-primary/10", "text-primary", "font-bold"); b.classList.add("border-outline-variant", "text-on-surface", "hover:bg-surface/50", "hover:border-primary"); });
+            budgetBtns[1].classList.add("border-primary", "bg-primary/10", "text-primary", "font-bold");
           } else { throw new Error(result.message); }
         })
         .catch(function (err) {
@@ -162,7 +162,7 @@ export function initContactForm(localeData) {
     const email = document.getElementById("cnt-email").value;
     const subject = document.getElementById("cnt-subject").value;
     const message = document.getElementById("cnt-message").value;
-    ["name","email","subject","message"].forEach((id) => document.getElementById("cnt-" + id + "-err")?.classList.add("hidden"));
+    ["name", "email", "subject", "message"].forEach((id) => document.getElementById("cnt-" + id + "-err")?.classList.add("hidden"));
     document.getElementById("contact-error")?.classList.add("hidden");
     if (!name.trim()) { document.getElementById("cnt-name-err").classList.remove("hidden"); valid = false; }
     if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) { document.getElementById("cnt-email-err").classList.remove("hidden"); valid = false; }

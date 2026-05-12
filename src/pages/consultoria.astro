@@ -315,13 +315,13 @@ void DATA_JSON;
                 id="c-goals"
                 rows="3"
                 placeholder={data.pages.consulting.goalsPlaceholder}
-                class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none font-body text-sm"
+                class="w-full h-36 bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none font-body text-sm"
               ></textarea>
             </div>
             <button
               type="submit"
               id="consult-submit-btn"
-              class="w-full bg-primary text-white font-bold py-5 rounded-xl flex items-center justify-center gap-2 transition-all hover:bg-primary/90 shadow-lg shadow-primary/20"
+              class="w-full bg-primary text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all hover:bg-primary/90 shadow-lg shadow-primary/20"
             >
               <span id="consult-btn-text"
                 >{data.pages.consulting.consultForm.submit}</span
@@ -378,11 +378,16 @@ void DATA_JSON;
                 <div
                   class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary/20"
                 >
-                  <img
-                    alt={data.pages.consulting.marcusThorne}
-                    class="w-full h-full object-cover"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80"
-                  />
+                  <a
+                    href="https://www.linkedin.com/in/chriscadev/"
+                    target="_blank"
+                  >
+                    <img
+                      alt={data.pages.consulting.marcusThorne}
+                      class="w-full h-full object-cover"
+                      src="/christian-camacho.png"
+                    />
+                  </a>
                 </div>
                 <div>
                   <p class="font-bold text-on-surface">

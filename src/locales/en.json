@@ -21,14 +21,14 @@
   },
   "pages": {
     "index": {
-      "title": "CROW SYSTEMS - Engineering Solutions for Real-World Challenges",
-      "description": "We help companies solve technical problems that are slowing down their business. From secure communications to scalable software architecture, we provide the engineering expertise to design and deliver the right solution.",
-      "subtitle": "Engineering Solutions for Real-World Challenges",
+      "title": "CROW SYSTEMS - Technology Professionals Who Build Systems You Can Trust",
+      "description": "Two technology professionals, two owners - one focused on networks and infrastructure, the other on backend systems and software. We take the time to understand your full picture: cameras, communications, and core systems. Straight talk, no lock-in. Reliable work built by people who stay until it's done.",
+      "subtitle": "For Those Who Do, Straight to the Point",
       "hero": {
-        "title": "We Help Companies<br />Solve Technical Problems",
-        "description": "We are a specialized engineering team focused on transforming complex technical challenges into practical, scalable, and reliable solutions for growing businesses. Our mission is to help companies reduce technical complexity, improve operational efficiency, accelerate development, and confidently bring new ideas to life.",
-        "startConsultation": "Start a Consultation",
-        "exploreServices": "Explore Services"
+        "title": "Technology Professionals Who Build<br />Systems You Can Trust",
+        "description": "Two technology professionals, two owners - one focused on networks and infrastructure, the other on backend systems and software. We take the time to understand your full picture: cameras, communications, and core systems. Straight talk, no lock-in. Reliable work built by people who stay until it's done.",
+        "startConsultation": "Send Us a Voice Note",
+        "exploreServices": "See How It Works"
       },
       "stats": {
         "uptime": {
@@ -42,9 +42,9 @@
           "desc": "During business hours, 8AM–6PM PDT"
         },
         "team": {
-          "value": "Senior Only",
-          "label": "Engineering Team",
-          "desc": "No handoffs, no compromises"
+          "value": "2 People",
+          "label": "Senior Engineers & Owners",
+          "desc": "No account managers, no handoffs"
         },
         "lockin": {
           "value": "Zero Lock-In",
@@ -53,72 +53,72 @@
         }
       },
       "cta": {
-        "title": "Ready to Solve Your Technical Challenges?",
-        "description": "Whether you need secure system communications, scalable architecture, or expert technical guidance - we provide the engineering expertise to move your business forward.",
-        "consultation": "Request a Consultation",
-        "services": "Our Services"
+        "title": "Not Sure Where to Start?<br />Let's Figure It Out Together.",
+        "description": "Describe your project in your own words - a quick voice note or a brief form, whichever works. A senior engineer will review it within one business hour.",
+        "consultation": "Send Us a Voice Note",
+        "services": "See How It Works"
       }
     },
     "services": {
       "title": "Services - CROW SYSTEMS",
       "description": "Explore our technology consulting services including systems consulting, IT infrastructure, software solutions, technical strategy, digital transformation, and automation consulting.",
       "hero": {
-        "subtitle": "What We Offer",
-        "title": "Engineering Solutions<br />Built for Your Business",
-        "description": "From secure communications to scalable software architecture, we provide end-to-end technology services designed to solve real operational challenges. Each service is built around practical outcomes - not technical jargon."
+        "subtitle": "What We Do",
+        "title": "Services Built Around<br />How You Actually Work",
+        "description": "We're two senior engineers who own the company. We design, build, and fix the systems that keep your business running: cameras, conectivity, systems, and everything in between. Each service is built around real outcomes, not technical jargon."
       },
       "process": {
-        "title": "How We Work",
+        "title": "How It Works",
         "steps": [
           {
-            "title": "Share Your Challenge",
-            "description": "Tell us about your business problem through our contact form or audio submission. We respond within 1 business hour."
+            "title": "Tell Us What You Need",
+            "description": "Share your project through a voice note or quick form. A senior engineer reviews it within one business hour."
           },
           {
-            "title": "Discovery & Analysis",
-            "description": "A 30-minute call to align on constraints, goals, and KPIs. We map the technical landscape and propose the right service category."
+            "title": "Discovery Call",
+            "description": "A 30-minute conversation to clarify goals, constraints, and next steps."
           },
           {
             "title": "Roadmap & Proposal",
-            "description": "A comprehensive proposal with phased deliverables, timeline, and fixed-fee options - delivered within 48 hours of discovery."
+            "description": "A clear plan with fixed-fee options, delivered within 48 hours."
           }
         ]
       },
       "cta": {
-        "title": "Ready to Solve Your Technical Challenges?",
-        "description": "Whether you need secure system communications, scalable architecture, or expert technical guidance - we provide the engineering expertise to move your business forward.",
-        "startConsultation": "Start a Consultation"
+        "title": "Not Sure Where to Start?<br />Let's Figure It Out Together.",
+        "description": "Describe your project in your own words - a quick voice note or a brief form, whichever works. A senior engineer will review it within one business hour.",
+        "startConsultation": "Send Us a Voice Note"
       },
       "included": "What's Included",
       "idealFor": "Ideal For",
       "technologies": "Technologies",
-      "getStarted": "Get Started with"
+      "getStarted": "Start with"
     },
     "about": {
       "title": "About - CROW SYSTEMS",
-      "description": "We are a specialized engineering team focused on transforming complex technical challenges into practical, scalable, and reliable solutions for growing businesses.",
+      "description": "Crow Systems is a two-person engineering team - one senior network engineer and one senior software engineer - building reliable systems for growing businesses.",
       "whoWeAre": "Who We Are",
-      "heading": "We Transform Complex Technical Challenges<br />Into Practical Solutions",
-      "description1": "We are a specialized engineering team focused on transforming complex technical challenges into practical, scalable, and reliable solutions for growing businesses. Our mission is to help companies reduce technical complexity, improve operational efficiency, accelerate development, and confidently bring new ideas to life.",
-      "description2": "We work closely with startups, micro businesses, and medium-sized companies that need experienced technical leadership without the overhead of building large internal engineering teams.",
+      "heading": "We're Engineers Who Take the Time<br />to Understand Your Business",
+      "description1": "Crow Systems is two senior engineers who got tired of watching businesses get burned by overpriced consultants and software that doesn't deliver. One of us focuses on networks, infrastructure, and secure communications. The other builds backend systems, data pipelines, and APIs. Together, we cover everything your business needs - no account managers, no handoffs, just the people who actually do the work.",
+      "description2": "We work directly with founders and operators who need real engineering expertise without the overhead of a big firm or a full internal team. When you work with us, you work with the owners, two senior engineers who treat your business like their own.",
       "missionVision": "Mission, Vision & Values",
       "mission": "Mission",
-      "missionText": "To help companies reduce technical complexity, improve operational efficiency, and accelerate development - bringing practical, scalable, and reliable engineering solutions to growing businesses without the overhead of large internal teams.",
+      "missionText": "To give growing businesses direct access to senior engineering owners - no account managers, no finger-pointing, just reliable systems built by the people who stand behind them.",
       "vision": "Vision",
-      "visionText": "Technology should empower businesses, not slow them down. We envision a world where companies of all sizes can access the engineering expertise needed to transform ideas into real-world solutions and grow with confidence.",
+      "visionText": "Technology should empower businesses, not slow them down. Every company - regardless of size - should have the engineering expertise they need to build with confidence.",
       "values": "Values",
       "valueItems": [
-        "Trust on every relationship",
-        "Integrity in every decision",
-        "Obsession with real impact",
-        "Excellence driven by simplicity",
-        "Open and transparent communication",
-        "Building with the long term in mind"
+        "Trust over contracts",
+        "Honest answers, even when it's hard",
+        "Obsessed with what actually works",
+        "Simple is better than clever",
+        "Radically transparent communication",
+        "Built to last, not to flip"
       ],
       "expertise": "Our Expertise",
       "networking": {
         "title": "Networking & Infrastructure Engineering",
-        "description": "Specializing in secure communications, networking architecture, systems integration, and infrastructure design. Focused on ensuring systems can communicate efficiently, securely, and reliably in real-world environments.",
+        "description": "We design networks and infrastructure that are secure, reliable, and built for the real world - not just the diagram.",
         "items": [
           "Secure network design",
           "System connectivity and communications",
@@ -131,7 +131,7 @@
       },
       "software": {
         "title": "Software & Data Systems Engineering",
-        "description": "Specializing in complex software systems, large-scale data processing, backend architecture, and business logic implementation. Focused on transforming complex operational requirements into maintainable and scalable software solutions.",
+        "description": "We build backend systems, data pipelines, and APIs that handle complexity so your team doesn't have to.",
         "items": [
           "High-performance backend systems",
           "Data processing pipelines",
@@ -148,9 +148,9 @@
       "description": "Contact Crow Systems for technology consulting, systems audits, and strategic partnerships.",
       "getInTouch": "Get In Touch",
       "heading": "Contact Us",
-      "description2": "Whether you need a full systems audit, a strategic consultation, or an engineering partner for your next project, our team is ready to help.",
+      "description2": "Not sure if you need a full audit, a quick consultation, or just someone to talk through an idea? Reach out and we'll figure it out together.",
       "startConversation": "Let's talk",
-      "inquiryDescription": "Have a technical challenge or project idea? We'd like to hear about it. Our engineers will review your inquiry and respond within 1 business hour.",
+      "inquiryDescription": "Have a project in mind or a problem you can't quite solve? Tell us about it - a senior engineer will review your message and get back to you within one business hour.",
       "inquiries": "Inquiries",
       "businessHours": "Business Hours",
       "regions": "Regions Served",
@@ -164,7 +164,7 @@
       "subjectRequired": "Subject is required",
       "messageRequired": "Message is required (min 10 characters)",
       "sending": "Sending...",
-      "success": "Thank you! Your message has been sent. We will get back to you soon.",
+      "success": "Thanks for reaching out! We'll review your message and get back to you within one business hour.",
       "failed": "Submission failed. Please try again.",
       "monFri": "Mon - Fri: 08:00 - 18:00 PDT",
       "sat": "Sat: 10:00 - 14:00 PDT (On-call only)",
@@ -174,12 +174,12 @@
       "title": "Consulting - CROW SYSTEMS",
       "description": "Submit a consulting request to Crow Systems. Get a technical audit, strategic consultation, or roadmap for your business.",
       "portal": "Consultation Portal",
-      "heading": "Articulate Your Vision.<br /><span class=\"text-surface-variant\">We Engineer the Rest.</span>",
-      "description2": "Provide the foundations of your business challenge. Use our high-fidelity audio capture to explain complex nuances, or detail your requirements through our structured technical brief.",
-      "audioSubmission": "Audio Idea Submission",
-      "additionalContext": "Additional Context <span class=\"text-on-surface-variant/60 italic\">(Optional)</span>",
+      "heading": "Tell Us What You Need.<br /><span class=\"text-surface-variant\">We'll Build It.</span>",
+      "description2": "Describe your project in your own words. Record a quick voice note for the details that are hard to write down, or use the form below - whichever works best for you.",
+      "audioSubmission": "Record a Voice Note",
+      "additionalContext": "Anything Else? <span class=\"text-on-surface-variant/60 italic\">(Optional)</span>",
       "placeholder": "Describe any technical constraints or specific outcomes...",
-      "submitAudio": "Submit Audio Idea",
+      "submitAudio": "Send Voice Note",
       "uploading": "Uploading...",
       "submitted": "✓ Submitted!",
       "audioSuccess": "✓ Your audio idea has been submitted! We will review it within 1 business hour.",
@@ -190,16 +190,16 @@
       "consultSuccess": "Thank you! Your consultation request has been submitted. We will be in touch within 1 business hour.",
       "audioNoBlob": "Please record audio first.",
       "consultForm": {
-        "heading": "Consulting Request Form",
+        "heading": "Prefer to Write? Use the Form",
         "fullName": "Full Name",
         "company": "Company",
-        "email": "Work Email",
+        "email": "Email",
         "phone": "Phone",
         "problem": "Business Problem",
         "goals": "Project Goals",
         "budget": "Budget Range",
-        "submit": "Submit Consulting Request",
-        "submitting": "Submitting..."
+        "submit": "Send Request",
+        "submitting": "Sending..."
       },
       "validation": {
         "nameRequired": "Name must be at least 2 characters",
@@ -208,7 +208,7 @@
         "problemRequired": "Please select a business problem"
       },
       "problems": [
-        "Select a business problem",
+        "What's the main challenge?",
         "Technical Complexity Reduction",
         "Digital Transformation",
         "Infrastructure Modernization",
@@ -217,20 +217,20 @@
         "Software Architecture & Development",
         "Other"
       ],
-      "goalsPlaceholder": "What do you hope to achieve?",
-      "method": "The Crow Engagement Method",
+      "goalsPlaceholder": "What does success look like?",
+      "method": "How It Works",
       "steps": [
         {
           "title": "Triage",
-          "desc": "Our lead architects review your submission within 1 business hour."
+          "desc": "A senior engineer reviews what you've shared within one business hour."
         },
         {
           "title": "Discovery",
-          "desc": "A 30-minute call to align on constraints, goals, and KPIs."
+          "desc": "A 30-minute conversation to clarify goals, constraints, and next steps."
         },
         {
           "title": "Proposal",
-          "desc": "A comprehensive roadmap with fixed-fee options delivered within 48 hours."
+          "desc": "A clear roadmap with fixed-fee options, delivered within 48 hours."
         }
       ],
       "officeHours": "Office Hours",
@@ -428,8 +428,8 @@
   "services": {
     "systemsConsulting": {
       "title": "Systems Consulting",
-      "description": "We audit and optimize your technology infrastructure to reduce operational friction and eliminate technical silos across departments.",
-      "fullDescription": "Our Systems Consulting service provides a comprehensive analysis of your existing technology infrastructure, workflows, and operational processes. We identify bottlenecks, redundancies, and misalignments that hinder productivity, then deliver actionable roadmaps to streamline operations. Whether you are dealing with legacy systems, fragmented tools, or disconnected departments, we bring clarity and structure to complex environments.",
+      "description": "We audit how your teams work with technology - fixing operational bottlenecks, eliminating silos, and streamlining workflows that slow you down.",
+      "fullDescription": "Systems aren't just servers and code - they're the workflows, tools, and processes your teams use every day. We audit your entire operational stack, identify where things get stuck, and deliver a clear plan to unblock your teams. Whether it's fragmented tools, disconnected departments, or manual processes that should be automated, we bring clarity and structure to complex environments.",
       "features": [
         "Comprehensive technology stack audit",
         "Workflow mapping and process optimization",
@@ -449,8 +449,8 @@
     },
     "itInfrastructure": {
       "title": "IT Infrastructure",
-      "description": "We build resilient, scalable network foundations that ensure reliable uptime and enterprise-grade security for your critical data.",
-      "fullDescription": "Reliable infrastructure is the backbone of any modern business. Our IT Infrastructure services cover everything from network design and server architecture to cloud provisioning and disaster recovery. We architect solutions that are resilient, scalable, and cost-effective - ensuring your systems stay operational even under peak demand. We focus on building foundations that grow with your business, not against it.",
+      "description": "We design and build the networks, servers, and cloud infrastructure your business runs on - reliable, secure, and built to scale.",
+      "fullDescription": "Your infrastructure is the foundation everything else depends on. We design and build networks, server architecture, cloud environments, and disaster recovery plans that keep your business online - even under peak demand. From AWS to on-prem, we build foundations that grow with you, not against you.",
       "features": [
         "Network architecture design and optimization",
         "Cloud infrastructure provisioning (AWS, Azure, GCP)",
@@ -469,8 +469,8 @@
     },
     "softwareSolutions": {
       "title": "Software Solutions",
-      "description": "Custom-engineered software tools designed to solve specific bottlenecks, allowing your team to focus on high-value output.",
-      "fullDescription": "Off-the-shelf software often creates more problems than it solves. Our Software Solutions team designs and builds custom applications tailored to your exact workflows and business rules. From internal tools and dashboards to customer-facing platforms and automated pipelines, we engineer solutions that fit like a glove. Every line of code is written with maintainability, performance, and your long-term goals in mind.",
+      "description": "We build custom software - internal tools, customer platforms, and everything in between - that fits your exact workflows.",
+      "fullDescription": "Off-the-shelf software often creates more problems than it solves. We design and build custom applications tailored to your exact workflows and business rules. From internal tools and dashboards to customer-facing platforms and automated pipelines, we engineer solutions that fit like a glove. Every line of code is written with maintainability, performance, and your long-term goals in mind.",
       "features": [
         "Custom web and mobile application development",
         "Internal tooling and automation scripts",
@@ -490,8 +490,8 @@
     },
     "technicalStrategy": {
       "title": "Technical Strategy",
-      "description": "We align your technology roadmap with long-term business growth to future-proof your organization against market shifts.",
-      "fullDescription": "Technology decisions made today will shape your business capabilities for years to come. Our Technical Strategy service helps leadership teams make informed, future-proof decisions about architecture, tooling, and investment priorities. We translate business goals into technical plans, evaluate trade-offs clearly, and create phased roadmaps that balance speed with sustainability. No vendor lock-in, no hype - just sound engineering judgment.",
+      "description": "We help leadership teams make confident technology decisions - architecture choices, build-vs-buy, no hype, no lock-in.",
+      "fullDescription": "Every technology decision has a long tail. We help leadership teams cut through the noise and make clear, informed choices about architecture, tooling, and investment. No vendor pitches, no trend-chasing - just sound engineering judgment and a phased roadmap that balances speed with sustainability. We translate business goals into technical plans, evaluate trade-offs clearly, and make sure you own your own destiny.",
       "features": [
         "Technology stack evaluation and recommendations",
         "Architecture review and design advisory",
@@ -511,8 +511,8 @@
     },
     "digitalTransformation": {
       "title": "Digital Transformation",
-      "description": "We modernize legacy systems and integrate advanced data analytics to drive informed, evidence-based decision making.",
-      "fullDescription": "Digital transformation is not about replacing everything - it is about strategically modernizing the right systems to unlock measurable business value. We help organizations migrate from legacy platforms to modern architectures, integrate data silos into unified analytics environments, and implement tools that empower teams with real-time insights. Our approach ensures continuity while accelerating your move toward a data-driven operating model.",
+      "description": "We modernize legacy systems and unify your data so your team can make decisions based on facts, not gut feelings.",
+      "fullDescription": "Digital transformation gets a bad name because it usually means 'replace everything.' We take a different approach - we modernize the systems that matter most and connect your data into a single source of truth. The result is dashboards you can trust, reports that actually help, and a team that can make decisions in hours instead of weeks. No unnecessary disruption, just practical progress.",
       "features": [
         "Legacy system modernization and migration",
         "Data warehouse and lake architecture",
@@ -532,8 +532,8 @@
     },
     "automationConsulting": {
       "title": "Automation Consulting",
-      "description": "We automate repetitive tasks to significantly increase your operational velocity and reduce human error.",
-      "fullDescription": "Repetitive manual processes are silent killers of productivity and morale. Our Automation Consulting service identifies high-impact opportunities to eliminate manual work through intelligent automation. From CI/CD pipelines and infrastructure-as-code to robotic process automation and scheduled data workflows, we build systems that free your team to focus on creative, strategic work that actually moves the needle.",
+      "description": "We eliminate repetitive manual work - from deployment pipelines to data entry - so your team can focus on what actually moves the business forward.",
+      "fullDescription": "Repetitive manual work is a silent killer of productivity and morale. We identify the highest-impact opportunities to eliminate it through smart automation - CI/CD pipelines, infrastructure as code, robotic process automation, and scheduled data workflows. The goal isn't automation for its own sake - it's freeing your team to do the creative, strategic work that actually moves the needle.",
       "features": [
         "CI/CD pipeline design and implementation",
         "Infrastructure as Code (IaC) adoption",

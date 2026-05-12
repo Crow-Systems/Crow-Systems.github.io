@@ -20,7 +20,7 @@
     "getStarted": "Comenzar"
   },
   "footer": {
-    "copyright": "© 2024 Crow Systems. Soluciones de ingeniería para empresas en crecimiento.",
+    "copyright": "© 2024 Crow Systems. Profesionales en tecnología construyendo sistemas en los que confiar.",
     "about": "Nosotros",
     "services": "Servicios",
     "contact": "Contacto",
@@ -32,14 +32,14 @@
   },
   "pages": {
     "index": {
-      "title": "CROW SYSTEMS - Soluciones de Ingeniería para Desafíos del Mundo Real",
-      "description": "Ayudamos a las empresas a resolver problemas técnicos que frenan su negocio. Desde comunicaciones seguras hasta arquitectura de software escalable, proporcionamos la experiencia en ingeniería para diseñar y entregar la solución correcta.",
-      "subtitle": "Soluciones de Ingeniería a Desafíos del Mundo Real",
+      "title": "CROW SYSTEMS - Profesionales en Tecnología que Construyen Sistemas en los que Confiar",
+      "description": "Dos profesionales en tecnología, dos dueños, uno enfocado en redes e infraestructura, el otro en sistemas backend y software. Nos tomamos el tiempo de entender su panorama completo: cámaras, comunicaciones y sistemas clave. Sin rodeos, sin ataduras. Trabajo confiable, construido por personas que se quedan hasta que funcione.",
+      "subtitle": "Para los que hacen, directo al grano",
       "hero": {
-        "title": "Ayudamos Empresas a<br />Resolver Problemas Técnicos",
-        "description": "Somos un equipo de ingeniería especializado en transformar desafíos técnicos complejos en soluciones prácticas, escalables y confiables para empresas en crecimiento. Nuestra misión es ayudar a las empresas a reducir la complejidad técnica, mejorar la eficiencia operativa, acelerar el desarrollo y llevar ideas nuevas a la realidad con confianza.",
-        "startConsultation": "Iniciar una Consulta",
-        "exploreServices": "Explorar Servicios"
+        "title": "Profesionales que Construyen<br />Sistemas Confiables",
+        "description": "Dos profesionales en tecnología, dos dueños, uno enfocado en redes e infraestructura, el otro en sistemas backend y software. Nos tomamos el tiempo de entender su panorama completo: cámaras, comunicaciones y sistemas clave. Sin rodeos, sin ataduras. Trabajo confiable, construido por personas que se quedan hasta que funcione.",
+        "startConsultation": "Enviar un Audio",
+        "exploreServices": "Ver Cómo Funciona"
       },
       "stats": {
         "uptime": {
@@ -53,9 +53,9 @@
           "desc": "En horario de 8AM a 6PM (PDT)"
         },
         "team": {
-          "value": "Solo Senior",
-          "label": "Equipo de Ingeniería profesional",
-          "desc": "Sin transferencias, sin compromisos"
+          "value": "2 Personas",
+          "label": "Profesionales y Dueños",
+          "desc": "Sin gerentes de cuenta, sin traspasos"
         },
         "lockin": {
           "value": "Zero Lock-In",
@@ -64,72 +64,72 @@
         }
       },
       "cta": {
-        "title": "¿Listo para Resolver sus Desafíos Técnicos?",
-        "description": "Ya sea que necesite comunicaciones seguras, arquitectura escalable o asesoría técnica especializada - proporcionamos la experiencia en ingeniería para impulsar su negocio.",
-        "consultation": "Solicitar una Consulta",
-        "services": "Nuestros Servicios"
+        "title": "¿No Sabe por Dónde Empezar?<br />Lo Resolvemos Juntos.",
+        "description": "Describa su proyecto en sus propias palabras, un audio rápido o un formulario breve, lo que le sea más cómodo. Un profesional senior lo revisará en una hora hábil.",
+        "consultation": "Enviar un Audio",
+        "services": "Ver Cómo Funciona"
       }
     },
     "services": {
       "title": "Servicios - CROW SYSTEMS",
       "description": "Explore nuestros servicios de consultoría tecnológica, incluyendo consultoría de sistemas, infraestructura de TI, soluciones de software, estrategia tecnológica, transformación digital y consultoría de automatización.",
       "hero": {
-        "subtitle": "Lo Que Ofrecemos",
-        "title": "Soluciones de Ingeniería<br />Diseñadas para su Negocio",
-        "description": "Desde comunicaciones seguras hasta arquitectura de software escalable, proporcionamos servicios tecnológicos de extremo a extremo diseñados para resolver desafíos operativos reales. Cada servicio se construye en torno a resultados prácticos - no jerga técnica."
+        "subtitle": "Lo que Hacemos",
+        "title": "Servicios Hechos a la Medida<br />de Cómo Trabaja Realmente",
+        "description": "Somos dos profesionales en tecnología, los dueños de la empresa. Diseñamos, construimos y reparamos los sistemas que mantienen su negocio en marcha: cámaras, conectividad, sistemas y todo lo demás. Cada servicio se basa en resultados reales, no en jerga técnica."
       },
       "process": {
-        "title": "Cómo Trabajamos",
+        "title": "Cómo Funciona",
         "steps": [
           {
-            "title": "Comparta su Desafío",
-            "description": "Cuéntenos sobre su problema de negocio a través de nuestro formulario de contacto o envío de audio. Respondemos dentro de 1 hora hábil."
+            "title": "Cuéntenos qué Necesita",
+            "description": "Comparta su proyecto mediante un audio o un formulario rápido. Un profesional senior lo revisa en una hora hábil."
           },
           {
-            "title": "Descubrimiento y Análisis",
-            "description": "Una llamada de 30 minutos para alinear restricciones, objetivos e indicadores clave de rendimiento. Mapeamos el panorama técnico y proponemos la categoría de servicio adecuada."
+            "title": "Llamada de Descubrimiento",
+            "description": "Una conversación de 30 minutos para aclarar objetivos, restricciones y próximos pasos."
           },
           {
             "title": "Hoja de Ruta y Propuesta",
-            "description": "Una propuesta integral con entregables por fases, cronograma y opciones de tarifa fija - entregada dentro de las 48 horas posteriores al descubrimiento."
+            "description": "Un plan claro con opciones de tarifa fija, entregado en 48 horas."
           }
         ]
       },
       "cta": {
-        "title": "¿Listo para Resolver sus Desafíos Técnicos?",
-        "description": "Ya sea que necesite comunicaciones seguras, arquitectura escalable o asesoría técnica especializada - proporcionamos la experiencia en ingeniería para impulsar su negocio.",
-        "startConsultation": "Iniciar una Consulta"
+        "title": "¿No Sabe por Dónde Empezar?<br />Lo Resolvemos Juntos.",
+        "description": "Describa su proyecto en sus propias palabras, un audio rápido o un formulario breve, lo que le sea más cómodo. Un profesional senior lo revisará en una hora hábil.",
+        "startConsultation": "Enviar un Audio"
       },
       "included": "Qué Incluye",
       "idealFor": "Ideal Para",
       "technologies": "Tecnologías",
-      "getStarted": "Comience con"
+      "getStarted": "Empezar con"
     },
     "about": {
       "title": "Nosotros - CROW SYSTEMS",
-      "description": "Somos un equipo de ingeniería especializado en transformar desafíos técnicos complejos en soluciones prácticas, escalables y confiables para empresas en crecimiento.",
+      "description": "Crow Systems es un equipo de dos profesionales en tecnología - uno de redes y otro de software - construyendo sistemas confiables para empresas en crecimiento.",
       "whoWeAre": "Quiénes Somos",
-      "heading": "Creamos soluciones practicas a proyectos técnicamente complejos.",
-      "description1": "Somos un equipo de ingeniería especializado en transformar desafíos técnicos complejos en soluciones prácticas, escalables y confiables para empresas en crecimiento. Nuestra misión es ayudar a las empresas a reducir la complejidad técnica, mejorar la eficiencia operativa, acelerar el desarrollo y llevar ideas nuevas a la realidad con confianza.",
-      "description2": "Trabajamos de cerca con startups, micro empresas y compañías medianas que necesitan liderazgo técnico experimentado sin la sobrecarga de construir grandes equipos de ingeniería internos.",
+      "heading": "Somos profesionales en tecnología que se toman el tiempo<br />de entender su negocio",
+      "description1": "Crow Systems somos dos profesionales en tecnología que nos cansamos de ver cómo las empresas terminan malgastando dinero en consultorías sobrevaloradas y software que no funciona. Uno se especializa en redes, infraestructura y comunicaciones seguras. El otro construye sistemas backend, pipelines de datos y APIs. Juntos cubrimos todo lo que su negocio necesita; sin gerentes de cuenta, sin traspasos, solo las personas que realmente hacen el trabajo.",
+      "description2": "Trabajamos directamente con fundadores y operadores que necesitan experiencia real en ingeniería sin la sobrecarga de una gran firma o un equipo interno completo. Cuando trabaja con nosotros, trabaja con los dueños, dos profesionales en tecnología que tratarán su negocio como si fuera propio.",
       "missionVision": "Misión, Visión y Valores",
       "mission": "Misión",
-      "missionText": "Ayudar empresas en crecimiento a reducir la complejidad técnica, mejorar su eficiencia operativa y acelerar el desarrollo brindando soluciones de ingeniería prácticas, escalables y confiables sin la sobrecarga de grandes equipos internos.",
+      "missionText": "Dar a las empresas en crecimiento acceso directo a los dueños profesionales en tecnología - sin gerentes de cuenta, sin culpas entre proveedores, solo sistemas confiables construidos por quienes los respaldan.",
       "vision": "Visión",
-      "visionText": "La tecnología debería empoderar, no frenar. Visualizamos un mundo donde las empresas de todos los tamaños puedan acceder a la experiencia en ingeniería necesaria para transformar ideas en soluciones, permitiendo crecer con seguridad y confianza.",
+      "visionText": "La tecnología debería empoderar, no frenar. Toda empresa, sin importar su tamaño, debería tener la experiencia en ingeniería que necesita para construir con confianza.",
       "values": "Valores",
       "valueItems": [
-        "Confianza en cada relación",
-        "Integridad en cada decisión",
-        "Obsesión por el impacto real",
-        "Excelencia impulsada por la simplicidad",
-        "Comunicación abierta y transparente",
-        "Construir pensando en el largo plazo"
+        "Confianza por encima de contratos",
+        "Respuestas honestas, incluso cuando es difícil",
+        "Obsesión por lo que realmente funciona",
+        "Simple es mejor que ingenioso",
+        "Comunicación radicalmente transparente",
+        "Construido para durar, no para vender"
       ],
       "expertise": "Nuestra Experiencia",
       "networking": {
         "title": "Ingeniería de Redes e Infraestructura",
-        "description": "Especializados en comunicaciones seguras, arquitectura de redes, integración de sistemas y diseño de infraestructura. Enfocados en asegurar que los sistemas puedan comunicarse de manera eficiente, segura y confiable en entornos del mundo real.",
+        "description": "Diseñamos redes e infraestructura que son seguras, confiables y construidas para el mundo real - no solo para el diagrama.",
         "items": [
           "Diseño de redes seguras",
           "Conectividad y comunicaciones de sistemas",
@@ -142,7 +142,7 @@
       },
       "software": {
         "title": "Ingeniería de Software y Sistemas de Datos",
-        "description": "Especializados en sistemas de software complejos, procesamiento de datos a gran escala, arquitectura de backend e implementación de lógica de negocio. Enfocados en transformar requisitos operativos complejos en soluciones de software mantenibles y escalables.",
+        "description": "Construimos sistemas backend, pipelines de datos y APIs que manejan la complejidad para que su equipo no tenga que hacerlo.",
         "items": [
           "Sistemas backend de alto rendimiento",
           "Pipelines de procesamiento de datos",
@@ -156,12 +156,12 @@
     },
     "contact": {
       "title": "Contacto - CROW SYSTEMS",
-      "description": "Contacte a Crow Systems para consultoría tecnológica, auditorías de sistemas y alianzas estratégicas.",
+      "description": "¿Tiene un proyecto en mente o un problema que resolver? Cuéntenos - un profesional senior le responderá en una hora hábil.",
       "getInTouch": "Contáctenos",
       "heading": "Contáctenos",
-      "description2": "Ya sea que necesite una auditoría de sistemas completa, una consulta estratégica o un socio de ingeniería para su próximo proyecto, nuestro equipo está listo para ayudarle.",
+      "description2": "¿No sabe si necesita una auditoría completa, una consulta rápida o solo alguien con quien hablar de una idea? Escríbanos y lo resolvemos juntos.",
       "startConversation": "Conversemos",
-      "inquiryDescription": "¿Tiene un desafío técnico o una idea de proyecto? Nos encantaría saber de ello. Nuestros ingenieros revisarán su consulta y responderán dentro de 1 hora hábil.",
+      "inquiryDescription": "¿Tiene un proyecto en mente o un problema que no termina de resolver? Cuéntenos. Un profesional senior revisará su mensaje y le responderá en una hora hábil.",
       "inquiries": "Consultas",
       "businessHours": "Horario de Atención",
       "regions": "Regiones Atendidas",
@@ -175,7 +175,7 @@
       "subjectRequired": "El asunto es obligatorio",
       "messageRequired": "El mensaje es obligatorio (mínimo 10 caracteres)",
       "sending": "Enviando...",
-      "success": "¡Gracias! Su mensaje ha sido enviado. Nos comunicaremos con usted pronto.",
+      "success": "¡Gracias por escribirnos! Revisaremos su mensaje y le responderemos en una hora hábil.",
       "failed": "Error al enviar. Por favor, inténtelo de nuevo.",
       "monFri": "Lun - Vie: 08:00 - 18:00 PDT",
       "sat": "Sáb: 10:00 - 14:00 PDT (solo guardia)",
@@ -183,14 +183,14 @@
     },
     "consulting": {
       "title": "Consultoría - CROW SYSTEMS",
-      "description": "Envíe una solicitud de consulta a Crow Systems. Obtenga una auditoría técnica, consulta estratégica o una hoja de ruta para su negocio.",
+      "description": "Envíe un audio o complete un formulario rápido. Un profesional senior revisa su proyecto y responde en una hora hábil.",
       "portal": "Portal de Consultoría",
-      "heading": "Describa su visión. </br> Nosotros desarrollamos la solución.",
-      "description2": "Proporcione los fundamentos de su desafío de negocio. Utilice nuestra captura de audio para explicar matices complejos, o detalle sus requisitos a través de nuestro breve formulario estructurado.",
-      "audioSubmission": "Envío de Idea de Audio",
-      "additionalContext": "Contexto Adicional <span class=\"text-on-surface-variant/60 italic\">(Opcional)</span>",
+      "heading": "Cuéntenos qué necesita.<br /><span class=\"text-surface-variant\">Nosotros lo construimos.</span>",
+      "description2": "Describa su proyecto con sus propias palabras. Grabe un audio rápido para los detalles difíciles de escribir, o use el formulario - lo que le sea más cómodo.",
+      "audioSubmission": "Grabar un Audio",
+      "additionalContext": "¿Algo más? <span class=\"text-on-surface-variant/60 italic\">(Opcional)</span>",
       "placeholder": "Describa cualquier restricción técnica o resultados específicos...",
-      "submitAudio": "Enviar Idea de Audio",
+      "submitAudio": "Enviar Audio",
       "uploading": "Subiendo...",
       "submitted": "✓ ¡Enviado!",
       "audioSuccess": "✓ ¡Su idea de audio ha sido enviada! La revisaremos dentro de 1 hora hábil.",
@@ -199,15 +199,15 @@
       "recordStopLabel": "Detener grabación",
       "playLabel": "Reproducir grabación",
       "consultForm": {
-        "heading": "Formulario de Solicitud de Consultoría",
+        "heading": "¿Prefiere Escribir? Use el Formulario",
         "fullName": "Nombre Completo",
         "company": "Empresa",
-        "email": "Correo Electrónico Corporativo",
+        "email": "Correo Electrónico",
         "phone": "Teléfono",
         "problem": "Problema de Negocio",
         "goals": "Objetivos del Proyecto",
         "budget": "Rango de Presupuesto",
-        "submit": "Enviar Solicitud de Consultoría",
+        "submit": "Enviar Solicitud",
         "submitting": "Enviando..."
       },
       "validation": {
@@ -217,7 +217,7 @@
         "problemRequired": "Por favor, seleccione un problema de negocio"
       },
       "problems": [
-        "Seleccione un problema de negocio",
+        "¿Cuál es el principal desafío?",
         "Reducción de Complejidad Técnica",
         "Transformación Digital",
         "Modernización de Infraestructura",
@@ -226,20 +226,20 @@
         "Arquitectura y Desarrollo de Software",
         "Otro"
       ],
-      "goalsPlaceholder": "¿Qué espera lograr?",
-      "method": "El Método de Colaboración de Crow",
+      "goalsPlaceholder": "¿Cómo se ve el éxito?",
+      "method": "Cómo Funciona",
       "steps": [
         {
           "title": "Diagnóstico Inicial",
-          "desc": "Nuestros arquitectos líderes evalúan su solicitud y prioridades operativas dentro de 1 hora hábil."
+          "desc": "Un profesional senior revisa lo que compartió en una hora hábil."
         },
         {
           "title": "Descubrimiento",
-          "desc": "Una llamada estratégica de 30 minutos para alinear objetivos, restricciones e indicadores clave de rendimiento."
+          "desc": "Una conversación de 30 minutos para aclarar objetivos, restricciones y próximos pasos."
         },
         {
           "title": "Propuesta",
-          "desc": "Entregamos una hoja de ruta clara y accionable con opciones de tarifa fija dentro de las 48 horas posteriores al descubrimiento."
+          "desc": "Una hoja de ruta clara con opciones de tarifa fija, entregada en 48 horas."
         }
       ],
       "officeHours": "Horario de Oficina",
@@ -248,7 +248,7 @@
       "consultingEmail": "hablemos@crowsys.com.mx",
       "securityTitle": "Seguridad Corporativa",
       "securityDesc": "Todos los envíos, incluidos los archivos de audio, se cifran mediante AES-256 en reposo y TLS 1.3 en tránsito. Priorizamos su propiedad intelectual. Se pueden proporcionar NDA estándar durante la fase de descubrimiento.",
-      "marcusThorne": "Marcus Thorne",
+      "marcusThorne": "Christian Camacho",
       "managingPartner": "Socio Gerente, Crow Systems",
       "quote": "Creamos este proceso para entender realmente qué está frenando al negocio. Las conversaciones nos ayudan a descubrir prioridades y necesidades que rara vez aparecen en información o datos.",
       "consultSuccess": "¡Gracias! Su solicitud de consulta ha sido enviada. Nos comunicaremos dentro de 1 hora hábil.",
@@ -428,8 +428,8 @@
   "services": {
     "systemsConsulting": {
       "title": "Consultoría de Sistemas",
-      "description": "Auditamos y optimizamos su infraestructura tecnológica para reducir la fricción operativa y eliminar los silos técnicos entre departamentos.",
-      "fullDescription": "Nuestro servicio de Consultoría de Sistemas proporciona un análisis integral de su infraestructura tecnológica, flujos de trabajo y procesos operativos existentes. Identificamos cuellos de botella, redundancias y desalineaciones que obstaculizan la productividad, y luego entregamos hojas de ruta ejecutables para optimizar las operaciones. Ya sea que esté lidiando con sistemas heredados, herramientas fragmentadas o departamentos desconectados, le brindamos claridad y estructura a entornos complejos.",
+      "description": "Auditamos cómo sus equipos trabajan con la tecnología - eliminamos cuellos de botella, silos y procesos que los frenan.",
+      "fullDescription": "Los sistemas no son solo servidores y código - son los flujos de trabajo, herramientas y procesos que sus equipos usan a diario. Analizamos su entorno operativo completo, identificamos dónde se atoran las cosas y entregamos un plan claro para destrabar a su equipo. Ya sean herramientas fragmentadas, departamentos desconectados o procesos manuales que deberían estar automatizados, llevamos claridad y estructura a entornos complejos.",
       "features": [
         "Auditoría integral de la pila tecnológica",
         "Mapeo de flujos de trabajo y optimización de procesos",
@@ -449,8 +449,8 @@
     },
     "itInfrastructure": {
       "title": "Infraestructura de TI",
-      "description": "Construimos cimientos de red resilientes y escalables que garantizan un tiempo de actividad confiable y seguridad empresarial para sus datos críticos.",
-      "fullDescription": "La infraestructura confiable es la columna vertebral de cualquier empresa moderna. Nuestros servicios de Infraestructura de TI cubren todo, desde el diseño de redes y arquitectura de servidores hasta el aprovisionamiento en la nube y la recuperación ante desastres. Diseñamos soluciones que son resilientes, escalables y rentables - asegurando que sus sistemas se mantengan operativos incluso bajo demanda máxima. Nos enfocamos en construir cimientos que crezcan con su negocio, no en su contra.",
+      "description": "Diseñamos y construimos las redes, servidores y nube en los que su negocio funciona - confiables, seguros y listos para crecer.",
+      "fullDescription": "Su infraestructura es la base de la que todo depende. Diseñamos y construimos redes, arquitectura de servidores, entornos en la nube y planes de recuperación que mantienen su negocio en línea - incluso bajo demanda máxima. De AWS a on-premise, construimos cimientos que crecen con usted, no en su contra.",
       "features": [
         "Diseño y optimización de arquitectura de red",
         "Aprovisionamiento de infraestructura en la nube (AWS, Azure, GCP)",
@@ -469,8 +469,8 @@
     },
     "softwareSolutions": {
       "title": "Soluciones de Software",
-      "description": "Herramientas de software personalizadas diseñadas para resolver cuellos de botella específicos, permitiendo que su equipo se enfoque en actividades de alto valor.",
-      "fullDescription": "El software genérico a menudo crea más problemas de los que resuelve. Nuestro equipo de Soluciones de Software diseña y construye aplicaciones personalizadas adaptadas a sus flujos de trabajo y reglas de negocio exactas. Desde herramientas internas y paneles de control hasta plataformas orientadas al cliente y pipelines automatizados, desarrollamos soluciones que se ajustan como un guante. Cada línea de código se escribe pensando en la mantenibilidad, el rendimiento y sus objetivos a largo plazo.",
+      "description": "Construimos software a la medida - herramientas internas, plataformas para clientes y todo lo demás - que se ajusta a su forma de trabajar.",
+      "fullDescription": "El software genérico a menudo crea más problemas de los que resuelve. Diseñamos y construimos aplicaciones personalizadas adaptadas a sus flujos de trabajo y reglas de negocio exactas. Desde herramientas internas y paneles de control hasta plataformas orientadas al cliente y pipelines automatizados, desarrollamos soluciones que se ajustan como un guante. Cada línea de código se escribe pensando en la mantenibilidad, el rendimiento y sus objetivos a largo plazo.",
       "features": [
         "Desarrollo de aplicaciones web y móviles personalizadas",
         "Herramientas internas y scripts de automatización",
@@ -490,10 +490,10 @@
     },
     "technicalStrategy": {
       "title": "Estrategia Tecnológica",
-      "description": "Alineamos su hoja de ruta tecnológica con el crecimiento comercial a largo plazo para preparar a su organización ante los cambios del mercado.",
-      "fullDescription": "Las decisiones tecnológicas tomadas hoy darán forma a las capacidades de su empresa durante años. Nuestro servicio de Estrategia Tecnológica ayuda a los equipos de liderazgo a tomar decisiones informadas y orientadas al futuro sobre arquitectura, herramientas y prioridades de inversión. Traducimos los objetivos comerciales en planes técnicos, evaluamos los compromisos con claridad y creamos hojas de ruta por fases que equilibran la velocidad con la sostenibilidad. Sin bloqueo de proveedor, sin exageraciones - solo criterio de ingeniería sólido.",
+      "description": "Ayudamos a los líderes a tomar decisiones tecnológicas con confianza - arquitectura, construir vs comprar, sin exageraciones, sin ataduras.",
+      "fullDescription": "Toda decisión tecnológica tiene consecuencias a largo plazo. Ayudamos a los equipos directivos a ver con claridad y tomar decisiones informadas sobre arquitectura, herramientas e inversión. Sin discursos de ventas, sin modas - solo criterio de ingeniería sólido y una hoja de ruta por fases que equilibra velocidad con sostenibilidad. Traducimos objetivos de negocio en planes técnicos claros y nos aseguramos de que usted sea dueño de su propio destino.",
       "features": [
-        "Evaluación y recomendaciones de la pila tecnológica",
+        "Evaluación y recomendaciones del stack tecnológico",
         "Revisión de arquitectura y asesoría de diseño",
         "Evaluación y priorización de la deuda técnica",
         "Predicción de escalabilidad y rendimiento",
@@ -511,8 +511,8 @@
     },
     "digitalTransformation": {
       "title": "Transformación Digital",
-      "description": "Modernizamos sistemas heredados e integramos análisis de datos avanzados para impulsar la toma de decisiones informada y basada en evidencia.",
-      "fullDescription": "La transformación digital no se trata de reemplazar todo - se trata de modernizar estratégicamente los sistemas correctos para liberar valor comercial medible. Ayudamos a las organizaciones a migrar de plataformas heredadas a arquitecturas modernas, integrar silos de datos en entornos de analítica unificados e implementar herramientas que empoderen a los equipos con información en tiempo real. Nuestro enfoque garantiza la continuidad mientras acelera su transición hacia un modelo operativo basado en datos.",
+      "description": "Modernizamos sistemas heredados y unificamos sus datos para que su equipo tome decisiones basadas en hechos, no en corazonadas.",
+      "fullDescription": "La transformación digital tiene mala fama porque normalmente significa 'reemplazar todo'. Nosotros lo hacemos distinto - modernizamos los sistemas que más importan y conectamos sus datos en una sola fuente de verdad. El resultado son paneles de control en los que puede confiar, informes que realmente ayudan y un equipo que toma decisiones en horas, no en semanas. Sin disrupción innecesaria, solo progreso práctico.",
       "features": [
         "Modernización y migración de sistemas heredados",
         "Arquitectura de almacén y lago de datos",
@@ -532,8 +532,8 @@
     },
     "automationConsulting": {
       "title": "Consultoría de Automatización",
-      "description": "Automatizamos tareas repetitivas para aumentar significativamente la velocidad operativa y reducir el error humano.",
-      "fullDescription": "Los procesos manuales repetitivos son asesinos silenciosos de la productividad y la moral. Nuestro servicio de Consultoría de Automatización identifica oportunidades de alto impacto para eliminar el trabajo manual mediante la automatización inteligente. Desde pipelines CI/CD e infraestructura como código hasta automatización robótica de procesos y flujos de datos programados, desarrollamos sistemas que liberan a su equipo para que se enfoque en trabajo creativo y estratégico que realmente marca la diferencia.",
+      "description": "Eliminamos el trabajo manual repetitivo - desde pipelines de despliegue hasta captura de datos - para que su equipo se enfoque en lo que realmente importa.",
+      "fullDescription": "El trabajo manual repetitivo es un asesino silencioso de la productividad y la moral. Identificamos las oportunidades de mayor impacto para eliminarlo mediante automatización inteligente - pipelines CI/CD, infraestructura como código, automatización robótica de procesos y flujos de datos programados. El objetivo no es automatizar por automatizar, sino liberar a su equipo para que haga el trabajo creativo y estratégico que realmente mueve la aguja.",
       "features": [
         "Diseño e implementación de pipelines CI/CD",
         "Adopción de Infraestructura como Código (IaC)",
