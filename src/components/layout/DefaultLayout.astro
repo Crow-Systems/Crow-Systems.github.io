@@ -12,7 +12,7 @@ interface Props {
 }
 
 const { title, description, activeNav = "", ogImage, locale } = Astro.props;
-const data = locale === "es" ? es : en;
+const data = locale === "en" ? en : es;
 const pageUrl = Astro.url.pathname;
 const canonicalUrl = `https://crowsys.chrislabs.net${pageUrl}`;
 
@@ -28,8 +28,8 @@ for (const [key, routePath] of Object.entries(data.routes)) {
   }
 }
 const routeKey = currentRouteKey as keyof typeof en.routes | null;
-const canonicalEn = routeKey ? en.routes[routeKey] || "/" : "/";
-const canonicalEs = routeKey ? es.routes[routeKey] || "/es/" : "/es/";
+const canonicalEn = routeKey ? en.routes[routeKey] || "/en/" : "/en/";
+const canonicalEs = routeKey ? es.routes[routeKey] || "/" : "/";
 ---
 
 <!doctype html>

@@ -3,26 +3,33 @@ import DefaultLayout from "../components/layout/DefaultLayout.astro";
 import en from "../locales/en.json";
 import es from "../locales/es.json";
 
-const locale = Astro.url.pathname.split("/")[1] === "es" ? "es" : "en";
-const data = locale === "es" ? es : en;
-
+const locale = Astro.url.pathname.split("/")[1] === "en" ? "en" : "es";
+const data = locale === "en" ? en : es;
+const messages = data.pages["404"];
 ---
 
-<DefaultLayout title={data.pages["404"].title} locale={locale}>
-  <div class="flex-1 flex items-center justify-center pt-28 px-6">
-    <div class="text-center max-w-2xl mx-auto">
-      <p class="font-heading text-8xl font-bold text-primary/20 mb-4">404</p>
-      <h1 class="font-heading text-3xl md:text-4xl font-bold text-on-surface mb-4">
-        {data.pages["404"].heading}
-      </h1>
-      <p class="text-on-surface-variant text-lg font-body mb-8">
-        {data.pages["404"].description}
-      </p>
-      <a href={data.routes.home} class="bg-primary text-on-primary font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-all active:scale-[0.98] shadow-lg shadow-primary/20 inline-block">
-        {data.pages["404"].home}
-      </a>
+<DefaultLayout title={messages.title} locale={locale}>
+  <main style="height: 80vh;">
+    <div class="flex-1 flex items-center justify-center pt-28 px-6">
+      <div class="text-center max-w-2xl mx-auto">
+        <p class="font-heading text-8xl font-bold text-primary/20 mb-4">404</p>
+        <h1
+          class="font-heading text-3xl md:text-4xl font-bold text-on-surface mb-4"
+        >
+          {messages.heading}
+        </h1>
+        <p class="text-on-surface-variant text-lg font-body mb-8">
+          {messages.description}
+        </p>
+        <a
+          href={data.routes.home}
+          class="bg-primary text-white font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-all active:scale-[0.98] shadow-lg shadow-primary/20 inline-block"
+        >
+          {messages.home}
+        </a>
+      </div>
     </div>
-  </div>
+  </main>
 </DefaultLayout>
 
 <script type="module" src="../scripts/site.js"></script>

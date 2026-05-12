@@ -1,12 +1,12 @@
 {
   "routes": {
-    "home": "/es/",
-    "services": "/es/servicios",
-    "about": "/es/nosotros",
-    "consulting": "/es/consultoria",
-    "contact": "/es/contacto",
-    "privacy": "/es/privacidad",
-    "terms": "/es/terminos"
+    "home": "/",
+    "services": "/servicios",
+    "about": "/nosotros",
+    "consulting": "/consultoria",
+    "contact": "/contacto",
+    "privacy": "/privacidad",
+    "terms": "/terminos"
   },
   "common": {
     "changeLanguage": "Cambiar idioma",

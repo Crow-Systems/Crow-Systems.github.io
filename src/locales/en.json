@@ -1,12 +1,12 @@
 {
   "routes": {
-    "home": "/",
-    "services": "/services",
-    "about": "/about",
-    "consulting": "/consulting",
-    "contact": "/contact",
-    "privacy": "/privacy",
-    "terms": "/terms"
+    "home": "/en/",
+    "services": "/en/services",
+    "about": "/en/about",
+    "consulting": "/en/consulting",
+    "contact": "/en/contact",
+    "privacy": "/en/privacy",
+    "terms": "/en/terms"
   },
   "common": {
     "changeLanguage": "Change Language",
