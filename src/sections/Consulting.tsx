@@ -1,6 +1,5 @@
-import { Button } from '../ui/Button';
-import { Card } from '../ui/Card';
-import { SectionWrapper } from '../layout/SectionWrapper';
+import { Card } from '../components/ui/Card';
+import { SectionWrapper } from '../components/layout/SectionWrapper';
 
 export function ConsultingSection() {
   return (
@@ -14,7 +13,7 @@ export function ConsultingSection() {
             </p>
             <div id="consult-error" className="hidden mb-6 p-4 bg-red-50 text-red-600 rounded-lg text-sm font-medium" role="alert"></div>
             <div id="consult-success" className="hidden mb-6 p-4 bg-green-50 text-green-700 rounded-lg text-sm font-medium font-bold" role="status"></div>
-            <form id="consult-form" className="space-y-5" novalidate>
+            <form id="consult-form" className="space-y-5" noValidate>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input id="c-fullname" type="text" placeholder="Full Name *" required className="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-sm" />
                 <p className="hidden text-xs text-red-500 mt-1" id="c-fullname-err">Name must be at least 2 characters</p>

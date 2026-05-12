@@ -1,4 +1,4 @@
-import { NAV_ITEMS, SOCIAL_LINKS, COMPANY_INFO } from "../../data/constants";
+import { NAV_ITEMS, SOCIAL_LINKS } from "../../data/constants";
 import type { MainLayoutProps } from "../../types/layout";
 
 export function MainLayout({ children }: MainLayoutProps) {
@@ -10,12 +10,6 @@ export function MainLayout({ children }: MainLayoutProps) {
     </div>
   );
 }
-
-import {
-  SOCIAL_LINKS as SOCIAL,
-  COMPANY_INFO as INFO,
-} from "../../data/constants";
-import type { ComponentPropsWithoutRef } from "react";
 
 function Navbar({ items }: { items: Array<{ label: string; href: string }> }) {
   const handleMenuToggle = () => {
@@ -124,7 +118,7 @@ function Footer() {
           </a>
         </div>
         <div className="flex gap-4 flex-wrap justify-center">
-          {Object.entries(SOCIAL).map(([key, url]) => (
+          {Object.entries(SOCIAL_LINKS).map(([key, url]) => (
             <a
               key={key}
               href={url || "#"}

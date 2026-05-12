@@ -1,10 +1,7 @@
 import { useState } from 'react';
-import { Input } from '../ui/Input';
-import { TextArea } from '../ui/TextArea';
-import { Card } from '../ui/Card';
-import { Button } from '../ui/Button';
-import { Button as ButtonLink } from '../ui/Button';
-import { SOCIAL_LINKS, COMPANY_INFO } from '../../data/constants';
+import { Input } from '../components/ui/Input';
+import { TextArea } from '../components/ui/TextArea';
+import { Button } from '../components/ui/Button';
 
 export function ContactSection() {
   const [serverError, setServerError] = useState('');

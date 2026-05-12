@@ -1,5 +1,5 @@
-import { Card } from '../ui/Card';
-import { SectionWrapper } from '../layout/SectionWrapper';
+import { Card } from '../components/ui/Card';
+import { SectionWrapper } from '../components/layout/SectionWrapper';
 
 export function AboutSection() {
   return (

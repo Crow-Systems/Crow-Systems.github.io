@@ -1,11 +1,8 @@
-import { useTranslations } from '../i18n';
-
 interface LanguageSwitcherProps {
   currentLang: string;
 }
 
 export function LanguageSwitcher({ currentLang }: LanguageSwitcherProps) {
-  const { t } = useTranslations(currentLang as any);
   const otherLang = currentLang === 'en' ? 'es' : 'en';
   const label = otherLang === 'en' ? 'EN' : 'ES';
   const currentLabel = currentLang === 'en' ? 'EN' : 'ES';

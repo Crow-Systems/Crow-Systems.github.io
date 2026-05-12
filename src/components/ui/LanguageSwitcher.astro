@@ -17,8 +17,9 @@ for (const [key, routePath] of Object.entries(data.routes)) {
     break;
   }
 }
-const otherPath = currentRouteKey && otherData.routes[currentRouteKey]
-  ? otherData.routes[currentRouteKey]
+const routeKey = currentRouteKey as keyof typeof en.routes | null;
+const otherPath = routeKey && otherData.routes[routeKey]
+  ? otherData.routes[routeKey]
   : otherLocale === "en" ? "/" : "/es/";
 ---
 

@@ -1,11 +1,9 @@
-import { Card } from '../ui/Card';
-import { getServiceIcon } from '../../data/services';
-import { SectionWrapper } from '../layout/SectionWrapper';
-import type { Service } from '../../types';
+import { Card } from '../components/ui/Card';
+import { SectionWrapper } from '../components/layout/SectionWrapper';
+import { getServiceIcon, SERVICES } from '../data/services';
+import type { Service } from '../types';
 
 export function ServicesSection() {
-  const { SERVICES } = require('../../data/services') as { SERVICES: Service[] };
-
   return (
     <SectionWrapper id="services" title="Our Services" subtitle="What We Offer">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

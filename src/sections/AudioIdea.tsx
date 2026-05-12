@@ -1,7 +1,7 @@
 import { useAudioRecorder } from "../hooks/useAudioRecorder";
-import { Button } from "../ui/Button";
-import { Card } from "../ui/Card";
-import { SectionWrapper } from "../layout/SectionWrapper";
+import { Button } from "../components/ui/Button";
+import { Card } from "../components/ui/Card";
+import { SectionWrapper } from "../components/layout/SectionWrapper";
 
 export function AudioIdeaSection() {
   const {

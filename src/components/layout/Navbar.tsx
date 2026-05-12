@@ -1,5 +1,3 @@
-import { NAV_ITEMS } from '../../data/constants';
-
 interface NavItem {
   label: string;
   href: string;

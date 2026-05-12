@@ -16,7 +16,6 @@ function t(key: string): string {
   return typeof result === "string" ? result : key;
 }
 
-const localePrefix = locale === "en" ? "" : `/${locale}`;
 const sections = data.pages.terms.sections;
 ---
 
@@ -25,7 +24,6 @@ const sections = data.pages.terms.sections;
   description={t("pages.terms.description")}
   activeNav=""
   locale={locale}
-  localePrefix={localePrefix}
 >
   <div class="pt-32 pb-24 px-6 max-w-4xl mx-auto">
     <header class="mb-12">
@@ -46,7 +44,7 @@ const sections = data.pages.terms.sections;
             <>
               <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm mb-4">{section.intro}</p>
               <ul class="space-y-2 text-on-surface-variant/80 font-body text-sm list-disc pl-6 mb-4">
-                {section.items.map((item) => (
+                {section.items?.map((item) => (
                   <li>{item}</li>
                 ))}
               </ul>

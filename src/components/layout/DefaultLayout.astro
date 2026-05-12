@@ -9,10 +9,9 @@ interface Props {
   activeNav?: string;
   ogImage?: string;
   locale: string;
-  localePrefix: string;
 }
 
-const { title, description, activeNav = "", ogImage, locale, localePrefix } = Astro.props;
+const { title, description, activeNav = "", ogImage, locale } = Astro.props;
 const data = locale === "es" ? es : en;
 const pageUrl = Astro.url.pathname;
 const canonicalUrl = `https://crowsys.chrislabs.net${pageUrl}`;
@@ -25,8 +24,9 @@ for (const [key, routePath] of Object.entries(data.routes)) {
     break;
   }
 }
-const canonicalEn = currentRouteKey && en.routes[currentRouteKey] ? en.routes[currentRouteKey] : "/";
-const canonicalEs = currentRouteKey && es.routes[currentRouteKey] ? es.routes[currentRouteKey] : "/es/";
+const routeKey = currentRouteKey as keyof typeof en.routes | null;
+const canonicalEn = routeKey ? (en.routes[routeKey] || "/") : "/";
+const canonicalEs = routeKey ? (es.routes[routeKey] || "/es/") : "/es/";
 ---
 
 <!doctype html>
