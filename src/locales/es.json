@@ -32,11 +32,11 @@
   },
   "pages": {
     "index": {
-      "title": "CROW SYSTEMS — Soluciones de Ingeniería para Desafíos del Mundo Real",
+      "title": "CROW SYSTEMS - Soluciones de Ingeniería para Desafíos del Mundo Real",
       "description": "Ayudamos a las empresas a resolver problemas técnicos que frenan su negocio. Desde comunicaciones seguras hasta arquitectura de software escalable, proporcionamos la experiencia en ingeniería para diseñar y entregar la solución correcta.",
-      "subtitle": "Soluciones de Ingeniería para Desafíos del Mundo Real",
+      "subtitle": "Soluciones de Ingeniería a Desafíos del Mundo Real",
       "hero": {
-        "title": "Ayudamos a las Empresas a<br />Resolver Problemas Técnicos",
+        "title": "Ayudamos Empresas a<br />Resolver Problemas Técnicos",
         "description": "Somos un equipo de ingeniería especializado en transformar desafíos técnicos complejos en soluciones prácticas, escalables y confiables para empresas en crecimiento. Nuestra misión es ayudar a las empresas a reducir la complejidad técnica, mejorar la eficiencia operativa, acelerar el desarrollo y llevar ideas nuevas a la realidad con confianza.",
         "startConsultation": "Iniciar una Consulta",
         "exploreServices": "Explorar Servicios"
@@ -54,29 +54,29 @@
         },
         "team": {
           "value": "Solo Senior",
-          "label": "Equipo de Ingeniería",
+          "label": "Equipo de Ingeniería profesional",
           "desc": "Sin transferencias, sin compromisos"
         },
         "lockin": {
-          "value": "Sin Bloqueo",
+          "value": "Zero Lock-In",
           "label": "Su IP, Siempre",
-          "desc": "Sin dependencias de proveedor"
+          "desc": "Sin dependencias de proveedores"
         }
       },
       "cta": {
         "title": "¿Listo para Resolver sus Desafíos Técnicos?",
-        "description": "Ya sea que necesite comunicaciones seguras, arquitectura escalable o asesoría técnica especializada — proporcionamos la experiencia en ingeniería para impulsar su negocio.",
+        "description": "Ya sea que necesite comunicaciones seguras, arquitectura escalable o asesoría técnica especializada - proporcionamos la experiencia en ingeniería para impulsar su negocio.",
         "consultation": "Solicitar una Consulta",
         "services": "Nuestros Servicios"
       }
     },
     "services": {
-      "title": "Servicios — CROW SYSTEMS",
+      "title": "Servicios - CROW SYSTEMS",
       "description": "Explore nuestros servicios de consultoría tecnológica, incluyendo consultoría de sistemas, infraestructura de TI, soluciones de software, estrategia tecnológica, transformación digital y consultoría de automatización.",
       "hero": {
         "subtitle": "Lo Que Ofrecemos",
         "title": "Soluciones de Ingeniería<br />Diseñadas para su Negocio",
-        "description": "Desde comunicaciones seguras hasta arquitectura de software escalable, proporcionamos servicios tecnológicos de extremo a extremo diseñados para resolver desafíos operativos reales. Cada servicio se construye en torno a resultados prácticos — no jerga técnica."
+        "description": "Desde comunicaciones seguras hasta arquitectura de software escalable, proporcionamos servicios tecnológicos de extremo a extremo diseñados para resolver desafíos operativos reales. Cada servicio se construye en torno a resultados prácticos - no jerga técnica."
       },
       "process": {
         "title": "Cómo Trabajamos",
@@ -91,13 +91,13 @@
           },
           {
             "title": "Hoja de Ruta y Propuesta",
-            "description": "Una propuesta integral con entregables por fases, cronograma y opciones de tarifa fija — entregada dentro de las 48 horas posteriores al descubrimiento."
+            "description": "Una propuesta integral con entregables por fases, cronograma y opciones de tarifa fija - entregada dentro de las 48 horas posteriores al descubrimiento."
           }
         ]
       },
       "cta": {
         "title": "¿Listo para Resolver sus Desafíos Técnicos?",
-        "description": "Ya sea que necesite comunicaciones seguras, arquitectura escalable o asesoría técnica especializada — proporcionamos la experiencia en ingeniería para impulsar su negocio.",
+        "description": "Ya sea que necesite comunicaciones seguras, arquitectura escalable o asesoría técnica especializada - proporcionamos la experiencia en ingeniería para impulsar su negocio.",
         "startConsultation": "Iniciar una Consulta"
       },
       "included": "Qué Incluye",
@@ -106,7 +106,7 @@
       "getStarted": "Comience con"
     },
     "about": {
-      "title": "Nosotros — CROW SYSTEMS",
+      "title": "Nosotros - CROW SYSTEMS",
       "description": "Somos un equipo de ingeniería especializado en transformar desafíos técnicos complejos en soluciones prácticas, escalables y confiables para empresas en crecimiento.",
       "whoWeAre": "Quiénes Somos",
       "heading": "Creamos soluciones practicas a proyectos técnicamente complejos.",
@@ -114,15 +114,17 @@
       "description2": "Trabajamos de cerca con startups, micro empresas y compañías medianas que necesitan liderazgo técnico experimentado sin la sobrecarga de construir grandes equipos de ingeniería internos.",
       "missionVision": "Misión, Visión y Valores",
       "mission": "Misión",
-      "missionText": "Ayudar a las empresas a reducir la complejidad técnica, mejorar la eficiencia operativa y acelerar el desarrollo — brindando soluciones de ingeniería prácticas, escalables y confiables a empresas en crecimiento sin la sobrecarga de grandes equipos internos.",
+      "missionText": "Ayudar empresas en crecimiento a reducir la complejidad técnica, mejorar su eficiencia operativa y acelerar el desarrollo brindando soluciones de ingeniería prácticas, escalables y confiables sin la sobrecarga de grandes equipos internos.",
       "vision": "Visión",
-      "visionText": "La tecnología debería empoderar a las empresas, no frenarlas. Visualizamos un mundo donde las empresas de todos los tamaños puedan acceder a la experiencia en ingeniería necesaria para transformar ideas en soluciones del mundo real y crecer con confianza.",
-      "values": "Valores Centrales",
+      "visionText": "La tecnología debería empoderar, no frenar. Visualizamos un mundo donde las empresas de todos los tamaños puedan acceder a la experiencia en ingeniería necesaria para transformar ideas en soluciones, permitiendo crecer con seguridad y confianza.",
+      "values": "Valores",
       "valueItems": [
-        "Decisiones tecnológicas confiables y mantenibles",
-        "Comunicación clara y transparencia",
-        "Soluciones prácticas enfocadas en resultados",
-        "Escalabilidad y valor a largo plazo"
+        "Confianza en cada relación",
+        "Integridad en cada decisión",
+        "Obsesión por el impacto real",
+        "Excelencia impulsada por la simplicidad",
+        "Comunicación abierta y transparente",
+        "Construir pensando en el largo plazo"
       ],
       "expertise": "Nuestra Experiencia",
       "networking": {
@@ -153,7 +155,7 @@
       }
     },
     "contact": {
-      "title": "Contacto — CROW SYSTEMS",
+      "title": "Contacto - CROW SYSTEMS",
       "description": "Contacte a Crow Systems para consultoría tecnológica, auditorías de sistemas y alianzas estratégicas.",
       "getInTouch": "Contáctenos",
       "heading": "Contáctenos",
@@ -175,12 +177,12 @@
       "sending": "Enviando...",
       "success": "¡Gracias! Su mensaje ha sido enviado. Nos comunicaremos con usted pronto.",
       "failed": "Error al enviar. Por favor, inténtelo de nuevo.",
-      "monFri": "Lun — Vie: 08:00 - 18:00 PDT",
+      "monFri": "Lun - Vie: 08:00 - 18:00 PDT",
       "sat": "Sáb: 10:00 - 14:00 PDT (solo guardia)",
       "regionsText": "Norteamérica, Unión Europea y Asia-Pacífico"
     },
     "consulting": {
-      "title": "Consultoría — CROW SYSTEMS",
+      "title": "Consultoría - CROW SYSTEMS",
       "description": "Envíe una solicitud de consulta a Crow Systems. Obtenga una auditoría técnica, consulta estratégica o una hoja de ruta para su negocio.",
       "portal": "Portal de Consultoría",
       "heading": "Describa su visión. </br> Nosotros desarrollamos la solución.",
@@ -241,7 +243,7 @@
         }
       ],
       "officeHours": "Horario de Oficina",
-      "monFriHours": "Lun — Vie: 9:00 AM — 6:00 PM",
+      "monFriHours": "Lun - Vie: 9:00 AM - 6:00 PM",
       "satHours": "Sábado: Por cita",
       "consultingEmail": "hablemos@crowsys.com.mx",
       "securityTitle": "Seguridad Corporativa",
@@ -253,7 +255,7 @@
       "audioNoBlob": "Por favor, grabe audio primero."
     },
     "privacy": {
-      "title": "Política de Privacidad — CROW SYSTEMS",
+      "title": "Política de Privacidad - CROW SYSTEMS",
       "description": "Lea la Política de Privacidad de Crow Systems para entender cómo recopilamos, usamos y protegemos su información personal.",
       "heading": "Política de Privacidad",
       "intro": "Esta Política de Privacidad explica cómo Crow Systems recopila, usa y protege su información personal cuando usted utiliza nuestro sitio web y servicios.",
@@ -343,7 +345,7 @@
       ]
     },
     "terms": {
-      "title": "Términos de Servicio — CROW SYSTEMS",
+      "title": "Términos de Servicio - CROW SYSTEMS",
       "description": "Lea los Términos de Servicio de Crow Systems para servicios de consultoría tecnológica y uso del sitio web.",
       "heading": "Términos de Servicio",
       "intro": "Por favor, lea estos términos cuidadosamente antes de utilizar nuestro sitio web o servicios.",
@@ -417,7 +419,7 @@
       ]
     },
     "404": {
-      "title": "404 — CROW SYSTEMS",
+      "title": "404 - CROW SYSTEMS",
       "heading": "Página No Encontrada",
       "description": "La página que está buscando no existe o ha sido movida.",
       "home": "Volver al Inicio"
@@ -448,7 +450,7 @@
     "itInfrastructure": {
       "title": "Infraestructura de TI",
       "description": "Construimos cimientos de red resilientes y escalables que garantizan un tiempo de actividad confiable y seguridad empresarial para sus datos críticos.",
-      "fullDescription": "La infraestructura confiable es la columna vertebral de cualquier empresa moderna. Nuestros servicios de Infraestructura de TI cubren todo, desde el diseño de redes y arquitectura de servidores hasta el aprovisionamiento en la nube y la recuperación ante desastres. Diseñamos soluciones que son resilientes, escalables y rentables — asegurando que sus sistemas se mantengan operativos incluso bajo demanda máxima. Nos enfocamos en construir cimientos que crezcan con su negocio, no en su contra.",
+      "fullDescription": "La infraestructura confiable es la columna vertebral de cualquier empresa moderna. Nuestros servicios de Infraestructura de TI cubren todo, desde el diseño de redes y arquitectura de servidores hasta el aprovisionamiento en la nube y la recuperación ante desastres. Diseñamos soluciones que son resilientes, escalables y rentables - asegurando que sus sistemas se mantengan operativos incluso bajo demanda máxima. Nos enfocamos en construir cimientos que crezcan con su negocio, no en su contra.",
       "features": [
         "Diseño y optimización de arquitectura de red",
         "Aprovisionamiento de infraestructura en la nube (AWS, Azure, GCP)",
@@ -489,7 +491,7 @@
     "technicalStrategy": {
       "title": "Estrategia Tecnológica",
       "description": "Alineamos su hoja de ruta tecnológica con el crecimiento comercial a largo plazo para preparar a su organización ante los cambios del mercado.",
-      "fullDescription": "Las decisiones tecnológicas tomadas hoy darán forma a las capacidades de su empresa durante años. Nuestro servicio de Estrategia Tecnológica ayuda a los equipos de liderazgo a tomar decisiones informadas y orientadas al futuro sobre arquitectura, herramientas y prioridades de inversión. Traducimos los objetivos comerciales en planes técnicos, evaluamos los compromisos con claridad y creamos hojas de ruta por fases que equilibran la velocidad con la sostenibilidad. Sin bloqueo de proveedor, sin exageraciones — solo criterio de ingeniería sólido.",
+      "fullDescription": "Las decisiones tecnológicas tomadas hoy darán forma a las capacidades de su empresa durante años. Nuestro servicio de Estrategia Tecnológica ayuda a los equipos de liderazgo a tomar decisiones informadas y orientadas al futuro sobre arquitectura, herramientas y prioridades de inversión. Traducimos los objetivos comerciales en planes técnicos, evaluamos los compromisos con claridad y creamos hojas de ruta por fases que equilibran la velocidad con la sostenibilidad. Sin bloqueo de proveedor, sin exageraciones - solo criterio de ingeniería sólido.",
       "features": [
         "Evaluación y recomendaciones de la pila tecnológica",
         "Revisión de arquitectura y asesoría de diseño",
@@ -510,7 +512,7 @@
     "digitalTransformation": {
       "title": "Transformación Digital",
       "description": "Modernizamos sistemas heredados e integramos análisis de datos avanzados para impulsar la toma de decisiones informada y basada en evidencia.",
-      "fullDescription": "La transformación digital no se trata de reemplazar todo — se trata de modernizar estratégicamente los sistemas correctos para liberar valor comercial medible. Ayudamos a las organizaciones a migrar de plataformas heredadas a arquitecturas modernas, integrar silos de datos en entornos de analítica unificados e implementar herramientas que empoderen a los equipos con información en tiempo real. Nuestro enfoque garantiza la continuidad mientras acelera su transición hacia un modelo operativo basado en datos.",
+      "fullDescription": "La transformación digital no se trata de reemplazar todo - se trata de modernizar estratégicamente los sistemas correctos para liberar valor comercial medible. Ayudamos a las organizaciones a migrar de plataformas heredadas a arquitecturas modernas, integrar silos de datos en entornos de analítica unificados e implementar herramientas que empoderen a los equipos con información en tiempo real. Nuestro enfoque garantiza la continuidad mientras acelera su transición hacia un modelo operativo basado en datos.",
       "features": [
         "Modernización y migración de sistemas heredados",
         "Arquitectura de almacén y lago de datos",

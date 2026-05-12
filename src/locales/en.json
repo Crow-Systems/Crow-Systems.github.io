@@ -21,7 +21,7 @@
   },
   "pages": {
     "index": {
-      "title": "CROW SYSTEMS — Engineering Solutions for Real-World Challenges",
+      "title": "CROW SYSTEMS - Engineering Solutions for Real-World Challenges",
       "description": "We help companies solve technical problems that are slowing down their business. From secure communications to scalable software architecture, we provide the engineering expertise to design and deliver the right solution.",
       "subtitle": "Engineering Solutions for Real-World Challenges",
       "hero": {
@@ -44,28 +44,28 @@
         "team": {
           "value": "Senior Only",
           "label": "Engineering Team",
-          "desc": "No juniors, no handoffs, no compromises"
+          "desc": "No handoffs, no compromises"
         },
         "lockin": {
           "value": "Zero Lock-In",
           "label": "Your IP, Always",
-          "desc": "Your code, your stack, no vendor dependencies"
+          "desc": "No vendor dependencies"
         }
       },
       "cta": {
         "title": "Ready to Solve Your Technical Challenges?",
-        "description": "Whether you need secure system communications, scalable architecture, or expert technical guidance — we provide the engineering expertise to move your business forward.",
+        "description": "Whether you need secure system communications, scalable architecture, or expert technical guidance - we provide the engineering expertise to move your business forward.",
         "consultation": "Request a Consultation",
         "services": "Our Services"
       }
     },
     "services": {
-      "title": "Services — CROW SYSTEMS",
+      "title": "Services - CROW SYSTEMS",
       "description": "Explore our technology consulting services including systems consulting, IT infrastructure, software solutions, technical strategy, digital transformation, and automation consulting.",
       "hero": {
         "subtitle": "What We Offer",
         "title": "Engineering Solutions<br />Built for Your Business",
-        "description": "From secure communications to scalable software architecture, we provide end-to-end technology services designed to solve real operational challenges. Each service is built around practical outcomes — not technical jargon."
+        "description": "From secure communications to scalable software architecture, we provide end-to-end technology services designed to solve real operational challenges. Each service is built around practical outcomes - not technical jargon."
       },
       "process": {
         "title": "How We Work",
@@ -80,13 +80,13 @@
           },
           {
             "title": "Roadmap & Proposal",
-            "description": "A comprehensive proposal with phased deliverables, timeline, and fixed-fee options — delivered within 48 hours of discovery."
+            "description": "A comprehensive proposal with phased deliverables, timeline, and fixed-fee options - delivered within 48 hours of discovery."
           }
         ]
       },
       "cta": {
         "title": "Ready to Solve Your Technical Challenges?",
-        "description": "Whether you need secure system communications, scalable architecture, or expert technical guidance — we provide the engineering expertise to move your business forward.",
+        "description": "Whether you need secure system communications, scalable architecture, or expert technical guidance - we provide the engineering expertise to move your business forward.",
         "startConsultation": "Start a Consultation"
       },
       "included": "What's Included",
@@ -95,7 +95,7 @@
       "getStarted": "Get Started with"
     },
     "about": {
-      "title": "About — CROW SYSTEMS",
+      "title": "About - CROW SYSTEMS",
       "description": "We are a specialized engineering team focused on transforming complex technical challenges into practical, scalable, and reliable solutions for growing businesses.",
       "whoWeAre": "Who We Are",
       "heading": "We Transform Complex Technical Challenges<br />Into Practical Solutions",
@@ -103,15 +103,17 @@
       "description2": "We work closely with startups, micro businesses, and medium-sized companies that need experienced technical leadership without the overhead of building large internal engineering teams.",
       "missionVision": "Mission, Vision & Values",
       "mission": "Mission",
-      "missionText": "To help companies reduce technical complexity, improve operational efficiency, and accelerate development — bringing practical, scalable, and reliable engineering solutions to growing businesses without the overhead of large internal teams.",
+      "missionText": "To help companies reduce technical complexity, improve operational efficiency, and accelerate development - bringing practical, scalable, and reliable engineering solutions to growing businesses without the overhead of large internal teams.",
       "vision": "Vision",
       "visionText": "Technology should empower businesses, not slow them down. We envision a world where companies of all sizes can access the engineering expertise needed to transform ideas into real-world solutions and grow with confidence.",
-      "values": "Core Values",
+      "values": "Values",
       "valueItems": [
-        "Reliable, maintainable technology decisions",
-        "Clear communication and transparency",
-        "Practical, outcome-focused solutions",
-        "Long-term scalability and value"
+        "Trust on every relationship",
+        "Integrity in every decision",
+        "Obsession with real impact",
+        "Excellence driven by simplicity",
+        "Open and transparent communication",
+        "Building with the long term in mind"
       ],
       "expertise": "Our Expertise",
       "networking": {
@@ -142,7 +144,7 @@
       }
     },
     "contact": {
-      "title": "Contact — CROW SYSTEMS",
+      "title": "Contact - CROW SYSTEMS",
       "description": "Contact Crow Systems for technology consulting, systems audits, and strategic partnerships.",
       "getInTouch": "Get In Touch",
       "heading": "Contact Us",
@@ -164,12 +166,12 @@
       "sending": "Sending...",
       "success": "Thank you! Your message has been sent. We will get back to you soon.",
       "failed": "Submission failed. Please try again.",
-      "monFri": "Mon — Fri: 08:00 - 18:00 PDT",
+      "monFri": "Mon - Fri: 08:00 - 18:00 PDT",
       "sat": "Sat: 10:00 - 14:00 PDT (On-call only)",
       "regionsText": "North America, European Union, & APAC"
     },
     "consulting": {
-      "title": "Consulting — CROW SYSTEMS",
+      "title": "Consulting - CROW SYSTEMS",
       "description": "Submit a consulting request to Crow Systems. Get a technical audit, strategic consultation, or roadmap for your business.",
       "portal": "Consultation Portal",
       "heading": "Articulate Your Vision.<br /><span class=\"text-surface-variant\">We Engineer the Rest.</span>",
@@ -232,7 +234,7 @@
         }
       ],
       "officeHours": "Office Hours",
-      "monFriHours": "Mon — Fri: 9:00 AM — 6:00 PM",
+      "monFriHours": "Mon - Fri: 9:00 AM - 6:00 PM",
       "satHours": "Saturday: By appointment",
       "consultingEmail": "letstalk@crowsys.com.mx",
       "securityTitle": "Corporate-Grade Security",
@@ -242,7 +244,7 @@
       "quote": "We created this process to truly understand what’s holding the business back. Conversations help us uncover priorities and needs that rarely appear in information or data."
     },
     "privacy": {
-      "title": "Privacy Policy — CROW SYSTEMS",
+      "title": "Privacy Policy - CROW SYSTEMS",
       "description": "Read the Privacy Policy for Crow Systems to understand how we collect, use, and protect your personal information.",
       "heading": "Privacy Policy",
       "intro": "This Privacy Policy explains how Crow Systems collects, uses, and protects your personal information when you use our website and services.",
@@ -332,7 +334,7 @@
       ]
     },
     "terms": {
-      "title": "Terms of Service — CROW SYSTEMS",
+      "title": "Terms of Service - CROW SYSTEMS",
       "description": "Read the Terms of Service for Crow Systems technology consulting services and website usage.",
       "heading": "Terms of Service",
       "intro": "Please read these terms carefully before using our website or services.",
@@ -406,7 +408,7 @@
       ]
     },
     "404": {
-      "title": "404 — CROW SYSTEMS",
+      "title": "404 - CROW SYSTEMS",
       "heading": "Page Not Found",
       "description": "The page you are looking for does not exist or has been moved.",
       "home": "Return to Home"
@@ -448,7 +450,7 @@
     "itInfrastructure": {
       "title": "IT Infrastructure",
       "description": "We build resilient, scalable network foundations that ensure reliable uptime and enterprise-grade security for your critical data.",
-      "fullDescription": "Reliable infrastructure is the backbone of any modern business. Our IT Infrastructure services cover everything from network design and server architecture to cloud provisioning and disaster recovery. We architect solutions that are resilient, scalable, and cost-effective — ensuring your systems stay operational even under peak demand. We focus on building foundations that grow with your business, not against it.",
+      "fullDescription": "Reliable infrastructure is the backbone of any modern business. Our IT Infrastructure services cover everything from network design and server architecture to cloud provisioning and disaster recovery. We architect solutions that are resilient, scalable, and cost-effective - ensuring your systems stay operational even under peak demand. We focus on building foundations that grow with your business, not against it.",
       "features": [
         "Network architecture design and optimization",
         "Cloud infrastructure provisioning (AWS, Azure, GCP)",
@@ -489,7 +491,7 @@
     "technicalStrategy": {
       "title": "Technical Strategy",
       "description": "We align your technology roadmap with long-term business growth to future-proof your organization against market shifts.",
-      "fullDescription": "Technology decisions made today will shape your business capabilities for years to come. Our Technical Strategy service helps leadership teams make informed, future-proof decisions about architecture, tooling, and investment priorities. We translate business goals into technical plans, evaluate trade-offs clearly, and create phased roadmaps that balance speed with sustainability. No vendor lock-in, no hype — just sound engineering judgment.",
+      "fullDescription": "Technology decisions made today will shape your business capabilities for years to come. Our Technical Strategy service helps leadership teams make informed, future-proof decisions about architecture, tooling, and investment priorities. We translate business goals into technical plans, evaluate trade-offs clearly, and create phased roadmaps that balance speed with sustainability. No vendor lock-in, no hype - just sound engineering judgment.",
       "features": [
         "Technology stack evaluation and recommendations",
         "Architecture review and design advisory",
@@ -510,7 +512,7 @@
     "digitalTransformation": {
       "title": "Digital Transformation",
       "description": "We modernize legacy systems and integrate advanced data analytics to drive informed, evidence-based decision making.",
-      "fullDescription": "Digital transformation is not about replacing everything — it is about strategically modernizing the right systems to unlock measurable business value. We help organizations migrate from legacy platforms to modern architectures, integrate data silos into unified analytics environments, and implement tools that empower teams with real-time insights. Our approach ensures continuity while accelerating your move toward a data-driven operating model.",
+      "fullDescription": "Digital transformation is not about replacing everything - it is about strategically modernizing the right systems to unlock measurable business value. We help organizations migrate from legacy platforms to modern architectures, integrate data silos into unified analytics environments, and implement tools that empower teams with real-time insights. Our approach ensures continuity while accelerating your move toward a data-driven operating model.",
       "features": [
         "Legacy system modernization and migration",
         "Data warehouse and lake architecture",

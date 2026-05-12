@@ -1,19 +1,19 @@
-# Crow Systems — Astro Project
+# Crow Systems - Astro Project
 
 A modern, professional consulting platform built with Astro, React, and Tailwind CSS.
 
 ## Features
 
-- **Hero / Landing Section** — Clear messaging with trust indicators
-- **Services Section** — 6 consulting service cards with icons
-- **Audio Idea Submission** — Browser-based MediaRecorder API for voice submissions
-- **Consulting Request Form** — Full form with inline validation (Zod + React Hook Form)
-- **About Section** — Company story, mission/vision, values, team
-- **Contact Section** — Lightweight contact form with validation
-- **SEO Optimized** — Semantic HTML, meta tags, Open Graph, JSON-LD ready
-- **Accessible** — WCAG 2.1 AA compliance, keyboard navigation, ARIA labels
-- **Responsive** — Mobile-first design
-- **API-Ready** — Configurable endpoints via environment variables
+- **Hero / Landing Section** - Clear messaging with trust indicators
+- **Services Section** - 6 consulting service cards with icons
+- **Audio Idea Submission** - Browser-based MediaRecorder API for voice submissions
+- **Consulting Request Form** - Full form with inline validation (Zod + React Hook Form)
+- **About Section** - Company story, mission/vision, values, team
+- **Contact Section** - Lightweight contact form with validation
+- **SEO Optimized** - Semantic HTML, meta tags, Open Graph, JSON-LD ready
+- **Accessible** - WCAG 2.1 AA compliance, keyboard navigation, ARIA labels
+- **Responsive** - Mobile-first design
+- **API-Ready** - Configurable endpoints via environment variables
 
 ## Tech Stack
 

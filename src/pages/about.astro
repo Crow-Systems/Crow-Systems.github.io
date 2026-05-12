@@ -5,7 +5,6 @@ import es from "../locales/es.json";
 
 const locale = Astro.url.pathname.split("/")[1] === "es" ? "es" : "en";
 const data = locale === "es" ? es : en;
-
 ---
 
 <DefaultLayout
@@ -22,13 +21,13 @@ const data = locale === "es" ? es : en;
       <div class="lg:col-span-7 space-y-8">
         <span
           class="text-accent font-bold uppercase tracking-widest text-xs mb-2 block"
-        >{data.pages.about.whoWeAre}</span
+          >{data.pages.about.whoWeAre}</span
         >
         <h1
           id="about-heading"
           class="font-heading text-4xl md:text-5xl font-bold text-on-surface tracking-tight mb-6"
           set:html={data.pages.about.heading}
-        ></h1>
+        />
         <p class="text-on-surface-variant leading-relaxed font-body text-lg">
           {data.pages.about.description1}
         </p>
@@ -140,11 +139,13 @@ const data = locale === "es" ? es : en;
           {data.pages.about.values}
         </h3>
         <ul class="space-y-3 text-on-surface-variant text-sm font-body">
-          {[0,1,2,3].map((i) => (
-            <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 bg-accent rounded-full"></span> {data.pages.about.valueItems[i]}
-            </li>
-          ))}
+          {
+            data.pages.about.valueItems.map((value) => (
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-accent rounded-full" /> {value}
+              </li>
+            ))
+          }
         </ul>
       </div>
     </div>
@@ -175,9 +176,11 @@ const data = locale === "es" ? es : en;
         <ul
           class="space-y-2 text-sm text-on-surface-variant font-body list-disc pl-5"
         >
-          {[0,1,2,3,4,5,6].map((i) => (
-            <li>{data.pages.about.networking.items[i]}</li>
-          ))}
+          {
+            [0, 1, 2, 3, 4, 5, 6].map((i) => (
+              <li>{data.pages.about.networking.items[i]}</li>
+            ))
+          }
         </ul>
       </div>
       <div
@@ -194,9 +197,11 @@ const data = locale === "es" ? es : en;
         <ul
           class="space-y-2 text-sm text-on-surface-variant font-body list-disc pl-5"
         >
-          {[0,1,2,3,4,5,6].map((i) => (
-            <li>{data.pages.about.software.items[i]}</li>
-          ))}
+          {
+            [0, 1, 2, 3, 4, 5, 6].map((i) => (
+              <li>{data.pages.about.software.items[i]}</li>
+            ))
+          }
         </ul>
       </div>
     </div>
