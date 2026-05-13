@@ -1,9 +1,9 @@
 ---
-import en from "../../locales/en.json";
-import es from "../../locales/es.json";
+import { getLocaleData, getRoutes } from "src/locales";
 
 const locale = Astro.url.pathname.split("/")[1] === "en" ? "en" : "es";
-const data = locale === "en" ? en : es;
+const data = getLocaleData(locale);
+const routes = getRoutes();
 
 const normalizedPath = Astro.url.pathname.replace(/\/$/, "") || "/";
 let currentRouteKey: string | null = null;
@@ -16,9 +16,9 @@ for (const [key, routePath] of Object.entries(data.routes)) {
     break;
   }
 }
-const routeKey = currentRouteKey as keyof typeof en.routes | null;
-const enPath = routeKey && en.routes[routeKey] ? en.routes[routeKey] : "/en/";
-const esPath = routeKey && es.routes[routeKey] ? es.routes[routeKey] : "/";
+const routeKey = currentRouteKey as keyof typeof routes.en | null;
+const enPath = routeKey && routes.en[routeKey] ? routes.en[routeKey] : "/en/";
+const esPath = routeKey && routes.es[routeKey] ? routes.es[routeKey] : "/";
 ---
 
 <div

@@ -1,7 +1,6 @@
 ---
 import LanguageSwitcher from "../ui/LanguageSwitcher.astro";
-import en from "../../locales/en.json";
-import es from "../../locales/es.json";
+import { getLocaleData, getRoutes } from "src/locales";
 
 interface Props {
   title: string;
@@ -12,7 +11,8 @@ interface Props {
 }
 
 const { title, description, activeNav = "", ogImage, locale } = Astro.props;
-const data = locale === "en" ? en : es;
+const data = getLocaleData(locale);
+const routes = getRoutes();
 const pageUrl = Astro.url.pathname;
 const canonicalUrl = `https://crowsys.chrislabs.net${pageUrl}`;
 
@@ -27,9 +27,9 @@ for (const [key, routePath] of Object.entries(data.routes)) {
     break;
   }
 }
-const routeKey = currentRouteKey as keyof typeof en.routes | null;
-const canonicalEn = routeKey ? en.routes[routeKey] || "/en/" : "/en/";
-const canonicalEs = routeKey ? es.routes[routeKey] || "/" : "/";
+const routeKey = currentRouteKey as keyof typeof routes.en | null;
+const canonicalEn = routeKey ? routes.en[routeKey] || "/en/" : "/en/";
+const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
 ---
 
 <!doctype html>

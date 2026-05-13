@@ -1,10 +1,9 @@
 ---
+import { getLocaleData } from "src/locales";
 import DefaultLayout from "../components/layout/DefaultLayout.astro";
-import en from "../locales/en.json";
-import es from "../locales/es.json";
 
 const locale = Astro.url.pathname.split("/")[1] === "en" ? "en" : "es";
-const data = locale === "en" ? en : es;
+const data = getLocaleData(locale);
 
 function t(key: string): string {
   const keys = key.split(".");
@@ -27,8 +26,13 @@ const sections = data.pages.terms.sections;
 >
   <div class="pt-32 pb-24 px-6 max-w-4xl mx-auto">
     <header class="mb-12">
-      <span class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block">Legal</span>
-      <h1 class="font-heading text-4xl md:text-5xl font-bold text-on-surface tracking-tight mb-4">
+      <span
+        class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block"
+        >Legal</span
+      >
+      <h1
+        class="font-heading text-4xl md:text-5xl font-bold text-on-surface tracking-tight mb-4"
+      >
         {t("pages.terms.heading")}
       </h1>
       <p class="text-on-surface-variant text-lg leading-relaxed font-body">
@@ -37,24 +41,36 @@ const sections = data.pages.terms.sections;
     </header>
 
     <div class="space-y-10">
-      {sections.map((section) => (
-        <section>
-          <h2 class="font-heading text-2xl font-bold text-on-surface mb-4">{section.title}</h2>
-          {"items" in section ? (
-            <>
-              <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm mb-4">{section.intro}</p>
-              <ul class="space-y-2 text-on-surface-variant/80 font-body text-sm list-disc pl-6 mb-4">
-                {section.items?.map((item) => (
-                  <li>{item}</li>
-                ))}
-              </ul>
-              {section.extra && <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm">{section.extra}</p>}
-            </>
-          ) : (
-            <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm">{section.content}</p>
-          )}
-        </section>
-      ))}
+      {
+        sections.map((section) => (
+          <section>
+            <h2 class="font-heading text-2xl font-bold text-on-surface mb-4">
+              {section.title}
+            </h2>
+            {"items" in section ? (
+              <>
+                <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm mb-4">
+                  {section.intro}
+                </p>
+                <ul class="space-y-2 text-on-surface-variant/80 font-body text-sm list-disc pl-6 mb-4">
+                  {section.items?.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+                {section.extra && (
+                  <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm">
+                    {section.extra}
+                  </p>
+                )}
+              </>
+            ) : (
+              <p class="text-on-surface-variant/80 leading-relaxed font-body text-sm">
+                {section.content}
+              </p>
+            )}
+          </section>
+        ))
+      }
     </div>
   </div>
 </DefaultLayout>

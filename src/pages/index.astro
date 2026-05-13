@@ -1,10 +1,9 @@
 ---
+import { getLocaleData } from "src/locales";
 import DefaultLayout from "../components/layout/DefaultLayout.astro";
-import en from "../locales/en.json";
-import es from "../locales/es.json";
 
 const locale = Astro.url.pathname.split("/")[1] === "en" ? "en" : "es";
-const data = locale === "en" ? en : es;
+const data = getLocaleData(locale);
 ---
 
 <DefaultLayout

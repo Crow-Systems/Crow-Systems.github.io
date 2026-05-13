@@ -21,13 +21,13 @@
   },
   "pages": {
     "index": {
-      "title": "CROW SYSTEMS - Technology Professionals Who Build Systems You Can Trust",
+      "title": "CROW SYSTEMS - Professionals Who Build Reliable Systems",
       "description": "Two technology professionals, two owners - one focused on networks and infrastructure, the other on backend systems and software. We take the time to understand your full picture: cameras, communications, and core systems. Straight talk, no lock-in. Reliable work built by people who stay until it's done.",
       "subtitle": "For Those Who Do, Straight to the Point",
       "hero": {
-        "title": "Technology Professionals Who Build<br />Systems You Can Trust",
-        "description": "Two technology professionals, two owners - one focused on networks and infrastructure, the other on backend systems and software. We take the time to understand your full picture: cameras, communications, and core systems. Straight talk, no lock-in. Reliable work built by people who stay until it's done.",
-        "startConsultation": "Send Us a Voice Note",
+        "title": "Professionals Who Build<br />Reliable Systems",
+        "description": "Two technology professionals, two owners, one focused on networks and infrastructure, the other on backend systems and software. We take the time to understand your full picture: cameras, communications, and core systems. Straight talk, no lock-in. Reliable work built by people who stay until it's done.",
+        "startConsultation": "Send Voice Note",
         "exploreServices": "See How It Works"
       },
       "stats": {
@@ -55,7 +55,7 @@
       "cta": {
         "title": "Not Sure Where to Start?<br />Let's Figure It Out Together.",
         "description": "Describe your project in your own words - a quick voice note or a brief form, whichever works. A senior engineer will review it within one business hour.",
-        "consultation": "Send Us a Voice Note",
+        "consultation": "Send Voice Note",
         "services": "See How It Works"
       }
     },
@@ -87,7 +87,7 @@
       "cta": {
         "title": "Not Sure Where to Start?<br />Let's Figure It Out Together.",
         "description": "Describe your project in your own words - a quick voice note or a brief form, whichever works. A senior engineer will review it within one business hour.",
-        "startConsultation": "Send Us a Voice Note"
+        "startConsultation": "Send Voice Note"
       },
       "included": "What's Included",
       "idealFor": "Ideal For",
