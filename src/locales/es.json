@@ -178,8 +178,8 @@
       "success": "¡Gracias por escribirnos! Revisaremos su mensaje y le responderemos en una hora hábil.",
       "failed": "Error al enviar. Por favor, inténtelo de nuevo.",
       "monFri": "Lun - Vie: 08:00 - 18:00 PDT",
-      "sat": "Sáb: 10:00 - 14:00 PDT (solo guardia)",
-      "regionsText": "Norteamérica, Unión Europea y Asia-Pacífico"
+      "sat": "Sáb y Dom: 10:00 - 14:00 PDT",
+      "regionsText": "México, Estados Unidos y Canadá"
     },
     "consulting": {
       "title": "Consultoría - CROW SYSTEMS",
