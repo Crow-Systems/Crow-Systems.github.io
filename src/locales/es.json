@@ -164,7 +164,7 @@
       "inquiryDescription": "¿Tiene un proyecto en mente o un problema que no termina de resolver? Cuéntenos. Un profesional senior revisará su mensaje y le responderá en una hora hábil.",
       "inquiries": "Consultas",
       "businessHours": "Horario de Atención",
-      "regions": "Regiones Atendidas",
+      "regions": "Regiones de Atención",
       "name": "Nombre",
       "email": "Correo Electrónico",
       "subject": "Asunto",
@@ -178,7 +178,7 @@
       "success": "¡Gracias por escribirnos! Revisaremos su mensaje y le responderemos en una hora hábil.",
       "failed": "Error al enviar. Por favor, inténtelo de nuevo.",
       "monFri": "Lun - Vie: 08:00 - 18:00 PDT",
-      "sat": "Sáb y Dom: 10:00 - 14:00 PDT",
+      "sat": "Sáb: 10:00 - 14:00 PDT (Solo bajo demanda)",
       "regionsText": "México, Estados Unidos y Canadá"
     },
     "consulting": {
