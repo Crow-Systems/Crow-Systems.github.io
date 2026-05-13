@@ -33,21 +33,30 @@ const services = serviceKeys.map((key) => data.services[key]);
     class="pt-32 pb-20 px-6 max-w-7xl mx-auto"
     aria-labelledby="services-hero-heading"
   >
-    <div class="max-w-3xl">
-      <span
-        class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block"
-        >{data.pages.services.hero.subtitle}</span
-      >
-      <h1
-        id="services-hero-heading"
-        class="font-heading text-4xl md:text-6xl font-bold tracking-tighter mb-6 text-on-surface leading-tight"
-        set:html={data.pages.services.hero.title}
-      />
-      <p
-        class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-2xl font-body"
-      >
-        {data.pages.services.hero.description}
-      </p>
+    <div class="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
+      <div class="flex-1 max-w-3xl">
+        <span
+          class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block"
+          >{data.pages.services.hero.subtitle}</span
+        >
+        <h1
+          id="services-hero-heading"
+          class="font-heading text-4xl md:text-6xl font-bold tracking-tighter mb-6 text-on-surface leading-tight"
+          set:html={data.pages.services.hero.title}
+        />
+        <p
+          class="text-lg text-on-surface-variant leading-relaxed max-w-2xl font-body"
+        >
+          {data.pages.services.hero.description}
+        </p>
+      </div>
+      <div class="flex-1">
+        <img
+          src="/measurement.webp"
+          alt=""
+          class="rounded-xl w-full h-auto object-cover md:[-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_20%,black_80%,transparent_100%)] md:[mask-image:linear-gradient(to_bottom,transparent_0%,black_20%,black_80%,transparent_100%)]"
+        />
+      </div>
     </div>
   </section>
 

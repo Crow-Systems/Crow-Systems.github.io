@@ -21,22 +21,33 @@ void LOCALE_JSON;
     class="pt-32 pb-24 px-6 max-w-7xl mx-auto"
     aria-labelledby="contact-heading"
   >
-    <header class="mb-16">
-      <span
-        class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block"
-        >{FORM_FIELDS.getInTouch}</span
-      >
-      <h1
-        id="contact-heading"
-        class="font-heading text-4xl md:text-6xl font-bold text-on-surface tracking-tighter mb-6"
-      >
-        {FORM_FIELDS.heading}
-      </h1>
-      <p
-        class="text-on-surface-variant max-w-2xl text-lg leading-relaxed font-body"
-      >
-        {FORM_FIELDS.description2}
-      </p>
+    <header
+      class="flex flex-col md:flex-row gap-8 md:gap-16 items-center mb-16"
+    >
+      <div class="flex-1">
+        <span
+          class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block"
+          >{FORM_FIELDS.getInTouch}</span
+        >
+        <h1
+          id="contact-heading"
+          class="font-heading text-4xl md:text-6xl font-bold text-on-surface tracking-tighter mb-6"
+        >
+          {FORM_FIELDS.heading}
+        </h1>
+        <p
+          class="text-on-surface-variant max-w-2xl text-lg leading-relaxed font-body"
+        >
+          {FORM_FIELDS.description2}
+        </p>
+      </div>
+      <div class="flex-1">
+        <img
+          src="/plane.webp"
+          alt=""
+          class="rounded-xl w-full h-auto object-cover opacity-70 md:[-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_35%,black_100%)] md:[mask-image:linear-gradient(to_right,transparent_0%,black_35%,black_100%)]"
+        />
+      </div>
     </header>
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">

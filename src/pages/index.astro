@@ -5,7 +5,6 @@ import es from "../locales/es.json";
 
 const locale = Astro.url.pathname.split("/")[1] === "en" ? "en" : "es";
 const data = locale === "en" ? en : es;
-
 ---
 
 <DefaultLayout
@@ -19,32 +18,43 @@ const data = locale === "en" ? en : es;
     class="pt-36 pb-24 px-6 md:px-8 max-w-7xl mx-auto"
     aria-labelledby="hero-heading"
   >
-    <div class="max-w-4xl">
-      <span
-        class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block"
-      >{data.pages.index.subtitle}</span
-      >
-      <h1
-        id="hero-heading"
-        class="font-heading text-4xl md:text-6xl font-bold tracking-tighter mb-6 text-on-surface leading-tight"
-        set:html={data.pages.index.hero.title}
-      ></h1>
-      <p
-        class="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 max-w-2xl font-body"
-      >
-        {data.pages.index.description}
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a
-          href={data.routes.consulting}
-          class="bg-primary text-white font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-all active:scale-[0.98] shadow-lg shadow-primary/20 text-center text-sm"
-        >{data.pages.index.hero.startConsultation}</a
+    <div class="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
+      <div class="max-w-2xl flex-1">
+        <span
+          class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block"
+          >{data.pages.index.subtitle}</span
         >
-        <a
-          href={data.routes.services}
-          class="border border-primary text-primary font-bold px-8 py-4 rounded-xl hover:bg-primary/10 transition-all active:scale-[0.98] text-center text-sm"
-        >{data.pages.index.hero.exploreServices}</a
+        <h1
+          id="hero-heading"
+          class="font-heading text-4xl md:text-6xl font-bold tracking-tighter mb-6 text-on-surface leading-tight"
+          set:html={data.pages.index.hero.title}
+        />
+        <p
+          class="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 max-w-2xl font-body"
         >
+          {data.pages.index.description}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href={data.routes.consulting}
+            class="bg-primary text-white font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-all active:scale-[0.98] shadow-lg shadow-primary/20 text-center text-sm"
+          >
+            {data.pages.index.hero.startConsultation}
+          </a>
+          <a
+            href={data.routes.services}
+            class="border border-primary text-primary font-bold px-8 py-4 rounded-xl hover:bg-primary/10 transition-all active:scale-[0.98] text-center text-sm"
+          >
+            {data.pages.index.hero.exploreServices}
+          </a>
+        </div>
+      </div>
+      <div class="flex-1">
+        <img
+          src="/crow-electricity.webp"
+          alt=""
+          class="rounded-xl md:rounded-tl-none md:rounded-bl-none w-full h-auto object-cover md:[-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_35%,black_100%)] md:[mask-image:linear-gradient(to_right,transparent_0%,black_35%,black_100%)] opacity-90"
+        />
       </div>
     </div>
     <div
@@ -102,7 +112,10 @@ const data = locale === "en" ? en : es;
     class="mx-6 md:mx-8 mb-20 relative overflow-hidden bg-primary rounded-xl p-12 md:p-20"
   >
     <div class="relative z-10 max-w-2xl">
-      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4" set:html={data.pages.index.cta.title}></h2>
+      <h2
+        class="font-heading text-3xl md:text-4xl font-bold text-white mb-4"
+        set:html={data.pages.index.cta.title}
+      />
       <p class="text-primary-fixed-dim text-lg mb-8 font-body text-white">
         {data.pages.index.cta.description}
       </p>
@@ -110,15 +123,22 @@ const data = locale === "en" ? en : es;
         <a
           href={data.routes.consulting}
           class="bg-secondary text-white font-bold px-8 py-4 rounded-xl hover:brightness-110 transition-all text-center text-sm"
-        >{data.pages.index.cta.consultation}</a
+          >{data.pages.index.cta.consultation}</a
         >
         <a
           href={data.routes.services}
           class="border border-on-primary text-white px-8 py-4 rounded-xl hover:bg-on-primary/10 transition-all text-center text-sm font-bold"
-        >{data.pages.index.cta.services}</a
+          >{data.pages.index.cta.services}</a
         >
       </div>
     </div>
+
+    <img
+      src="/tree.webp"
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover object-right pointer-events-none select-none"
+      style="-webkit-mask-image: linear-gradient(to right, transparent 30%, black 100%); mask-image: linear-gradient(to right, transparent 30%, black 100%);"
+    />
   </section>
 </DefaultLayout>
 
