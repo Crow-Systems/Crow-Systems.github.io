@@ -234,8 +234,8 @@ void LOCALE_JSON;
 </DefaultLayout>
 
 <div id="locale-data" data-json={LOCALE_JSON} hidden></div>
-<script type="module" is:inline>
-  import { initContactForm } from "../scripts/site.js";
+<script>
+  import { initContactForm } from "../scripts/site.ts";
   const el = document.getElementById("locale-data");
   initContactForm(JSON.parse(el?.getAttribute("data-json") || "{}"));
 </script>

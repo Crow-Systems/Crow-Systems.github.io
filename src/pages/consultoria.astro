@@ -496,8 +496,8 @@ void DATA_JSON;
 </DefaultLayout>
 
 <div id="locale-data" data-json={DATA_JSON} hidden></div>
-<script type="module" is:inline>
-  import { initAudioRecorder, initConsultForm } from "../scripts/site.js";
+<script>
+  import { initAudioRecorder, initConsultForm } from "../scripts/site.ts";
   initAudioRecorder();
   const el = document.getElementById("locale-data");
   initConsultForm(JSON.parse(el?.getAttribute("data-json") || "{}"));

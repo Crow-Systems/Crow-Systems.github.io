@@ -46,10 +46,10 @@ src/
 ## Environment Variables
 
 ```env
-VITE_API_BASE_URL=https://crowsys.chrislabs.net/api/v1
-VITE_CONTACT_ENDPOINT=/contact
-VITE_CONSULTATION_ENDPOINT=/consultation
-VITE_AUDIO_UPLOAD_ENDPOINT=/audio/upload
+PUBLIC_API_BASE_URL=https://crowsys.chrislabs.net/api/v1
+PUBLIC_CONTACT_ENDPOINT=/contact
+PUBLIC_CONSULTATION_ENDPOINT=/consultation
+PUBLIC_AUDIO_UPLOAD_ENDPOINT=/audio/upload
 ```
 
 ## Development
