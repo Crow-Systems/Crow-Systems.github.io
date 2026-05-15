@@ -1,9 +1,12 @@
 import { useState, useCallback, useMemo, useEffect } from "react";
 import { z } from "zod";
 import { parsePhoneNumber } from "libphonenumber-js";
-import { submitConsultation } from "../scripts/api";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { useSubmitConsultation, useUploadAudio } from "../scripts/api-hooks";
 import AudioRecorder from "./AudioRecorder";
 import PhoneInput from "./PhoneInput";
+
+const queryClient = new QueryClient();
 
 interface ConsultingLocale {
   audioSubmission: string;
@@ -49,10 +52,10 @@ interface ConsultingLocale {
 }
 
 interface Props {
-  locale: ConsultingLocale;
+  readonly locale: ConsultingLocale;
 }
 
-export default function ConsultingForm({ locale }: Props) {
+function ConsultingFormInner({ locale }: Props) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -63,31 +66,44 @@ export default function ConsultingForm({ locale }: Props) {
   const [audioBlob, setAudioBlob] = useState<Blob | null>(null);
   const [recorderKey, setRecorderKey] = useState(0);
 
-  const [submitting, setSubmitting] = useState(false);
+  const submitMutation = useSubmitConsultation();
+  const uploadMutation = useUploadAudio();
+  const submitting = submitMutation.isPending || uploadMutation.isPending;
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
   const [hasSubmitted, setHasSubmitted] = useState(false);
 
-  const schema = useMemo(() => z.object({
-    name: z.string().trim().min(2, locale.validation.nameRequired),
-    phone: z.string().trim().min(1, locale.validation.phoneRequired).refine(
-      (val) => {
-        try {
-          return parsePhoneNumber(val, "MX")?.isPossible() ?? false;
-        } catch {
-          return false;
-        }
-      },
-      { message: locale.validation.phoneInvalid }
-    ),
-    email: z.string().trim().optional().refine(
-      (val) => !val || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val),
-      { message: locale.validation.emailInvalid }
-    ),
-    company: z.string().optional(),
-  }), [locale]);
+  const schema = useMemo(
+    () =>
+      z.object({
+        name: z.string().trim().min(2, locale.validation.nameRequired),
+        phone: z
+          .string()
+          .trim()
+          .min(1, locale.validation.phoneRequired)
+          .refine(
+            (val) => {
+              try {
+                return parsePhoneNumber(val, "MX")?.isPossible() ?? false;
+              } catch {
+                return false;
+              }
+            },
+            { message: locale.validation.phoneInvalid },
+          ),
+        email: z
+          .string()
+          .trim()
+          .optional()
+          .refine((val) => !val || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val), {
+            message: locale.validation.emailInvalid,
+          }),
+        company: z.string().optional(),
+      }),
+    [locale],
+  );
 
   const runValidation = useCallback(() => {
     const result = schema.safeParse({ name, phone, email, company });
@@ -127,7 +143,11 @@ export default function ConsultingForm({ locale }: Props) {
     const show = touched[field] || hasSubmitted;
     const err = fieldErrors[field];
     const values: Record<Field, string> = {
-      name, phone, email, company, description,
+      name,
+      phone,
+      email,
+      company,
+      description,
     };
     return {
       showError: show && !!err,
@@ -136,48 +156,22 @@ export default function ConsultingForm({ locale }: Props) {
     };
   };
 
-  const handleSubmit = async (e: React.SyntheticEvent) => {
+  const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     setHasSubmitted(true);
     setTouched({
-      name: true, phone: true, email: true, company: true, description: true,
+      name: true,
+      phone: true,
+      email: true,
+      company: true,
+      description: true,
     });
     if (!runValidation()) return;
 
-    setSubmitting(true);
     setError(null);
     setSuccess(null);
 
-    try {
-      if (mode === "text") {
-        await submitConsultation({
-          fullName: name,
-          company: company || "",
-          email: email || "",
-          phone,
-          businessProblem: description || "No description provided",
-        });
-      } else {
-        const BASE =
-          import.meta.env.PUBLIC_API_BASE_URL ||
-          "https://crowsys.chrislabs.net/api/v1";
-        const AUDIO_UPLOAD =
-          import.meta.env.PUBLIC_AUDIO_UPLOAD_ENDPOINT || "/audio/upload";
-        const formData = new FormData();
-        if (audioBlob) formData.append("audio", audioBlob, "recording.webm");
-        formData.append("name", name);
-        formData.append("phone", phone);
-        if (email) formData.append("email", email);
-        if (company) formData.append("company", company);
-        if (description) formData.append("description", description);
-        const res = await fetch(`${BASE}${AUDIO_UPLOAD}`, {
-          method: "POST",
-          body: formData,
-        });
-        const data = await res.json();
-        if (!res.ok) throw new Error(data.message || "Upload failed");
-      }
-
+    const onSuccess = () => {
       setSuccess(
         mode === "audio" ? locale.audioSuccess : locale.consultSuccess,
       );
@@ -190,10 +184,39 @@ export default function ConsultingForm({ locale }: Props) {
       setRecorderKey((k) => k + 1);
       setTouched({});
       setHasSubmitted(false);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Submission failed");
-    } finally {
-      setSubmitting(false);
+    };
+
+    const onError = (err: Error) => {
+      setError(err.message);
+    };
+
+    if (mode === "text") {
+      submitMutation.mutate(
+        {
+          fullName: name,
+          company: company || "",
+          email: email || "",
+          phone,
+          businessProblem: description || "No description provided",
+        },
+        { onSuccess, onError },
+      );
+    } else {
+      if (!audioBlob) {
+        setError(locale.audioNoBlob);
+        return;
+      }
+      uploadMutation.mutate(
+        {
+          audioBlob,
+          name,
+          phone,
+          email: email || undefined,
+          company: company || undefined,
+          description: description || undefined,
+        },
+        { onSuccess, onError },
+      );
     }
   };
 
@@ -208,6 +231,12 @@ export default function ConsultingForm({ locale }: Props) {
   const inputErrClass = "border-red-400 border-l-2";
 
   const inputSuccessClass = "border-green-400 border-l-2";
+
+  const loadingLabel =
+    mode === "audio" ? locale.uploading : locale.consultForm.submitting;
+  const submitLabel =
+    mode === "audio" ? locale.submitAudio : locale.consultForm.submit;
+  const buttonText = submitting ? loadingLabel : submitLabel;
 
   return (
     <form
@@ -593,15 +622,7 @@ export default function ConsultingForm({ locale }: Props) {
         disabled={submitting}
         className="w-full md:w-auto md:px-12 bg-primary text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all hover:bg-primary/90 shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed md:mx-auto"
       >
-        <span>
-          {submitting
-            ? mode === "audio"
-              ? locale.uploading
-              : locale.consultForm.submitting
-            : mode === "audio"
-              ? locale.submitAudio
-              : locale.consultForm.submit}
-        </span>
+        <span>{buttonText}</span>
         <svg
           width="18"
           height="18"
@@ -615,5 +636,13 @@ export default function ConsultingForm({ locale }: Props) {
         </svg>
       </button>
     </form>
+  );
+}
+
+export default function ConsultingForm({ locale }: Props) {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <ConsultingFormInner locale={locale} />
+    </QueryClientProvider>
   );
 }

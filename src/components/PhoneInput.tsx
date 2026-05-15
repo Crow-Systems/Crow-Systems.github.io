@@ -2,17 +2,17 @@ import { useCallback } from "react";
 import RPNInput from "react-phone-number-input/input";
 
 interface PhoneInputProps {
-  value: string;
-  onChange: (value: string) => void;
-  onBlur: () => void;
-  showError: boolean;
-  showSuccess: boolean;
-  errorId?: string;
-  errorMessage?: string;
-  label: string;
-  required?: boolean;
-  placeholder?: string;
-  id?: string;
+  readonly value: string;
+  readonly onChange: (value: string) => void;
+  readonly onBlur: () => void;
+  readonly showError: boolean;
+  readonly showSuccess: boolean;
+  readonly errorId?: string;
+  readonly errorMessage?: string;
+  readonly label: string;
+  readonly required?: boolean;
+  readonly placeholder?: string;
+  readonly id?: string;
 }
 
 const inputClass =

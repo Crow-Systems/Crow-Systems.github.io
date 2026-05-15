@@ -22,7 +22,6 @@ interface ApiResponse {
 
 const BASE: string =
   import.meta.env.PUBLIC_API_BASE_URL || "https://crowsys.chrislabs.net/api/v1";
-console.log("BASE:", BASE);
 const CONTACT: string = import.meta.env.PUBLIC_CONTACT_ENDPOINT || "/contact";
 const CONSULTATION: string =
   import.meta.env.PUBLIC_CONSULTATION_ENDPOINT || "/consultation";
@@ -66,14 +65,23 @@ export function submitConsultation(
   });
 }
 
-export async function uploadAudio(
-  audioBlob: Blob,
-  description?: string,
-): Promise<ApiResponse> {
+export async function uploadAudio(payload: {
+  audioBlob: Blob;
+  description?: string;
+  name?: string;
+  phone?: string;
+  email?: string;
+  company?: string;
+}): Promise<ApiResponse> {
+  const { audioBlob, description, name, phone, email, company } = payload;
   const url = `${BASE}${AUDIO_UPLOAD}`;
   const formData = new FormData();
   formData.append("audio", audioBlob, "recording.webm");
   if (description) formData.append("description", description);
+  if (name) formData.append("name", name);
+  if (phone) formData.append("phone", phone);
+  if (email) formData.append("email", email);
+  if (company) formData.append("company", company);
   const res = await fetch(url, { method: "POST", body: formData });
   const data: ApiResponse = await res.json();
   if (!res.ok) throw new Error(data.message || `HTTP ${res.status}`);

@@ -94,7 +94,7 @@ export function initAudioRecorder(): void {
       if (submitText) submitText.textContent = "Uploading...";
       submitBtn.disabled = true;
       try {
-        const result = await uploadAudio(audioBlob, description || undefined);
+        const result = await uploadAudio({ audioBlob, description: description || undefined });
         if (result.success) {
           audioBlob = null;
           if (successEl) {
