@@ -223,8 +223,11 @@
         "nameRequired": "El nombre debe tener al menos 2 caracteres",
         "companyRequired": "El nombre de la empresa es obligatorio",
         "emailRequired": "Se requiere un correo electrónico válido",
+        "emailInvalid": "Ingrese un correo electrónico válido (ej., nombre@dominio.com)",
         "problemRequired": "Por favor, seleccione un problema de negocio",
-        "phoneRequired": "El número de teléfono es obligatorio"
+        "phoneRequired": "El número de teléfono es obligatorio",
+        "phoneInvalid": "Ingrese un número telefónico válido (ej., +52 555 000 0000)",
+        "descriptionMin": "Describa su proyecto en al menos 10 caracteres"
       },
       "problems": [
         "¿Cuál es el principal desafío?",

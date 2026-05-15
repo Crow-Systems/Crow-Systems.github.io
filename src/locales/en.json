@@ -213,8 +213,11 @@
         "nameRequired": "Name must be at least 2 characters",
         "companyRequired": "Company name is required",
         "emailRequired": "Valid email required",
+        "emailInvalid": "Enter a valid email address (e.g., name@domain.com)",
         "problemRequired": "Please select a business problem",
-        "phoneRequired": "Phone number is required"
+        "phoneRequired": "Phone number is required",
+        "phoneInvalid": "Enter a valid phone number (e.g., +1 555 000 0000)",
+        "descriptionMin": "Describe your project in at least 10 characters"
       },
       "problems": [
         "What's the main challenge?",

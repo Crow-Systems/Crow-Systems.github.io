@@ -19,8 +19,10 @@
     "@astrojs/sitemap": "^3.7.2",
     "@astrojs/tailwind": "^6.0.2",
     "astro": "^6.3.3",
+    "libphonenumber-js": "^1.13.2",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "react-phone-number-input": "^3.4.16",
     "zod": "^4.4.3"
   },
   "devDependencies": {
