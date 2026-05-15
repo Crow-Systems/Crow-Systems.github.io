@@ -211,13 +211,16 @@
         "goals": "Objetivos del Proyecto",
         "budget": "Rango de Presupuesto",
         "submit": "Enviar Solicitud",
-        "submitting": "Enviando..."
+        "submitting": "Enviando...",
+        "record": "Grabar",
+        "write": "Escribir"
       },
       "validation": {
         "nameRequired": "El nombre debe tener al menos 2 caracteres",
         "companyRequired": "El nombre de la empresa es obligatorio",
         "emailRequired": "Se requiere un correo electrónico válido",
-        "problemRequired": "Por favor, seleccione un problema de negocio"
+        "problemRequired": "Por favor, seleccione un problema de negocio",
+        "phoneRequired": "El número de teléfono es obligatorio"
       },
       "problems": [
         "¿Cuál es el principal desafío?",

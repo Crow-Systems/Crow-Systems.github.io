@@ -202,13 +202,16 @@
         "goals": "Project Goals",
         "budget": "Budget Range",
         "submit": "Send Request",
-        "submitting": "Sending..."
+        "submitting": "Sending...",
+        "record": "Record",
+        "write": "Write"
       },
       "validation": {
         "nameRequired": "Name must be at least 2 characters",
         "companyRequired": "Company name is required",
         "emailRequired": "Valid email required",
-        "problemRequired": "Please select a business problem"
+        "problemRequired": "Please select a business problem",
+        "phoneRequired": "Phone number is required"
       },
       "problems": [
         "What's the main challenge?",
