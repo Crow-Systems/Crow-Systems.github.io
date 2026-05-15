@@ -192,6 +192,9 @@
       "playLabel": "Play recording",
       "consultSuccess": "Thank you! Your consultation request has been submitted. We will be in touch within 1 business hour.",
       "audioNoBlob": "Please record audio first.",
+      "audioDeleteFail": "Nothing to delete.",
+      "micError": "Microphone access denied.",
+      "discardRecording": "Discard current recording and start a new one?",
       "consultForm": {
         "heading": "Prefer to Write? Use the Form",
         "fullName": "Full Name",

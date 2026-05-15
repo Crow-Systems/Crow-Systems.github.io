@@ -38,6 +38,9 @@ interface ConsultingLocale {
   goalsPlaceholder: string;
   consultSuccess: string;
   audioNoBlob: string;
+  audioDeleteFail: string;
+  micError: string;
+  discardRecording: string;
 }
 
 interface Props {
@@ -280,6 +283,10 @@ export default function ConsultingForm({ locale }: Props) {
               recordStopLabel={locale.recordStopLabel}
               recordDeleteLabel={locale.recordDeleteLabel}
               playLabel={locale.playLabel}
+              audioNoBlob={locale.audioNoBlob}
+              audioDeleteFail={locale.audioDeleteFail}
+              micError={locale.micError}
+              discardRecording={locale.discardRecording}
               onAudioChange={(blob) => setAudioBlob(blob)}
             />
             <div className="space-y-4">

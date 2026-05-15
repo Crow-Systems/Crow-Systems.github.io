@@ -201,6 +201,10 @@
       "recordStartLabel": "Iniciar grabación",
       "recordStopLabel": "Detener grabación",
       "playLabel": "Reproducir grabación",
+      "audioNoBlob": "Grabe audio primero.",
+      "audioDeleteFail": "No hay nada que eliminar.",
+      "micError": "Acceso al micrófono denegado.",
+      "discardRecording": "¿Descartar grabación actual y comenzar una nueva?",
       "consultForm": {
         "heading": "¿Prefiere Escribir? Use el Formulario",
         "fullName": "Nombre Completo",

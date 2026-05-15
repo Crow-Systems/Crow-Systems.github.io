@@ -6,6 +6,10 @@ interface Props {
   recordStopLabel: string;
   recordDeleteLabel: string;
   playLabel: string;
+  audioNoBlob: string;
+  audioDeleteFail: string;
+  micError: string;
+  discardRecording: string;
   onAudioChange: (blob: Blob | null) => void;
 }
 
@@ -18,6 +22,10 @@ export default function AudioRecorder({
   recordStopLabel,
   recordDeleteLabel,
   playLabel,
+  audioNoBlob,
+  audioDeleteFail,
+  micError,
+  discardRecording,
   onAudioChange,
 }: Props) {
   const [audioBlob, setAudioBlob] = useState<Blob | null>(null);
@@ -27,6 +35,14 @@ export default function AudioRecorder({
   const [playing, setPlaying] = useState(false);
   const [playbackPosition, setPlaybackPosition] = useState(0);
   const [levels, setLevels] = useState<number[]>([]);
+  const [feedback, setFeedback] = useState<string | null>(null);
+  const feedbackTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const showFeedback = useCallback((msg: string) => {
+    setFeedback(msg);
+    if (feedbackTimer.current) clearTimeout(feedbackTimer.current);
+    feedbackTimer.current = setTimeout(() => setFeedback(null), 3000);
+  }, []);
 
   const mediaRecorder = useRef<MediaRecorder | null>(null);
   const chunks = useRef<Blob[]>([]);
@@ -58,7 +74,11 @@ export default function AudioRecorder({
       for (let i = 0; i < 5; i++) {
         let sum = 0;
         let count = 0;
-        for (let j = i * binSize; j < (i + 1) * binSize && j < data.length; j++) {
+        for (
+          let j = i * binSize;
+          j < (i + 1) * binSize && j < data.length;
+          j++
+        ) {
           sum += data[j]!;
           count++;
         }
@@ -82,6 +102,7 @@ export default function AudioRecorder({
     return () => {
       if (audioUrl) URL.revokeObjectURL(audioUrl);
       if (timerRef.current) clearInterval(timerRef.current);
+      if (feedbackTimer.current) clearTimeout(feedbackTimer.current);
       stopLevelLoop();
       if (elementSourceRef.current) {
         elementSourceRef.current.disconnect();
@@ -113,6 +134,10 @@ export default function AudioRecorder({
       mediaSourceRef.current.disconnect();
       mediaSourceRef.current = null;
     }
+    if (elementSourceRef.current) {
+      elementSourceRef.current.disconnect();
+      elementSourceRef.current = null;
+    }
     stopLevelLoop();
     setAudioBlob(null);
     if (audioUrl) URL.revokeObjectURL(audioUrl);
@@ -124,7 +149,19 @@ export default function AudioRecorder({
     onAudioChange(null);
   }, [audioUrl, onAudioChange]);
 
+  const handleDelete = useCallback(() => {
+    if (!audioBlob && !recording) {
+      showFeedback(audioDeleteFail);
+      return;
+    }
+    clearRecording();
+  }, [audioBlob, recording, audioDeleteFail, showFeedback, clearRecording]);
+
   const startRecording = useCallback(async () => {
+    if (audioBlob || playing) {
+      if (!window.confirm(discardRecording)) return;
+      clearRecording();
+    }
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       const mimeType =
@@ -178,8 +215,18 @@ export default function AudioRecorder({
       }, 1000);
     } catch {
       setRecording(false);
+      showFeedback(micError);
     }
-  }, [audioUrl, onAudioChange]);
+  }, [
+    audioUrl,
+    onAudioChange,
+    audioBlob,
+    playing,
+    clearRecording,
+    showFeedback,
+    discardRecording,
+    micError,
+  ]);
 
   const stopRecording = useCallback(() => {
     if (mediaRecorder.current?.state === "recording") {
@@ -195,7 +242,10 @@ export default function AudioRecorder({
   }, []);
 
   const togglePlayback = useCallback(() => {
-    if (!audioUrl) return;
+    if (!audioUrl) {
+      showFeedback(audioNoBlob);
+      return;
+    }
     if (playing) {
       audioEl.current?.pause();
       setPlaying(false);
@@ -227,17 +277,19 @@ export default function AudioRecorder({
     setPlaybackPosition(0);
     setPlaying(true);
     startLevelLoop();
-  }, [audioUrl, playing]);
+  }, [audioUrl, playing, showFeedback, audioNoBlob]);
 
   return (
-    <div className="bg-surface rounded-xl p-10 border border-outline-variant/30 mb-6 flex flex-col items-center justify-center text-center">
-      <WaveformBars active={recording || playing} levels={recording || playing ? levels : undefined} />
+    <div className="relative bg-surface rounded-xl p-12 border border-outline-variant/30 mb-6 flex flex-col items-center justify-center text-center">
+      <WaveformBars
+        active={recording || playing}
+        levels={recording || playing ? levels : undefined}
+      />
       <div className="flex items-center gap-6">
         <button
           type="button"
-          onClick={clearRecording}
-          disabled={!audioBlob && !recording}
-          className="w-12 h-12 rounded-full border border-outline-variant/50 flex items-center justify-center text-on-surface-variant hover:border-red-500 hover:text-red-500 transition-all disabled:opacity-30"
+          onClick={handleDelete}
+          className="w-12 h-12 rounded-full border border-outline-variant/50 flex items-center justify-center text-on-surface-variant hover:border-red-500 hover:text-red-500 transition-all"
           aria-label={recordDeleteLabel}
         >
           <svg
@@ -266,8 +318,7 @@ export default function AudioRecorder({
         <button
           type="button"
           onClick={togglePlayback}
-          disabled={!audioUrl}
-          className="w-12 h-12 rounded-full border border-outline-variant/50 flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary transition-all disabled:opacity-30"
+          className="w-12 h-12 rounded-full border border-outline-variant/50 flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary transition-all"
           aria-label={playLabel}
         >
           {playing ? (
@@ -281,7 +332,7 @@ export default function AudioRecorder({
           )}
         </button>
       </div>
-      <p className="mt-6 font-mono text-sm">
+      <p className="mt-4 font-mono text-sm">
         <span className={playing ? "text-primary" : "text-on-surface-variant"}>
           {playing ? formatTime(playbackPosition) : formatTime(duration)}
         </span>
@@ -290,6 +341,14 @@ export default function AudioRecorder({
           {formatTime(audioBlob ? duration : 300)}
         </span>
       </p>
+      {feedback && (
+        <div
+          className="absolute bottom-2 mt-4 px-4 py-2 bg-red-50 text-red-600 rounded-lg text-sm font-medium"
+          role="alert"
+        >
+          {feedback}
+        </div>
+      )}
     </div>
   );
 }
