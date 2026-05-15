@@ -144,9 +144,11 @@ export default function ConsultingForm({ locale }: Props) {
     "w-full bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-sm";
 
   const labelClass =
-    "text-xs font-bold uppercase tracking-widest text-on-surface-variant";
+    "text-xs font-bold uppercase tracking-wider text-on-surface-variant";
 
   const errClass = "text-xs text-red-500 mt-1";
+
+  const inputErrClass = "border-red-400 border-l-2";
 
   return (
     <form
@@ -179,15 +181,16 @@ export default function ConsultingForm({ locale }: Props) {
           <div className="space-y-2">
             <label htmlFor="cf-name" className={labelClass}>
               {locale.consultForm.fullName}
-              <span className="text-error">*</span>
+              <span className="text-red-500">*</span>
             </label>
             <input
               id="cf-name"
               type="text"
-              placeholder="John Doe"
+              placeholder="Full legal name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className={inputClass}
+              aria-required="true"
+              className={`${inputClass} ${fieldErrors.name ? inputErrClass : ""}`}
             />
             {fieldErrors.name && (
               <p className={errClass} id="cf-name-err">
@@ -198,7 +201,7 @@ export default function ConsultingForm({ locale }: Props) {
           <div className="space-y-2">
             <label htmlFor="cf-phone" className={labelClass}>
               {locale.consultForm.phone}
-              <span className="text-error">*</span>
+              <span className="text-red-500">*</span>
             </label>
             <input
               id="cf-phone"
@@ -206,7 +209,8 @@ export default function ConsultingForm({ locale }: Props) {
               placeholder="+1 (555) 000-0000"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className={inputClass}
+              aria-required="true"
+              className={`${inputClass} ${fieldErrors.phone ? inputErrClass : ""}`}
             />
             {fieldErrors.phone && (
               <p className={errClass} id="cf-phone-err">
@@ -224,7 +228,8 @@ export default function ConsultingForm({ locale }: Props) {
               placeholder="j.doe@acme.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className={inputClass}
+              aria-required="false"
+              className={`${inputClass} ${fieldErrors.email ? inputErrClass : ""}`}
             />
           </div>
           <div className="space-y-2">
@@ -234,17 +239,18 @@ export default function ConsultingForm({ locale }: Props) {
             <input
               id="cf-company"
               type="text"
-              placeholder="Your company name"
+              placeholder="Acme Corp"
               value={company}
               onChange={(e) => setCompany(e.target.value)}
-              className={inputClass}
+              aria-required="false"
+              className={`${inputClass} ${fieldErrors.company ? inputErrClass : ""}`}
             />
           </div>
         </div>
       </fieldset>
 
       <fieldset>
-        <legend className="font-heading text-xl font-bold text-on-surface mb-4">
+        <legend className="font-heading text-lg font-bold text-on-surface mb-4">
           {locale.audioSubmission}
         </legend>
 
@@ -252,25 +258,53 @@ export default function ConsultingForm({ locale }: Props) {
           <button
             type="button"
             onClick={() => setMode("text")}
-            className={`text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full transition-all duration-300 ${
+            className={`flex gap-1 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full transition-all duration-300 ${
               mode === "text"
                 ? "bg-primary text-white shadow-sm shadow-black/10"
                 : "text-on-surface-variant hover:bg-primary/10"
             }`}
           >
-            <span className="mr-1">✏️</span>
+            <svg
+              className="mr-1"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" />
+              <path d="m15 5 4 4" />
+            </svg>
             {locale.consultForm.write}
           </button>
           <button
             type="button"
             onClick={() => setMode("audio")}
-            className={`text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full transition-all duration-300 ${
+            className={`flex gap-1 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full transition-all duration-300 ${
               mode === "audio"
                 ? "bg-primary text-white shadow-sm shadow-black/10"
                 : "text-on-surface-variant hover:bg-primary/10"
             }`}
           >
-            <span className="mr-1">🎤</span>
+            <svg
+              className="mr-1"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <rect x="9" y="2" width="6" height="12" rx="3" />
+              <path d="M5 10a7 7 0 0 0 14 0" />
+              <path d="M8 21h8" />
+              <path d="M12 17v4" />
+            </svg>
             {locale.consultForm.record}
           </button>
         </div>
@@ -299,7 +333,7 @@ export default function ConsultingForm({ locale }: Props) {
               </label>
               <textarea
                 id="cf-audio-context"
-                className="w-full bg-white border border-outline-variant rounded-lg p-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none min-h-[100px] transition-all font-body text-sm"
+                className="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none font-body text-sm min-h-[100px]"
                 placeholder={locale.placeholder}
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
@@ -310,7 +344,7 @@ export default function ConsultingForm({ locale }: Props) {
           <div className="space-y-4 mb-6">
             <label htmlFor="cf-description" className={labelClass}>
               {locale.consultForm.problem}
-              <span className="text-error">*</span>
+              <span className="text-red-500">*</span>
             </label>
             <textarea
               id="cf-description"
@@ -318,6 +352,7 @@ export default function ConsultingForm({ locale }: Props) {
               placeholder={locale.goalsPlaceholder}
               value={description}
               onChange={(e) => setDescription(e.target.value)}
+              aria-required="true"
               className="w-full h-36 bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none font-body text-sm"
             />
           </div>
@@ -327,7 +362,7 @@ export default function ConsultingForm({ locale }: Props) {
       <button
         type="submit"
         disabled={submitting}
-        className="w-full bg-primary text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all hover:bg-primary/90 shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full md:w-auto md:px-12 bg-primary text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all hover:bg-primary/90 shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed md:mx-auto"
       >
         <span>
           {submitting

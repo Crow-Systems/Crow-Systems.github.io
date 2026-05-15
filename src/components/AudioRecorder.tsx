@@ -154,8 +154,9 @@ export default function AudioRecorder({
       showFeedback(audioDeleteFail);
       return;
     }
+    if (!window.confirm(discardRecording)) return;
     clearRecording();
-  }, [audioBlob, recording, audioDeleteFail, showFeedback, clearRecording]);
+  }, [audioBlob, recording, discardRecording, audioDeleteFail, showFeedback, clearRecording]);
 
   const startRecording = useCallback(async () => {
     if (audioBlob || playing) {

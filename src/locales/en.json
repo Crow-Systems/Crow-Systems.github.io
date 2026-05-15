@@ -196,7 +196,7 @@
       "micError": "Microphone access denied.",
       "discardRecording": "Discard current recording and start a new one?",
       "consultForm": {
-        "heading": "Prefer to Write? Use the Form",
+        "heading": "Tell Us About Your Project",
         "fullName": "Full Name",
         "company": "Company",
         "email": "Email",
