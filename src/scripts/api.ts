@@ -20,6 +20,19 @@ const consultationSchema = z.object({
 interface ApiResponse {
   success: boolean;
   message?: string;
+  errorKey?: string;
+}
+
+export class ApiError extends Error {
+  public readonly errorKey?: string;
+  public readonly status: number;
+
+  constructor(status: number, errorKey?: string, message?: string) {
+    super(errorKey || message || `HTTP ${status}`);
+    this.name = "ApiError";
+    this.status = status;
+    this.errorKey = errorKey;
+  }
 }
 
 const BASE: string =
@@ -60,8 +73,8 @@ async function request<T = ApiResponse>(
   });
   const data = await parseResponse<T>(res);
   if (!res.ok) {
-    const msg = (data as ApiResponse).message || `HTTP ${res.status}`;
-    throw new Error(msg);
+    const apiData = data as ApiResponse;
+    throw new ApiError(res.status, apiData.errorKey, apiData.message);
   }
   return data;
 }
@@ -123,6 +136,6 @@ export async function uploadAudio(payload: {
   if (company) formData.append("company", company);
   const res = await fetch(url, { method: "POST", body: formData });
   const data = await parseResponse<ApiResponse>(res);
-  if (!res.ok) throw new Error(data.message || `HTTP ${res.status}`);
+  if (!res.ok) throw new ApiError(res.status, data.errorKey, data.message);
   return data;
 }

@@ -1,6 +1,60 @@
-import { submitContact, submitConsultation, uploadAudio } from "./api.js";
+import { submitContact, submitConsultation, uploadAudio, ApiError } from "./api.js";
 
 let audioBlob: Blob | null = null;
+
+const CONTACT_VALIDATION_FIELD_MAP: Record<string, string> = {
+  VALIDATION_NAME_REQUIRED: "name",
+  VALIDATION_EMAIL_INVALID: "email",
+  VALIDATION_SUBJECT_REQUIRED: "subject",
+  VALIDATION_MESSAGE_MIN: "message",
+};
+
+const CONSULT_VALIDATION_FIELD_MAP: Record<string, string> = {
+  VALIDATION_NAME_REQUIRED: "fullname",
+  VALIDATION_EMAIL_INVALID: "email",
+  VALIDATION_COMPANY_REQUIRED: "company",
+  VALIDATION_PROBLEM_REQUIRED: "problem",
+};
+
+function mapErrorKeyToField(key: string, map: Record<string, string>): string | null {
+  return map[key] ?? null;
+}
+
+function getSectionErrorKeys(
+  localeData: Record<string, unknown>,
+  section: string,
+): Record<string, string> {
+  const sectionData = (localeData as Record<string, unknown>)?.pages as
+    | Record<string, unknown>
+    | undefined;
+  return (sectionData?.[section] as Record<string, unknown>)?.[
+    "errorKeys"
+  ] as Record<string, string>;
+}
+
+function resolveServerError(
+  err: unknown,
+  localeData: Record<string, unknown>,
+  section: string,
+  fieldMap: Record<string, string>,
+  fieldPrefix: string,
+): { message: string; field?: string } | null {
+  if (err instanceof ApiError && err.errorKey) {
+    const errorKeys = getSectionErrorKeys(localeData, section);
+    const msg = errorKeys?.[err.errorKey] || err.errorKey;
+    const field = mapErrorKeyToField(err.errorKey, fieldMap);
+    return { message: msg, field: field || undefined };
+  }
+  if (err instanceof TypeError) {
+    const errorKeys = getSectionErrorKeys(localeData, section);
+    return {
+      message:
+        errorKeys?.NETWORK_ERROR ||
+        "Unable to connect. Please check your internet connection.",
+    };
+  }
+  return null;
+}
 
 export function initAudioRecorder(): void {
   const btn = document.getElementById("record-btn") as HTMLButtonElement | null;
@@ -104,11 +158,17 @@ export function initAudioRecorder(): void {
           if (desc) desc.value = "";
           if (delBtn) delBtn.click();
         } else {
-          throw new Error(result.message || "Upload failed.");
+          throw new ApiError(0, undefined, result.message || "Upload failed.");
         }
       } catch (err) {
         if (errorEl) {
-          errorEl.textContent = err instanceof Error ? err.message : "Upload failed.";
+          if (err instanceof ApiError) {
+            errorEl.textContent = err.message;
+          } else if (err instanceof TypeError) {
+            errorEl.textContent = "Unable to connect. Please check your internet connection.";
+          } else {
+            errorEl.textContent = err instanceof Error ? err.message : "Upload failed.";
+          }
           errorEl.classList.remove("hidden");
         }
       } finally {
@@ -174,10 +234,22 @@ export function initConsultForm(localeData: Record<string, unknown>): void {
       })
       .catch(function (err: unknown) {
         const errorEl = document.getElementById("consult-error");
-        if (errorEl) {
+        if (!errorEl) return;
+        const resolved = resolveServerError(err, localeData, "consulting", CONSULT_VALIDATION_FIELD_MAP, "c");
+        if (resolved) {
+          if (resolved.field) {
+            const fieldEl = document.getElementById("c-" + resolved.field + "-err");
+            if (fieldEl) {
+              fieldEl.textContent = resolved.message;
+              fieldEl.classList.remove("hidden");
+            }
+            return;
+          }
+          errorEl.textContent = resolved.message;
+        } else {
           errorEl.textContent = err instanceof Error ? err.message : "Submission failed.";
-          errorEl.classList.remove("hidden");
         }
+        errorEl.classList.remove("hidden");
       })
       .finally(function () {
         if (btnText) btnText.textContent = t("pages.consulting.consultForm.submit");
@@ -190,6 +262,14 @@ export function initContactForm(localeData: Record<string, unknown>): void {
   const form = document.getElementById("contact-form") as HTMLFormElement | null;
   if (!form) return;
   const t = (key: string): string => { const keys = key.split("."); let r: unknown = localeData; for (const k of keys) { if (!r) return key; r = (r as Record<string, unknown>)[k]; } return typeof r === "string" ? r : key; };
+
+  const dismissBtn = document.getElementById("contact-error-dismiss");
+  if (dismissBtn) {
+    dismissBtn.addEventListener("click", function () {
+      const errorEl = document.getElementById("contact-error");
+      if (errorEl) errorEl.classList.add("hidden");
+    });
+  }
 
   form.addEventListener("submit", async (e: Event) => {
     e.preventDefault();
@@ -221,13 +301,37 @@ export function initContactForm(localeData: Record<string, unknown>): void {
           successEl.classList.remove("hidden");
         }
         form.reset();
-      } else { throw new Error(result.message); }
+      } else {
+        throw new ApiError(0, undefined, result.message);
+      }
     } catch (err) {
       const errorEl = document.getElementById("contact-error");
-      if (errorEl) {
-        errorEl.textContent = err instanceof Error ? err.message : t("pages.contact.failed");
-        errorEl.classList.remove("hidden");
+      const errorText = document.getElementById("contact-error-text");
+      if (!errorEl || !errorText) return;
+      errorEl.classList.add("hidden");
+      const resolved = resolveServerError(err, localeData, "contact", CONTACT_VALIDATION_FIELD_MAP, "cnt");
+      if (resolved) {
+        if (resolved.field) {
+          const fieldEl = document.getElementById("cnt-" + resolved.field + "-err");
+          if (fieldEl) {
+            fieldEl.textContent = resolved.message;
+            fieldEl.classList.remove("hidden");
+          }
+          return;
+        }
+        errorText.textContent = resolved.message;
+        if (err instanceof TypeError || (err instanceof ApiError && err.errorKey?.startsWith("NETWORK"))) {
+          errorEl.className = "hidden mb-6 p-4 rounded-lg text-sm font-medium flex items-start gap-3 border border-amber-200 bg-amber-50 text-amber-800";
+        } else if (err instanceof ApiError) {
+          errorEl.className = "hidden mb-6 p-4 rounded-lg text-sm font-medium flex items-start gap-3 border border-orange-200 bg-orange-50 text-orange-800";
+        } else {
+          errorEl.className = "hidden mb-6 p-4 rounded-lg text-sm font-medium flex items-start gap-3 border border-red-200 bg-red-50 text-red-600";
+        }
+      } else {
+        errorText.textContent = err instanceof Error ? err.message : t("pages.contact.failed");
+        errorEl.className = "hidden mb-6 p-4 rounded-lg text-sm font-medium flex items-start gap-3 border border-red-200 bg-red-50 text-red-600";
       }
+      errorEl.classList.remove("hidden");
     } finally {
       const btn = document.getElementById("contact-submit-btn") as HTMLButtonElement | null;
       if (btn) { btn.disabled = false; btn.textContent = t("pages.contact.sendMessage"); }

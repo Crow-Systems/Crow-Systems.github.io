@@ -169,6 +169,18 @@
       "sending": "Sending...",
       "success": "Thanks for reaching out! We'll review your message and get back to you within one business hour.",
       "failed": "Submission failed. Please try again.",
+      "errorKeys": {
+        "SUBMISSION_FAILED": "Your submission could not be sent. Please try again.",
+        "SERVER_INTERNAL_ERROR": "Something went wrong on our end. Please try again in a few moments.",
+        "SERVER_RATE_LIMIT": "Too many requests. Please wait a moment and try again.",
+        "SERVER_TIMEOUT": "The request took too long. Please check your connection and try again.",
+        "NETWORK_ERROR": "Unable to connect. Please check your internet connection and try again.",
+        "UNKNOWN_ERROR": "An unexpected error occurred. Please try again or contact support.",
+        "VALIDATION_NAME_REQUIRED": "Name is required",
+        "VALIDATION_EMAIL_INVALID": "Valid email required (e.g., name@domain.com)",
+        "VALIDATION_SUBJECT_REQUIRED": "Subject is required",
+        "VALIDATION_MESSAGE_MIN": "Message is required (min 10 characters)"
+      },
       "monFri": "Mon - Fri: 08:00 - 18:00 PDT",
       "sat": "Sat: 10:00 - 14:00 PDT (On-call only)",
       "regionsText": "México, United States & Canadá"
@@ -218,6 +230,22 @@
         "phoneRequired": "Phone number is required",
         "phoneInvalid": "Enter a valid phone number (e.g., +1 555 000 0000)",
         "descriptionMin": "Describe your project in at least 10 characters"
+      },
+      "errorKeys": {
+        "SUBMISSION_FAILED": "Your submission could not be sent. Please try again.",
+        "SERVER_INTERNAL_ERROR": "Something went wrong on our end. Please try again in a few moments.",
+        "SERVER_RATE_LIMIT": "Too many requests. Please wait a moment and try again.",
+        "SERVER_TIMEOUT": "The request took too long. Please check your connection and try again.",
+        "SERVER_UPLOAD_FAILED": "Failed to upload audio. Please check your connection and try again.",
+        "SERVER_UPLOAD_TOO_LARGE": "The audio file is too large. Please try a shorter recording.",
+        "SERVER_INVALID_FORMAT": "Invalid file format. Please use a supported format.",
+        "NETWORK_ERROR": "Unable to connect. Please check your internet connection and try again.",
+        "UNKNOWN_ERROR": "An unexpected error occurred. Please try again or contact support.",
+        "VALIDATION_NAME_REQUIRED": "Name must be at least 2 characters",
+        "VALIDATION_EMAIL_INVALID": "Enter a valid email address (e.g., name@domain.com)",
+        "VALIDATION_PHONE_INVALID": "Enter a valid phone number (e.g., +1 555 000 0000)",
+        "VALIDATION_COMPANY_REQUIRED": "Company name is required",
+        "VALIDATION_DESCRIPTION_MIN": "Describe your project in at least 10 characters"
       },
       "problems": [
         "What's the main challenge?",

@@ -180,6 +180,18 @@
       "sending": "Enviando...",
       "success": "¡Gracias por escribirnos! Revisaremos su mensaje y le responderemos en una hora hábil.",
       "failed": "Error al enviar. Por favor, inténtelo de nuevo.",
+      "errorKeys": {
+        "SUBMISSION_FAILED": "No se pudo enviar su mensaje. Por favor, inténtelo de nuevo.",
+        "SERVER_INTERNAL_ERROR": "Algo salió mal. Por favor, inténtelo de nuevo en unos momentos.",
+        "SERVER_RATE_LIMIT": "Demasiadas solicitudes. Espere un momento e inténtelo de nuevo.",
+        "SERVER_TIMEOUT": "La solicitud tardó demasiado. Verifique su conexión e inténtelo de nuevo.",
+        "NETWORK_ERROR": "No se puede conectar. Verifique su conexión a internet e inténtelo de nuevo.",
+        "UNKNOWN_ERROR": "Ocurrió un error inesperado. Inténtelo de nuevo o contacte al soporte.",
+        "VALIDATION_NAME_REQUIRED": "El nombre es obligatorio",
+        "VALIDATION_EMAIL_INVALID": "Ingrese un correo electrónico válido (ej., nombre@dominio.com)",
+        "VALIDATION_SUBJECT_REQUIRED": "El asunto es obligatorio",
+        "VALIDATION_MESSAGE_MIN": "El mensaje es obligatorio (mínimo 10 caracteres)"
+      },
       "monFri": "Lun - Vie: 08:00 - 18:00 PDT",
       "sat": "Sáb: 10:00 - 14:00 PDT (Solo bajo demanda)",
       "regionsText": "México, Estados Unidos y Canadá"
@@ -228,6 +240,22 @@
         "phoneRequired": "El número de teléfono es obligatorio",
         "phoneInvalid": "Ingrese un número telefónico válido (ej., +52 555 000 0000)",
         "descriptionMin": "Describa su proyecto en al menos 10 caracteres"
+      },
+      "errorKeys": {
+        "SUBMISSION_FAILED": "No se pudo enviar su solicitud. Por favor, inténtelo de nuevo.",
+        "SERVER_INTERNAL_ERROR": "Algo salió mal. Por favor, inténtelo de nuevo en unos momentos.",
+        "SERVER_RATE_LIMIT": "Demasiadas solicitudes. Espere un momento e inténtelo de nuevo.",
+        "SERVER_TIMEOUT": "La solicitud tardó demasiado. Verifique su conexión e inténtelo de nuevo.",
+        "SERVER_UPLOAD_FAILED": "Error al subir el audio. Verifique su conexión e inténtelo de nuevo.",
+        "SERVER_UPLOAD_TOO_LARGE": "El archivo de audio es demasiado grande. Intente una grabación más corta.",
+        "SERVER_INVALID_FORMAT": "Formato de archivo no válido. Utilice un formato compatible.",
+        "NETWORK_ERROR": "No se puede conectar. Verifique su conexión a internet e inténtelo de nuevo.",
+        "UNKNOWN_ERROR": "Ocurrió un error inesperado. Inténtelo de nuevo o contacte al soporte.",
+        "VALIDATION_NAME_REQUIRED": "El nombre debe tener al menos 2 caracteres",
+        "VALIDATION_EMAIL_INVALID": "Ingrese un correo electrónico válido (ej., nombre@dominio.com)",
+        "VALIDATION_PHONE_INVALID": "Ingrese un número telefónico válido (ej., +52 555 000 0000)",
+        "VALIDATION_COMPANY_REQUIRED": "El nombre de la empresa es obligatorio",
+        "VALIDATION_DESCRIPTION_MIN": "Describa su proyecto en al menos 10 caracteres"
       },
       "problems": [
         "¿Cuál es el principal desafío?",

@@ -1,8 +1,9 @@
-import { useState, useCallback, useMemo, useEffect } from "react";
+import { useState, useCallback, useMemo, useEffect, useRef } from "react";
 import { z } from "zod";
 import { parsePhoneNumber } from "libphonenumber-js";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useSubmitConsultation, useUploadAudio } from "../scripts/api-hooks";
+import { ApiError } from "../scripts/api";
 import AudioRecorder from "./AudioRecorder";
 import PhoneInput from "./PhoneInput";
 
@@ -42,6 +43,7 @@ interface ConsultingLocale {
     phoneInvalid: string;
     descriptionMin: string;
   };
+  errorKeys: Record<string, string>;
   problems: string[];
   goalsPlaceholder: string;
   consultSuccess: string;
@@ -53,6 +55,30 @@ interface ConsultingLocale {
 
 interface Props {
   readonly locale: ConsultingLocale;
+}
+
+type ErrorType = "network" | "server" | "unknown";
+
+interface ErrorDisplay {
+  message: string;
+  type: ErrorType;
+  key: string;
+}
+
+const VALIDATION_FIELD_MAP: Record<string, string> = {
+  VALIDATION_NAME_REQUIRED: "name",
+  VALIDATION_EMAIL_INVALID: "email",
+  VALIDATION_PHONE_INVALID: "phone",
+  VALIDATION_COMPANY_REQUIRED: "company",
+  VALIDATION_DESCRIPTION_MIN: "description",
+};
+
+function mapErrorKeyToField(key: string): string | null {
+  return VALIDATION_FIELD_MAP[key] ?? null;
+}
+
+function resolveErrorKey(key: string, locale: ConsultingLocale): string {
+  return locale.errorKeys[key] || key;
 }
 
 function ConsultingFormInner({ locale }: Props) {
@@ -69,11 +95,12 @@ function ConsultingFormInner({ locale }: Props) {
   const submitMutation = useSubmitConsultation();
   const uploadMutation = useUploadAudio();
   const submitting = submitMutation.isPending || uploadMutation.isPending;
-  const [error, setError] = useState<string | null>(null);
+  const [errorDisplay, setErrorDisplay] = useState<ErrorDisplay | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
   const [hasSubmitted, setHasSubmitted] = useState(false);
+  const serverFieldErrorsRef = useRef<Record<string, string>>({});
 
   const schema = useMemo(
     () =>
@@ -120,6 +147,10 @@ function ConsultingFormInner({ locale }: Props) {
       errs.description = locale.validation.descriptionMin;
     }
 
+    for (const [key, val] of Object.entries(serverFieldErrorsRef.current)) {
+      if (!errs[key]) errs[key] = val;
+    }
+
     setFieldErrors(errs);
     return Object.keys(errs).length === 0;
   }, [name, phone, email, company, description, mode, schema, locale]);
@@ -156,6 +187,14 @@ function ConsultingFormInner({ locale }: Props) {
     };
   };
 
+  const clearServerFieldError = useCallback((field: string) => {
+    if (field in serverFieldErrorsRef.current) {
+      const next = { ...serverFieldErrorsRef.current };
+      delete next[field];
+      serverFieldErrorsRef.current = next;
+    }
+  }, []);
+
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     setHasSubmitted(true);
@@ -168,7 +207,7 @@ function ConsultingFormInner({ locale }: Props) {
     });
     if (!runValidation()) return;
 
-    setError(null);
+    setErrorDisplay(null);
     setSuccess(null);
 
     const onSuccess = () => {
@@ -184,11 +223,40 @@ function ConsultingFormInner({ locale }: Props) {
       setRecorderKey((k) => k + 1);
       setTouched({});
       setHasSubmitted(false);
+      serverFieldErrorsRef.current = {};
     };
 
     const onError = (err: Error) => {
-      const msg = err.message.replace(/^HTTP \d+: /, "");
-      setError(msg);
+      if (err instanceof ApiError && err.errorKey) {
+        const field = mapErrorKeyToField(err.errorKey);
+        const msg = resolveErrorKey(err.errorKey, locale);
+        if (field) {
+          serverFieldErrorsRef.current = {
+            ...serverFieldErrorsRef.current,
+            [field]: msg,
+          };
+          setFieldErrors((prev) => ({ ...prev, [field]: msg }));
+          setTouched((prev) => ({ ...prev, [field]: true }));
+          setHasSubmitted(true);
+        } else if (err.errorKey.startsWith("NETWORK")) {
+          setErrorDisplay({ message: msg, type: "network", key: err.errorKey });
+        } else {
+          setErrorDisplay({ message: msg, type: "server", key: err.errorKey });
+        }
+      } else if (err instanceof TypeError) {
+        setErrorDisplay({
+          message: locale.errorKeys?.NETWORK_ERROR || "Unable to connect.",
+          type: "network",
+          key: "NETWORK_ERROR",
+        });
+      } else {
+        const msg = err.message.replace(/^HTTP \d+: /, "");
+        setErrorDisplay({
+          message: locale.errorKeys?.UNKNOWN_ERROR || msg,
+          type: "unknown",
+          key: "UNKNOWN_ERROR",
+        });
+      }
     };
 
     if (mode === "text") {
@@ -204,7 +272,7 @@ function ConsultingFormInner({ locale }: Props) {
       );
     } else {
       if (!audioBlob) {
-        setError(locale.audioNoBlob);
+        setErrorDisplay({ message: locale.audioNoBlob, type: "unknown", key: "AUDIO_NO_BLOB" });
         return;
       }
       uploadMutation.mutate(
@@ -245,12 +313,41 @@ function ConsultingFormInner({ locale }: Props) {
       className="bg-surface-container-lowest border border-outline-variant/50 rounded-2xl p-8 shadow-sm space-y-8"
       noValidate
     >
-      {error && (
+      {errorDisplay && (
         <div
-          className="p-4 bg-red-50 text-red-600 rounded-lg text-sm font-medium"
+          className={`p-4 rounded-lg text-sm flex items-start gap-3 border ${
+            errorDisplay.type === "network"
+              ? "bg-amber-50 text-amber-800 border-amber-200"
+              : errorDisplay.type === "server"
+                ? "bg-orange-50 text-orange-800 border-orange-200"
+                : "bg-red-50 text-red-600 border-red-200"
+          }`}
           role="alert"
         >
-          {error}
+          {errorDisplay.type === "network" ? (
+            <svg className="w-5 h-5 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 16v.01M8 12a8 8 0 0 0 8 0m-6-4a6 6 0 0 1 8 0m-10-2a10 10 0 0 1 14 0M3.05 8.05a14 14 0 0 1 17.9 0" />
+            </svg>
+          ) : errorDisplay.type === "server" ? (
+            <svg className="w-5 h-5 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 17.25v-.228a4.5 4.5 0 0 0-.12-1.03l-2.268-9.64a3.375 3.375 0 0 0-3.285-2.602H7.923a3.375 3.375 0 0 0-3.285 2.602l-2.268 9.64a4.5 4.5 0 0 0-.12 1.03v.228m19.5 0a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3m19.5 0a3 3 0 0 0-3-3H5.25a3 3 0 0 0-3 3m16.5 0h.008v.008h-.008v-.008Zm-3 0h.008v.008h-.008v-.008Z" />
+            </svg>
+          ) : (
+            <svg className="w-5 h-5 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+            </svg>
+          )}
+          <p className="flex-1 font-medium">{errorDisplay.message}</p>
+          <button
+            type="button"
+            onClick={() => setErrorDisplay(null)}
+            className="shrink-0 p-1 rounded hover:bg-black/5 transition-colors"
+            aria-label="Dismiss error"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
       )}
       {success && (
@@ -278,7 +375,10 @@ function ConsultingFormInner({ locale }: Props) {
                 type="text"
                 placeholder="Full legal name"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => {
+                  setName(e.target.value);
+                  clearServerFieldError("name");
+                }}
                 onBlur={() => handleBlur("name")}
                 aria-required="true"
                 aria-invalid={fieldState("name").showError || undefined}
@@ -330,7 +430,10 @@ function ConsultingFormInner({ locale }: Props) {
           </div>
           <PhoneInput
             value={phone}
-            onChange={setPhone}
+            onChange={(val) => {
+              setPhone(val);
+              clearServerFieldError("phone");
+            }}
             onBlur={() => handleBlur("phone")}
             showError={fieldState("phone").showError}
             showSuccess={fieldState("phone").showSuccess}
@@ -349,7 +452,10 @@ function ConsultingFormInner({ locale }: Props) {
                 type="email"
                 placeholder="j.doe@acme.com"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  clearServerFieldError("email");
+                }}
                 onBlur={() => handleBlur("email")}
                 aria-required="false"
                 aria-invalid={fieldState("email").showError || undefined}
@@ -409,7 +515,10 @@ function ConsultingFormInner({ locale }: Props) {
                 type="text"
                 placeholder="Acme Corp"
                 value={company}
-                onChange={(e) => setCompany(e.target.value)}
+                onChange={(e) => {
+                  setCompany(e.target.value);
+                  clearServerFieldError("company");
+                }}
                 onBlur={() => handleBlur("company")}
                 aria-required="false"
                 aria-invalid={fieldState("company").showError || undefined}
@@ -549,7 +658,10 @@ function ConsultingFormInner({ locale }: Props) {
                 className="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none font-body text-sm min-h-[100px]"
                 placeholder={locale.placeholder}
                 value={description}
-                onChange={(e) => setDescription(e.target.value)}
+                onChange={(e) => {
+                  setDescription(e.target.value);
+                  clearServerFieldError("description");
+                }}
               />
             </div>
           </>
@@ -565,7 +677,10 @@ function ConsultingFormInner({ locale }: Props) {
                 rows={4}
                 placeholder={locale.goalsPlaceholder}
                 value={description}
-                onChange={(e) => setDescription(e.target.value)}
+                onChange={(e) => {
+                  setDescription(e.target.value);
+                  clearServerFieldError("description");
+                }}
                 onBlur={() => handleBlur("description")}
                 aria-required="true"
                 aria-invalid={fieldState("description").showError || undefined}
