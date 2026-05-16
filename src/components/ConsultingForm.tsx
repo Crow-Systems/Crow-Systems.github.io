@@ -24,8 +24,11 @@ interface ConsultingLocale {
   consultForm: {
     heading: string;
     fullName: string;
+    fullNamePlaceholder: string;
     company: string;
+    companyPlaceholder: string;
     email: string;
+    emailPlaceholder: string;
     phone: string;
     problem: string;
     submit: string;
@@ -272,7 +275,11 @@ function ConsultingFormInner({ locale }: Props) {
       );
     } else {
       if (!audioBlob) {
-        setErrorDisplay({ message: locale.audioNoBlob, type: "unknown", key: "AUDIO_NO_BLOB" });
+        setErrorDisplay({
+          message: locale.audioNoBlob,
+          type: "unknown",
+          key: "AUDIO_NO_BLOB",
+        });
         return;
       }
       uploadMutation.mutate(
@@ -325,16 +332,46 @@ function ConsultingFormInner({ locale }: Props) {
           role="alert"
         >
           {errorDisplay.type === "network" ? (
-            <svg className="w-5 h-5 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 16v.01M8 12a8 8 0 0 0 8 0m-6-4a6 6 0 0 1 8 0m-10-2a10 10 0 0 1 14 0M3.05 8.05a14 14 0 0 1 17.9 0" />
+            <svg
+              className="w-5 h-5 shrink-0 mt-0.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 16v.01M8 12a8 8 0 0 0 8 0m-6-4a6 6 0 0 1 8 0m-10-2a10 10 0 0 1 14 0M3.05 8.05a14 14 0 0 1 17.9 0"
+              />
             </svg>
           ) : errorDisplay.type === "server" ? (
-            <svg className="w-5 h-5 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 17.25v-.228a4.5 4.5 0 0 0-.12-1.03l-2.268-9.64a3.375 3.375 0 0 0-3.285-2.602H7.923a3.375 3.375 0 0 0-3.285 2.602l-2.268 9.64a4.5 4.5 0 0 0-.12 1.03v.228m19.5 0a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3m19.5 0a3 3 0 0 0-3-3H5.25a3 3 0 0 0-3 3m16.5 0h.008v.008h-.008v-.008Zm-3 0h.008v.008h-.008v-.008Z" />
+            <svg
+              className="w-5 h-5 shrink-0 mt-0.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21.75 17.25v-.228a4.5 4.5 0 0 0-.12-1.03l-2.268-9.64a3.375 3.375 0 0 0-3.285-2.602H7.923a3.375 3.375 0 0 0-3.285 2.602l-2.268 9.64a4.5 4.5 0 0 0-.12 1.03v.228m19.5 0a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3m19.5 0a3 3 0 0 0-3-3H5.25a3 3 0 0 0-3 3m16.5 0h.008v.008h-.008v-.008Zm-3 0h.008v.008h-.008v-.008Z"
+              />
             </svg>
           ) : (
-            <svg className="w-5 h-5 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+            <svg
+              className="w-5 h-5 shrink-0 mt-0.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"
+              />
             </svg>
           )}
           <p className="flex-1 font-medium">{errorDisplay.message}</p>
@@ -344,8 +381,18 @@ function ConsultingFormInner({ locale }: Props) {
             className="shrink-0 p-1 rounded hover:bg-black/5 transition-colors"
             aria-label="Dismiss error"
           >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
@@ -373,7 +420,7 @@ function ConsultingFormInner({ locale }: Props) {
               <input
                 id="cf-name"
                 type="text"
-                placeholder="Full legal name"
+                placeholder={locale.consultForm.fullNamePlaceholder}
                 value={name}
                 onChange={(e) => {
                   setName(e.target.value);
@@ -450,7 +497,7 @@ function ConsultingFormInner({ locale }: Props) {
               <input
                 id="cf-email"
                 type="email"
-                placeholder="j.doe@acme.com"
+                placeholder={locale.consultForm.emailPlaceholder}
                 value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
@@ -513,7 +560,7 @@ function ConsultingFormInner({ locale }: Props) {
               <input
                 id="cf-company"
                 type="text"
-                placeholder="Acme Corp"
+                placeholder={locale.consultForm.companyPlaceholder}
                 value={company}
                 onChange={(e) => {
                   setCompany(e.target.value);

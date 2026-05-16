@@ -210,8 +210,11 @@
       "consultForm": {
         "heading": "Tell Us About Your Project",
         "fullName": "Full Name",
+        "fullNamePlaceholder": "Jonh Doe",
         "company": "Company",
+        "companyPlaceholder": "ACME Corp",
         "email": "Email",
+        "emailPlaceholder": "j.doe@acme.com",
         "phone": "Phone",
         "problem": "Business Problem",
         "goals": "Project Goals",
