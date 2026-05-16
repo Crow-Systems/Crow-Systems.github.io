@@ -2,7 +2,7 @@ import { z } from "zod";
 
 const contactSchema = z.object({
   name: z.string().trim().min(2),
-  email: z.string().email(),
+  email: z.email(),
   subject: z.string().min(1),
   message: z.string().min(10),
 });
@@ -11,7 +11,7 @@ const consultationSchema = z.object({
   fullName: z.string().trim().min(2),
   phone: z.string().min(1),
   businessProblem: z.string().trim().min(20),
-  email: z.string().email().or(z.literal("")).optional(),
+  email: z.email().or(z.literal("")).optional(),
   company: z.string().optional(),
   projectGoals: z.string().optional(),
   budgetRange: z.string().optional(),

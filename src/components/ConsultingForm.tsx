@@ -1,6 +1,6 @@
 import { useState, useCallback, useMemo, useEffect, useRef } from "react";
 import { z } from "zod";
-import { parsePhoneNumber } from "libphonenumber-js";
+import { parsePhoneNumberFromString } from "libphonenumber-js";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useSubmitConsultation, useUploadAudio } from "../scripts/api-hooks";
 import { ApiError } from "../scripts/api";
@@ -114,13 +114,7 @@ function ConsultingFormInner({ locale }: Props) {
           .trim()
           .min(1, locale.validation.phoneRequired)
           .refine(
-            (val) => {
-              try {
-                return parsePhoneNumber(val, "MX")?.isPossible() ?? false;
-              } catch {
-                return false;
-              }
-            },
+            (val) => parsePhoneNumberFromString(val, "MX")?.isPossible() ?? false,
             { message: locale.validation.phoneInvalid },
           ),
         email: z

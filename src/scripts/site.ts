@@ -37,7 +37,6 @@ function resolveServerError(
   localeData: Record<string, unknown>,
   section: string,
   fieldMap: Record<string, string>,
-  fieldPrefix: string,
 ): { message: string; field?: string } | null {
   if (err instanceof ApiError && err.errorKey) {
     const errorKeys = getSectionErrorKeys(localeData, section);
@@ -235,7 +234,7 @@ export function initConsultForm(localeData: Record<string, unknown>): void {
       .catch(function (err: unknown) {
         const errorEl = document.getElementById("consult-error");
         if (!errorEl) return;
-        const resolved = resolveServerError(err, localeData, "consulting", CONSULT_VALIDATION_FIELD_MAP, "c");
+        const resolved = resolveServerError(err, localeData, "consulting", CONSULT_VALIDATION_FIELD_MAP);
         if (resolved) {
           if (resolved.field) {
             const fieldEl = document.getElementById("c-" + resolved.field + "-err");
@@ -309,7 +308,7 @@ export function initContactForm(localeData: Record<string, unknown>): void {
       const errorText = document.getElementById("contact-error-text");
       if (!errorEl || !errorText) return;
       errorEl.classList.add("hidden");
-      const resolved = resolveServerError(err, localeData, "contact", CONTACT_VALIDATION_FIELD_MAP, "cnt");
+      const resolved = resolveServerError(err, localeData, "contact", CONTACT_VALIDATION_FIELD_MAP);
       if (resolved) {
         if (resolved.field) {
           const fieldEl = document.getElementById("cnt-" + resolved.field + "-err");
