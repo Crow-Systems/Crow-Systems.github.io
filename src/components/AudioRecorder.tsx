@@ -166,7 +166,7 @@ export default function AudioRecorder({
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       const mimeType =
-        ["audio/webm", "audio/mp3", "audio/wav", "audio/ogg"].find((t) =>
+        ["audio/webm", "audio/mp4", "audio/mp3", "audio/wav", "audio/ogg"].find((t) =>
           MediaRecorder.isTypeSupported(t),
         ) || "audio/webm";
       const mr = new MediaRecorder(stream, { mimeType });

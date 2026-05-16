@@ -187,7 +187,8 @@ function ConsultingFormInner({ locale }: Props) {
     };
 
     const onError = (err: Error) => {
-      setError(err.message);
+      const msg = err.message.replace(/^HTTP \d+: /, "");
+      setError(msg);
     };
 
     if (mode === "text") {
@@ -209,7 +210,7 @@ function ConsultingFormInner({ locale }: Props) {
       uploadMutation.mutate(
         {
           audioBlob,
-          name,
+          fullName: name,
           phone,
           email: email || undefined,
           company: company || undefined,
