@@ -40,11 +40,10 @@ export function useFormFields(initialValues: Record<string, string> = {}) {
     error: fieldErrors[field],
   });
 
-  const scrollToFirstError = (errors: Record<string, string>) => {
+  const scrollToFirstError = (errors: Record<string, string>, idPrefix = "cf-") => {
     const firstKey = Object.keys(errors)[0];
     if (!firstKey) return;
-    const id = firstKey === "phone" ? "cf-phone" : `cf-${firstKey}`;
-    const el = document.getElementById(id);
+    const el = document.getElementById(`${idPrefix}${firstKey}`);
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "center" });
       el.focus({ preventScroll: true });

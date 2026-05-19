@@ -10,7 +10,8 @@ interface FormFieldProps {
   errorId?: string;
   showError: boolean;
   showSuccess: boolean;
-  type?: "text" | "email";
+  type?: "text" | "email" | "textarea";
+  rows?: number;
 }
 
 const inputClass =
@@ -40,10 +41,10 @@ function ErrorIcon() {
   );
 }
 
-function SuccessIcon() {
+function SuccessIcon({ className }: { className?: string }) {
   return (
     <svg
-      className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-green-500"
+      className={`absolute w-4 h-4 text-green-500 ${className ?? "right-3 top-1/2 -translate-y-1/2"}`}
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -71,8 +72,10 @@ export default function FormField({
   showError,
   showSuccess,
   type = "text",
+  rows,
 }: FormFieldProps) {
   const resolvedErrorId = errorId ?? `${id}-err`;
+  const isTextarea = type === "textarea";
 
   return (
     <div className="space-y-2">
@@ -81,19 +84,38 @@ export default function FormField({
         {required && <span className="text-red-500">*</span>}
       </label>
       <div className="relative">
-        <input
-          id={id}
-          type={type}
-          placeholder={placeholder}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          onBlur={onBlur}
-          aria-required={required}
-          aria-invalid={showError || undefined}
-          aria-describedby={showError ? resolvedErrorId : undefined}
-          className={`${inputClass} ${showError ? inputErrClass : ""} ${showSuccess ? inputSuccessClass : ""}`}
-        />
-        {showSuccess && <SuccessIcon />}
+        {isTextarea ? (
+          <textarea
+            id={id}
+            rows={rows ?? 5}
+            placeholder={placeholder}
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+            onBlur={onBlur}
+            aria-required={required}
+            aria-invalid={showError || undefined}
+            aria-describedby={showError ? resolvedErrorId : undefined}
+            className={`resize-none font-body ${inputClass} ${showError ? inputErrClass : ""} ${showSuccess ? inputSuccessClass : ""}`}
+          />
+        ) : (
+          <input
+            id={id}
+            type={type}
+            placeholder={placeholder}
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+            onBlur={onBlur}
+            aria-required={required}
+            aria-invalid={showError || undefined}
+            aria-describedby={showError ? resolvedErrorId : undefined}
+            className={`${inputClass} ${showError ? inputErrClass : ""} ${showSuccess ? inputSuccessClass : ""}`}
+          />
+        )}
+        {showSuccess && (
+          <SuccessIcon
+            className={isTextarea ? "right-3 top-3" : "right-3 top-1/2 -translate-y-1/2"}
+          />
+        )}
       </div>
       {showError && error && (
         <p className={errClass} id={resolvedErrorId} role="alert">

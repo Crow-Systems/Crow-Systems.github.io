@@ -1,5 +1,9 @@
 import { useMutation } from "@tanstack/react-query";
-import { submitConsultation, uploadAudio } from "./api";
+import { submitContact, submitConsultation, uploadAudio } from "./api";
+
+export function useSubmitContact() {
+  return useMutation({ mutationFn: submitContact });
+}
 
 export function useSubmitConsultation() {
   return useMutation({ mutationFn: submitConsultation });
