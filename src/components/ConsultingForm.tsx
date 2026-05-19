@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo, useEffect, useRef } from "react";
+import { useState, useCallback, useMemo, useEffect } from "react";
 import { z } from "zod";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -6,6 +6,8 @@ import { useSubmitConsultation, useUploadAudio } from "../scripts/api-hooks";
 import { ApiError } from "../scripts/api";
 import AudioRecorder from "./AudioRecorder";
 import PhoneInput from "./PhoneInput";
+import FormField from "./FormField";
+import { useFormFields } from "../hooks/useFormFields";
 
 const queryClient = new QueryClient();
 
@@ -68,6 +70,14 @@ interface ErrorDisplay {
   key: string;
 }
 
+interface FieldConfig {
+  key: string;
+  type: "text" | "email";
+  label: string;
+  placeholder: string;
+  required?: boolean;
+}
+
 const VALIDATION_FIELD_MAP: Record<string, string> = {
   VALIDATION_NAME_REQUIRED: "name",
   VALIDATION_EMAIL_INVALID: "email",
@@ -85,13 +95,29 @@ function resolveErrorKey(key: string, locale: ConsultingLocale): string {
 }
 
 function ConsultingFormInner({ locale }: Props) {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [company, setCompany] = useState("");
-  const [description, setDescription] = useState("");
-  const [mode, setMode] = useState<"audio" | "text">("audio");
+  const {
+    values,
+    setValue,
+    setFieldErrors,
+    touched,
+    setTouched,
+    hasSubmitted,
+    setHasSubmitted,
+    serverFieldErrorsRef,
+    handleBlur,
+    clearServerFieldError,
+    getFieldState,
+    scrollToFirstError,
+    reset,
+  } = useFormFields({
+    name: "",
+    phone: "",
+    email: "",
+    company: "",
+    description: "",
+  });
 
+  const [mode, setMode] = useState<"audio" | "text">("audio");
   const [audioBlob, setAudioBlob] = useState<Blob | null>(null);
   const [recorderKey, setRecorderKey] = useState(0);
 
@@ -100,10 +126,6 @@ function ConsultingFormInner({ locale }: Props) {
   const submitting = submitMutation.isPending || uploadMutation.isPending;
   const [errorDisplay, setErrorDisplay] = useState<ErrorDisplay | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
-  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
-  const [touched, setTouched] = useState<Record<string, boolean>>({});
-  const [hasSubmitted, setHasSubmitted] = useState(false);
-  const serverFieldErrorsRef = useRef<Record<string, string>>({});
 
   const schema = useMemo(
     () =>
@@ -130,7 +152,12 @@ function ConsultingFormInner({ locale }: Props) {
   );
 
   const runValidation = useCallback(() => {
-    const result = schema.safeParse({ name, phone, email, company });
+    const result = schema.safeParse({
+      name: values.name ?? "",
+      phone: values.phone ?? "",
+      email: values.email ?? "",
+      company: values.company ?? "",
+    });
     const errs: Record<string, string> = {};
 
     if (!result.success) {
@@ -140,7 +167,7 @@ function ConsultingFormInner({ locale }: Props) {
       }
     }
 
-    if (mode === "text" && description.trim().length < 10) {
+    if (mode === "text" && (values.description ?? "").trim().length < 10) {
       errs.description = locale.validation.descriptionMin;
     }
 
@@ -149,8 +176,8 @@ function ConsultingFormInner({ locale }: Props) {
     }
 
     setFieldErrors(errs);
-    return Object.keys(errs).length === 0;
-  }, [name, phone, email, company, description, mode, schema, locale]);
+    return errs;
+  }, [values, mode, schema, locale, setFieldErrors, serverFieldErrorsRef]);
 
   const shouldValidate = useMemo(
     () => hasSubmitted || Object.values(touched).some(Boolean),
@@ -159,38 +186,7 @@ function ConsultingFormInner({ locale }: Props) {
 
   useEffect(() => {
     if (shouldValidate) runValidation();
-  }, [name, phone, email, company, description, shouldValidate, runValidation]);
-
-  const handleBlur = (field: string) => {
-    setTouched((prev) => ({ ...prev, [field]: true }));
-  };
-
-  type Field = "name" | "phone" | "email" | "company" | "description";
-
-  const fieldState = (field: Field) => {
-    const show = touched[field] || hasSubmitted;
-    const err = fieldErrors[field];
-    const values: Record<Field, string> = {
-      name,
-      phone,
-      email,
-      company,
-      description,
-    };
-    return {
-      showError: show && !!err,
-      showSuccess: show && !err && values[field].length > 0,
-      errorId: `cf-${field}-err`,
-    };
-  };
-
-  const clearServerFieldError = useCallback((field: string) => {
-    if (field in serverFieldErrorsRef.current) {
-      const next = { ...serverFieldErrorsRef.current };
-      delete next[field];
-      serverFieldErrorsRef.current = next;
-    }
-  }, []);
+  }, [values, shouldValidate, runValidation]);
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
@@ -202,7 +198,11 @@ function ConsultingFormInner({ locale }: Props) {
       company: true,
       description: true,
     });
-    if (!runValidation()) return;
+    const errs = runValidation();
+    if (Object.keys(errs).length > 0) {
+      scrollToFirstError(errs);
+      return;
+    }
 
     setErrorDisplay(null);
     setSuccess(null);
@@ -211,16 +211,9 @@ function ConsultingFormInner({ locale }: Props) {
       setSuccess(
         mode === "audio" ? locale.audioSuccess : locale.consultSuccess,
       );
-      setName("");
-      setPhone("");
-      setEmail("");
-      setCompany("");
-      setDescription("");
+      reset(["name", "phone", "email", "company", "description"]);
       setAudioBlob(null);
       setRecorderKey((k) => k + 1);
-      setTouched({});
-      setHasSubmitted(false);
-      serverFieldErrorsRef.current = {};
     };
 
     const onError = (err: Error) => {
@@ -259,11 +252,11 @@ function ConsultingFormInner({ locale }: Props) {
     if (mode === "text") {
       submitMutation.mutate(
         {
-          fullName: name,
-          company: company || "",
-          email: email || "",
-          phone,
-          businessProblem: description || "No description provided",
+          fullName: values.name ?? "",
+          company: (values.company ?? "") || "",
+          email: (values.email ?? "") || "",
+          phone: values.phone ?? "",
+          businessProblem: (values.description ?? "") || "No description provided",
         },
         { onSuccess, onError },
       );
@@ -279,19 +272,16 @@ function ConsultingFormInner({ locale }: Props) {
       uploadMutation.mutate(
         {
           audioBlob,
-          fullName: name,
-          phone,
-          email: email || undefined,
-          company: company || undefined,
-          description: description || undefined,
+          fullName: values.name ?? "",
+          phone: values.phone ?? "",
+          email: (values.email ?? "") || undefined,
+          company: (values.company ?? "") || undefined,
+          description: (values.description ?? "") || undefined,
         },
         { onSuccess, onError },
       );
     }
   };
-
-  const inputClass =
-    "w-full bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-sm";
 
   const labelClass =
     "text-xs font-bold uppercase tracking-wider text-on-surface-variant";
@@ -307,6 +297,28 @@ function ConsultingFormInner({ locale }: Props) {
   const submitLabel =
     mode === "audio" ? locale.submitAudio : locale.consultForm.submit;
   const buttonText = submitting ? loadingLabel : submitLabel;
+
+  const FIELDS: FieldConfig[] = [
+    {
+      key: "name",
+      type: "text",
+      label: locale.consultForm.fullName,
+      placeholder: locale.consultForm.fullNamePlaceholder,
+      required: true,
+    },
+    {
+      key: "email",
+      type: "email",
+      label: locale.consultForm.email,
+      placeholder: locale.consultForm.emailPlaceholder,
+    },
+    {
+      key: "company",
+      type: "text",
+      label: locale.consultForm.company,
+      placeholder: locale.consultForm.companyPlaceholder,
+    },
+  ];
 
   return (
     <form
@@ -405,210 +417,43 @@ function ConsultingFormInner({ locale }: Props) {
           {locale.consultForm.heading}
         </legend>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="space-y-2">
-            <label htmlFor="cf-name" className={labelClass}>
-              {locale.consultForm.fullName}
-              <span className="text-red-500">*</span>
-            </label>
-            <div className="relative">
-              <input
-                id="cf-name"
-                type="text"
-                placeholder={locale.consultForm.fullNamePlaceholder}
-                value={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                  clearServerFieldError("name");
+          {FIELDS.map((field) => {
+            const state = getFieldState(field.key);
+            return (
+              <FormField
+                key={field.key}
+                id={`cf-${field.key}`}
+                label={field.label}
+                required={field.required}
+                value={values[field.key] ?? ""}
+                onChange={(val) => {
+                  setValue(field.key, val);
+                  clearServerFieldError(field.key);
                 }}
-                onBlur={() => handleBlur("name")}
-                aria-required="true"
-                aria-invalid={fieldState("name").showError || undefined}
-                aria-describedby={
-                  fieldState("name").showError
-                    ? fieldState("name").errorId
-                    : undefined
-                }
-                className={`${inputClass} ${fieldState("name").showError ? inputErrClass : ""} ${fieldState("name").showSuccess ? inputSuccessClass : ""}`}
+                onBlur={() => handleBlur(field.key)}
+                showError={state.showError}
+                showSuccess={state.showSuccess}
+                error={state.error}
+                errorId={state.errorId}
+                type={field.type}
+                placeholder={field.placeholder}
               />
-              {fieldState("name").showSuccess && (
-                <svg
-                  className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-green-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m5 13 4 4L19 7"
-                  />
-                </svg>
-              )}
-            </div>
-            {fieldState("name").showError && (
-              <p
-                className={errClass}
-                id={fieldState("name").errorId}
-                role="alert"
-              >
-                <svg
-                  className="w-3.5 h-3.5 shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"
-                  />
-                </svg>
-                {fieldErrors.name}
-              </p>
-            )}
-          </div>
+            );
+          })}
           <PhoneInput
-            value={phone}
+            value={values.phone ?? ""}
             onChange={(val) => {
-              setPhone(val);
+              setValue("phone", val);
               clearServerFieldError("phone");
             }}
             onBlur={() => handleBlur("phone")}
-            showError={fieldState("phone").showError}
-            showSuccess={fieldState("phone").showSuccess}
-            errorId={fieldState("phone").errorId}
-            errorMessage={fieldErrors.phone}
+            showError={getFieldState("phone").showError}
+            showSuccess={getFieldState("phone").showSuccess}
+            errorId={getFieldState("phone").errorId}
+            errorMessage={getFieldState("phone").error}
             label={locale.consultForm.phone}
             required
           />
-          <div className="space-y-2">
-            <label htmlFor="cf-email" className={labelClass}>
-              {locale.consultForm.email}
-            </label>
-            <div className="relative">
-              <input
-                id="cf-email"
-                type="email"
-                placeholder={locale.consultForm.emailPlaceholder}
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                  clearServerFieldError("email");
-                }}
-                onBlur={() => handleBlur("email")}
-                aria-required="false"
-                aria-invalid={fieldState("email").showError || undefined}
-                aria-describedby={
-                  fieldState("email").showError
-                    ? fieldState("email").errorId
-                    : undefined
-                }
-                className={`${inputClass} ${fieldState("email").showError ? inputErrClass : ""} ${fieldState("email").showSuccess ? inputSuccessClass : ""}`}
-              />
-              {fieldState("email").showSuccess && (
-                <svg
-                  className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-green-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m5 13 4 4L19 7"
-                  />
-                </svg>
-              )}
-            </div>
-            {fieldState("email").showError && (
-              <p
-                className={errClass}
-                id={fieldState("email").errorId}
-                role="alert"
-              >
-                <svg
-                  className="w-3.5 h-3.5 shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"
-                  />
-                </svg>
-                {fieldErrors.email}
-              </p>
-            )}
-          </div>
-          <div className="space-y-2">
-            <label htmlFor="cf-company" className={labelClass}>
-              {locale.consultForm.company}
-            </label>
-            <div className="relative">
-              <input
-                id="cf-company"
-                type="text"
-                placeholder={locale.consultForm.companyPlaceholder}
-                value={company}
-                onChange={(e) => {
-                  setCompany(e.target.value);
-                  clearServerFieldError("company");
-                }}
-                onBlur={() => handleBlur("company")}
-                aria-required="false"
-                aria-invalid={fieldState("company").showError || undefined}
-                aria-describedby={
-                  fieldState("company").showError
-                    ? fieldState("company").errorId
-                    : undefined
-                }
-                className={`${inputClass} ${fieldState("company").showError ? inputErrClass : ""} ${fieldState("company").showSuccess ? inputSuccessClass : ""}`}
-              />
-              {fieldState("company").showSuccess && (
-                <svg
-                  className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-green-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m5 13 4 4L19 7"
-                  />
-                </svg>
-              )}
-            </div>
-            {fieldState("company").showError && (
-              <p
-                className={errClass}
-                id={fieldState("company").errorId}
-                role="alert"
-              >
-                <svg
-                  className="w-3.5 h-3.5 shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"
-                  />
-                </svg>
-                {fieldErrors.company}
-              </p>
-            )}
-          </div>
         </div>
       </fieldset>
 
@@ -698,9 +543,9 @@ function ConsultingFormInner({ locale }: Props) {
                 id="cf-audio-context"
                 className="w-full bg-surface-container-lowest border border-outline-variant/50 rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none font-body text-sm min-h-[100px]"
                 placeholder={locale.placeholder}
-                value={description}
+                value={values.description ?? ""}
                 onChange={(e) => {
-                  setDescription(e.target.value);
+                  setValue("description", e.target.value);
                   clearServerFieldError("description");
                 }}
               />
@@ -717,22 +562,22 @@ function ConsultingFormInner({ locale }: Props) {
                 id="cf-description"
                 rows={4}
                 placeholder={locale.goalsPlaceholder}
-                value={description}
+                value={values.description ?? ""}
                 onChange={(e) => {
-                  setDescription(e.target.value);
+                  setValue("description", e.target.value);
                   clearServerFieldError("description");
                 }}
                 onBlur={() => handleBlur("description")}
                 aria-required="true"
-                aria-invalid={fieldState("description").showError || undefined}
+                aria-invalid={getFieldState("description").showError || undefined}
                 aria-describedby={
-                  fieldState("description").showError
-                    ? fieldState("description").errorId
+                  getFieldState("description").showError
+                    ? getFieldState("description").errorId
                     : undefined
                 }
-                className={`w-full h-36 bg-surface-container-lowest border rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none font-body text-sm ${fieldState("description").showError ? inputErrClass : ""} ${fieldState("description").showSuccess ? inputSuccessClass : ""} ${!fieldState("description").showError && !fieldState("description").showSuccess ? "border-outline-variant/50" : ""}`}
+                className={`w-full h-36 bg-surface-container-lowest border rounded-lg p-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none font-body text-sm ${getFieldState("description").showError ? inputErrClass : ""} ${getFieldState("description").showSuccess ? inputSuccessClass : ""} ${!getFieldState("description").showError && !getFieldState("description").showSuccess ? "border-outline-variant/50" : ""}`}
               />
-              {fieldState("description").showSuccess && (
+              {getFieldState("description").showSuccess && (
                 <svg
                   className="absolute right-3 top-3 w-4 h-4 text-green-500"
                   fill="none"
@@ -748,10 +593,10 @@ function ConsultingFormInner({ locale }: Props) {
                 </svg>
               )}
             </div>
-            {fieldState("description").showError && (
+            {getFieldState("description").showError && (
               <p
                 className={errClass}
-                id={fieldState("description").errorId}
+                id={getFieldState("description").errorId}
                 role="alert"
               >
                 <svg
@@ -767,7 +612,7 @@ function ConsultingFormInner({ locale }: Props) {
                     d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"
                   />
                 </svg>
-                {fieldErrors.description}
+                {getFieldState("description").error}
               </p>
             )}
           </div>
