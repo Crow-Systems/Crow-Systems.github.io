@@ -1,5 +1,11 @@
-import { useState, useRef, useCallback, useEffect } from "react";
-import WaveformBars from "./WaveformBars";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
+
+import WaveformBars from './WaveformBars';
 
 interface Props {
   recordStartLabel: string;
@@ -154,13 +160,13 @@ export default function AudioRecorder({
       showFeedback(audioDeleteFail);
       return;
     }
-    if (!window.confirm(discardRecording)) return;
+    if (!globalThis.confirm(discardRecording)) return;
     clearRecording();
   }, [audioBlob, recording, discardRecording, audioDeleteFail, showFeedback, clearRecording]);
 
   const startRecording = useCallback(async () => {
     if (audioBlob || playing) {
-      if (!window.confirm(discardRecording)) return;
+      if (!globalThis.confirm(discardRecording)) return;
       clearRecording();
     }
     try {
@@ -281,7 +287,7 @@ export default function AudioRecorder({
   }, [audioUrl, playing, showFeedback, audioNoBlob]);
 
   return (
-    <div className="relative bg-surface rounded-xl p-12 border border-outline-variant/30 mb-6 flex flex-col items-center justify-center text-center">
+    <div className="relative bg-surface rounded-xl p-4 md:p-8 border border-outline-variant/30 mb-4 flex flex-col items-center justify-center text-center">
       <WaveformBars
         active={recording || playing}
         levels={recording || playing ? levels : undefined}

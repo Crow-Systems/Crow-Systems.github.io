@@ -67,7 +67,7 @@ const data = getLocaleData(locale);
             {data.pages.consulting.description2}
           </p>
 
-          <div class="grid grid-cols-3 gap-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             {
               [0, 1, 2].map((i) => {
                 const title = data.pages.consulting.steps[i]?.title;

@@ -1,13 +1,27 @@
-import { useState, useCallback, useMemo, useEffect } from "react";
-import { z } from "zod";
-import { parsePhoneNumberFromString } from "libphonenumber-js";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { useSubmitConsultation, useUploadAudio } from "../scripts/api-hooks";
-import { ApiError } from "../scripts/api";
-import AudioRecorder from "./AudioRecorder";
-import PhoneInput from "./PhoneInput";
-import FormField from "./FormField";
-import { useFormFields } from "../hooks/useFormFields";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
+
+import { parsePhoneNumberFromString } from 'libphonenumber-js';
+import { z } from 'zod';
+
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query';
+
+import { useFormFields } from '../hooks/useFormFields';
+import { ApiError } from '../scripts/api';
+import {
+  useSubmitConsultation,
+  useUploadAudio,
+} from '../scripts/api-hooks';
+import AudioRecorder from './AudioRecorder';
+import FormField from './FormField';
+import PhoneInput from './PhoneInput';
 
 const queryClient = new QueryClient();
 
@@ -323,7 +337,7 @@ function ConsultingFormInner({ locale }: Props) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-surface-container-lowest border border-outline-variant/50 rounded-2xl p-8 shadow-sm space-y-8"
+      className="bg-surface-container-lowest border border-outline-variant/50 rounded-2xl p-4 md:p-8 shadow-sm space-y-8"
       noValidate
     >
       {errorDisplay && (
