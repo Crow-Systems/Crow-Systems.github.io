@@ -6,7 +6,8 @@
     "consulting": "/consultoria",
     "contact": "/contacto",
     "privacy": "/privacidad",
-    "terms": "/terminos"
+    "terms": "/terminos",
+    "flyer": "/folleto"
   },
   "common": {
     "changeLanguage": "Cambiar idioma",
@@ -466,6 +467,32 @@
       "heading": "Página No Encontrada",
       "description": "La página que está buscando no existe o ha sido movida.",
       "home": "Volver al Inicio"
+    },
+    "flyer": {
+      "title": "CROW SYSTEMS - Folleto Corporativo | Tecnología y Estrategia",
+      "description": "Descarga nuestro folleto digital con soluciones de software, ciberseguridad, fintech y más.",
+      "downloadLabel": "Descargar como JPG",
+      "content": {
+        "tagline": "Tecnología y Estrategia",
+        "hiringBadge": "Estamos contratando ✦",
+        "eyebrow": "Tecnología que funciona para ti",
+        "heading": "Impulsamos empresas con <em>tecnología</em> y estrategia",
+        "heroDescription": "Soluciones inteligentes para escalar negocios, optimizar operaciones y construir infraestructura digital preparada para el futuro.",
+        "cta": "Construyamos el futuro juntos",
+        "service1Title": "Desarrollo de Software",
+        "service1Desc": "Apps, SaaS y plataformas escalables",
+        "service2Title": "Ciberseguridad",
+        "service2Desc": "Protección cloud y Zero Trust",
+        "service3Title": "Infraestructura de TI",
+        "service3Desc": "Redes, nube y servidores listos para escalar",
+        "service4Title": "Consultoría para Startups",
+        "service4Desc": "Estrategia y asesoría de financiamiento",
+        "service5Title": "Branding Digital y Visibilidad",
+        "service5Desc": "Posicionamiento estratégico para marcas y líderes modernos",
+        "footerHeadline": "No solo construimos soluciones.<br>Construimos crecimiento sostenible.",
+        "footerSubheadline": "Hablemos de tu próximo gran proyecto.",
+        "qrLabel": "ESCANÉAME"
+      }
     }
   },
   "services": {

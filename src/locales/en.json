@@ -6,7 +6,8 @@
     "consulting": "/en/consulting",
     "contact": "/en/contact",
     "privacy": "/en/privacy",
-    "terms": "/en/terms"
+    "terms": "/en/terms",
+    "flyer": "/en/flyer"
   },
   "common": {
     "changeLanguage": "Change Language",
@@ -454,7 +455,33 @@
       "title": "404 - CROW SYSTEMS",
       "heading": "Page Not Found",
       "description": "The page you are looking for does not exist or has been moved.",
-      "home": "Return to Home"
+      "home": "Back to Home"
+    },
+    "flyer": {
+      "title": "CROW SYSTEMS - Corporate Flyer | Technology & Strategy",
+      "description": "Download our digital flyer with software development, cybersecurity, fintech and more.",
+      "downloadLabel": "Download as JPG",
+      "content": {
+        "tagline": "Technology & Strategy",
+        "hiringBadge": "We're hiring ✦",
+        "eyebrow": "Tech that works for you",
+        "heading": "Empowering businesses with <em>technology</em> and strategy",
+        "heroDescription": "Smart solutions to scale businesses, optimize operations, and build future-ready digital infrastructure.",
+        "cta": "Let's build the future together",
+        "service1Title": "Software Dev",
+        "service1Desc": "Apps, SaaS, and scalable platforms",
+        "service2Title": "Cybersecurity",
+        "service2Desc": "Cloud protection and Zero Trust",
+        "service3Title": "IT Infrastructure",
+        "service3Desc": "Networks, cloud, and servers built to scale",
+        "service4Title": "Startup Consulting",
+        "service4Desc": "Strategy and funding advisory",
+        "service5Title": "Digital Branding & Visibility",
+        "service5Desc": "Strategic positioning for modern brands and leaders",
+        "footerHeadline": "We don't just build solutions.<br>We build sustainable growth.",
+        "footerSubheadline": "Let's talk about your next big project.",
+        "qrLabel": "SCAN ME"
+      }
     }
   },
   "footer": {

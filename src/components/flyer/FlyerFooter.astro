@@ -1,0 +1,24 @@
+---
+interface Props {
+  footerHeadline: string;
+  footerSubheadline: string;
+  origin: string;
+  qrLabel: string;
+}
+
+const { footerHeadline, footerSubheadline, origin, qrLabel } = Astro.props;
+---
+
+<div class="flex items-center gap-5">
+  <div class="flex-1">
+    <div class="text-sm font-bold text-[#1a1f36] mb-1 leading-relaxed" set:html={footerHeadline}></div>
+    <div class="text-xs text-[#8a93aa] mb-3">{footerSubheadline}</div>
+    <div class="inline-flex items-center gap-2 text-xs text-[#185FA5] font-semibold bg-[#E6F1FB] px-4 py-2 rounded-3xl">
+      <i class="ti ti-world text-sm" aria-hidden="true"></i> {origin}
+    </div>
+  </div>
+  <div class="flex-shrink-0 bg-white border border-[#e2e6f0] rounded-xl p-4 flex flex-col items-center gap-2">
+    <div id="qr-container" class="w-24 h-24"></div>
+    <div class="text-[8px] text-[#8a93aa] font-semibold tracking-[1px] text-center">{qrLabel}</div>
+  </div>
+</div>

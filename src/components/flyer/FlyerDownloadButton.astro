@@ -1,0 +1,18 @@
+---
+interface Props {
+  downloadLabel: string;
+}
+
+const { downloadLabel } = Astro.props;
+---
+
+<div class="flex justify-center mt-8">
+  <button id="download-btn" class="inline-flex items-center gap-2 bg-primary text-white font-bold p-4 rounded-lg text-sm hover:bg-primary/90 transition-all active:scale-95 shadow-sm cursor-pointer mb-4">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <polyline points="7 10 12 15 17 10" />
+      <line x1="12" y1="15" x2="12" y2="3" />
+    </svg>
+    {downloadLabel}
+  </button>
+</div>

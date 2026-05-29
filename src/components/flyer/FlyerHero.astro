@@ -1,0 +1,19 @@
+---
+interface Props {
+  eyebrow: string;
+  heading: string;
+  heroDescription: string;
+  cta: string;
+}
+
+const { eyebrow, heading, heroDescription, cta } = Astro.props;
+---
+
+<div class="bg-white border border-[#e2e6f0] rounded-2xl px-5 pt-6 pb-5 mb-4">
+  <div class="text-xs font-semibold text-[#378ADD] tracking-[2px] uppercase mb-3">{eyebrow}</div>
+  <h1 class="text-2xl font-extrabold leading-tight text-[#1a1f36] mb-3" set:html={heading} />
+  <p class="text-xs text-[#6b7694] leading-relaxed mb-5">{heroDescription}</p>
+  <div class="inline-flex items-center gap-2 bg-[#185FA5] text-white text-xs font-semibold px-5 py-3 rounded-lg tracking-[.3px]">
+    <i class="ti ti-arrow-right" aria-hidden="true"></i> {cta}
+  </div>
+</div>

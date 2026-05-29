@@ -1,0 +1,119 @@
+---
+import { getLocaleData } from "src/locales";
+import DefaultLayout from "../components/layout/DefaultLayout.astro";
+import FlyerHeader from "../components/flyer/FlyerHeader.astro";
+import FlyerHero from "../components/flyer/FlyerHero.astro";
+import FlyerServices from "../components/flyer/FlyerServices.astro";
+import FlyerServiceCard from "../components/flyer/FlyerServiceCard.astro";
+import FlyerFooter from "../components/flyer/FlyerFooter.astro";
+import FlyerDownloadButton from "../components/flyer/FlyerDownloadButton.astro";
+
+const locale = Astro.url.pathname.split("/")[1] === "en" ? "en" : "es";
+const data = getLocaleData(locale);
+const origin = Astro.site?.origin || "https://crowsys.chrislabs.net";
+const qrUrl = `${origin}${data.routes.consulting}`;
+const content = data.pages.flyer.content;
+---
+
+<DefaultLayout
+  title={data.pages.flyer.title}
+  description={data.pages.flyer.description}
+  activeNav=""
+  locale={locale}
+>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet" />
+
+  <div class="flex justify-center flex-col">
+    <div class="flex justify-center">
+      <div id="flyer" data-qr-url={qrUrl} class="font-['Inter',sans-serif] bg-[#f7f8fc] w-full max-w-2xl rounded-3xl border border-[#e2e6f0] text-[#1a1f36] p-8">
+        <FlyerHeader tagline={content.tagline} />
+
+        <FlyerHero
+          eyebrow={content.eyebrow}
+          heading={content.heading}
+          heroDescription={content.heroDescription}
+          cta={content.cta}
+        />
+
+        <FlyerServices>
+          <FlyerServiceCard
+            iconClass="ti ti-code"
+            iconBg="bg-[#E6F1FB]"
+            iconColor="text-[#185FA5]"
+            title={content.service1Title}
+            desc={content.service1Desc}
+          />
+          <FlyerServiceCard
+            iconClass="ti ti-shield-lock"
+            iconBg="bg-[#E1F5EE]"
+            iconColor="text-[#0F6E56]"
+            title={content.service2Title}
+            desc={content.service2Desc}
+          />
+          <FlyerServiceCard
+            iconClass="ti ti-chart-line"
+            iconBg="bg-[#EEEDFE]"
+            iconColor="text-[#534AB7]"
+            title={content.service3Title}
+            desc={content.service3Desc}
+          />
+          <FlyerServiceCard
+            iconClass="ti ti-rocket"
+            iconBg="bg-[#FAEEDA]"
+            iconColor="text-[#854F0B]"
+            title={content.service4Title}
+            desc={content.service4Desc}
+          />
+          <FlyerServiceCard
+            iconClass="ti ti-speakerphone"
+            iconBg="bg-[#FAECE7]"
+            iconColor="text-[#993C1D]"
+            title={content.service5Title}
+            desc={content.service5Desc}
+            fullWidth
+          />
+        </FlyerServices>
+
+        <hr class="border-0 border-t border-[#e8eaf2]">
+        <div class="h-4"></div>
+
+        <FlyerFooter
+          footerHeadline={content.footerHeadline}
+          footerSubheadline={content.footerSubheadline}
+          origin={origin}
+          qrLabel={content.qrLabel}
+        />
+      </div>
+    </div>
+    <FlyerDownloadButton downloadLabel={data.pages.flyer.downloadLabel} />
+  </div>
+  <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/html-to-image@1/dist/html-to-image.js"></script>
+  <script is:inline>
+    new QRCode(document.getElementById('qr-container'), {
+      text: document.getElementById('flyer').getAttribute('data-qr-url'),
+      width: 96,
+      height: 96,
+      colorDark: '#185FA5',
+      colorLight: '#ffffff',
+      correctLevel: QRCode.CorrectLevel.M
+    });
+
+    document.getElementById('download-btn').addEventListener('click', async function () {
+      await document.fonts.ready;
+
+      const el = document.getElementById('flyer');
+      const dataUrl = await htmlToImage.toJpeg(el, {
+        quality: 0.92,
+        backgroundColor: '#f7f8fc',
+        pixelRatio: 2,
+      });
+
+      const link = document.createElement('a');
+      link.download = 'crow-systems-flyer.jpg';
+      link.href = dataUrl;
+      link.click();
+    });
+  </script>
+</DefaultLayout>

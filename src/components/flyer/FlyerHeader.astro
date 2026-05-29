@@ -1,0 +1,17 @@
+---
+interface Props {
+  tagline: string;
+}
+
+const { tagline } = Astro.props;
+---
+
+<div class="flex items-center justify-between mb-7">
+  <div class="flex items-center gap-3">
+    <img src="/android-chrome-512x512.png" alt="Crow Systems" class="w-9 h-9 rounded-xl object-cover shadow-md" />
+    <div>
+      <div class="font-['Space_Grotesk',sans-serif] text-base font-black text-[#218bf6] tracking-[-.5px]">CROW SYSTEMS</div>
+      <div class="text-[10px] text-[#7a8299] tracking-[1px]">{tagline}</div>
+    </div>
+  </div>
+</div>
