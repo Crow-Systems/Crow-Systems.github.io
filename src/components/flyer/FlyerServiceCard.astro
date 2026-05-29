@@ -1,6 +1,6 @@
 ---
 interface Props {
-  iconClass: string;
+  iconSvg: string;
   iconBg: string;
   iconColor: string;
   title: string;
@@ -8,29 +8,16 @@ interface Props {
   fullWidth?: boolean;
 }
 
-const { iconClass, iconBg, iconColor, title, desc, fullWidth = false } = Astro.props;
+const { iconSvg, iconBg, iconColor, title, desc, fullWidth } = Astro.props;
+const colClass = fullWidth ? "col-span-2" : "";
 ---
 
-{
-  fullWidth ? (
-    <div class="col-span-full flex items-center gap-4 bg-white border border-[#e2e6f0] rounded-xl p-4">
-      <div class={`w-8 h-8 rounded-lg flex items-center justify-center mb-2 text-lg flex-shrink-0 ${iconBg} ${iconColor}`}>
-        <i class={iconClass} aria-hidden="true"></i>
-      </div>
-      <div>
-        <div class="text-xs font-bold text-[#1a1f36] mb-1">{title}</div>
-        <div class="text-[10px] text-[#8a93aa] leading-relaxed">{desc}</div>
-      </div>
+<div class={`bg-white border border-[#e2e6f0] rounded-2xl px-5 py-5 ${colClass}`}>
+  <div class="flex items-start gap-4">
+    <div class={`w-10 h-10 rounded-xl ${iconBg} ${iconColor} flex items-center justify-center shrink-0`} set:html={iconSvg} />
+    <div class="min-w-0">
+      <div class="text-sm font-bold text-[#1a1f36] mb-1 leading-tight">{title}</div>
+      <div class="text-[11px] text-[#6b7694] leading-relaxed">{desc}</div>
     </div>
-  ) : (
-    <div class="bg-white border border-[#e2e6f0] rounded-xl px-4 pb-3 pt-3 flex gap-4">
-      <div class={`w-8 h-8 rounded-lg flex items-center justify-center mb-2 text-lg flex-shrink-0 ${iconBg} ${iconColor}`}>
-        <i class={iconClass} aria-hidden="true"></i>
-      </div>
-      <div>
-        <div class="text-xs font-bold text-[#1a1f36] mb-1">{title}</div>
-        <div class="text-[10px] text-[#8a93aa] leading-relaxed">{desc}</div>
-      </div>
-    </div>
-  )
-}
+  </div>
+</div>

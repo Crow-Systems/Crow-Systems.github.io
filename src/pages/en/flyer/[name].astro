@@ -1,7 +1,13 @@
 ---
 import { getLocaleData } from "src/locales";
-import DefaultLayout from "../../components/layout/DefaultLayout.astro";
-import FlyerContent from "../../components/flyer/FlyerContent.astro";
+import DefaultLayout from "../../../components/layout/DefaultLayout.astro";
+import FlyerContent from "../../../components/flyer/FlyerContent.astro";
+
+export async function getStaticPaths() {
+  return [
+    { params: { name: "corporate" } },
+  ];
+}
 
 const locale = "en";
 const data = getLocaleData(locale);

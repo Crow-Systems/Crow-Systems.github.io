@@ -3,7 +3,13 @@ import { getLocaleData } from "src/locales";
 import DefaultLayout from "../../components/layout/DefaultLayout.astro";
 import FlyerContent from "../../components/flyer/FlyerContent.astro";
 
-const locale = "en";
+export async function getStaticPaths() {
+  return [
+    { params: { name: "corporate" } },
+  ];
+}
+
+const locale = Astro.url.pathname.split("/")[1] === "en" ? "en" : "es";
 const data = getLocaleData(locale);
 const origin = Astro.site?.origin || "https://crowsys.chrislabs.net";
 const qrUrl = `${origin}${data.routes.consulting}`;
