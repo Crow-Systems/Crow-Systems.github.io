@@ -5,6 +5,8 @@ interface ImportMetaEnv {
   readonly PUBLIC_CONTACT_ENDPOINT: string;
   readonly PUBLIC_CONSULTATION_ENDPOINT: string;
   readonly PUBLIC_AUDIO_UPLOAD_ENDPOINT: string;
+  readonly UMAMI_WEBSITE_ID?: string;
+  readonly PUBLIC_UMAMI_URL?: string;
 }
 
 interface ImportMeta {

@@ -16,6 +16,9 @@ const routes = getRoutes();
 const pageUrl = Astro.url.pathname;
 const canonicalUrl = `https://crowsys.chrislabs.net${pageUrl}`;
 
+const umamiWebsiteId = import.meta.env.UMAMI_WEBSITE_ID;
+const umamiUrl = import.meta.env.PUBLIC_UMAMI_URL || "https://cloud.umami.is/script.js";
+
 const normalizedPath = pageUrl.replace(/\/$/, "") || "/";
 let currentRouteKey: string | null = null;
 for (const [key, routePath] of Object.entries(data.routes)) {
@@ -81,6 +84,15 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    {
+      umamiWebsiteId && (
+        <script
+          defer
+          src={umamiUrl}
+          data-website-id={umamiWebsiteId}
+        />
+      )
+    }
   </head>
   <body
     class="bg-surface text-on-surface selection:bg-primary/20 font-body grid-bg min-h-screen"
