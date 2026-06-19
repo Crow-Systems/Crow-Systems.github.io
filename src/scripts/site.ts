@@ -1,5 +1,15 @@
 import { submitContact, submitConsultation, uploadAudio, ApiError } from "./api.js";
 
+function setSvgContent(el: HTMLElement, svgContent: string): void {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(`<svg xmlns="http://www.w3.org/2000/svg">${svgContent}</svg>`, "image/svg+xml");
+  const svg = doc.documentElement;
+  el.textContent = "";
+  while (svg.firstChild) {
+    el.appendChild(svg.firstChild);
+  }
+}
+
 let audioBlob: Blob | null = null;
 
 const CONTACT_VALIDATION_FIELD_MAP: Record<string, string> = {
@@ -76,7 +86,7 @@ export function initAudioRecorder(): void {
   btn.addEventListener("click", async function () {
     if (mediaRecorder && mediaRecorder.state === "recording") {
       mediaRecorder.stop(); if (timer) clearInterval(timer);
-      icon.innerHTML = '<path d="M12 2a3 3 0 00-3 3v7a3 3 0 006 0V5a3 3 0 00-3-3z"/><path d="M19 10a1 1 0 012 0 7 7 0 01-2.516 5.482 1 1 0 01-1.464-1.464A5 5 0 0019 10z"/><path d="M5 10a1 1 0 01-2 0 7 7 0 012.516-5.482A1 1 0 017.516 6a5 5 0 00-.016 10z"/><path d="M12 18a2 2 0 002-2v-1a2 2 0 00-4 0v1a2 2 0 002 2z"/>';
+            setSvgContent(icon, '<path d="M12 2a3 3 0 00-3 3v7a3 3 0 006 0V5a3 3 0 00-3-3z"/><path d="M19 10a1 1 0 012 0 7 7 0 01-2.516 5.482 1 1 0 01-1.464-1.464A5 5 0 0019 10z"/><path d="M5 10a1 1 0 01-2 0 7 7 0 012.516-5.482A1 1 0 017.516 6a5 5 0 00-.016 10z"/><path d="M12 18a2 2 0 002-2v-1a2 2 0 00-4 0v1a2 2 0 002 2z"/>');
       recDot.classList.replace("bg-red-500", "bg-accent"); recDot.classList.remove("animate-pulse"); if (playBtn) playBtn.disabled = false; return;
     }
     try {
@@ -92,13 +102,13 @@ export function initAudioRecorder(): void {
           if (submitBtn) submitBtn.disabled = false;
         };
         mediaRecorder.start();
-        icon.innerHTML = '<rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/>';
+        setSvgContent(icon, '<rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/>');
         recDot.classList.replace("bg-accent", "bg-red-500"); recDot.classList.add("animate-pulse"); if (playBtn) playBtn.disabled = true;
         timer = setInterval(function () {
           duration++; if (timerEl) timerEl.textContent = fmt(duration);
           if (duration >= 300) {
             mediaRecorder?.stop(); if (timer) clearInterval(timer);
-            icon.innerHTML = '<path d="M12 2a3 3 0 00-3 3v7a3 3 0 006 0V5a3 3 0 00-3-3z"/><path d="M19 10a1 1 0 012 0 7 7 0 01-2.516 5.482 1 1 0 01-1.464-1.464A5 5 0 0019 10z"/><path d="M5 10a1 1 0 01-2 0 7 7 0 012.516-5.482A1 1 0 017.516 6a5 5 0 00-.016 10z"/><path d="M12 18a2 2 0 002-2v-1a2 2 0 00-4 0v1a2 2 0 002 2z"/>';
+      setSvgContent(icon, '<path d="M12 2a3 3 0 00-3 3v7a3 3 0 006 0V5a3 3 0 00-3-3z"/><path d="M19 10a1 1 0 012 0 7 7 0 01-2.516 5.482 1 1 0 01-1.464-1.464A5 5 0 0019 10z"/><path d="M5 10a1 1 0 01-2 0 7 7 0 012.516-5.482A1 1 0 017.516 6a5 5 0 00-.016 10z"/><path d="M12 18a2 2 0 002-2v-1a2 2 0 00-4 0v1a2 2 0 002 2z"/>');
             recDot.classList.replace("bg-red-500", "bg-accent"); recDot.classList.remove("animate-pulse"); if (playBtn) playBtn.disabled = false;
           }
         }, 1000);
@@ -114,9 +124,9 @@ export function initAudioRecorder(): void {
 
   if (playBtn) playBtn.addEventListener("click", function () {
     if (!audioUrl) return;
-    if (!audioEl) { audioEl = new Audio(); audioEl.onended = function () { if (playIcon) playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>'; }; }
+    if (!audioEl) { audioEl = new Audio(); audioEl.onended = function () { if (playIcon) setSvgContent(playIcon, '<path d="M8 5v14l11-7z"/>'); }; }
     audioEl.src = audioUrl; audioEl.play();
-    if (playIcon) playIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+    if (playIcon) setSvgContent(playIcon, '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>');
   });
 
   if (delBtn) delBtn.addEventListener("click", function () {
@@ -126,8 +136,8 @@ export function initAudioRecorder(): void {
     if (audioUrl) { URL.revokeObjectURL(audioUrl); audioUrl = null; }
     duration = 0;
     if (timerEl) timerEl.textContent = "00:00";
-    icon.innerHTML = '<path d="M12 2a3 3 0 00-3 3v7a3 3 0 006 0V5a3 3 0 00-3-3z"/><path d="M19 10a1 1 0 012 0 7 7 0 01-2.516 5.482 1 1 0 01-1.464-1.464A5 5 0 0019 10z"/><path d="M5 10a1 1 0 01-2 0 7 7 0 012.516-5.482A1 1 0 017.516 6a5 5 0 00-.016 10z"/><path d="M12 18a2 2 0 002-2v-1a2 2 0 00-4 0v1a2 2 0 002 2z"/>';
-    if (playIcon) playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+    setSvgContent(icon, '<path d="M12 2a3 3 0 00-3 3v7a3 3 0 006 0V5a3 3 0 00-3-3z"/><path d="M19 10a1 1 0 012 0 7 7 0 01-2.516 5.482 1 1 0 01-1.464-1.464A5 5 0 0019 10z"/><path d="M5 10a1 1 0 01-2 0 7 7 0 012.516-5.482A1 1 0 017.516 6a5 5 0 00-.016 10z"/><path d="M12 18a2 2 0 002-2v-1a2 2 0 00-4 0v1a2 2 0 002 2z"/>');
+    if (playIcon) setSvgContent(playIcon, '<path d="M8 5v14l11-7z"/>');
     if (playBtn) playBtn.disabled = true;
     if (submitBtn) submitBtn.disabled = true;
     if (submitText) submitText.textContent = "Submit Audio Idea";

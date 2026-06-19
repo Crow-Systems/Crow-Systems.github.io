@@ -1,6 +1,7 @@
 ---
 import { getLocaleData } from "src/locales";
 import DefaultLayout from "../components/layout/DefaultLayout.astro";
+import { sanitizeHtml } from "../scripts/sanitize";
 
 const locale = Astro.url.pathname.split("/")[1] === "en" ? "en" : "es";
 const data = getLocaleData(locale);
@@ -25,7 +26,7 @@ const data = getLocaleData(locale);
         <h1
           id="about-heading"
           class="font-heading text-4xl md:text-5xl font-bold text-on-surface tracking-tight mb-6"
-          set:html={data.pages.about.heading}
+          set:html={sanitizeHtml(data.pages.about.heading)}
         />
         <p class="text-on-surface-variant leading-relaxed font-body text-lg">
           {data.pages.about.description1}

@@ -1,4 +1,6 @@
 ---
+import { sanitizeHtml } from "../../scripts/sanitize";
+
 interface Props {
   footerHeadline: string;
   footerSubheadline: string;
@@ -11,7 +13,7 @@ const { footerHeadline, footerSubheadline, origin, qrLabel } = Astro.props;
 
 <div class="flex items-center gap-5">
   <div class="flex-1">
-    <div class="text-sm font-bold text-[#1a1f36] mb-1 leading-relaxed" set:html={footerHeadline}></div>
+    <div class="text-sm font-bold text-[#1a1f36] mb-1 leading-relaxed" set:html={sanitizeHtml(footerHeadline)}></div>
     <div class="text-xs text-[#8a93aa] mb-3">{footerSubheadline}</div>
     <div class="inline-flex items-center gap-2 text-xs text-[#185FA5] font-semibold bg-[#E6F1FB] px-4 py-2 rounded-3xl">
       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0"/><path d="M3.6 9h16.8"/><path d="M3.6 15h16.8"/><path d="M11.5 3a17 17 0 0 0 0 18"/><path d="M12.5 3a17 17 0 0 1 0 18"/></svg> {origin}

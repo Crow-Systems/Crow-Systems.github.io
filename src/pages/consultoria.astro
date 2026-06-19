@@ -2,6 +2,7 @@
 import { getLocaleData } from "src/locales";
 import DefaultLayout from "../components/layout/DefaultLayout.astro";
 import ConsultingForm from "src/components/ConsultingForm";
+import { sanitizeHtml } from "../scripts/sanitize";
 
 const locale = Astro.url.pathname.split("/")[1] === "en" ? "en" : "es";
 const data = getLocaleData(locale);
@@ -29,7 +30,7 @@ const data = getLocaleData(locale);
         <h1
           id="consulting-heading"
           class="font-heading text-4xl md:text-6xl font-bold text-on-surface tracking-tighter mb-6"
-          set:html={data.pages.consulting.heading}
+          set:html={sanitizeHtml(data.pages.consulting.heading)}
         />
         <p
           class="text-on-surface-variant max-w-2xl text-lg leading-relaxed font-body"
