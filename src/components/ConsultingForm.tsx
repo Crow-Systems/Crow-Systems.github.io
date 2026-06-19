@@ -28,6 +28,7 @@ const queryClient = new QueryClient();
 interface ConsultingLocale {
   audioSubmission: string;
   additionalContext: string;
+  additionalContextOptional: string;
   placeholder: string;
   submitAudio: string;
   uploading: string;
@@ -547,11 +548,8 @@ function ConsultingFormInner({ locale }: Props) {
             />
             <div className="space-y-4">
               <label htmlFor="cf-audio-context" className={labelClass}>
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: locale.additionalContext,
-                  }}
-                />
+                {locale.additionalContext}
+                <span className="text-on-surface-variant/60 italic">{locale.additionalContextOptional}</span>
               </label>
               <textarea
                 id="cf-audio-context"

@@ -2,8 +2,3 @@
 User-agent: *
 Allow: /
 Sitemap: https://crowsys.chrislabs.net/sitemap-index.xml
-
-# Block sensitive paths
-User-agent: *
-Disallow: /admin/
-Disallow: /api/admin/

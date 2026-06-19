@@ -35,6 +35,9 @@ jobs:
 
       - name: Build
         run: bun run build
+        env:
+          UMAMI_WEBSITE_ID: ${{ secrets.UMAMI_WEBSITE_ID }}
+          PUBLIC_UMAMI_URL: ${{ secrets.PUBLIC_UMAMI_URL }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
