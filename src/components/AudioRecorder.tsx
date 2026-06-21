@@ -295,6 +295,7 @@ export default function AudioRecorder({
       <div className="flex items-center gap-6">
         <button
           type="button"
+          data-umami-event="audio-recorder-delete"
           onClick={handleDelete}
           className="w-12 h-12 rounded-full border border-outline-variant/50 flex items-center justify-center text-on-surface-variant hover:border-red-500 hover:text-red-500 transition-all"
           aria-label={recordDeleteLabel}
@@ -316,6 +317,7 @@ export default function AudioRecorder({
         </button>
         <button
           type="button"
+          data-umami-event="audio-recorder-toggle"
           onClick={recording ? stopRecording : startRecording}
           className="w-20 h-20 rounded-full text-4xl bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/20 active:scale-95 transition-all"
           aria-label={recording ? recordStopLabel : recordStartLabel}
@@ -324,6 +326,7 @@ export default function AudioRecorder({
         </button>
         <button
           type="button"
+          data-umami-event="audio-playback-toggle"
           onClick={togglePlayback}
           className="w-12 h-12 rounded-full border border-outline-variant/50 flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary transition-all"
           aria-label={playLabel}

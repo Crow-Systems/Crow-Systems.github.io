@@ -480,6 +480,8 @@ function ConsultingFormInner({ locale }: Props) {
         <div className="inline-flex items-center gap-px bg-surface-container/80 rounded-full p-1 mb-6">
           <button
             type="button"
+            data-umami-event="consulting-mode-toggle"
+            data-umami-event-mode="write"
             onClick={() => setMode("text")}
             className={`flex gap-1 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full transition-all duration-300 ${
               mode === "text"
@@ -505,6 +507,8 @@ function ConsultingFormInner({ locale }: Props) {
           </button>
           <button
             type="button"
+            data-umami-event="consulting-mode-toggle"
+            data-umami-event-mode="audio"
             onClick={() => setMode("audio")}
             className={`flex gap-1 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full transition-all duration-300 ${
               mode === "audio"
@@ -633,6 +637,7 @@ function ConsultingFormInner({ locale }: Props) {
 
       <button
         type="submit"
+        data-umami-event="consulting-form-submit"
         disabled={submitting}
         className="w-full md:w-auto md:px-12 bg-primary text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all hover:bg-primary/90 shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed md:mx-auto"
       >

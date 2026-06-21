@@ -128,6 +128,8 @@ const services = serviceKeys.map((key) => data.services[key]);
                 <div class="pt-4 border-t border-outline-variant/30 mt-4">
                   <a
                     href={data.routes.consulting}
+                    data-umami-event="service-card-start"
+                    data-umami-event-service={service.title}
                     class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:text-accent transition-colors group"
                   >
                     {getStartedLabel} {service.title}
@@ -311,6 +313,7 @@ const services = serviceKeys.map((key) => data.services[key]);
       <div class="flex flex-col sm:flex-row gap-4">
         <a
           href={data.routes.consulting}
+          data-umami-event="services-cta-start"
           class="border border-white text-white px-8 py-4 rounded-xl hover:bg-on-primary/10 transition-all text-center text-sm font-bold"
           >{data.pages.services.cta.startConsultation}</a
         >

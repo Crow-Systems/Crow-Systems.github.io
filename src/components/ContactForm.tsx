@@ -351,6 +351,7 @@ function ContactFormInner({ locale }: Props) {
         })}
         <button
           type="submit"
+          data-umami-event="contact-form-submit"
           disabled={submitMutation.isPending}
           className="w-full bg-primary text-white font-bold py-5 rounded-xl flex items-center justify-center gap-2 transition-all hover:bg-primary/90 shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed"
         >

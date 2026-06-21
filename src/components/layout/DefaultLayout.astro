@@ -126,27 +126,32 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
           </button>
           <a
             href={data.routes.home}
+            data-umami-event="nav-home"
             class="font-heading text-xl font-black tracking-tighter text-primary"
             aria-label="Crow Systems Home">CROW SYSTEMS</a
           >
           <div class="hidden md:flex items-center gap-6">
             <a
               href={data.routes.services}
+              data-umami-event="nav-services"
               class={`text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-sm ${activeNav === data.nav.services ? "text-primary font-bold border-b-2 border-primary pb-1" : ""}`}
               >{data.nav.services}</a
             >
             <a
               href={data.routes.consulting}
+              data-umami-event="nav-consulting"
               class={`text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-sm ${activeNav === data.nav.consulting ? "text-primary font-bold border-b-2 border-primary pb-1" : ""}`}
               >{data.nav.consulting}</a
             >
             <a
               href={data.routes.about}
+              data-umami-event="nav-about"
               class={`text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-sm ${activeNav === data.nav.about ? "text-primary font-bold border-b-2 border-primary pb-1" : ""}`}
               >{data.nav.about}</a
             >
             <a
               href={data.routes.contact}
+              data-umami-event="nav-contact"
               class={`text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-sm ${activeNav === data.nav.contact ? "text-primary font-bold border-b-2 border-primary pb-1" : ""}`}
               >{data.nav.contact}</a
             >
@@ -158,6 +163,7 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
           </div>
           <a
             href={data.routes.consulting}
+            data-umami-event="nav-get-started"
             class="ml-auto bg-primary text-white font-bold px-5 py-2 rounded-lg text-sm hover:bg-primary/90 transition-all active:scale-95 shadow-sm text-center"
             style="width: 120px;"
           >
@@ -172,21 +178,25 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
         <div class="px-6 py-4 space-y-3">
           <a
             href={data.routes.services}
+            data-umami-event="mobile-nav-services"
             class={`block text-on-surface-variant hover:text-primary text-sm font-medium py-1 ${activeNav === data.nav.services ? "text-primary font-bold" : ""}`}
             >{data.nav.services}</a
           >
           <a
             href={data.routes.consulting}
+            data-umami-event="mobile-nav-consulting"
             class={`block text-on-surface-variant hover:text-primary text-sm font-medium py-1 ${activeNav === data.nav.consulting ? "text-primary font-bold" : ""}`}
             >{data.nav.consulting}</a
           >
           <a
             href={data.routes.about}
+            data-umami-event="mobile-nav-about"
             class={`block text-on-surface-variant hover:text-primary text-sm font-medium py-1 ${activeNav === data.nav.about ? "text-primary font-bold" : ""}`}
             >{data.nav.about}</a
           >
           <a
             href={data.routes.contact}
+            data-umami-event="mobile-nav-contact"
             class={`block text-on-surface-variant hover:text-primary text-sm font-medium py-1 ${activeNav === data.nav.contact ? "text-primary font-bold" : ""}`}
             >{data.nav.contact}</a
           >
@@ -219,11 +229,13 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
         <div class="flex gap-6 flex-wrap justify-center">
           <a
             href={data.routes.privacy}
+            data-umami-event="footer-privacy"
             class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors"
             >{data.footer.privacy}</a
           >
           <a
             href={data.routes.terms}
+            data-umami-event="footer-terms"
             class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors"
             >{data.footer.terms}</a
           >
@@ -231,18 +243,21 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
         <div class="flex gap-4 flex-wrap justify-center">
           <a
             href="https://www.linkedin.com/company/crowsysmx"
+            data-umami-event="footer-linkedin"
             class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors capitalize"
             target="_blank"
             rel="noopener noreferrer">{data.footer.linkedin}</a
           >
           <a
             href="https://www.x.com/crowsysmx"
+            data-umami-event="footer-twitter"
             class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors capitalize"
             target="_blank"
             rel="noopener noreferrer">{data.footer.twitter}</a
           >
           <a
             href="https://www.instagram.com/crowsysmx"
+            data-umami-event="footer-instagram"
             class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors capitalize"
             target="_blank"
             rel="noopener noreferrer">{data.footer.instagram}</a

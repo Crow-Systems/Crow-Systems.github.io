@@ -37,12 +37,14 @@ const data = getLocaleData(locale);
         <div class="flex flex-col sm:flex-row gap-4">
           <a
             href={data.routes.consulting}
+            data-umami-event="hero-start-consultation"
             class="bg-primary text-white font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-all active:scale-[0.98] shadow-lg shadow-primary/20 text-center text-sm"
           >
             {data.pages.index.hero.startConsultation}
           </a>
           <a
             href={data.routes.services}
+            data-umami-event="hero-explore-services"
             class="border border-primary text-primary font-bold px-8 py-4 rounded-xl hover:bg-primary/10 transition-all active:scale-[0.98] text-center text-sm"
           >
             {data.pages.index.hero.exploreServices}
@@ -111,11 +113,13 @@ const data = getLocaleData(locale);
       <div class="flex flex-col sm:flex-row gap-4">
         <a
           href={data.routes.consulting}
+          data-umami-event="cta-banner-consultation"
           class="bg-secondary text-white font-bold px-8 py-4 rounded-xl hover:brightness-110 transition-all text-center text-sm"
           >{data.pages.index.cta.consultation}</a
         >
         <a
           href={data.routes.services}
+          data-umami-event="cta-banner-services"
           class="border border-on-primary text-white px-8 py-4 rounded-xl hover:bg-on-primary/10 transition-all text-center text-sm font-bold"
           >{data.pages.index.cta.services}</a
         >
