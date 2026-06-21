@@ -48,6 +48,41 @@ const FORM_FIELDS = data.pages.contact;
       </div>
     </header>
 
+    <div
+      class="bg-primary/5 border border-primary/20 rounded-xl p-6 mb-12 flex items-center justify-between gap-4"
+    >
+      <div class="flex items-center gap-4">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="text-primary shrink-0"
+        >
+          <path d="M9 18h6" />
+          <path d="M10 22h4" />
+          <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" />
+        </svg>
+        <div>
+          <p class="font-heading font-bold text-on-surface">
+            {FORM_FIELDS.consultingHeading}
+          </p>
+          <a
+            href={data.routes.consulting}
+            data-umami-event="consulting-cta"
+            data-umami-event-page="contacto"
+            class="text-primary font-semibold hover:underline hover:text-primary/80 transition-colors"
+          >
+            {FORM_FIELDS.consultingLink}
+          </a>
+        </div>
+      </div>
+    </div>
+
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
       <div class="lg:col-span-5 space-y-8">
         <div>

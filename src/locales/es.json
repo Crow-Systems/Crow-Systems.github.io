@@ -195,7 +195,9 @@
       },
       "monFri": "Lun - Vie: 08:00 - 18:00 PDT",
       "sat": "Sáb: 10:00 - 14:00 PDT (Solo bajo demanda)",
-      "regionsText": "México, Estados Unidos y Canadá"
+      "regionsText": "México, Estados Unidos y Canadá",
+      "consultingHeading": "¿Prefiere un enfoque estructurado?",
+      "consultingLink": "Solicite una consultoría gratuita →"
     },
     "consulting": {
       "title": "Consultoría - CROW SYSTEMS",
