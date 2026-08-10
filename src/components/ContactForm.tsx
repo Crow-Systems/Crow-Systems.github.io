@@ -156,11 +156,22 @@ function ContactFormInner({ locale }: Props) {
     setSuccess(null);
 
     const onSuccess = () => {
+      window.umami?.track("contact-form-success");
+      const email = (values.email ?? "").trim();
+      if (email) window.umami?.identify(email);
       setSuccess(locale.success);
       reset(["name", "email", "subject", "message"]);
     };
 
     const onError = (err: Error) => {
+      window.umami?.track("contact-form-error", {
+        error:
+          err instanceof ApiError
+            ? err.errorKey || "unknown"
+            : err instanceof TypeError
+              ? "network"
+              : "unknown",
+      });
       if (err instanceof ApiError && err.errorKey) {
         const field = mapErrorKeyToField(err.errorKey);
         const msg = resolveErrorKey(err.errorKey, locale);

@@ -60,6 +60,7 @@ const data = getLocaleData(locale);
       </div>
     </div>
     <div
+      id="homepage-stats"
       class="grid grid-cols-2 md:grid-cols-3 gap-8 mt-16 pt-12 border-t border-outline-variant/30"
     >
       <div class="text-center">
@@ -136,3 +137,21 @@ const data = getLocaleData(locale);
 </DefaultLayout>
 
 <script src="../scripts/site.ts"></script>
+<script is:inline>
+  (() => {
+    const el = document.getElementById("homepage-stats");
+    if (!el) return;
+    let fired = false;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !fired) {
+          fired = true;
+          window.umami?.track("stats-section-visible");
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.5 },
+    );
+    obs.observe(el);
+  })();
+</script>

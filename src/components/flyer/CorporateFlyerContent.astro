@@ -134,6 +134,8 @@ const { content, origin, qrUrl, downloadLabel } = Astro.props;
       pixelRatio: 2,
     });
 
+    window.umami?.track('flyer-download-complete');
+
     const link = document.createElement('a');
     link.download = 'crow-systems-flyer.jpg';
     link.href = dataUrl;

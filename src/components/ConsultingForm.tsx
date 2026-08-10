@@ -223,6 +223,9 @@ function ConsultingFormInner({ locale }: Props) {
     setSuccess(null);
 
     const onSuccess = () => {
+      window.umami?.track("consulting-form-success", { mode });
+      const email = (values.email ?? "").trim();
+      if (email) window.umami?.identify(email);
       setSuccess(
         mode === "audio" ? locale.audioSuccess : locale.consultSuccess,
       );
@@ -232,6 +235,15 @@ function ConsultingFormInner({ locale }: Props) {
     };
 
     const onError = (err: Error) => {
+      window.umami?.track("consulting-form-error", {
+        mode,
+        error:
+          err instanceof ApiError
+            ? err.errorKey || "unknown"
+            : err instanceof TypeError
+              ? "network"
+              : "unknown",
+      });
       if (err instanceof ApiError && err.errorKey) {
         const field = mapErrorKeyToField(err.errorKey);
         const msg = resolveErrorKey(err.errorKey, locale);
@@ -637,7 +649,7 @@ function ConsultingFormInner({ locale }: Props) {
 
       <button
         type="submit"
-        data-umami-event="consulting-form-submit"
+        onClick={() => window.umami?.track("consulting-form-submit", { mode })}
         disabled={submitting}
         className="w-full md:w-auto md:px-12 bg-primary text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all hover:bg-primary/90 shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed md:mx-auto"
       >

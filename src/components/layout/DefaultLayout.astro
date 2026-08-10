@@ -91,6 +91,7 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
           defer
           src={umamiUrl}
           data-website-id={umamiWebsiteId}
+          data-performance="true"
         />
       )
     }
@@ -111,6 +112,7 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
             class="md:hidden p-2 text-on-surface"
             aria-label="Toggle menu"
             id="menu-btn"
+            data-umami-event="mobile-menu-toggle"
           >
             <svg
               class="w-6 h-6"

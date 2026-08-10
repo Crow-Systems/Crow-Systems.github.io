@@ -206,6 +206,8 @@ const services = serviceKeys.map((key) => data.services[key]);
               <a
                 href="https://www.linkedin.com/in/carlos-rabago-0a62b6184/"
                 target="_blank"
+                data-umami-event="testimonial-linkedin"
+                data-umami-event-person="carlos-rabago"
               >
                 <img
                   alt={data.pages.services.carlosRabago}
@@ -312,7 +314,7 @@ const services = serviceKeys.map((key) => data.services[key]);
     <div class="space-y-4">
       {
         data.pages.services.faq.items.map((item: { question: string; answer: string }) => (
-          <details class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 group">
+          <details data-faq class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 group">
             <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer font-heading font-bold text-on-surface text-sm hover:text-primary transition-colors list-none">
               <span>{item.question}</span>
               <svg
@@ -367,3 +369,14 @@ const services = serviceKeys.map((key) => data.services[key]);
 </DefaultLayout>
 
 <script src="../scripts/site.ts"></script>
+<script is:inline>
+  document.querySelectorAll("details[data-faq]").forEach((el) => {
+    el.addEventListener("toggle", () => {
+      if (el.open) {
+        window.umami?.track("faq-toggle", {
+          question: el.querySelector("summary")?.textContent?.trim() || "",
+        });
+      }
+    });
+  });
+</script>

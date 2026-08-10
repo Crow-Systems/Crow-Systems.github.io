@@ -223,6 +223,7 @@ export default function AudioRecorder({
     } catch {
       setRecording(false);
       showFeedback(micError);
+      window.umami?.track("audio-recorder-error", { reason: "mic-denied" });
     }
   }, [
     audioUrl,
@@ -246,7 +247,10 @@ export default function AudioRecorder({
       mediaSourceRef.current = null;
     }
     setRecording(false);
-  }, []);
+    if (duration > 0) {
+      window.umami?.track("audio-recorder-stop", { duration });
+    }
+  }, [duration]);
 
   const togglePlayback = useCallback(() => {
     if (!audioUrl) {
@@ -268,6 +272,7 @@ export default function AudioRecorder({
       audioEl.current.onended = () => {
         setPlaying(false);
         stopLevelLoop();
+        window.umami?.track("audio-playback-complete", { duration });
       };
       if (mediaSourceRef.current) {
         mediaSourceRef.current.disconnect();
@@ -284,7 +289,7 @@ export default function AudioRecorder({
     setPlaybackPosition(0);
     setPlaying(true);
     startLevelLoop();
-  }, [audioUrl, playing, showFeedback, audioNoBlob]);
+  }, [audioUrl, playing, showFeedback, audioNoBlob, duration]);
 
   return (
     <div className="relative bg-surface rounded-xl p-4 md:p-8 border border-outline-variant/30 mb-4 flex flex-col items-center justify-center text-center">
