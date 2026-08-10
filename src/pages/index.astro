@@ -112,16 +112,16 @@ const data = getLocaleData(locale);
       </p>
       <div class="flex flex-col sm:flex-row gap-4">
         <a
-          href={data.routes.consulting}
-          data-umami-event="cta-banner-consultation"
+          href={data.routes.about}
+          data-umami-event="cta-banner-about"
           class="bg-secondary text-white font-bold px-8 py-4 rounded-xl hover:brightness-110 transition-all text-center text-sm"
-          >{data.pages.index.cta.consultation}</a
+          >{data.pages.index.cta.services}</a
         >
         <a
-          href={data.routes.services}
-          data-umami-event="cta-banner-services"
+          href={data.routes.consulting}
+          data-umami-event="cta-banner-consultation"
           class="border border-on-primary text-white px-8 py-4 rounded-xl hover:bg-on-primary/10 transition-all text-center text-sm font-bold"
-          >{data.pages.index.cta.services}</a
+          >{data.pages.index.cta.consultation}</a
         >
       </div>
     </div>

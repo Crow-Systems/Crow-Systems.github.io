@@ -18,10 +18,10 @@
     "about": "Nosotros",
     "consulting": "Consultoría",
     "contact": "Contacto",
-    "getStarted": "Comenzar"
+    "getStarted": "Empezar"
   },
   "footer": {
-    "copyright": "© 2024 Crow Systems. Profesionales en tecnología construyendo sistemas en los que confiar.",
+    "copyright": "© 2024 Crow Systems. Tecnología que funciona para que tu negocio crezca.",
     "about": "Nosotros",
     "services": "Servicios",
     "contact": "Contacto",
@@ -33,94 +33,131 @@
   },
   "pages": {
     "index": {
-      "title": "CROW SYSTEMS - Profesionales en Tecnología que Construyen Sistemas en los que Confiar",
-      "description": "Dos profesionales en tecnología, dos dueños, uno enfocado en redes e infraestructura, el otro en sistemas backend y software. Nos tomamos el tiempo de entender su panorama completo: cámaras, comunicaciones y sistemas clave. Sin rodeos, sin ataduras. Trabajo confiable, construido por personas que se quedan hasta que funcione.",
-      "subtitle": "Para los que hacen, directo al grano",
+      "title": "CROW SYSTEMS - Tecnología Confiable para Negocios que Quieren Crecer",
+      "description": "Ayudamos a negocios locales y medianos a tener presencia digital profesional, sistemas confiables y la conectividad que necesitan para que más clientes los encuentren. Sin complicaciones, sin ataduras.",
+      "subtitle": "Tu negocio conectado con tus clientes",
       "hero": {
-        "title": "Profesionales que Construyen<br />Sistemas Confiables",
-        "description": "Dos profesionales en tecnología, dos dueños, uno enfocado en redes e infraestructura, el otro en sistemas backend y software. Nos tomamos el tiempo de entender su panorama completo: cámaras, comunicaciones y sistemas clave. Sin rodeos, sin ataduras. Trabajo confiable, construido por personas que se quedan hasta que funcione.",
-        "startConsultation": "Enviar un Audio",
-        "exploreServices": "Ver Cómo Funciona"
+        "title": "Haz que los clientes que<br />buscan tu servicio te encuentren",
+        "description": "Tu negocio merece verse profesional y estar disponible para tus clientes en todo momento. Construimos la presencia digital, la conectividad y los sistemas que necesitas para que más personas te encuentren y confíen en ti.",
+        "startConsultation": "Quiero que me encuentren",
+        "exploreServices": "Ver qué puedo obtener"
       },
       "stats": {
         "uptime": {
           "value": "99%",
-          "label": "Disponibilidad del Sistema",
-          "desc": "Infraestructura confiable"
+          "label": "Tu negocio siempre en línea",
+          "desc": "Sistemas que no se detienen cuando tus clientes te necesitan"
         },
         "triage": {
           "value": "< 1 hr",
-          "label": "Diagnóstico Inicial",
-          "desc": "En horario de 8AM a 6PM (PDT)"
+          "label": "Respuesta en menos de 1 hora",
+          "desc": "Un profesional senior revisa tu caso en horario laboral"
         },
         "team": {
           "value": "2 Personas",
-          "label": "Profesionales y Dueños",
-          "desc": "Sin gerentes de cuenta, sin traspasos"
+          "label": "Siempre hablas con el dueño",
+          "desc": "Sin gerentes de cuenta, sin traspasos, sin perder tiempo"
         },
         "lockin": {
           "value": "Zero Lock-In",
-          "label": "Su IP, Siempre",
-          "desc": "Sin dependencias de proveedores"
+          "label": "Tu información siempre es tuya",
+          "desc": "Sin dependencias de proveedores ni contratos que atrapan"
         }
       },
       "cta": {
-        "title": "¿No Sabe por Dónde Empezar?<br />Lo Resolvemos Juntos.",
-        "description": "Describa su proyecto en sus propias palabras, un audio rápido o un formulario breve, lo que le sea más cómodo. Un profesional senior lo revisará en una hora hábil.",
-        "consultation": "Enviar un Audio",
-        "services": "Ver Cómo Funciona"
+        "title": "¿Quieres que más clientes<br />te encuentren online?",
+        "description": "Cuéntanos qué necesitas con tus propias palabras: un audio rápido, un formulario breve o un correo. Un profesional senior lo revisa y te responde en una hora hábil.",
+        "consultation": "Empezar juntos",
+        "services": "Conocer al equipo"
       }
     },
     "services": {
       "title": "Servicios - CROW SYSTEMS",
-      "description": "Explore nuestros servicios de consultoría tecnológica, incluyendo consultoría de sistemas, infraestructura de TI, soluciones de software, estrategia tecnológica, transformación digital y consultoría de automatización.",
+      "description": "Consultoría tecnológica para negocios locales y medianos: presencia digital, conectividad, sistemas y soporte. Soluciones reales que hacen que más clientes te encuentren.",
       "hero": {
-        "subtitle": "Lo que Hacemos",
-        "title": "Servicios Hechos a la Medida<br />de Cómo Trabaja Realmente",
-        "description": "Somos dos profesionales en tecnología, los dueños de la empresa. Diseñamos, construimos y reparamos los sistemas que mantienen su negocio en marcha: cámaras, conectividad, sistemas y todo lo demás. Cada servicio se basa en resultados reales, no en jerga técnica."
+        "subtitle": "Qué obtienes",
+        "title": "Soluciones que hacen<br />que tu negocio funcione mejor",
+        "description": "Cada servicio está diseñado para resolver un problema real de tu negocio. No vendemos tecnología por vender: construimos lo que necesitas para que tus clientes te encuentren, confíen en ti y tu operación fluya sin contratiempos."
       },
       "process": {
-        "title": "Cómo Funciona",
+        "title": "Cómo llegas a tu resultado",
         "steps": [
           {
-            "title": "Cuéntenos qué Necesita",
-            "description": "Comparta su proyecto mediante un audio o un formulario rápido. Un profesional senior lo revisa en una hora hábil."
+            "title": "Cuéntanos qué necesitas",
+            "description": "Comparte tu proyecto mediante un audio o un formulario rápido. Un profesional senior lo revisa en una hora hábil."
           },
           {
-            "title": "Llamada de Descubrimiento",
-            "description": "Una conversación de 30 minutos para aclarar objetivos, restricciones y próximos pasos."
+            "title": "Definimos qué necesita tu negocio",
+            "description": "Una conversación de 30 minutos para entender tu situación actual y qué resultado quieres lograr."
           },
           {
-            "title": "Hoja de Ruta y Propuesta",
-            "description": "Un plan claro con opciones de tarifa fija, entregado en 48 horas."
+            "title": "Te entregamos un plan claro",
+            "description": "Una hoja de ruta con opciones de tarifa fija, entregada en menos de 2 días, para que sepas exactamente qué vas a obtener."
           }
         ]
       },
       "cta": {
-        "title": "¿No Sabe por Dónde Empezar?<br />Lo Resolvemos Juntos.",
-        "description": "Describa su proyecto en sus propias palabras, un audio rápido o un formulario breve, lo que le sea más cómodo. Un profesional senior lo revisará en una hora hábil.",
-        "startConsultation": "Enviar un Audio"
+        "title": "¿Listo para que tu negocio<br />funcione como debe?",
+        "description": "Cuéntanos qué necesitas con tus propias palabras: un audio rápido, un formulario breve o un correo. Un profesional senior lo revisa y te responde en una hora hábil.",
+        "startConsultation": "Empezar ahora"
       },
-      "included": "Qué Incluye",
-      "idealFor": "Ideal Para",
+      "included": "Qué obtienes",
+      "idealFor": "Ideal para",
       "technologies": "Tecnologías",
       "getStarted": "Empezar con",
+      "faq": {
+        "title": "Preguntas Frecuentes",
+        "items": [
+          {
+            "question": "¿Cuánto tarda en responder?",
+            "answer": "Un profesional senior revisa tu mensaje y te responde en una hora hábil. Si envías un audio o formulario fuera de horario, te respondemos al siguiente día hábil."
+          },
+          {
+            "question": "¿Qué necesito proporcionar para empezar?",
+            "answer": "Solo cuéntanos qué necesitas con tus propias palabras: un audio, un formulario o un correo. No necesitas documentos técnicos ni especificaciones. Nosotros hacemos las preguntas necesarias durante la conversación."
+          },
+          {
+            "question": "¿Y si no sé nada de tecnología?",
+            "answer": "No necesitas saberlo. Hablamos en lenguaje sencillo y nos encargamos de traducir tus necesidades a una solución técnica. Tu parte es explicarnos qué necesitas para tu negocio; la nuestra es encontrar la mejor forma de lograrlo."
+          },
+          {
+            "question": "¿Quién hace el trabajo real?",
+            "answer": "Los dueños de la empresa. No hay gerentes de cuenta ni traspasos: las dos personas que hablan contigo son las mismas que construyen la solución. Siempre sabes con quién estás hablando."
+          },
+          {
+            "question": "¿Qué pasa después del primer contacto?",
+            "answer": "Revisamos lo que compartiste, te proponemos una conversación de 30 minutos para entender mejor tu situación, y te entregamos una hoja de ruta con opciones claras en menos de 2 días."
+          },
+          {
+            "question": "¿Trabajan con negocios fuera de México?",
+            "answer": "Sí. Trabajamos con negocios en México, Estados Unidos y Canadá. La mayoría de nuestro trabajo se hace de forma remota con reuniones por videollamada."
+          },
+          {
+            "question": "¿Puedo cancelar en cualquier momento?",
+            "answer": "Sí. No hay contratos que atrapen. Cada fase tiene un alcance claro y tú decides si quieres continuar con la siguiente."
+          },
+          {
+            "question": "¿Hay soporte después de que se entregue el proyecto?",
+            "answer": "Sí. Ofrecemos opciones de soporte y mantenimiento según lo que necesites. No te dejamos solo después de la entrega."
+          }
+        ]
+      },
       "carlosRabago": "Carlos Rabago",
       "carlosRabagoTitle": "Socio Gerente, Crow Systems",
       "carlosRabagoQuote": "Me gusta encontrar soluciones simples para problemas complejos. Escuchar, entender y construir algo estable siempre termina dando mejores resultados."
     },
     "about": {
       "title": "Nosotros - CROW SYSTEMS",
-      "description": "Crow Systems es un equipo de dos profesionales en tecnología - uno de redes y otro de software - construyendo sistemas confiables para empresas en crecimiento.",
+      "description": "Dos profesionales en tecnología, dueños de la empresa, construyendo sistemas confiables para negocios locales y medianos en México, Estados Unidos y Canadá.",
       "whoWeAre": "Quiénes Somos",
-      "heading": "Somos profesionales en tecnología que se toman el tiempo<br />de entender su negocio",
-      "description1": "Crow Systems somos dos profesionales en tecnología que nos cansamos de ver cómo las empresas terminan malgastando dinero en consultorías sobrevaloradas y software que no funciona. Uno se especializa en redes, infraestructura y comunicaciones seguras. El otro construye sistemas backend, pipelines de datos y APIs. Juntos cubrimos todo lo que su negocio necesita; sin gerentes de cuenta, sin traspasos, solo las personas que realmente hacen el trabajo.",
-      "description2": "Trabajamos directamente con fundadores y operadores que necesitan experiencia real en ingeniería sin la sobrecarga de una gran firma o un equipo interno completo. Cuando trabaja con nosotros, trabaja con los dueños, dos profesionales en tecnología que tratarán su negocio como si fuera propio.",
+      "heading": "Somos dos profesionales en tecnología<br />que se toman el tiempo de entender tu negocio",
+      "description1": "Crow Systems nació de la frustración de ver cómo las empresas desperdician dinero en consultorías costosas y software que no funciona. Un profesional se especializa en redes, infraestructura y comunicaciones seguras. El otro construye sistemas backend, pipelines de datos y APIs. Juntos cubrimos todo lo que tu negocio necesita: sin gerentes de cuenta, sin traspasos, solo las personas que realmente hacen el trabajo.",
+      "description2": "Trabajamos directamente con dueños de negocios que necesitan experiencia real en ingeniería sin la sobrecarga de una gran firma. Cuando trabajas con nosotros, trabajas con los dueños: dos profesionales que tratarán tu negocio como si fuera propio.",
       "missionVision": "Misión, Visión y Valores",
       "mission": "Misión",
-      "missionText": "Dar a las empresas en crecimiento acceso directo a los dueños profesionales en tecnología - sin gerentes de cuenta, sin culpas entre proveedores, solo sistemas confiables construidos por quienes los respaldan.",
+      "missionText": "Dar a los negocios en crecimiento acceso directo a profesionales en tecnología dueños de la empresa: sin intermediarios, sin excusas, solo sistemas confiables construidos por quienes los respaldan.",
       "vision": "Visión",
-      "visionText": "La tecnología debería empoderar, no frenar. Toda empresa, sin importar su tamaño, debería tener la experiencia en ingeniería que necesita para construir con confianza.",
+      "visionText": "La tecnología debería ayudar al negocio, no frenarlo. Toda empresa, sin importar su tamaño, debería tener la experiencia en ingeniería que necesita para crecer con confianza.",
       "values": "Valores",
       "valueItems": [
         "Confianza por encima de contratos",
@@ -130,42 +167,42 @@
         "Comunicación radicalmente transparente",
         "Construido para durar, no para vender"
       ],
-      "expertise": "Nuestra Experiencia",
+      "expertise": "Cómo te ayudamos",
       "networking": {
-        "title": "Ingeniería de Redes e Infraestructura",
-        "description": "Diseñamos redes e infraestructura que son seguras, confiables y construidas para el mundo real - no solo para el diagrama.",
+        "title": "Conectividad e Infraestructura",
+        "description": "Construimos la base tecnológica que tu negocio necesita para mantenerse en línea y comunicarse sin interrupciones.",
         "items": [
-          "Diseño de redes seguras",
-          "Conectividad y comunicaciones de sistemas",
-          "Integración de hardware/software",
-          "Sistemas distribuidos",
-          "Protocolos de transporte confiables",
-          "Optimización de infraestructura",
-          "Arquitectura orientada a ciberseguridad"
+          "Tu negocio siempre conectado y disponible",
+          "Comunicaciones seguras entre tus equipos",
+          "Cámaras y sistemas de seguridad que funcionan",
+          "Redes diseñadas para crecer con tu negocio",
+          "Conexiones confiables sin caídas",
+          "Infraestructura que no te da problemas",
+          "Seguridad que protege tu información"
         ]
       },
       "software": {
-        "title": "Ingeniería de Software y Sistemas de Datos",
-        "description": "Construimos sistemas backend, pipelines de datos y APIs que manejan la complejidad para que su equipo no tenga que hacerlo.",
+        "title": "Sistemas y Software",
+        "description": "Construimos las herramientas digitales que tu negocio necesita para operar mejor, sin depender de software genérico que no se ajusta a tu forma de trabajar.",
         "items": [
-          "Sistemas backend de alto rendimiento",
-          "Pipelines de procesamiento de datos",
-          "Arquitectura de aplicaciones escalables",
-          "Desarrollo de API y plataformas",
-          "Implementación de lógica de negocio compleja",
-          "Optimización de bases de código",
-          "Mejoras en experiencia de desarrollo"
+          "Sistemas que automatizan lo que haces manual",
+          "Herramientas que se ajustan a tu negocio, no al revés",
+          "Plataformas que tus clientes pueden usar fácilmente",
+          "Conexiones entre tus sistemas para que no pierdas tiempo",
+          "Software que funciona sin constantes fallas",
+          "Sistemas que crecen cuando tu negocio crece",
+          "Herramientas que tu equipo puede usar sin complicaciones"
         ]
       }
     },
     "contact": {
       "title": "Contacto - CROW SYSTEMS",
-      "description": "¿Tiene un proyecto en mente o un problema que resolver? Cuéntenos - un profesional senior le responderá en una hora hábil.",
+      "description": "¿Tienes un proyecto en mente o un problema que resolver? Cuéntenos: un profesional senior te responderá en una hora hábil.",
       "getInTouch": "Contáctenos",
       "heading": "Contáctenos",
-      "description2": "¿No sabe si necesita una auditoría completa, una consulta rápida o solo alguien con quien hablar de una idea? Escríbanos y lo resolvemos juntos.",
+      "description2": "¿No estás seguro de lo que necesitas? Escríbanos y te ayudamos a definir el mejor camino para tu negocio.",
       "startConversation": "Conversemos",
-      "inquiryDescription": "¿Tiene un proyecto en mente o un problema que no termina de resolver? Cuéntenos. Un profesional senior revisará su mensaje y le responderá en una hora hábil.",
+      "inquiryDescription": "Cuéntanos qué necesitas y un profesional senior te responderá en una hora hábil con una propuesta clara.",
       "inquiries": "Consultas",
       "businessHours": "Horario de Atención",
       "regions": "Regiones de Atención",
@@ -179,40 +216,40 @@
       "subjectRequired": "El asunto es obligatorio",
       "messageRequired": "El mensaje es obligatorio (mínimo 10 caracteres)",
       "sending": "Enviando...",
-      "success": "¡Gracias por escribirnos! Revisaremos su mensaje y le responderemos en una hora hábil.",
+      "success": "¡Gracias! Un profesional revisará tu mensaje y te responderá en una hora hábil.",
       "failed": "Error al enviar. Por favor, inténtelo de nuevo.",
       "errorKeys": {
-        "SUBMISSION_FAILED": "No se pudo enviar su mensaje. Por favor, inténtelo de nuevo.",
-        "SERVER_INTERNAL_ERROR": "Algo salió mal. Por favor, inténtelo de nuevo en unos momentos.",
-        "SERVER_RATE_LIMIT": "Demasiadas solicitudes. Espere un momento e inténtelo de nuevo.",
-        "SERVER_TIMEOUT": "La solicitud tardó demasiado. Verifique su conexión e inténtelo de nuevo.",
-        "NETWORK_ERROR": "No se puede conectar. Verifique su conexión a internet e inténtelo de nuevo.",
-        "UNKNOWN_ERROR": "Ocurrió un error inesperado. Inténtelo de nuevo o contacte al soporte.",
+        "SUBMISSION_FAILED": "No se pudo enviar tu mensaje. Por favor, inténtalo de nuevo.",
+        "SERVER_INTERNAL_ERROR": "Algo salió mal. Por favor, inténtalo de nuevo en unos momentos.",
+        "SERVER_RATE_LIMIT": "Demasiadas solicitudes. Espera un momento e inténtalo de nuevo.",
+        "SERVER_TIMEOUT": "La solicitud tardó demasiado. Verifica tu conexión e inténtalo de nuevo.",
+        "NETWORK_ERROR": "No se puede conectar. Verifica tu conexión a internet e inténtalo de nuevo.",
+        "UNKNOWN_ERROR": "Ocurrió un error inesperado. Inténtalo de nuevo o contacta al soporte.",
         "VALIDATION_NAME_REQUIRED": "El nombre es obligatorio",
-        "VALIDATION_EMAIL_INVALID": "Ingrese un correo electrónico válido (ej., nombre@dominio.com)",
+        "VALIDATION_EMAIL_INVALID": "Ingresa un correo electrónico válido (ej., nombre@dominio.com)",
         "VALIDATION_SUBJECT_REQUIRED": "El asunto es obligatorio",
         "VALIDATION_MESSAGE_MIN": "El mensaje es obligatorio (mínimo 10 caracteres)"
       },
       "monFri": "Lun - Vie: 08:00 - 18:00 PDT",
       "sat": "Sáb: 10:00 - 14:00 PDT (Solo bajo demanda)",
       "regionsText": "México, Estados Unidos y Canadá",
-      "consultingHeading": "¿Prefiere un enfoque estructurado?",
-      "consultingLink": "Solicite una consultoría gratuita →"
+      "consultingHeading": "¿Prefieres un enfoque más estructurado?",
+      "consultingLink": "Solicita una consultoría gratuita →"
     },
     "consulting": {
       "title": "Consultoría - CROW SYSTEMS",
-      "description": "Envíe un audio o complete un formulario rápido. Un profesional senior revisa su proyecto y responde en una hora hábil.",
+      "description": "Envía un audio o completa un formulario rápido. Un profesional senior revisa tu proyecto y te responde en una hora hábil con un plan claro.",
       "portal": "Portal de Consultoría",
-      "heading": "Cuéntenos qué necesita.<br /><span class=\"text-surface-variant\">Nosotros lo construimos.</span>",
-      "description2": "Describa su proyecto con sus propias palabras. Grabe un audio rápido para los detalles difíciles de escribir, o use el formulario, lo que le sea más cómodo.",
+      "heading": "Cuéntanos qué necesitas.<br /><span class=\"text-surface-variant\">Te decimos cómo lograrlo.</span>",
+      "description2": "Describe tu proyecto con tus propias palabras. Graba un audio rápido para los detalles difíciles de escribir, o usa el formulario: lo que te sea más cómodo.",
       "audioSubmission": "Grabar un Audio",
       "additionalContext": "¿Algo más? ",
       "additionalContextOptional": "(Opcional)",
-      "placeholder": "Describa cualquier restricción técnica o resultados específicos...",
+      "placeholder": "Describe cualquier restricción o qué resultado específico buscas...",
       "submitAudio": "Enviar Audio",
       "uploading": "Subiendo...",
       "submitted": "✓ ¡Enviado!",
-      "audioSuccess": "✓ ¡Su idea de audio ha sido enviada! La revisaremos dentro de 1 hora hábil.",
+      "audioSuccess": "✓ ¡Tu audio ha sido enviado! Lo revisaremos dentro de 1 hora hábil.",
       "recordDeleteLabel": "Eliminar grabación",
       "recordStartLabel": "Iniciar grabación",
       "recordStopLabel": "Detener grabación",
@@ -221,16 +258,16 @@
       "micError": "Acceso al micrófono denegado.",
       "discardRecording": "¿Descartar grabación actual y comenzar una nueva?",
       "consultForm": {
-        "heading": "Cuéntenos sobre su proyecto",
+        "heading": "Cuéntanos qué quieres lograr",
         "fullName": "Nombre Completo",
         "fullNamePlaceholder": "Juan Perez",
         "company": "Empresa",
         "companyPlaceholder": "Marca ACME",
         "email": "Correo Electrónico",
-        "emailPlaceholder": "j.per@acme.com",
+        "emailPlaceholder": "j.pe@acme.com",
         "phone": "Teléfono",
-        "problem": "Problema de Negocio",
-        "goals": "Objetivos del Proyecto",
+        "problem": "¿Qué necesitas resolver?",
+        "goals": "¿Cómo se vería el éxito?",
         "budget": "Rango de Presupuesto",
         "submit": "Enviar Solicitud",
         "submitting": "Enviando...",
@@ -241,75 +278,74 @@
         "nameRequired": "El nombre debe tener al menos 2 caracteres",
         "companyRequired": "El nombre de la empresa es obligatorio",
         "emailRequired": "Se requiere un correo electrónico válido",
-        "emailInvalid": "Ingrese un correo electrónico válido (ej., nombre@dominio.com)",
-        "problemRequired": "Por favor, seleccione un problema de negocio",
+        "emailInvalid": "Ingresa un correo electrónico válido (ej., nombre@dominio.com)",
+        "problemRequired": "Por favor, selecciona qué necesitas resolver",
         "phoneRequired": "El número de teléfono es obligatorio",
-        "phoneInvalid": "Ingrese un número telefónico válido (ej., +52 555 000 0000)",
-        "descriptionMin": "Describa su proyecto en al menos 10 caracteres"
+        "phoneInvalid": "Ingresa un número telefónico válido (ej., +52 555 000 0000)",
+        "descriptionMin": "Describe tu proyecto en al menos 10 caracteres"
       },
       "errorKeys": {
-        "SUBMISSION_FAILED": "No se pudo enviar su solicitud. Por favor, inténtelo de nuevo.",
-        "SERVER_INTERNAL_ERROR": "Algo salió mal. Por favor, inténtelo de nuevo en unos momentos.",
-        "SERVER_RATE_LIMIT": "Demasiadas solicitudes. Espere un momento e inténtelo de nuevo.",
-        "SERVER_TIMEOUT": "La solicitud tardó demasiado. Verifique su conexión e inténtelo de nuevo.",
-        "SERVER_UPLOAD_FAILED": "Error al subir el audio. Verifique su conexión e inténtelo de nuevo.",
-        "SERVER_UPLOAD_TOO_LARGE": "El archivo de audio es demasiado grande. Intente una grabación más corta.",
-        "SERVER_INVALID_FORMAT": "Formato de archivo no válido. Utilice un formato compatible.",
-        "NETWORK_ERROR": "No se puede conectar. Verifique su conexión a internet e inténtelo de nuevo.",
-        "UNKNOWN_ERROR": "Ocurrió un error inesperado. Inténtelo de nuevo o contacte al soporte.",
+        "SUBMISSION_FAILED": "No se pudo enviar tu solicitud. Por favor, inténtalo de nuevo.",
+        "SERVER_INTERNAL_ERROR": "Algo salió mal. Por favor, inténtalo de nuevo en unos momentos.",
+        "SERVER_RATE_LIMIT": "Demasiadas solicitudes. Espera un momento e inténtalo de nuevo.",
+        "SERVER_TIMEOUT": "La solicitud tardó demasiado. Verifica tu conexión e inténtalo de nuevo.",
+        "SERVER_UPLOAD_FAILED": "Error al subir el audio. Verifica tu conexión e inténtalo de nuevo.",
+        "SERVER_UPLOAD_TOO_LARGE": "El archivo de audio es demasiado grande. Intenta una grabación más corta.",
+        "SERVER_INVALID_FORMAT": "Formato de archivo no válido. Utiliza un formato compatible.",
+        "NETWORK_ERROR": "No se puede conectar. Verifica tu conexión a internet e inténtalo de nuevo.",
+        "UNKNOWN_ERROR": "Ocurrió un error inesperado. Inténtalo de nuevo o contacta al soporte.",
         "VALIDATION_NAME_REQUIRED": "El nombre debe tener al menos 2 caracteres",
-        "VALIDATION_EMAIL_INVALID": "Ingrese un correo electrónico válido (ej., nombre@dominio.com)",
-        "VALIDATION_PHONE_INVALID": "Ingrese un número telefónico válido (ej., +52 555 000 0000)",
+        "VALIDATION_EMAIL_INVALID": "Ingresa un correo electrónico válido (ej., nombre@dominio.com)",
+        "VALIDATION_PHONE_INVALID": "Ingresa un número telefónico válido (ej., +52 555 000 0000)",
         "VALIDATION_COMPANY_REQUIRED": "El nombre de la empresa es obligatorio",
-        "VALIDATION_DESCRIPTION_MIN": "Describa su proyecto en al menos 10 caracteres"
+        "VALIDATION_DESCRIPTION_MIN": "Describe tu proyecto en al menos 10 caracteres"
       },
       "problems": [
-        "¿Cuál es el principal desafío?",
-        "Reducción de Complejidad Técnica",
-        "Transformación Digital",
-        "Modernización de Infraestructura",
-        "Reducción de Deuda Técnica",
-        "Escalamiento de Infraestructura",
-        "Arquitectura y Desarrollo de Software",
+        "¿Qué necesitas resolver?",
+        "Que más clientes me encuentren",
+        "Modernizar mi infraestructura",
+        "Que mi negocio funcione sin interrupciones",
+        "Automatizar procesos manuales",
+        "Construir una herramienta a la medida",
         "Otro"
       ],
-      "goalsPlaceholder": "¿Cómo se ve el éxito?",
-      "method": "Cómo Funciona",
+      "goalsPlaceholder": "¿Cómo se vería el éxito para tu negocio?",
+      "method": "Cómo llegas a tu resultado",
       "steps": [
         {
-          "title": "Diagnóstico Inicial",
-          "desc": "Un profesional senior revisa lo que compartió en una hora hábil."
+          "title": "Revisamos tu caso",
+          "desc": "Un profesional senior revisa lo que compartiste en una hora hábil."
         },
         {
-          "title": "Descubrimiento",
-          "desc": "Una conversación de 30 minutos para aclarar objetivos, restricciones y próximos pasos."
+          "title": "Entendemos tu negocio",
+          "desc": "Una conversación de 30 minutos para entender tu situación y qué quieres lograr."
         },
         {
-          "title": "Propuesta",
-          "desc": "Una hoja de ruta clara con opciones de tarifa fija, entregada en 48 horas."
+          "title": "Te entregamos el plan",
+          "desc": "Una hoja de ruta clara con opciones de tarifa fija, entregada en menos de 2 días."
         }
       ],
-      "officeHours": "Horario de Oficina",
+      "officeHours": "Horario de Atención",
       "monFriHours": "Lun - Vie: 9:00 AM - 6:00 PM",
       "satHours": "Sábado: Por cita",
       "consultingEmail": "hablemos@crowsys.com.mx",
-      "securityTitle": "Seguridad Corporativa",
-      "securityDesc": "Todos los envíos, incluidos los archivos de audio, se cifran mediante AES-256 en reposo y TLS 1.3 en tránsito. Priorizamos su propiedad intelectual. Se pueden proporcionar NDA estándar durante la fase de descubrimiento.",
+      "securityTitle": "Tu información está segura",
+      "securityDesc": "Todos los envíos, incluidos los archivos de audio, se cifran y protegen. Priorizamos tu propiedad intelectual. Disponibles NDA estándar durante la fase de descubrimiento.",
       "marcusThorne": "Christian Camacho",
       "managingPartner": "Socio Gerente, Crow Systems",
-      "quote": "Creamos este proceso para entender realmente qué está frenando al negocio. Las conversaciones nos ayudan a descubrir prioridades y necesidades que rara vez aparecen en información o datos.",
-      "consultSuccess": "¡Gracias! Su solicitud de consulta ha sido enviada. Nos comunicaremos dentro de 1 hora hábil.",
-      "audioNoBlob": "Por favor, grabe audio primero."
+      "quote": "Creamos este proceso para entender realmente qué está frenando a tu negocio. Las conversaciones nos ayudan a descubrir prioridades que rara vez aparecen en una hoja de cálculo.",
+      "consultSuccess": "¡Gracias! Tu solicitud ha sido enviada. Nos comunicaremos dentro de 1 hora hábil.",
+      "audioNoBlob": "Por favor, graba audio primero."
     },
     "privacy": {
       "title": "Política de Privacidad - CROW SYSTEMS",
-      "description": "Lea la Política de Privacidad de Crow Systems para entender cómo recopilamos, usamos y protegemos su información personal.",
+      "description": "Lee la Política de Privacidad de Crow Systems para entender cómo recopilamos, usamos y protegemos tu información personal.",
       "heading": "Política de Privacidad",
-      "intro": "Esta Política de Privacidad explica cómo Crow Systems recopila, usa y protege su información personal cuando usted utiliza nuestro sitio web y servicios.",
+      "intro": "Esta Política de Privacidad explica cómo Crow Systems recopila, usa y protege tu información personal cuando utilizas nuestro sitio web y servicios.",
       "sections": [
         {
           "title": "1. Introducción",
-          "content": "Crow Systems respeta la privacidad del usuario y se compromete a proteger la información personal. Esta Política de Privacidad explica cómo se recopila, utiliza y protege la información cuando usted visita nuestro sitio web o utiliza nuestros servicios de consultoría."
+          "content": "Crow Systems respeta la privacidad del usuario y se compromete a proteger la información personal. Esta Política de Privacidad explica cómo se recopila, utiliza y protege la información cuando visitas nuestro sitio web o utilizas nuestros servicios de consultoría."
         },
         {
           "title": "2. Información que Recopilamos",
@@ -393,9 +429,9 @@
     },
     "terms": {
       "title": "Términos de Servicio - CROW SYSTEMS",
-      "description": "Lea los Términos de Servicio de Crow Systems para servicios de consultoría tecnológica y uso del sitio web.",
+      "description": "Lee los Términos de Servicio de Crow Systems para servicios de consultoría tecnológica y uso del sitio web.",
       "heading": "Términos de Servicio",
-      "intro": "Por favor, lea estos términos cuidadosamente antes de utilizar nuestro sitio web o servicios.",
+      "intro": "Por favor, lee estos términos cuidadosamente antes de utilizar nuestro sitio web o servicios.",
       "sections": [
         {
           "title": "1. Aceptación de Términos",
@@ -419,7 +455,7 @@
         },
         {
           "title": "4. Solicitudes de Consultoría",
-          "content": "El envío de una solicitud de consultoría no establece una relación comercial formal ni un acuerdo contractual. El trabajo del proyecto, los precios, los cronogramas y los entregables requieren acuerdos escritos por separado. Nuestro equipo revisará su solicitud y responderá dentro de 1 hora hábil."
+          "content": "El envío de una solicitud de consultoría no establece una relación comercial formal ni un acuerdo contractual. El trabajo del proyecto, los precios, los cronogramas y los entregables requieren acuerdos escritos por separado. Nuestro equipo revisará tu solicitud y responderá dentro de 1 hora hábil."
         },
         {
           "title": "5. Envíos de Audio",
@@ -468,7 +504,7 @@
     "404": {
       "title": "404 - CROW SYSTEMS",
       "heading": "Página No Encontrada",
-      "description": "La página que está buscando no existe o ha sido movida.",
+      "description": "La página que buscas no existe o ha sido movida.",
       "home": "Volver al Inicio"
     },
     "flyer": {
@@ -476,26 +512,26 @@
       "description": "Descarga nuestro folleto digital con soluciones de software, ciberseguridad, fintech y más.",
       "downloadLabel": "Descargar como JPG",
       "content": {
-        "tagline": "Tecnología y Estrategia",
+        "tagline": "Tecnología que funciona para ti",
         "hiringBadge": "Estamos contratando ✦",
-        "eyebrow": "Tecnología que funciona para ti",
-        "heading": "Impulsamos empresas con <em>tecnología</em> y estrategia",
-        "heroDescription": "Soluciones inteligentes para escalar negocios, optimizar operaciones y construir infraestructura digital preparada para el futuro.",
-        "cta": "Construyamos el futuro juntos",
+        "eyebrow": "Tu negocio conectado",
+        "heading": "Tecnología que hace que <em>tu negocio</em> funcione mejor",
+        "heroDescription": "Soluciones que hacen que más clientes te encuentren, tus operaciones fluyan y tu negocio crezca con confianza.",
+        "cta": "Construyamos el futuro de tu negocio juntos",
         "service1Title": "Consultoría de Sistemas",
-        "service1Desc": "Auditorías de stack tecnológico, optimización de flujos e integración entre departamentos",
+        "service1Desc": "Eliminamos la fricción entre tus herramientas para que tu equipo trabaje sin perder tiempo",
         "service2Title": "Infraestructura de TI",
-        "service2Desc": "Redes, nube y servidores listos para escalar — confiables y seguros",
+        "service2Desc": "Tu negocio siempre en línea: redes, nube y servidores que funcionan cuando tus clientes te necesitan",
         "service3Title": "Soluciones de Software",
-        "service3Desc": "Apps a la medida, SaaS, APIs y modernización de sistemas heredados",
+        "service3Desc": "Herramientas a la medida que se ajustan a tu forma de trabajar, no al revés",
         "service4Title": "Estrategia Tecnológica",
-        "service4Desc": "Decisiones de arquitectura, construir vs comprar, y hoja de ruta tecnológica",
+        "service4Desc": "Decisiones tecnológicas claras para que inviertas bien y no tengas sorpresas",
         "service5Title": "Transformación Digital",
-        "service5Desc": "Modernización de legados, unificación de datos e inteligencia de negocio",
+        "service5Desc": "Moderniza lo que importa y toma decisiones basadas en datos reales, no en corazonadas",
         "service6Title": "Consultoría de Automatización",
-        "service6Desc": "Pipelines CI/CD, IaC, RPA y pruebas automatizadas",
+        "service6Desc": "Elimina el trabajo manual repetitivo para que tu equipo se enfoque en lo que realmente importa",
         "footerHeadline": "No solo construimos soluciones.<br>Construimos crecimiento sostenible.",
-        "footerSubheadline": "Hablemos de tu próximo gran proyecto.",
+        "footerSubheadline": "Hablemos de cómo hacer crecer tu negocio.",
         "qrLabel": "ESCANÉAME"
       }
     }
@@ -503,16 +539,16 @@
   "services": {
     "systemsConsulting": {
       "title": "Consultoría de Sistemas",
-      "description": "Auditamos cómo sus equipos trabajan con la tecnología - eliminamos cuellos de botella, silos y procesos que los frenan.",
-      "fullDescription": "Los sistemas no son solo servidores y código - son los flujos de trabajo, herramientas y procesos que sus equipos usan a diario. Analizamos su entorno operativo completo, identificamos dónde se atoran las cosas y entregamos un plan claro para destrabar a su equipo. Ya sean herramientas fragmentadas, departamentos desconectados o procesos manuales que deberían estar automatizados, llevamos claridad y estructura a entornos complejos.",
+      "description": "Tu equipo deja de perder tiempo entre herramientas que no se hablan entre sí.",
+      "fullDescription": "Las herramientas fragmentadas, los departamentos desconectados y los procesos manuales que ya no escalan le cuestan tiempo y dinero a tu negocio. Analizamos cómo trabajas con la tecnología, identificamos dónde se atoran las cosas y entregamos un plan claro para destrabar a tu equipo. El resultado: menos tiempo perdido, menos errores y más tiempo enfocado en servir a tus clientes.",
       "features": [
-        "Auditoría integral de la pila tecnológica",
-        "Mapeo de flujos de trabajo y optimización de procesos",
-        "Estrategia de integración entre departamentos",
-        "Evaluación y consolidación de proveedores",
-        "Informes personalizados y paneles de KPI"
+        "Tu equipo trabaja sin perder tiempo entre sistemas",
+        "Herramientas que se conectan entre sí sin fricción",
+        "Procesos que escalan cuando tu negocio crece",
+        "Claridad sobre qué herramientas necesitas y cuáles sobran",
+        "Informes que te ayudan a tomar mejores decisiones"
       ],
-      "idealFor": "Empresas en crecimiento que experimentan fricción operativa, esfuerzos duplicados entre equipos, o que dependen de procesos manuales obsoletos que ya no escalan.",
+      "idealFor": "Negocios que gastan tiempo y dinero en procesos manuales, herramientas que no se integran o esfuerzo duplicado entre equipos.",
       "technologies": [
         "Arquitectura Empresarial",
         "Minería de Procesos",
@@ -520,40 +556,40 @@
         "Migración a la Nube",
         "Prácticas DevOps"
       ],
-      "cta": "Más Información"
+      "cta": "Quiero que mi equipo funcione mejor"
     },
     "itInfrastructure": {
       "title": "Infraestructura de TI",
-      "description": "Diseñamos y construimos las redes, servidores y nube en los que su negocio funciona - confiables, seguros y listos para crecer.",
-      "fullDescription": "Su infraestructura es la base de la que todo depende. Diseñamos y construimos redes, arquitectura de servidores, entornos en la nube y planes de recuperación que mantienen su negocio en línea - incluso bajo demanda máxima. De AWS a on-premise, construimos cimientos que crecen con usted, no en su contra.",
+      "description": "Tu negocio siempre disponible para tus clientes, sin interrupciones.",
+      "fullDescription": "La infraestructura es la base de todo: si se cae, tu negocio se cae. Construimos redes, servidores, entornos en la nube y planes de recuperación que mantienen tu negocio en línea: incluso cuando más clientes te necesitan. De AWS a on-premise, construimos cimientos que crecen con tu negocio, no en su contra.",
       "features": [
-        "Diseño y optimización de arquitectura de red",
-        "Aprovisionamiento de infraestructura en la nube (AWS, Azure, GCP)",
-        "Recuperación ante desastres y planificación de continuidad del negocio",
-        "Administración de servidores y bases de datos",
-        "Monitoreo 24/7 y alertas proactivas"
+        "Tu negocio siempre en línea, sin caídas",
+        "Tus datos seguros y protegidos en todo momento",
+        "Infraestructura que crece cuando tu negocio crece",
+        "Respuesta rápida ante cualquier problema",
+        "Monitoreo constante para prevenir fallas"
       ],
-      "idealFor": "Empresas que dependen de sistemas siempre activos, manejan datos sensibles, o están escalando su infraestructura para satisfacer la creciente demanda.",
+      "idealFor": "Negocios que dependen de estar siempre en línea, manejan datos sensibles, o están creciendo y necesitan infraestructura que los acompañe.",
       "technologies": [
         "AWS",
         "Azure",
         "Google Cloud",
         "Administración de Linux"
       ],
-      "cta": "Más Información"
+      "cta": "Quiero que mi negocio nunca se detenga"
     },
     "softwareSolutions": {
       "title": "Soluciones de Software",
-      "description": "Construimos software a la medida - herramientas internas, plataformas para clientes y todo lo demás - que se ajusta a su forma de trabajar.",
-      "fullDescription": "El software genérico a menudo crea más problemas de los que resuelve. Diseñamos y construimos aplicaciones personalizadas adaptadas a sus flujos de trabajo y reglas de negocio exactas. Desde herramientas internas y paneles de control hasta plataformas orientadas al cliente y pipelines automatizados, desarrollamos soluciones que se ajustan como un guante. Cada línea de código se escribe pensando en la mantenibilidad, el rendimiento y sus objetivos a largo plazo.",
+      "description": "Herramientas que se ajustan a tu negocio, no al revés.",
+      "fullDescription": "El software genérico a menudo crea más problemas de los que resuelve. Construimos aplicaciones personalizadas adaptadas a tu forma de trabajar: desde herramientas internas y paneles de control hasta plataformas que tus clientes pueden usar fácilmente. Cada solución está pensada para que sea fácil de usar, confiable y que funcione sin constantes fallas.",
       "features": [
-        "Desarrollo de aplicaciones web y móviles personalizadas",
-        "Herramientas internas y scripts de automatización",
-        "Diseño de API y desarrollo de capa de integración",
-        "Modernización de aplicaciones heredadas",
-        "Optimización de rendimiento y auditoría de código"
+        "Herramientas que se ajustan a cómo trabajas realmente",
+        "Tus clientes pueden interactuar contigo fácilmente",
+        "Automatización de tareas que haces manual",
+        "Sistemas que funcionan sin fallas constantes",
+        "Software que crece cuando tu negocio crece"
       ],
-      "idealFor": "Equipos con flujos de trabajo únicos que el software genérico no puede cubrir, u organizaciones que buscan reemplazar herramientas heredadas frágiles.",
+      "idealFor": "Negocios con procesos únicos que el software genérico no cubre, o que necesitan reemplazar herramientas heredadas frágiles.",
       "technologies": [
         "TypeScript",
         "React",
@@ -561,20 +597,20 @@
         "PostgreSQL",
         "Python"
       ],
-      "cta": "Más Información"
+      "cta": "Quiero una herramienta que funcione para mí"
     },
     "technicalStrategy": {
       "title": "Estrategia Tecnológica",
-      "description": "Ayudamos a los líderes a tomar decisiones tecnológicas con confianza - arquitectura, construir vs comprar, sin exageraciones, sin ataduras.",
-      "fullDescription": "Toda decisión tecnológica tiene consecuencias a largo plazo. Ayudamos a los equipos directivos a ver con claridad y tomar decisiones informadas sobre arquitectura, herramientas e inversión. Sin discursos de ventas, sin modas - solo criterio de ingeniería sólido y una hoja de ruta por fases que equilibra velocidad con sostenibilidad. Traducimos objetivos de negocio en planes técnicos claros y nos aseguramos de que usted sea dueño de su propio destino.",
+      "description": "Decisiones tecnológicas claras para que inviertas bien y no tengas sorpresas.",
+      "fullDescription": "Cada decisión tecnológica tiene consecuencias a largo plazo. Te ayudamos a ver con claridad y tomar decisiones informadas sobre qué construir, qué comprar y en qué invertir. Sin discursos de ventas, sin modas: solo criterio de ingeniería sólido que equilibra velocidad con sostenibilidad. Traducimos tus objetivos de negocio en planes técnicos claros y nos aseguramos de que seas dueño de tu propio destino.",
       "features": [
-        "Evaluación y recomendaciones del stack tecnológico",
-        "Revisión de arquitectura y asesoría de diseño",
-        "Evaluación y priorización de la deuda técnica",
-        "Predicción de escalabilidad y rendimiento",
-        "Orientación en la selección de proveedores y código abierto"
+        "Sabes exactamente en qué invertir y qué evitar",
+        "Decisiones claras sobre construir vs. comprar",
+        "Evitas costosas sorpresas tecnológicas",
+        "Tus sistemas están preparados para crecer",
+        "Eliges las herramientas correctas para tu negocio"
       ],
-      "idealFor": "CTOs, VPs de Ingeniería y empresas en etapa de crecimiento que navegan decisiones tecnológicas complejas sin experiencia técnica interna de alto nivel.",
+      "idealFor": "Dueños de negocio y líderes que necesitan tomar decisiones tecnológicas sin tener un equipo técnico interno completo.",
       "technologies": [
         "Diseño de Sistemas",
         "Microservicios",
@@ -582,20 +618,20 @@
         "Estrategia de Datos",
         "Ingeniería de Plataformas"
       ],
-      "cta": "Más Información"
+      "cta": "Quiero tomar mejores decisiones tech"
     },
     "digitalTransformation": {
       "title": "Transformación Digital",
-      "description": "Modernizamos sistemas heredados y unificamos sus datos para que su equipo tome decisiones basadas en hechos, no en corazonadas.",
-      "fullDescription": "La transformación digital tiene mala fama porque normalmente significa 'reemplazar todo'. Nosotros lo hacemos distinto - modernizamos los sistemas que más importan y conectamos sus datos en una sola fuente de verdad. El resultado son paneles de control en los que puede confiar, informes que realmente ayudan y un equipo que toma decisiones en horas, no en semanas. Sin disrupción innecesaria, solo progreso práctico.",
+      "description": "Moderniza lo que importa y toma decisiones basadas en datos reales.",
+      "fullDescription": "La transformación digital tiene mala fama porque normalmente significa 'reemplazar todo'. Nosotros lo hacemos distinto: modernizamos los sistemas que más importan y conectamos tus datos en una sola fuente de verdad. El resultado son paneles de control en los que puedes confiar, informes que realmente ayudan y un equipo que toma decisiones en horas, no en semanas. Sin disrupción innecesaria, solo progreso práctico.",
       "features": [
-        "Modernización y migración de sistemas heredados",
-        "Arquitectura de almacén y lago de datos",
-        "Paneles de inteligencia empresarial y analítica",
-        "Automatización de procesos y digitalización de flujos de trabajo",
-        "Gestión del cambio y capacitación del equipo"
+        "Tomas decisiones basadas en datos, no en suposiciones",
+        "Informes claros que te ayudan a entender tu negocio",
+        "Sistemas modernos que no frenan tu operación",
+        "Tu equipo tiene la información que necesita, cuando la necesita",
+        "Menos tiempo buscando datos, más tiempo usándolos"
       ],
-      "idealFor": "Empresas establecidas con sistemas envejecidos que buscan modernizar sus operaciones, desbloquear información a partir de datos y mejorar la velocidad de toma de decisiones.",
+      "idealFor": "Negocios establecidos con sistemas envejecidos que buscan modernizar, desbloquear información y mejorar la velocidad de toma de decisiones.",
       "technologies": [
         "Pipelines ETL",
         "dbt",
@@ -603,20 +639,20 @@
         "Apache Airflow",
         "Snowflake"
       ],
-      "cta": "Más Información"
+      "cta": "Quiero tomar decisiones con datos reales"
     },
     "automationConsulting": {
       "title": "Consultoría de Automatización",
-      "description": "Eliminamos el trabajo manual repetitivo - desde pipelines de despliegue hasta captura de datos - para que su equipo se enfoque en lo que realmente importa.",
-      "fullDescription": "El trabajo manual repetitivo es un asesino silencioso de la productividad y la moral. Identificamos las oportunidades de mayor impacto para eliminarlo mediante automatización inteligente - pipelines CI/CD, infraestructura como código, automatización robótica de procesos y flujos de datos programados. El objetivo no es automatizar por automatizar, sino liberar a su equipo para que haga el trabajo creativo y estratégico que realmente mueve la aguja.",
+      "description": "Elimina el trabajo manual repetitivo para que tu equipo se enfoque en lo que realmente importa.",
+      "fullDescription": "El trabajo manual repetitivo es un asesino silencioso de la productividad. Identificamos las oportunidades de mayor impacto para eliminarlo: desde pipelines de despliegue hasta captura de datos. El resultado: tu equipo se libera de tareas repetitivas y puede enfocarse en el trabajo creativo y estratégico que realmente mueve la aguja de tu negocio.",
       "features": [
-        "Diseño e implementación de pipelines CI/CD",
-        "Adopción de Infraestructura como Código (IaC)",
-        "Automatización Robótica de Procesos (RPA)",
-        "Procesamiento de datos y automatización ETL programados",
-        "Pruebas automatizadas y aseguramiento de calidad"
+        "Tu equipo deja de perder horas en tareas repetitivas",
+        "Menos errores humanos en procesos importantes",
+        "Despliegues y actualizaciones sin estrés",
+        "Datos que fluyen automáticamente entre sistemas",
+        "Tu equipo se enfoca en trabajo de valor, no en tareas mecánicas"
       ],
-      "idealFor": "Equipos operativos que dedican tiempo excesivo a tareas repetitivas, equipos de ingeniería con muchos despliegues, o empresas que se preparan para escalar sin un crecimiento proporcional de personal.",
+      "idealFor": "Negocios con equipos que dedican tiempo excesivo a tareas repetitivas, o que quieren escalar sin contratar proporcionalmente más personal.",
       "technologies": [
         "GitHub Actions",
         "Terraform",
@@ -624,7 +660,7 @@
         "Scripting en Python",
         "Jenkins"
       ],
-      "cta": "Más Información"
+      "cta": "Quiero liberar a mi equipo"
     }
   }
 }

@@ -20,96 +20,144 @@
     "contact": "Contact",
     "getStarted": "Get Started"
   },
+  "footer": {
+    "copyright": "© 2024 Crow Systems. Technology that works so your business can grow.",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter/X",
+    "instagram": "Instagram"
+  },
   "pages": {
     "index": {
-      "title": "CROW SYSTEMS - Professionals Who Build Reliable Systems",
-      "description": "Two technology professionals, two owners - one focused on networks and infrastructure, the other on backend systems and software. We take the time to understand your full picture: cameras, communications, and core systems. Straight talk, no lock-in. Reliable work built by people who stay until it's done.",
-      "subtitle": "For Those Who Do, Straight to the Point",
+      "title": "CROW SYSTEMS - Reliable Technology for Businesses That Want to Grow",
+      "description": "We help local and mid-size businesses get a professional digital presence, reliable systems, and the connectivity they need so more customers find them. No hassle, no lock-in.",
+      "subtitle": "Your business connected to your customers",
       "hero": {
-        "title": "Professionals Who Build<br />Reliable Systems",
-        "description": "Two technology professionals, two owners, one focused on networks and infrastructure, the other on backend systems and software. We take the time to understand your full picture: cameras, communications, and core systems. Straight talk, no lock-in. Reliable work built by people who stay until it's done.",
-        "startConsultation": "Send Voice Note",
-        "exploreServices": "See How It Works"
+        "title": "Get found by the customers<br />already searching for what you sell",
+        "description": "Your business deserves to look professional and be available for your customers at all times. We build the digital presence, connectivity, and systems you need so more people find you and trust you.",
+        "startConsultation": "I want to get found",
+        "exploreServices": "See what I can get"
       },
       "stats": {
         "uptime": {
           "value": "99%",
-          "label": "System Uptime",
-          "desc": "Reliable infrastructure you can count on"
+          "label": "Your business always online",
+          "desc": "Systems that don't stop when your customers need you"
         },
         "triage": {
           "value": "< 1hr",
-          "label": "Initial Triage",
-          "desc": "During business hours, 8AM–6PM PDT"
+          "label": "Response in under 1 hour",
+          "desc": "A senior engineer reviews your case during business hours"
         },
         "team": {
           "value": "2 People",
-          "label": "Senior Engineers & Owners",
-          "desc": "No account managers, no handoffs"
+          "label": "You always talk to the owner",
+          "desc": "No account managers, no handoffs, no wasted time"
         },
         "lockin": {
           "value": "Zero Lock-In",
-          "label": "Your IP, Always",
-          "desc": "No vendor dependencies"
+          "label": "Your information is always yours",
+          "desc": "No vendor dependencies or trapping contracts"
         }
       },
       "cta": {
-        "title": "Not Sure Where to Start?<br />Let's Figure It Out Together.",
-        "description": "Describe your project in your own words - a quick voice note or a brief form, whichever works. A senior engineer will review it within one business hour.",
-        "consultation": "Send Voice Note",
-        "services": "See How It Works"
+        "title": "Want more customers<br />to find you online?",
+        "description": "Tell us what you need in your own words: a quick voice note, a short form, or an email. A senior engineer reviews it and gets back to you within one business hour.",
+        "consultation": "Let's start together",
+        "services": "Meet the team"
       }
     },
     "services": {
       "title": "Services - CROW SYSTEMS",
-      "description": "Explore our technology consulting services including systems consulting, IT infrastructure, software solutions, technical strategy, digital transformation, and automation consulting.",
+      "description": "Technology consulting for local and mid-size businesses: digital presence, connectivity, systems, and support. Real solutions that help more customers find you.",
       "hero": {
-        "subtitle": "What We Do",
-        "title": "Services Built Around<br />How You Actually Work",
-        "description": "We're two senior engineers who own the company. We design, build, and fix the systems that keep your business running: cameras, conectivity, systems, and everything in between. Each service is built around real outcomes, not technical jargon."
+        "subtitle": "What you get",
+        "title": "Solutions that make<br />your business work better",
+        "description": "Every service is designed to solve a real problem in your business. We don't sell technology for the sake of it: we build what you need so your customers find you, trust you, and your operations run smoothly."
       },
       "process": {
-        "title": "How It Works",
+        "title": "How you get to your result",
         "steps": [
           {
-            "title": "Tell Us What You Need",
+            "title": "Tell us what you need",
             "description": "Share your project through a voice note or quick form. A senior engineer reviews it within one business hour."
           },
           {
-            "title": "Discovery Call",
-            "description": "A 30-minute conversation to clarify goals, constraints, and next steps."
+            "title": "We understand your business",
+            "description": "A 30-minute conversation to understand your current situation and what result you want to achieve."
           },
           {
-            "title": "Roadmap & Proposal",
-            "description": "A clear plan with fixed-fee options, delivered within 48 hours."
+            "title": "You get a clear plan",
+            "description": "A roadmap with fixed-fee options, delivered in under 2 days, so you know exactly what you'll get."
           }
         ]
       },
       "cta": {
-        "title": "Not Sure Where to Start?<br />Let's Figure It Out Together.",
-        "description": "Describe your project in your own words - a quick voice note or a brief form, whichever works. A senior engineer will review it within one business hour.",
-        "startConsultation": "Send Voice Note"
+        "title": "Ready for your business<br />to work like it should?",
+        "description": "Tell us what you need in your own words: a quick voice note, a short form, or an email. A senior engineer reviews it and gets back to you within one business hour.",
+        "startConsultation": "Get started now"
       },
-      "included": "What's Included",
-      "idealFor": "Ideal For",
+      "included": "What you get",
+      "idealFor": "Ideal for",
       "technologies": "Technologies",
       "getStarted": "Start with",
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "items": [
+          {
+            "question": "How fast do you respond?",
+            "answer": "A senior engineer reviews your message and responds within one business hour. If you send a voice note or form outside business hours, we'll get back to you the next business day."
+          },
+          {
+            "question": "What do I need to provide to get started?",
+            "answer": "Just tell us what you need in your own words: a voice note, a form, or an email. You don't need technical documents or specifications. We ask the right questions during the conversation."
+          },
+          {
+            "question": "What if I don't know anything about technology?",
+            "answer": "You don't need to. We speak plain language and take care of translating your needs into a technical solution. Your part is telling us what your business needs; ours is finding the best way to make it happen."
+          },
+          {
+            "question": "Who actually does the work?",
+            "answer": "The company owners. No account managers, no handoffs: the two people you talk to are the same ones building the solution. You always know who you're working with."
+          },
+          {
+            "question": "What happens after the first contact?",
+            "answer": "We review what you shared, propose a 30-minute call to better understand your situation, and deliver a clear roadmap with options in under 2 days."
+          },
+          {
+            "question": "Do you work with businesses outside Mexico?",
+            "answer": "Yes. We work with businesses in Mexico, the United States, and Canada. Most of our work is done remotely with video call meetings."
+          },
+          {
+            "question": "Can I cancel at any time?",
+            "answer": "Yes. No trapping contracts. Each phase has a clear scope and you decide whether to continue with the next one."
+          },
+          {
+            "question": "Is there support after project delivery?",
+            "answer": "Yes. We offer support and maintenance options based on what you need. We don't leave you alone after delivery."
+          }
+        ]
+      },
       "carlosRabago": "Carlos Rabago",
       "carlosRabagoTitle": "Managing Partner, Crow Systems",
       "carlosRabagoQuote": "I like to find simple solutions for complex problems. Listening, understanding, and building something stable always ends up giving better results."
     },
     "about": {
       "title": "About - CROW SYSTEMS",
-      "description": "Crow Systems is a two-person engineering team - one senior network engineer and one senior software engineer - building reliable systems for growing businesses.",
+      "description": "Two technology professionals, company owners, building reliable systems for local and mid-size businesses in Mexico, the United States, and Canada.",
       "whoWeAre": "Who We Are",
-      "heading": "We're Engineers Who Take the Time<br />to Understand Your Business",
-      "description1": "Crow Systems is two senior engineers who got tired of watching businesses get burned by overpriced consultants and software that doesn't deliver. One of us focuses on networks, infrastructure, and secure communications. The other builds backend systems, data pipelines, and APIs. Together, we cover everything your business needs - no account managers, no handoffs, just the people who actually do the work.",
-      "description2": "We work directly with founders and operators who need real engineering expertise without the overhead of a big firm or a full internal team. When you work with us, you work with the owners, two senior engineers who treat your business like their own.",
+      "heading": "We're two technology professionals<br />who take the time to understand your business",
+      "description1": "Crow Systems was born from the frustration of watching businesses waste money on expensive consultants and software that doesn't deliver. One engineer specializes in networks, infrastructure, and secure communications. The other builds backend systems, data pipelines, and APIs. Together, we cover everything your business needs: no account managers, no handoffs, just the people who actually do the work.",
+      "description2": "We work directly with business owners who need real engineering expertise without the overhead of a big firm. When you work with us, you work with the owners: two professionals who will treat your business as if it were their own.",
       "missionVision": "Mission, Vision & Values",
       "mission": "Mission",
-      "missionText": "To give growing businesses direct access to senior engineering owners - no account managers, no finger-pointing, just reliable systems built by the people who stand behind them.",
+      "missionText": "To give growing businesses direct access to technology professionals who own the company: no intermediaries, no excuses, just reliable systems built by the people who stand behind them.",
       "vision": "Vision",
-      "visionText": "Technology should empower businesses, not slow them down. Every company - regardless of size - should have the engineering expertise they need to build with confidence.",
+      "visionText": "Technology should help businesses, not slow them down. Every company, regardless of size, should have the engineering expertise it needs to grow with confidence.",
       "values": "Values",
       "valueItems": [
         "Trust over contracts",
@@ -119,42 +167,42 @@
         "Radically transparent communication",
         "Built to last, not to flip"
       ],
-      "expertise": "Our Expertise",
+      "expertise": "How we help you",
       "networking": {
-        "title": "Networking & Infrastructure Engineering",
-        "description": "We design networks and infrastructure that are secure, reliable, and built for the real world - not just the diagram.",
+        "title": "Connectivity & Infrastructure",
+        "description": "We build the technology foundation your business needs to stay online and communicate without interruptions.",
         "items": [
-          "Secure network design",
-          "System connectivity and communications",
-          "Hardware/software integration",
-          "Distributed systems",
-          "Reliable transport protocols",
-          "Infrastructure optimization",
-          "Cybersecurity-oriented architecture"
+          "Your business always connected and available",
+          "Secure communications between your teams",
+          "Cameras and security systems that work",
+          "Networks designed to grow with your business",
+          "Reliable connections without downtime",
+          "Infrastructure that doesn't give you problems",
+          "Security that protects your information"
         ]
       },
       "software": {
-        "title": "Software & Data Systems Engineering",
-        "description": "We build backend systems, data pipelines, and APIs that handle complexity so your team doesn't have to.",
+        "title": "Systems & Software",
+        "description": "We build the digital tools your business needs to operate better, without relying on generic software that doesn't fit how you work.",
         "items": [
-          "High-performance backend systems",
-          "Data processing pipelines",
-          "Scalable application architecture",
-          "API and platform development",
-          "Complex business logic implementation",
-          "Codebase optimization",
-          "Developer experience improvements"
+          "Systems that automate what you do manually",
+          "Tools that fit your business, not the other way around",
+          "Platforms your customers can use easily",
+          "Connections between your systems so you don't waste time",
+          "Software that works without constant failures",
+          "Systems that grow when your business grows",
+          "Tools your team can use without complications"
         ]
       }
     },
     "contact": {
       "title": "Contact - CROW SYSTEMS",
-      "description": "Contact Crow Systems for technology consulting, systems audits, and strategic partnerships.",
+      "description": "Have a project in mind or a problem to solve? Tell us: a senior engineer will get back to you within one business hour.",
       "getInTouch": "Get In Touch",
       "heading": "Contact Us",
-      "description2": "Not sure if you need a full audit, a quick consultation, or just someone to talk through an idea? Reach out and we'll figure it out together.",
+      "description2": "Not sure what you need? Reach out and we'll help you define the best path for your business.",
       "startConversation": "Let's talk",
-      "inquiryDescription": "Have a project in mind or a problem you can't quite solve? Tell us about it - a senior engineer will review your message and get back to you within one business hour.",
+      "inquiryDescription": "Tell us what you need and a senior engineer will respond within one business hour with a clear proposal.",
       "inquiries": "Inquiries",
       "businessHours": "Business Hours",
       "regions": "Regions Served",
@@ -168,60 +216,60 @@
       "subjectRequired": "Subject is required",
       "messageRequired": "Message is required (min 10 characters)",
       "sending": "Sending...",
-      "success": "Thanks for reaching out! We'll review your message and get back to you within one business hour.",
+      "success": "Thanks! An engineer will review your message and get back to you within one business hour.",
       "failed": "Submission failed. Please try again.",
       "errorKeys": {
-        "SUBMISSION_FAILED": "Your submission could not be sent. Please try again.",
-        "SERVER_INTERNAL_ERROR": "Something went wrong on our end. Please try again in a few moments.",
+        "SUBMISSION_FAILED": "Your message could not be sent. Please try again.",
+        "SERVER_INTERNAL_ERROR": "Something went wrong. Please try again in a few moments.",
         "SERVER_RATE_LIMIT": "Too many requests. Please wait a moment and try again.",
         "SERVER_TIMEOUT": "The request took too long. Please check your connection and try again.",
         "NETWORK_ERROR": "Unable to connect. Please check your internet connection and try again.",
         "UNKNOWN_ERROR": "An unexpected error occurred. Please try again or contact support.",
         "VALIDATION_NAME_REQUIRED": "Name is required",
-        "VALIDATION_EMAIL_INVALID": "Valid email required (e.g., name@domain.com)",
+        "VALIDATION_EMAIL_INVALID": "Enter a valid email address (e.g., name@domain.com)",
         "VALIDATION_SUBJECT_REQUIRED": "Subject is required",
         "VALIDATION_MESSAGE_MIN": "Message is required (min 10 characters)"
       },
       "monFri": "Mon - Fri: 08:00 - 18:00 PDT",
       "sat": "Sat: 10:00 - 14:00 PDT (On-call only)",
-      "regionsText": "México, United States & Canadá",
-      "consultingHeading": "Prefer a structured approach?",
+      "regionsText": "México, United States & Canada",
+      "consultingHeading": "Prefer a more structured approach?",
       "consultingLink": "Book a free consultation →"
     },
     "consulting": {
       "title": "Consulting - CROW SYSTEMS",
-      "description": "Submit a consulting request to Crow Systems. Get a technical audit, strategic consultation, or roadmap for your business.",
+      "description": "Submit a voice note or complete a quick form. A senior engineer reviews your project and gets back to you within one business hour with a clear plan.",
       "portal": "Consultation Portal",
-      "heading": "Tell Us What You Need.<br /><span class=\"text-surface-variant\">We'll Build It.</span>",
-      "description2": "Describe your project in your own words. Record a quick voice note for the details that are hard to write down, or use the form below - whichever works best for you.",
+      "heading": "Tell us what you need.<br /><span class=\"text-surface-variant\">We'll make it happen.</span>",
+      "description2": "Describe your project in your own words. Record a quick voice note for the details that are hard to write down, or use the form: whichever works best for you.",
       "audioSubmission": "Record a Voice Note",
       "additionalContext": "Anything Else? ",
       "additionalContextOptional": "(Optional)",
-      "placeholder": "Describe any technical constraints or specific outcomes...",
+      "placeholder": "Describe any constraints or what specific result you're looking for...",
       "submitAudio": "Send Voice Note",
       "uploading": "Uploading...",
       "submitted": "✓ Submitted!",
-      "audioSuccess": "✓ Your audio idea has been submitted! We will review it within 1 business hour.",
+      "audioSuccess": "✓ Your voice note has been submitted! We'll review it within 1 business hour.",
       "recordDeleteLabel": "Delete recording",
       "recordStartLabel": "Start recording",
       "recordStopLabel": "Stop recording",
       "playLabel": "Play recording",
-      "consultSuccess": "Thank you! Your consultation request has been submitted. We will be in touch within 1 business hour.",
+      "consultSuccess": "Thank you! Your request has been submitted. We'll get in touch within 1 business hour.",
       "audioNoBlob": "Please record audio first.",
       "audioDeleteFail": "Nothing to delete.",
       "micError": "Microphone access denied.",
       "discardRecording": "Discard current recording and start a new one?",
       "consultForm": {
-        "heading": "Tell Us About Your Project",
+        "heading": "Tell us what you want to achieve",
         "fullName": "Full Name",
-        "fullNamePlaceholder": "Jonh Doe",
+        "fullNamePlaceholder": "John Doe",
         "company": "Company",
         "companyPlaceholder": "ACME Corp",
         "email": "Email",
         "emailPlaceholder": "j.doe@acme.com",
         "phone": "Phone",
-        "problem": "Business Problem",
-        "goals": "Project Goals",
+        "problem": "What do you need to solve?",
+        "goals": "What would success look like?",
         "budget": "Budget Range",
         "submit": "Send Request",
         "submitting": "Sending...",
@@ -233,14 +281,14 @@
         "companyRequired": "Company name is required",
         "emailRequired": "Valid email required",
         "emailInvalid": "Enter a valid email address (e.g., name@domain.com)",
-        "problemRequired": "Please select a business problem",
+        "problemRequired": "Please select what you need to solve",
         "phoneRequired": "Phone number is required",
         "phoneInvalid": "Enter a valid phone number (e.g., +1 555 000 0000)",
         "descriptionMin": "Describe your project in at least 10 characters"
       },
       "errorKeys": {
-        "SUBMISSION_FAILED": "Your submission could not be sent. Please try again.",
-        "SERVER_INTERNAL_ERROR": "Something went wrong on our end. Please try again in a few moments.",
+        "SUBMISSION_FAILED": "Your request could not be sent. Please try again.",
+        "SERVER_INTERNAL_ERROR": "Something went wrong. Please try again in a few moments.",
         "SERVER_RATE_LIMIT": "Too many requests. Please wait a moment and try again.",
         "SERVER_TIMEOUT": "The request took too long. Please check your connection and try again.",
         "SERVER_UPLOAD_FAILED": "Failed to upload audio. Please check your connection and try again.",
@@ -255,40 +303,39 @@
         "VALIDATION_DESCRIPTION_MIN": "Describe your project in at least 10 characters"
       },
       "problems": [
-        "What's the main challenge?",
-        "Technical Complexity Reduction",
-        "Digital Transformation",
-        "Infrastructure Modernization",
-        "Technical Debt Reduction",
-        "Infrastructure Scaling",
-        "Software Architecture & Development",
+        "What do you need to solve?",
+        "Get found by more customers",
+        "Modernize my infrastructure",
+        "Keep my business running without interruptions",
+        "Automate manual processes",
+        "Build a custom tool",
         "Other"
       ],
-      "goalsPlaceholder": "What does success look like?",
-      "method": "How It Works",
+      "goalsPlaceholder": "What would success look like for your business?",
+      "method": "How you get to your result",
       "steps": [
         {
-          "title": "Triage",
-          "desc": "A senior engineer reviews what you've shared within one business hour."
+          "title": "We review your case",
+          "desc": "A senior engineer reviews what you shared within one business hour."
         },
         {
-          "title": "Discovery",
-          "desc": "A 30-minute conversation to clarify goals, constraints, and next steps."
+          "title": "We understand your business",
+          "desc": "A 30-minute conversation to understand your situation and what you want to achieve."
         },
         {
-          "title": "Proposal",
-          "desc": "A clear roadmap with fixed-fee options, delivered within 48 hours."
+          "title": "You get the plan",
+          "desc": "A clear roadmap with fixed-fee options, delivered in under 2 days."
         }
       ],
       "officeHours": "Office Hours",
       "monFriHours": "Mon - Fri: 9:00 AM - 6:00 PM",
       "satHours": "Saturday: By appointment",
       "consultingEmail": "letstalk@crowsys.com.mx",
-      "securityTitle": "Corporate-Grade Security",
-      "securityDesc": "All submissions, including audio files, are encrypted using AES-256 at rest and TLS 1.3 in transit. We prioritize your intellectual property. Standard NDAs are available upon request during the discovery phase.",
+      "securityTitle": "Your information is secure",
+      "securityDesc": "All submissions, including audio files, are encrypted and protected. We prioritize your intellectual property. Standard NDAs available during the discovery phase.",
       "marcusThorne": "Christian Camacho",
       "managingPartner": "Managing Partner, Crow Systems",
-      "quote": "We created this process to truly understand what’s holding the business back. Conversations help us uncover priorities and needs that rarely appear in information or data."
+      "quote": "We created this process to truly understand what's holding your business back. Conversations help us uncover priorities that rarely show up in a spreadsheet."
     },
     "privacy": {
       "title": "Privacy Policy - CROW SYSTEMS",
@@ -457,7 +504,7 @@
     "404": {
       "title": "404 - CROW SYSTEMS",
       "heading": "Page Not Found",
-      "description": "The page you are looking for does not exist or has been moved.",
+      "description": "The page you're looking for doesn't exist or has been moved.",
       "home": "Back to Home"
     },
     "flyer": {
@@ -465,54 +512,43 @@
       "description": "Download our digital flyer with software development, cybersecurity, fintech and more.",
       "downloadLabel": "Download as JPG",
       "content": {
-        "tagline": "Technology & Strategy",
+        "tagline": "Technology that works for you",
         "hiringBadge": "We're hiring ✦",
-        "eyebrow": "Tech that works for you",
-        "heading": "Empowering businesses with <em>technology</em> and strategy",
-        "heroDescription": "Smart solutions to scale businesses, optimize operations, and build future-ready digital infrastructure.",
-        "cta": "Let's build the future together",
+        "eyebrow": "Your business connected",
+        "heading": "Technology that makes <em>your business</em> work better",
+        "heroDescription": "Solutions that help more customers find you, your operations run smoothly, and your business grow with confidence.",
+        "cta": "Let's build the future of your business together",
         "service1Title": "Systems Consulting",
-        "service1Desc": "Technology stack audits, workflow optimization, and cross-departmental integration",
+        "service1Desc": "Eliminate friction between your tools so your team works without wasting time",
         "service2Title": "IT Infrastructure",
-        "service2Desc": "Networks, cloud, and servers built to scale — reliable and secure",
+        "service2Desc": "Your business always online: networks, cloud, and servers that work when your customers need you",
         "service3Title": "Software Solutions",
-        "service3Desc": "Custom apps, SaaS platforms, APIs, and legacy modernization",
+        "service3Desc": "Custom tools that fit how you work, not the other way around",
         "service4Title": "Technical Strategy",
-        "service4Desc": "Architecture decisions, build-vs-buy, and technology roadmap planning",
+        "service4Desc": "Clear technology decisions so you invest wisely with no surprises",
         "service5Title": "Digital Transformation",
-        "service5Desc": "Legacy modernization, data unification, and business intelligence",
+        "service5Desc": "Modernize what matters and make decisions based on real data, not gut feelings",
         "service6Title": "Automation Consulting",
-        "service6Desc": "CI/CD pipelines, IaC, RPA, and automated testing",
+        "service6Desc": "Eliminate repetitive manual work so your team focuses on what really matters",
         "footerHeadline": "We don't just build solutions.<br>We build sustainable growth.",
-        "footerSubheadline": "Let's talk about your next big project.",
+        "footerSubheadline": "Let's talk about growing your business.",
         "qrLabel": "SCAN ME"
       }
     }
   },
-  "footer": {
-    "copyright": "© 2024 Crow Systems. Engineering Solutions for Growing Businesses.",
-    "about": "About",
-    "services": "Services",
-    "contact": "Contact",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "linkedin": "LinkedIn",
-    "twitter": "Twitter/X",
-    "instagram": "Instagram"
-  },
   "services": {
     "systemsConsulting": {
       "title": "Systems Consulting",
-      "description": "We audit how your teams work with technology - fixing operational bottlenecks, eliminating silos, and streamlining workflows that slow you down.",
-      "fullDescription": "Systems aren't just servers and code - they're the workflows, tools, and processes your teams use every day. We audit your entire operational stack, identify where things get stuck, and deliver a clear plan to unblock your teams. Whether it's fragmented tools, disconnected departments, or manual processes that should be automated, we bring clarity and structure to complex environments.",
+      "description": "Your team stops wasting time between tools that don't talk to each other.",
+      "fullDescription": "Fragmented tools, disconnected departments, and manual processes that no longer scale cost your business time and money. We audit how you work with technology, identify where things get stuck, and deliver a clear plan to unblock your team. The result: less wasted time, fewer errors, and more time focused on serving your customers.",
       "features": [
-        "Comprehensive technology stack audit",
-        "Workflow mapping and process optimization",
-        "Cross-departmental integration strategy",
-        "Vendor evaluation and consolidation",
-        "Custom reporting and KPI dashboards"
+        "Your team works without losing time between systems",
+        "Tools that connect to each other seamlessly",
+        "Processes that scale when your business grows",
+        "Clarity on which tools you need and which to cut",
+        "Reports that help you make better decisions"
       ],
-      "idealFor": "Growing businesses experiencing operational friction, duplicated efforts across teams, or those relying on outdated manual processes that no longer scale.",
+      "idealFor": "Businesses spending time and money on manual processes, unintegrated tools, or duplicated effort across teams.",
       "technologies": [
         "Enterprise Architecture",
         "Process Mining",
@@ -520,40 +556,40 @@
         "Cloud Migration",
         "DevOps Practices"
       ],
-      "cta": "Learn More"
+      "cta": "I want my team to work better"
     },
     "itInfrastructure": {
       "title": "IT Infrastructure",
-      "description": "We design and build the networks, servers, and cloud infrastructure your business runs on - reliable, secure, and built to scale.",
-      "fullDescription": "Your infrastructure is the foundation everything else depends on. We design and build networks, server architecture, cloud environments, and disaster recovery plans that keep your business online - even under peak demand. From AWS to on-prem, we build foundations that grow with you, not against you.",
+      "description": "Your business always available for your customers, without interruptions.",
+      "fullDescription": "Infrastructure is the foundation everything depends on: if it goes down, your business goes down. We build networks, servers, cloud environments, and recovery plans that keep your business online: even when more customers need you. From AWS to on-prem, we build foundations that grow with your business, not against it.",
       "features": [
-        "Network architecture design and optimization",
-        "Cloud infrastructure provisioning (AWS, Azure, GCP)",
-        "Disaster recovery and business continuity planning",
-        "Server and database administration",
-        "24/7 monitoring and proactive alerting"
+        "Your business always online, no downtime",
+        "Your data secure and protected at all times",
+        "Infrastructure that grows when your business grows",
+        "Fast response to any issue",
+        "Constant monitoring to prevent failures"
       ],
-      "idealFor": "Businesses that depend on always-on systems, handle sensitive data, or are scaling infrastructure to meet growing demand.",
+      "idealFor": "Businesses that depend on always being online, handle sensitive data, or are growing and need infrastructure that scales with them.",
       "technologies": [
         "AWS",
         "Azure",
         "Google Cloud",
-        "Administración de Linux"
+        "Linux Administration"
       ],
-      "cta": "Learn More"
+      "cta": "I want my business to never stop"
     },
     "softwareSolutions": {
       "title": "Software Solutions",
-      "description": "We build custom software - internal tools, customer platforms, and everything in between - that fits your exact workflows.",
-      "fullDescription": "Off-the-shelf software often creates more problems than it solves. We design and build custom applications tailored to your exact workflows and business rules. From internal tools and dashboards to customer-facing platforms and automated pipelines, we engineer solutions that fit like a glove. Every line of code is written with maintainability, performance, and your long-term goals in mind.",
+      "description": "Tools that fit your business, not the other way around.",
+      "fullDescription": "Off-the-shelf software often creates more problems than it solves. We build custom applications tailored to how you work: from internal tools and dashboards to platforms your customers can use easily. Every solution is designed to be easy to use, reliable, and work without constant failures.",
       "features": [
-        "Custom web and mobile application development",
-        "Internal tooling and automation scripts",
-        "API design and integration layer development",
-        "Legacy application modernization",
-        "Performance optimization and code auditing"
+        "Tools that fit how you actually work",
+        "Your customers can interact with you easily",
+        "Automation of tasks you do manually",
+        "Systems that work without constant failures",
+        "Software that grows when your business grows"
       ],
-      "idealFor": "Teams with unique workflows that generic software cannot address, or organizations looking to replace brittle legacy tools.",
+      "idealFor": "Businesses with unique processes that generic software can't cover, or that need to replace fragile legacy tools.",
       "technologies": [
         "TypeScript",
         "React",
@@ -561,20 +597,20 @@
         "PostgreSQL",
         "Python"
       ],
-      "cta": "Learn More"
+      "cta": "I want a tool that works for me"
     },
     "technicalStrategy": {
       "title": "Technical Strategy",
-      "description": "We help leadership teams make confident technology decisions - architecture choices, build-vs-buy, no hype, no lock-in.",
-      "fullDescription": "Every technology decision has a long tail. We help leadership teams cut through the noise and make clear, informed choices about architecture, tooling, and investment. No vendor pitches, no trend-chasing - just sound engineering judgment and a phased roadmap that balances speed with sustainability. We translate business goals into technical plans, evaluate trade-offs clearly, and make sure you own your own destiny.",
+      "description": "Clear technology decisions so you invest wisely with no surprises.",
+      "fullDescription": "Every technology decision has long-term consequences. We help you see clearly and make informed decisions about what to build, what to buy, and where to invest. No sales pitches, no trends: just solid engineering judgment that balances speed with sustainability. We translate your business goals into clear technical plans and make sure you own your own destiny.",
       "features": [
-        "Technology stack evaluation and recommendations",
-        "Architecture review and design advisory",
-        "Technical debt assessment and prioritization",
-        "Scalability and performance forecasting",
-        "Vendor and open-source selection guidance"
+        "You know exactly where to invest and what to avoid",
+        "Clear decisions on build vs. buy",
+        "Avoid costly technology surprises",
+        "Your systems are ready to grow",
+        "You choose the right tools for your business"
       ],
-      "idealFor": "CTOs, VPs of Engineering, and growth-stage companies navigating complex technology decisions without in-house senior expertise.",
+      "idealFor": "Business owners and leaders who need to make technology decisions without a full in-house technical team.",
       "technologies": [
         "System Design",
         "Microservices",
@@ -582,20 +618,20 @@
         "Data Strategy",
         "Platform Engineering"
       ],
-      "cta": "Learn More"
+      "cta": "I want to make better tech decisions"
     },
     "digitalTransformation": {
       "title": "Digital Transformation",
-      "description": "We modernize legacy systems and unify your data so your team can make decisions based on facts, not gut feelings.",
-      "fullDescription": "Digital transformation gets a bad name because it usually means 'replace everything.' We take a different approach - we modernize the systems that matter most and connect your data into a single source of truth. The result is dashboards you can trust, reports that actually help, and a team that can make decisions in hours instead of weeks. No unnecessary disruption, just practical progress.",
+      "description": "Modernize what matters and make decisions based on real data.",
+      "fullDescription": "Digital transformation gets a bad name because it usually means 'replace everything.' We do it differently: we modernize the systems that matter most and connect your data into a single source of truth. The result is dashboards you can trust, reports that actually help, and a team that makes decisions in hours instead of weeks. No unnecessary disruption, just practical progress.",
       "features": [
-        "Legacy system modernization and migration",
-        "Data warehouse and lake architecture",
-        "Business intelligence and analytics dashboards",
-        "Process automation and workflow digitization",
-        "Change management and team training"
+        "You make decisions based on data, not guesses",
+        "Clear reports that help you understand your business",
+        "Modern systems that don't slow your operations",
+        "Your team has the information they need, when they need it",
+        "Less time searching for data, more time using it"
       ],
-      "idealFor": "Established businesses with aging systems looking to modernize operations, unlock data insights, and improve decision-making speed.",
+      "idealFor": "Established businesses with aging systems looking to modernize, unlock data insights, and improve decision-making speed.",
       "technologies": [
         "ETL Pipelines",
         "dbt",
@@ -603,20 +639,20 @@
         "Apache Airflow",
         "Snowflake"
       ],
-      "cta": "Learn More"
+      "cta": "I want decisions based on real data"
     },
     "automationConsulting": {
       "title": "Automation Consulting",
-      "description": "We eliminate repetitive manual work - from deployment pipelines to data entry - so your team can focus on what actually moves the business forward.",
-      "fullDescription": "Repetitive manual work is a silent killer of productivity and morale. We identify the highest-impact opportunities to eliminate it through smart automation - CI/CD pipelines, infrastructure as code, robotic process automation, and scheduled data workflows. The goal isn't automation for its own sake - it's freeing your team to do the creative, strategic work that actually moves the needle.",
+      "description": "Eliminate repetitive manual work so your team focuses on what really matters.",
+      "fullDescription": "Repetitive manual work is a silent killer of productivity. We identify the highest-impact opportunities to eliminate it: from deployment pipelines to data entry. The result: your team is freed from repetitive tasks and can focus on the creative, strategic work that really moves the needle for your business.",
       "features": [
-        "CI/CD pipeline design and implementation",
-        "Infrastructure as Code (IaC) adoption",
-        "Robotic Process Automation (RPA)",
-        "Scheduled data processing and ETL automation",
-        "Automated testing and quality assurance"
+        "Your team stops losing hours to repetitive tasks",
+        "Fewer human errors in important processes",
+        "Deployments and updates without stress",
+        "Data flows automatically between systems",
+        "Your team focuses on value work, not mechanical tasks"
       ],
-      "idealFor": "Operations-heavy teams spending excessive time on repetitive tasks, deployment-heavy engineering teams, or businesses preparing to scale without proportional headcount growth.",
+      "idealFor": "Businesses with teams spending excessive time on repetitive tasks, or that want to scale without hiring proportionally more staff.",
       "technologies": [
         "GitHub Actions",
         "Terraform",
@@ -624,7 +660,7 @@
         "Python Scripting",
         "Jenkins"
       ],
-      "cta": "Learn More"
+      "cta": "I want to free my team"
     }
   }
 }
