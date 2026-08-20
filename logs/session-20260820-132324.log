@@ -1,0 +1,9 @@
+[13:23:27] WARN No criteria file found, skipping acceptance review
+[13:23:27] === Session started ===
+[13:23:27] PID: 832827
+[13:23:27] Project: /home/chris/projects/mx.com.crowsys/web
+[13:23:27] Task: AudioRecorder.tsx is working fine, there is just a minor problem, after recording is not allowing to playback the recorded audio, please fix that
+[13:23:27] Criteria: ACCEPTANCE.md (found)0
+[13:23:27] Model: opencode-go/mimo-v2.5
+[13:23:27] Max iterations: 25
+[13:23:27] === Iteration 1/25 ===
