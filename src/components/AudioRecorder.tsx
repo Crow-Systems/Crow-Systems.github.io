@@ -60,11 +60,14 @@ export default function AudioRecorder({
   const mediaSourceRef = useRef<MediaStreamAudioSourceNode | null>(null);
   const elementSourceRef = useRef<MediaElementAudioSourceNode | null>(null);
 
-  function ensureAudioCtx() {
+  async function ensureAudioCtx() {
     if (!audioCtxRef.current || audioCtxRef.current.state === "closed") {
       audioCtxRef.current = new AudioContext();
       analyserRef.current = audioCtxRef.current.createAnalyser();
       analyserRef.current.fftSize = 32;
+    }
+    if (audioCtxRef.current.state === "suspended") {
+      await audioCtxRef.current.resume();
     }
     return audioCtxRef.current;
   }
@@ -182,7 +185,7 @@ export default function AudioRecorder({
 
       if (elementSourceRef.current) elementSourceRef.current.disconnect();
       if (analyserRef.current) analyserRef.current.disconnect();
-      const ctx = ensureAudioCtx();
+      const ctx = await ensureAudioCtx();
       mediaSourceRef.current = ctx.createMediaStreamSource(stream);
       mediaSourceRef.current.connect(analyserRef.current!);
 
@@ -252,7 +255,7 @@ export default function AudioRecorder({
     }
   }, [duration]);
 
-  const togglePlayback = useCallback(() => {
+  const togglePlayback = useCallback(async () => {
     if (!audioUrl) {
       showFeedback(audioNoBlob);
       return;
@@ -279,13 +282,13 @@ export default function AudioRecorder({
         mediaSourceRef.current = null;
       }
       if (analyserRef.current) analyserRef.current.disconnect();
-      const ctx = ensureAudioCtx();
+      const ctx = await ensureAudioCtx();
       elementSourceRef.current = ctx.createMediaElementSource(audioEl.current);
       elementSourceRef.current.connect(analyserRef.current!);
       analyserRef.current!.connect(ctx.destination);
     }
     audioEl.current.src = audioUrl;
-    audioEl.current.play();
+    await audioEl.current.play();
     setPlaybackPosition(0);
     setPlaying(true);
     startLevelLoop();
