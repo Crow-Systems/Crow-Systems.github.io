@@ -14,7 +14,7 @@ const { title, description, activeNav = "", ogImage, locale } = Astro.props;
 const data = getLocaleData(locale);
 const routes = getRoutes();
 const pageUrl = Astro.url.pathname;
-const canonicalUrl = `https://crowsys.chrislabs.net${pageUrl}`;
+const canonicalUrl = new URL(pageUrl, Astro.site).href;
 
 const umamiWebsiteId = import.meta.env.UMAMI_WEBSITE_ID;
 const umamiUrl = import.meta.env.PUBLIC_UMAMI_URL || "https://cloud.umami.is/script.js";
