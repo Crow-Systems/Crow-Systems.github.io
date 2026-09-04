@@ -11,7 +11,7 @@
     "preview": "astro preview",
     "clean:cache": "rm -rf .astro node_modules/.vite",
     "astro": "astro",
-    "deploy": "ghp-import -d dist -b main"
+    "deploy": "gh workflow run deploy.yml"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
