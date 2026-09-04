@@ -33,25 +33,25 @@
   },
   "pages": {
     "index": {
-      "title": "CROW SYSTEMS - Tecnología Confiable para Negocios que Quieren Crecer",
-      "description": "Ayudamos a negocios locales y medianos a tener presencia digital profesional, sistemas confiables y la conectividad que necesitan para que más clientes los encuentren. Sin complicaciones, sin ataduras.",
-      "subtitle": "Tu negocio conectado con tus clientes",
+      "title": "CROW SYSTEMS - Tu negocio en línea y funcionando, sin dolores de cabeza",
+      "description": "Mantenemos la parte técnica de tu negocio en forma para que más clientes te encuentren, tus sistemas no se detengan y nunca despiertes con una llamada de pánico. Sin tecnicismos, sin ataduras.",
+      "subtitle": "La plomería invisible detrás de tu negocio",
       "hero": {
-        "title": "Haz que los clientes que<br />buscan tu servicio te encuentren",
-        "description": "Tu negocio merece verse profesional y estar disponible para tus clientes en todo momento. Construimos la presencia digital, la conectividad y los sistemas que necesitas para que más personas te encuentren y confíen en ti.",
-        "startConsultation": "Quiero que me encuentren",
-        "exploreServices": "Ver qué puedo obtener"
+        "title": "Que más clientes te encuentren,<br />y nunca despiertes con una llamada de pánico",
+        "description": "Tu sitio web y tus sistemas influyen en cómo te ven los clientes y en que tu negocio siga funcionando. Los mantenemos confiables y seguros, para que te veas profesional, estés en línea y sigas creciendo. Nada de tecnicismos: preferimos explicarlo en palabras sencillas.",
+        "startConsultation": "Quiero mi revisión gratis",
+        "exploreServices": "Ver qué hacemos"
       },
       "stats": {
         "uptime": {
           "value": "99%",
           "label": "Tu negocio siempre en línea",
-          "desc": "Sistemas que no se detienen cuando tus clientes te necesitan"
+          "desc": "Tus luces quedan encendidas, aunque en la cuadra se apaguen"
         },
         "triage": {
           "value": "< 1 hr",
           "label": "Respuesta en menos de 1 hora",
-          "desc": "Un profesional senior revisa tu caso en horario laboral"
+          "desc": "Un ingeniero de verdad responde en menos de una hora, no una fila de tickets"
         },
         "team": {
           "value": "2 Personas",
@@ -61,148 +61,167 @@
         "lockin": {
           "value": "Zero Lock-In",
           "label": "Tu información siempre es tuya",
-          "desc": "Sin dependencias de proveedores ni contratos que atrapan"
+          "desc": "Tus llaves, tu casa. Sin contratos que aten"
         }
       },
       "cta": {
-        "title": "¿Quieres que más clientes<br />te encuentren online?",
-        "description": "Cuéntanos qué necesitas con tus propias palabras: un audio rápido, un formulario breve o un correo. Un profesional senior lo revisa y te responde en una hora hábil.",
-        "consultation": "Empezar juntos",
+        "title": "¿Te preocupa que algo de tu tecnología<br />vaya a fallar?",
+        "description": "Un audio rápido, un formulario breve, un correo. Lo que te sea más fácil. Un ingeniero de verdad lo lee en una hora hábil y te muestra dónde están los riesgos. Sin compromiso, solo respuestas.",
+        "consultation": "Quiero mi revisión gratis",
         "services": "Conocer al equipo"
       }
     },
     "services": {
       "title": "Servicios - CROW SYSTEMS",
-      "description": "Consultoría tecnológica para negocios locales y medianos: presencia digital, conectividad, sistemas y soporte. Soluciones reales que hacen que más clientes te encuentren.",
+      "description": "Encontramos los problemas de tus sistemas antes de que te cuesten: más clientes te encuentran, nada falla en el peor momento y creces con confianza.",
       "hero": {
         "subtitle": "Qué obtienes",
-        "title": "Soluciones que hacen<br />que tu negocio funcione mejor",
-        "description": "Cada servicio está diseñado para resolver un problema real de tu negocio. No vendemos tecnología por vender: construimos lo que necesitas para que tus clientes te encuentren, confíen en ti y tu operación fluya sin contratiempos."
+        "title": "Mantenemos tu tecnología en forma,<br />para que tu negocio funcione bien",
+        "description": "No vendemos artilugios ni promesas vacías. Encontramos los puntos débiles de tus sistemas y arreglamos lo que importa: para que los clientes te encuentren, confíen en ti y tus días fluyan mejor. Ingenieros de verdad, palabras sencillas, sin ataduras."
       },
       "process": {
-        "title": "Cómo llegas a tu resultado",
+        "title": "Cómo lo logramos",
         "steps": [
           {
-            "title": "Cuéntanos qué necesitas",
-            "description": "Comparte tu proyecto mediante un audio o un formulario rápido. Un profesional senior lo revisa en una hora hábil."
+            "title": "Cuéntanos qué te trae",
+            "description": "Con tus propias palabras: un audio, un formulario rápido, un correo. Un ingeniero de verdad lo lee en una hora hábil."
           },
           {
-            "title": "Definimos qué necesita tu negocio",
-            "description": "Una conversación de 30 minutos para entender tu situación actual y qué resultado quieres lograr."
+            "title": "La revisión de 15 minutos",
+            "description": "Recorremos tu instalación contigo en 15 minutos y te mostramos dónde están los riesgos. Sin discursos de venta, sin tecnicismos."
           },
           {
-            "title": "Te entregamos un plan claro",
-            "description": "Una hoja de ruta con opciones de tarifa fija, entregada en menos de 2 días, para que sepas exactamente qué vas a obtener."
+            "title": "Recibes el Plan",
+            "description": "Un Plan de una página: qué está mal, qué arreglaríamos y cuánto cuesta, en menos de 2 días. Tú decides el siguiente paso."
           }
         ]
       },
       "cta": {
-        "title": "¿Listo para que tu negocio<br />funcione como debe?",
-        "description": "Cuéntanos qué necesitas con tus propias palabras: un audio rápido, un formulario breve o un correo. Un profesional senior lo revisa y te responde en una hora hábil.",
-        "startConsultation": "Empezar ahora"
+        "title": "Entérate de lo que está mal<br />antes de que te cueste",
+        "description": "Cuéntanos qué te preocupa con tus propias palabras: un audio, un formulario breve o un correo. Un ingeniero de verdad lo lee y te muestra dónde están los riesgos, en una hora hábil.",
+        "startConsultation": "Quiero mi revisión gratis"
       },
       "included": "Qué obtienes",
-      "idealFor": "Ideal para",
-      "technologies": "Tecnologías",
+      "idealFor": "Para quién es",
+      "technologies": "Qué hay adentro",
       "getStarted": "Empezar con",
       "faq": {
-        "title": "Preguntas Frecuentes",
+        "title": "Preguntas, en palabras sencillas",
         "items": [
           {
             "question": "¿Cuánto tarda en responder?",
-            "answer": "Un profesional senior revisa tu mensaje y te responde en una hora hábil. Si envías un audio o formulario fuera de horario, te respondemos al siguiente día hábil."
+            "answer": "En una hora hábil, de un ingeniero de verdad, no de un bot ni de una fila de tickets. Si envías un audio o formulario fuera de horario, te respondemos a la mañana siguiente."
           },
           {
             "question": "¿Qué necesito proporcionar para empezar?",
-            "answer": "Solo cuéntanos qué necesitas con tus propias palabras: un audio, un formulario o un correo. No necesitas documentos técnicos ni especificaciones. Nosotros hacemos las preguntas necesarias durante la conversación."
+            "answer": "Solo tus propias palabras. Un audio, un formulario de un minuto o un correo. Sin documentos, sin especificaciones, sin preparación. Nosotros preguntamos lo que necesitemos durante la revisión."
           },
           {
             "question": "¿Y si no sé nada de tecnología?",
-            "answer": "No necesitas saberlo. Hablamos en lenguaje sencillo y nos encargamos de traducir tus necesidades a una solución técnica. Tu parte es explicarnos qué necesitas para tu negocio; la nuestra es encontrar la mejor forma de lograrlo."
+            "answer": "Perfecto. Ese es nuestro trabajo. No estás aquí para aprender a usar un taladro; estás aquí para colgar el cuadro. Nosotros llevamos la pared ya perforada, con los taquetes puestos. Cuéntanos qué necesita tu negocio y lo hacemos realidad en palabras sencillas."
           },
           {
             "question": "¿Quién hace el trabajo real?",
-            "answer": "Los dueños de la empresa. No hay gerentes de cuenta ni traspasos: las dos personas que hablan contigo son las mismas que construyen la solución. Siempre sabes con quién estás hablando."
+            "answer": "Los dos dueños. Sin gerentes de cuenta, sin traspasos: la persona que toma tu llamada es la misma que construye y arregla. Siempre sabes quién cuida tu casa."
           },
           {
             "question": "¿Qué pasa después del primer contacto?",
-            "answer": "Revisamos lo que compartiste, te proponemos una conversación de 30 minutos para entender mejor tu situación, y te entregamos una hoja de ruta con opciones claras en menos de 2 días."
+            "answer": "Revisamos lo que compartiste, te invitamos a una revisión de 15 minutos y te entregamos un Plan de una página con tus opciones y precios, en menos de 2 días. Sin compromiso. Tú decides el siguiente paso."
           },
           {
             "question": "¿Trabajan con negocios fuera de México?",
-            "answer": "Sí. Trabajamos con negocios en México, Estados Unidos y Canadá. La mayoría de nuestro trabajo se hace de forma remota con reuniones por videollamada."
+            "answer": "Sí. Trabajamos con negocios en México, Estados Unidos y Canadá. Casi todo lo hacemos de forma remota por videollamada."
           },
           {
             "question": "¿Puedo cancelar en cualquier momento?",
-            "answer": "Sí. No hay contratos que atrapen. Cada fase tiene un alcance claro y tú decides si quieres continuar con la siguiente."
+            "answer": "Sí. Sin contratos que atrapen. Cada fase tiene un alcance y un precio claros, y tú decides si quieres continuar con la siguiente."
           },
           {
             "question": "¿Hay soporte después de que se entregue el proyecto?",
-            "answer": "Sí. Ofrecemos opciones de soporte y mantenimiento según lo que necesites. No te dejamos solo después de la entrega."
+            "answer": "Sí. Nos quedamos contigo el tiempo que quieras, con soporte y mantenimiento que se ajustan a tu forma de trabajar. No te entregamos las llaves y desaparecemos."
           }
         ]
       },
       "carlosRabago": "Carlos Rabago",
       "carlosRabagoTitle": "Socio Gerente, Crow Systems",
-      "carlosRabagoQuote": "Me gusta encontrar soluciones simples para problemas complejos. Escuchar, entender y construir algo estable siempre termina dando mejores resultados."
+      "carlosRabagoQuote": "La mejor solución suele ser la más simple. Escuchar, entender y construir algo que aguante le gana a lo ingenioso todas las veces."
     },
     "about": {
       "title": "Nosotros - CROW SYSTEMS",
-      "description": "Dos profesionales en tecnología, dueños de la empresa, construyendo sistemas confiables para negocios locales y medianos en México, Estados Unidos y Canadá.",
+      "description": "Dos ingenieros dueños de la empresa, manteniendo tu tecnología en forma para que tu negocio crezca, en México, Estados Unidos y Canadá.",
       "whoWeAre": "Quiénes Somos",
-      "heading": "Somos dos profesionales en tecnología<br />que se toman el tiempo de entender tu negocio",
-      "description1": "Crow Systems nació de la frustración de ver cómo las empresas desperdician dinero en consultorías costosas y software que no funciona. Un profesional se especializa en redes, infraestructura y comunicaciones seguras. El otro construye sistemas backend, pipelines de datos y APIs. Juntos cubrimos todo lo que tu negocio necesita: sin gerentes de cuenta, sin traspasos, solo las personas que realmente hacen el trabajo.",
-      "description2": "Trabajamos directamente con dueños de negocios que necesitan experiencia real en ingeniería sin la sobrecarga de una gran firma. Cuando trabajas con nosotros, trabajas con los dueños: dos profesionales que tratarán tu negocio como si fuera propio.",
+      "heading": "Dos dueños que hacen el trabajo,<br />sin intermediarios",
+      "description1": "Crow Systems nació de la frustración. Veíamos negocios buenos pagar de más por consultores y software que se tambalea y necesita atención constante. Uno de nosotros mantiene tus sistemas funcionando: conexiones, seguridad y respaldos. El otro construye las herramientas y los registros sobre los que corre tu negocio. Juntos, eso es todo lo que un negocio en crecimiento necesita: sin gerentes de cuenta, sin traspasos, solo las dos personas que realmente hacen el trabajo.",
+      "description2": "Trabajamos directo con dueños de negocio que quieren experiencia real, sin el costo ni las vueltas de una gran firma. Cuando llamas, hablas con un dueño, alguien que cuida tus sistemas como si fueran suyos.",
+      "meetTheTeam": "Conoce al equipo",
+      "teamAnchorId": "equipo",
+      "meetTheTeamIntro": "Crow Systems son solo dos personas: los dueños. Conócelos y sabrás exactamente quién cuida tu negocio.",
+      "founders": [
+        {
+          "name": "Carlos Cardona",
+          "title": "Socio Gerente · Conectividad y Seguridad",
+          "role": "Mantiene tus sistemas funcionando: conexiones, seguridad y respaldos. Si algo falla, lo detecta temprano y lo resuelve antes de que tus clientes lo noten.",
+          "photo": "/carlos-cardona.webp",
+          "linkedin": "https://www.linkedin.com/in/carlos-rabago-0a62b6184/"
+        },
+        {
+          "name": "Christian Camacho",
+          "title": "Socio Gerente · Software a la medida",
+          "role": "Construye las herramientas y los registros sobre los que corre tu negocio, a la medida de cómo trabajas de verdad.",
+          "photo": "/christian-camacho.png",
+          "linkedin": "https://www.linkedin.com/in/chriscadev/"
+        }
+      ],
       "missionVision": "Misión, Visión y Valores",
       "mission": "Misión",
-      "missionText": "Dar a los negocios en crecimiento acceso directo a profesionales en tecnología dueños de la empresa: sin intermediarios, sin excusas, solo sistemas confiables construidos por quienes los respaldan.",
+      "missionText": "Los negocios en crecimiento merecen acceso directo a las personas que son dueñas y construyen sus sistemas. Sin sala de espera, sin intermediarios, sin excusas.",
       "vision": "Visión",
-      "visionText": "La tecnología debería ayudar al negocio, no frenarlo. Toda empresa, sin importar su tamaño, debería tener la experiencia en ingeniería que necesita para crecer con confianza.",
+      "visionText": "La tecnología debería ser como una buena plomería: no la notas, porque simplemente funciona. Todo negocio, sin importar su tamaño, lo merece.",
       "values": "Valores",
       "valueItems": [
         "Confianza por encima de contratos",
         "Respuestas honestas, incluso cuando es difícil",
-        "Obsesión por lo que realmente funciona",
+        "Obsesión por lo que de verdad aguanta",
         "Simple es mejor que ingenioso",
-        "Comunicación radicalmente transparente",
+        "Siempre sabes lo que pasa, en palabras sencillas",
         "Construido para durar, no para vender"
       ],
       "expertise": "Cómo te ayudamos",
       "networking": {
-        "title": "Conectividad e Infraestructura",
-        "description": "Construimos la base tecnológica que tu negocio necesita para mantenerse en línea y comunicarse sin interrupciones.",
+        "title": "Conectividad y Seguridad",
+        "description": "Conexiones, seguridad y almacenamiento confiables que mantienen tu negocio localizable, pase lo que pase.",
         "items": [
-          "Tu negocio siempre conectado y disponible",
-          "Comunicaciones seguras entre tus equipos",
-          "Cámaras y sistemas de seguridad que funcionan",
-          "Redes diseñadas para crecer con tu negocio",
-          "Conexiones confiables sin caídas",
-          "Infraestructura que no te da problemas",
-          "Seguridad que protege tu información"
+          "Siempre te pueden localizar: clientes, equipo, proveedores",
+          "Conversaciones de tu equipo que se quedan entre tu equipo",
+          "Cámaras y control de acceso que de verdad cumplen su trabajo",
+          "Un sistema listo para crecer cuando agregues sucursales o personal",
+          "Sin caídas sorpresa en el peor momento",
+          "Tecnología confiable que nunca te da de qué preocuparte",
+          "Tus registros protegidos, no a la intemperie"
         ]
       },
       "software": {
-        "title": "Sistemas y Software",
-        "description": "Construimos las herramientas digitales que tu negocio necesita para operar mejor, sin depender de software genérico que no se ajusta a tu forma de trabajar.",
+        "title": "Las Herramientas Donde Trabajas",
+        "description": "Los registros, los tableros y las herramientas que usan tus clientes, construidos a la medida de cómo trabajas de verdad.",
         "items": [
-          "Sistemas que automatizan lo que haces manual",
-          "Herramientas que se ajustan a tu negocio, no al revés",
-          "Plataformas que tus clientes pueden usar fácilmente",
-          "Conexiones entre tus sistemas para que no pierdas tiempo",
-          "Software que funciona sin constantes fallas",
-          "Sistemas que crecen cuando tu negocio crece",
-          "Herramientas que tu equipo puede usar sin complicaciones"
+          "Las tareas repetitivas que ahora se hacen solas",
+          "Herramientas construidas alrededor de tus procesos reales",
+          "Una interfaz sencilla que tus clientes disfrutan usar",
+          "Sin capturar lo mismo en tres lugares",
+          "Herramientas que no fallan un viernes ajetreado",
+          "Espacio para crecer sin reconstruir todo",
+          "Herramientas que tu equipo usa sin manual"
         ]
       }
     },
     "contact": {
       "title": "Contacto - CROW SYSTEMS",
-      "description": "¿Tienes un proyecto en mente o un problema que resolver? Cuéntenos: un profesional senior te responderá en una hora hábil.",
+      "description": "¿Algo de tu negocio no está bien? Cuéntanoslo con tus propias palabras. Un ingeniero de verdad responde en una hora hábil.",
       "getInTouch": "Contáctenos",
       "heading": "Contáctenos",
-      "description2": "¿No estás seguro de lo que necesitas? Escríbanos y te ayudamos a definir el mejor camino para tu negocio.",
+      "description2": "¿No sabes qué está mal? Es normal. Cuéntanos qué te molesta y te ayudamos a ponerle nombre.",
       "startConversation": "Conversemos",
-      "inquiryDescription": "Cuéntanos qué necesitas y un profesional senior te responderá en una hora hábil con una propuesta clara.",
+      "inquiryDescription": "Cuéntanos qué te trae. Un ingeniero de verdad responde en una hora hábil con una respuesta clara.",
       "inquiries": "Consultas",
       "businessHours": "Horario de Atención",
       "regions": "Regiones de Atención",
@@ -216,7 +235,7 @@
       "subjectRequired": "El asunto es obligatorio",
       "messageRequired": "El mensaje es obligatorio (mínimo 10 caracteres)",
       "sending": "Enviando...",
-      "success": "¡Gracias! Un profesional revisará tu mensaje y te responderá en una hora hábil.",
+      "success": "¡Gracias! Un ingeniero de verdad revisará tu mensaje y te responderá en una hora hábil.",
       "failed": "Error al enviar. Por favor, inténtelo de nuevo.",
       "errorKeys": {
         "SUBMISSION_FAILED": "No se pudo enviar tu mensaje. Por favor, inténtalo de nuevo.",
@@ -233,19 +252,19 @@
       "monFri": "Lun - Vie: 08:00 - 18:00 PDT",
       "sat": "Sáb: 10:00 - 14:00 PDT (Solo bajo demanda)",
       "regionsText": "México, Estados Unidos y Canadá",
-      "consultingHeading": "¿Prefieres un enfoque más estructurado?",
-      "consultingLink": "Solicita una consultoría gratuita →"
+      "consultingHeading": "¿Prefieres que le demos una revisada completa?",
+      "consultingLink": "Empieza con una revisión gratis →"
     },
     "consulting": {
-      "title": "Consultoría - CROW SYSTEMS",
-      "description": "Envía un audio o completa un formulario rápido. Un profesional senior revisa tu proyecto y te responde en una hora hábil con un plan claro.",
-      "portal": "Portal de Consultoría",
-      "heading": "Cuéntanos qué necesitas.<br /><span class=\"text-surface-variant\">Te decimos cómo lograrlo.</span>",
-      "description2": "Describe tu proyecto con tus propias palabras. Graba un audio rápido para los detalles difíciles de escribir, o usa el formulario: lo que te sea más cómodo.",
+      "title": "Tu Revisión Gratis - CROW SYSTEMS",
+      "description": "Cuéntanos qué está mal con tus propias palabras: un audio o un formulario rápido. Un ingeniero de verdad lo revisa en una hora hábil y te muestra dónde están los riesgos.",
+      "portal": "La Revisión",
+      "heading": "Cuéntanos qué está mal.<br /><span class=\"text-surface-variant\">Encontraremos lo que se esconde.</span>",
+      "description2": "Describe qué te preocupa con tus propias palabras. Graba un audio rápido para los detalles difíciles de escribir, o usa el formulario. Lo que te sea más cómodo. Es una revisión de 15 minutos, no un examen.",
       "audioSubmission": "Grabar un Audio",
       "additionalContext": "¿Algo más? ",
       "additionalContextOptional": "(Opcional)",
-      "placeholder": "Describe cualquier restricción o qué resultado específico buscas...",
+      "placeholder": "Describe qué te preocupa o qué resultado buscas...",
       "submitAudio": "Enviar Audio",
       "uploading": "Subiendo...",
       "submitted": "✓ ¡Enviado!",
@@ -303,26 +322,26 @@
       "problems": [
         "¿Qué necesitas resolver?",
         "Que más clientes me encuentren",
-        "Modernizar mi infraestructura",
-        "Que mi negocio funcione sin interrupciones",
-        "Automatizar procesos manuales",
-        "Construir una herramienta a la medida",
+        "Actualizar mis sistemas sin dolores de cabeza",
+        "Dejar de preocuparme por quedarme sin servicio",
+        "Poner el trabajo repetitivo en piloto automático",
+        "Una herramienta a la medida de mi negocio",
         "Otro"
       ],
       "goalsPlaceholder": "¿Cómo se vería el éxito para tu negocio?",
-      "method": "Cómo llegas a tu resultado",
+      "method": "Qué sigue",
       "steps": [
         {
-          "title": "Revisamos tu caso",
-          "desc": "Un profesional senior revisa lo que compartiste en una hora hábil."
+          "title": "Le damos el primer vistazo",
+          "desc": "Un ingeniero de verdad revisa lo que compartiste en una hora hábil."
         },
         {
-          "title": "Entendemos tu negocio",
-          "desc": "Una conversación de 30 minutos para entender tu situación y qué quieres lograr."
+          "title": "La revisión de 15 minutos",
+          "desc": "Recorremos tu instalación juntos en 15 minutos y señalamos dónde están los riesgos. Sin ofertas, sin tecnicismos."
         },
         {
-          "title": "Te entregamos el plan",
-          "desc": "Una hoja de ruta clara con opciones de tarifa fija, entregada en menos de 2 días."
+          "title": "Recibes el Plan",
+          "desc": "Un Plan de una página con opciones de tarifa fija, en menos de 2 días. Tú decides qué sigue."
         }
       ],
       "officeHours": "Horario de Atención",
@@ -330,10 +349,10 @@
       "satHours": "Sábado: Por cita",
       "consultingEmail": "hablemos@crowsys.com.mx",
       "securityTitle": "Tu información está segura",
-      "securityDesc": "Todos los envíos, incluidos los archivos de audio, se cifran y protegen. Priorizamos tu propiedad intelectual. Disponibles NDA estándar durante la fase de descubrimiento.",
+      "securityDesc": "Todo lo que envías va cifrado y bajo llave, audios incluidos. Tus ideas son tuyas. Firmamos un NDA de una página antes de la revisión si lo prefieres.",
       "marcusThorne": "Christian Camacho",
       "managingPartner": "Socio Gerente, Crow Systems",
-      "quote": "Creamos este proceso para entender realmente qué está frenando a tu negocio. Las conversaciones nos ayudan a descubrir prioridades que rara vez aparecen en una hoja de cálculo.",
+      "quote": "Creamos este proceso porque el problema real casi nunca está en la hoja de cálculo. Una conversación corta nos muestra qué frena a tu negocio, y casi siempre te sorprende también a ti.",
       "consultSuccess": "¡Gracias! Tu solicitud ha sido enviada. Nos comunicaremos dentro de 1 hora hábil.",
       "audioNoBlob": "Por favor, graba audio primero."
     },
@@ -509,87 +528,87 @@
     },
     "flyer": {
       "title": "CROW SYSTEMS - Folleto Corporativo | Tecnología y Estrategia",
-      "description": "Descarga nuestro folleto digital con soluciones de software, ciberseguridad, fintech y más.",
+      "description": "Descarga nuestro folleto de una página: qué hacemos en Crow Systems, explicado en palabras sencillas.",
       "downloadLabel": "Descargar como JPG",
       "content": {
-        "tagline": "Tecnología que funciona para ti",
+        "tagline": "Tecnología que trabaja mientras duermes",
         "hiringBadge": "Estamos contratando ✦",
-        "eyebrow": "Tu negocio conectado",
+        "eyebrow": "Tu negocio, sobre terreno firme",
         "heading": "Tecnología que hace que <em>tu negocio</em> funcione mejor",
-        "heroDescription": "Soluciones que hacen que más clientes te encuentren, tus operaciones fluyan y tu negocio crezca con confianza.",
-        "cta": "Construyamos el futuro de tu negocio juntos",
-        "service1Title": "Consultoría de Sistemas",
-        "service1Desc": "Eliminamos la fricción entre tus herramientas para que tu equipo trabaje sin perder tiempo",
-        "service2Title": "Infraestructura de TI",
-        "service2Desc": "Tu negocio siempre en línea: redes, nube y servidores que funcionan cuando tus clientes te necesitan",
-        "service3Title": "Soluciones de Software",
-        "service3Desc": "Herramientas a la medida que se ajustan a tu forma de trabajar, no al revés",
-        "service4Title": "Estrategia Tecnológica",
-        "service4Desc": "Decisiones tecnológicas claras para que inviertas bien y no tengas sorpresas",
-        "service5Title": "Transformación Digital",
-        "service5Desc": "Moderniza lo que importa y toma decisiones basadas en datos reales, no en corazonadas",
-        "service6Title": "Consultoría de Automatización",
-        "service6Desc": "Elimina el trabajo manual repetitivo para que tu equipo se enfoque en lo que realmente importa",
-        "footerHeadline": "No solo construimos soluciones.<br>Construimos crecimiento sostenible.",
-        "footerSubheadline": "Hablemos de cómo hacer crecer tu negocio.",
+        "heroDescription": "Más clientes te encuentran, nada falla en el peor momento y la tecnología trabaja en silencio en segundo plano.",
+        "cta": "Empieza con tu revisión de 15 minutos gratis",
+        "service1Title": "Herramientas que trabajan juntas",
+        "service1Desc": "Tus sistemas comparten datos, para que no captures lo mismo dos veces. Sin tiempo perdido",
+        "service2Title": "Siempre Abierto",
+        "service2Desc": "Un sistema confiable con respaldos y monitoreo, para que nunca cierres cuando los clientes te buscan",
+        "service3Title": "Herramientas a Tu Medida",
+        "service3Desc": "Software construido alrededor de tus procesos, no un paquete genérico",
+        "service4Title": "Decisiones Inteligentes",
+        "service4Desc": "Evaluamos opciones y costos antes de que te comprometas. Sin sorpresas después",
+        "service5Title": "Moderniza lo que Importa",
+        "service5Desc": "Sistemas actualizados y un solo registro de la verdad. Decisiones con números reales, no corazonadas",
+        "service6Title": "Ponlo en Piloto Automático",
+        "service6Desc": "Las tareas repetitivas corren solas mientras tu equipo piensa",
+        "footerHeadline": "No solo parchamos problemas.<br>Construimos sistemas que aguantan.",
+        "footerSubheadline": "Empieza con una revisión gratis. Te mostramos los riesgos de tus sistemas.",
         "qrLabel": "ESCANÉAME"
       }
     }
   },
   "services": {
     "systemsConsulting": {
-      "title": "Consultoría de Sistemas",
+      "title": "Hacer que tus herramientas hablen entre sí",
       "description": "Tu equipo deja de perder tiempo entre herramientas que no se hablan entre sí.",
-      "fullDescription": "Las herramientas fragmentadas, los departamentos desconectados y los procesos manuales que ya no escalan le cuestan tiempo y dinero a tu negocio. Analizamos cómo trabajas con la tecnología, identificamos dónde se atoran las cosas y entregamos un plan claro para destrabar a tu equipo. El resultado: menos tiempo perdido, menos errores y más tiempo enfocado en servir a tus clientes.",
+      "fullDescription": "Tu negocio seguramente corre con piezas que no se comunican entre sí: el sistema de pedidos, el software de contabilidad, el inventario en una hoja de cálculo. Ahí es donde se van las horas y el dinero. Conectamos esas piezas, eliminamos la captura manual y automatizamos lo repetitivo. El resultado: menos errores, reportes claros y un equipo que atiende clientes en lugar de mantener hojas de cálculo.",
       "features": [
-        "Tu equipo trabaja sin perder tiempo entre sistemas",
-        "Herramientas que se conectan entre sí sin fricción",
-        "Procesos que escalan cuando tu negocio crece",
-        "Claridad sobre qué herramientas necesitas y cuáles sobran",
-        "Informes que te ayudan a tomar mejores decisiones"
+        "Tu equipo deja de escribir lo mismo dos veces",
+        "Tus sistemas integrados, para que los datos se muevan sin captura manual",
+        "Flujos de trabajo que dan abasto cuando crece el volumen de pedidos",
+        "Claridad sobre qué herramientas conservar, actualizar o eliminar",
+        "Reportes confiables a partir de datos consolidados"
       ],
-      "idealFor": "Negocios que gastan tiempo y dinero en procesos manuales, herramientas que no se integran o esfuerzo duplicado entre equipos.",
+      "idealFor": "Negocios donde el personal captura los mismos datos en varias herramientas, los equipos duplican el trabajo o los reportes dependen de unir hojas de cálculo.",
       "technologies": [
-        "Arquitectura Empresarial",
-        "Minería de Procesos",
         "Integración API",
+        "Integración de Sistemas",
         "Migración a la Nube",
-        "Prácticas DevOps"
+        "Reportes y Datos",
+        "Automatización de Procesos"
       ],
-      "cta": "Quiero que mi equipo funcione mejor"
+      "cta": "Quiero que mi equipo trabaje mejor"
     },
     "itInfrastructure": {
-      "title": "Infraestructura de TI",
-      "description": "Tu negocio siempre disponible para tus clientes, sin interrupciones.",
-      "fullDescription": "La infraestructura es la base de todo: si se cae, tu negocio se cae. Construimos redes, servidores, entornos en la nube y planes de recuperación que mantienen tu negocio en línea: incluso cuando más clientes te necesitan. De AWS a on-premise, construimos cimientos que crecen con tu negocio, no en su contra.",
+      "title": "Mantener tu negocio en línea",
+      "description": "Tu negocio permanece abierto, entre tormentas, oleadas y sorpresas de las 3 de la mañana.",
+      "fullDescription": "Tu negocio depende de servidores, redes, almacenamiento y seguridad que la mayoría solo nota cuando dejan de funcionar. Una oleada de clientes, un recibo olvidado o una caída en tu región pueden dejarte sin servicio en el peor momento. Diseñamos y mantenemos todo el conjunto: monitoreo, copias de respaldo automáticas, recuperación rápida y seguridad que protege tus datos. Si algo falla, lo detectamos temprano y lo resolvemos antes de que tus clientes lo noten.",
       "features": [
-        "Tu negocio siempre en línea, sin caídas",
-        "Tus datos seguros y protegidos en todo momento",
-        "Infraestructura que crece cuando tu negocio crece",
-        "Respuesta rápida ante cualquier problema",
-        "Monitoreo constante para prevenir fallas"
+        "Alta disponibilidad: tu negocio se mantiene en línea cuando importa",
+        "Datos cifrados, almacenamiento seguro y acceso controlado",
+        "Capacidad que crece con tu negocio sin reconstruir todo",
+        "Monitoreo constante con respuesta en menos de una hora",
+        "Mantenimiento preventivo que evita fallas antes de que ocurran"
       ],
-      "idealFor": "Negocios que dependen de estar siempre en línea, manejan datos sensibles, o están creciendo y necesitan infraestructura que los acompañe.",
+      "idealFor": "Negocios que no pueden darse el lujo de dejar de operar ni una tarde, que manejan datos sensibles o que están creciendo y necesitan capacidad confiable.",
       "technologies": [
         "AWS",
         "Azure",
         "Google Cloud",
         "Administración de Linux"
       ],
-      "cta": "Quiero que mi negocio nunca se detenga"
+      "cta": "No quiero cerrar ni un solo día"
     },
     "softwareSolutions": {
-      "title": "Soluciones de Software",
-      "description": "Herramientas que se ajustan a tu negocio, no al revés.",
-      "fullDescription": "El software genérico a menudo crea más problemas de los que resuelve. Construimos aplicaciones personalizadas adaptadas a tu forma de trabajar: desde herramientas internas y paneles de control hasta plataformas que tus clientes pueden usar fácilmente. Cada solución está pensada para que sea fácil de usar, confiable y que funcione sin constantes fallas.",
+      "title": "Software a tu medida",
+      "description": "Herramientas a la medida de tu negocio, no al revés.",
+      "fullDescription": "El software genérico rara vez se ajusta a cómo funciona tu negocio. Construimos aplicaciones web y herramientas internas a la medida de tus procesos: portales para clientes, tableros, sistemas internos e integraciones. Usamos tecnología moderna y comprobada para que el resultado sea confiable, seguro y fácil de usar para tu equipo y tus clientes.",
       "features": [
-        "Herramientas que se ajustan a cómo trabajas realmente",
-        "Tus clientes pueden interactuar contigo fácilmente",
-        "Automatización de tareas que haces manual",
-        "Sistemas que funcionan sin fallas constantes",
-        "Software que crece cuando tu negocio crece"
+        "Software construido alrededor de tus procesos reales, no al revés",
+        "Portales e interfaces sencillos para tus clientes",
+        "El trabajo manual se automatiza dentro del sistema",
+        "Sistemas estables, probados antes de cada actualización",
+        "Arquitectura diseñada para crecer con tu uso"
       ],
-      "idealFor": "Negocios con procesos únicos que el software genérico no cubre, o que necesitan reemplazar herramientas heredadas frágiles.",
+      "idealFor": "Negocios con procesos únicos que el software de paquete no cubre, o que necesitan reemplazar sistemas viejos y frágiles.",
       "technologies": [
         "TypeScript",
         "React",
@@ -600,59 +619,59 @@
       "cta": "Quiero una herramienta que funcione para mí"
     },
     "technicalStrategy": {
-      "title": "Estrategia Tecnológica",
-      "description": "Decisiones tecnológicas claras para que inviertas bien y no tengas sorpresas.",
-      "fullDescription": "Cada decisión tecnológica tiene consecuencias a largo plazo. Te ayudamos a ver con claridad y tomar decisiones informadas sobre qué construir, qué comprar y en qué invertir. Sin discursos de ventas, sin modas: solo criterio de ingeniería sólido que equilibra velocidad con sostenibilidad. Traducimos tus objetivos de negocio en planes técnicos claros y nos aseguramos de que seas dueño de tu propio destino.",
+      "title": "Decisiones claras, sin arrepentimientos",
+      "description": "Decide sobre tecnología con los ojos abiertos, no con un volado.",
+      "fullDescription": "Cada decisión de tecnología tiene consecuencias a largo plazo, y la mayoría de los dueños las toman sin tener toda la información. Te ayudamos a comparar construir vs. comprar, estimar el costo real a lo largo del tiempo y evitar herramientas que te dejen atrapado. El resultado es un plan práctico: qué adoptar, qué retirar y en qué conviene invertir. Recomendaciones directas basadas en experiencia real de ingeniería, no en modas ni discursos de venta.",
       "features": [
-        "Sabes exactamente en qué invertir y qué evitar",
-        "Decisiones claras sobre construir vs. comprar",
-        "Evitas costosas sorpresas tecnológicas",
-        "Tus sistemas están preparados para crecer",
-        "Eliges las herramientas correctas para tu negocio"
+        "Sabes dónde invertir y dónde el gasto no lleva a nada",
+        "Recomendaciones directas: construir, comprar o mantener como está",
+        "Menos sorpresas costosas a futuro",
+        "Decisiones que dejan espacio para crecer en lugar de atarte",
+        "Herramientas elegidas para tu situación real, no para el discurso de venta"
       ],
-      "idealFor": "Dueños de negocio y líderes que necesitan tomar decisiones tecnológicas sin tener un equipo técnico interno completo.",
+      "idealFor": "Dueños y líderes que toman decisiones de tecnología sin un equipo técnico completo en la empresa.",
       "technologies": [
-        "Diseño de Sistemas",
-        "Microservicios",
-        "Arquitectura Basada en Eventos",
-        "Estrategia de Datos",
-        "Ingeniería de Plataformas"
+        "Hoja de Ruta Tecnológica",
+        "Evaluación de Herramientas",
+        "Análisis Construir vs. Comprar",
+        "Costo Total de Propiedad",
+        "Arquitectura de Datos"
       ],
-      "cta": "Quiero tomar mejores decisiones tech"
+      "cta": "Quiero dejar de adivinar en tecnología"
     },
     "digitalTransformation": {
-      "title": "Transformación Digital",
-      "description": "Moderniza lo que importa y toma decisiones basadas en datos reales.",
-      "fullDescription": "La transformación digital tiene mala fama porque normalmente significa 'reemplazar todo'. Nosotros lo hacemos distinto: modernizamos los sistemas que más importan y conectamos tus datos en una sola fuente de verdad. El resultado son paneles de control en los que puedes confiar, informes que realmente ayudan y un equipo que toma decisiones en horas, no en semanas. Sin disrupción innecesaria, solo progreso práctico.",
+      "title": "Modernizar lo que importa",
+      "description": "Moderniza lo que importa y toma decisiones con números reales.",
+      "fullDescription": "Modernizar no tiene que significar reemplazar todo de golpe. Modernizamos los sistemas que más importan y consolidamos tus datos en una sola fuente confiable, para que tus informes reflejen la realidad y las decisiones se tomen en horas, no en semanas. Trabajamos por fases, con riesgo bajo y sin detener tu operación.",
       "features": [
-        "Tomas decisiones basadas en datos, no en suposiciones",
-        "Informes claros que te ayudan a entender tu negocio",
-        "Sistemas modernos que no frenan tu operación",
-        "Tu equipo tiene la información que necesita, cuando la necesita",
-        "Menos tiempo buscando datos, más tiempo usándolos"
+        "Decisiones respaldadas por datos consolidados y precisos",
+        "Informes en los que todos pueden confiar y entender",
+        "Tus fuentes de datos conectadas en un solo lugar, sin buscar entre herramientas",
+        "La información correcta llega a las personas correctas a tiempo",
+        "Menos tiempo juntando datos, más tiempo actuando sobre ellos"
       ],
-      "idealFor": "Negocios establecidos con sistemas envejecidos que buscan modernizar, desbloquear información y mejorar la velocidad de toma de decisiones.",
+      "idealFor": "Negocios establecidos con sistemas envejecidos que quieren modernizar y consolidar sus datos sin detener la operación.",
       "technologies": [
-        "Pipelines ETL",
+        "Almacén de Datos",
         "dbt",
         "Looker",
         "Apache Airflow",
         "Snowflake"
       ],
-      "cta": "Quiero tomar decisiones con datos reales"
+      "cta": "Quiero decidir con números reales"
     },
     "automationConsulting": {
-      "title": "Consultoría de Automatización",
-      "description": "Elimina el trabajo manual repetitivo para que tu equipo se enfoque en lo que realmente importa.",
-      "fullDescription": "El trabajo manual repetitivo es un asesino silencioso de la productividad. Identificamos las oportunidades de mayor impacto para eliminarlo: desde pipelines de despliegue hasta captura de datos. El resultado: tu equipo se libera de tareas repetitivas y puede enfocarse en el trabajo creativo y estratégico que realmente mueve la aguja de tu negocio.",
+      "title": "El trabajo repetitivo en piloto automático",
+      "description": "Pon el trabajo repetitivo en piloto automático, para que tu equipo piense, no copie.",
+      "fullDescription": "Muchos equipos pierden horas cada semana en trabajo repetitivo: captura de datos, procesamiento de archivos, informes y traslados manuales entre herramientas. Identificamos qué tareas vale la pena automatizar y construimos flujos automáticos confiables con herramientas comprobadas. Tu equipo se libera de la rutina y se enfoca en los clientes y decisiones que de verdad mueven el negocio.",
       "features": [
-        "Tu equipo deja de perder horas en tareas repetitivas",
-        "Menos errores humanos en procesos importantes",
-        "Despliegues y actualizaciones sin estrés",
-        "Datos que fluyen automáticamente entre sistemas",
-        "Tu equipo se enfoca en trabajo de valor, no en tareas mecánicas"
+        "Horas que vuelven a tu semana",
+        "Menos errores humanos en procesos críticos",
+        "Despliegues y actualizaciones que corren solos, sin problemas",
+        "Datos registrados una vez y sincronizados entre tus sistemas",
+        "Tu equipo se enfoca en criterio y atención, no en captura de datos"
       ],
-      "idealFor": "Negocios con equipos que dedican tiempo excesivo a tareas repetitivas, o que quieren escalar sin contratar proporcionalmente más personal.",
+      "idealFor": "Equipos que dedican demasiadas horas a tareas repetitivas, o negocios que quieren crecer sin contratar más personal en la misma proporción.",
       "technologies": [
         "GitHub Actions",
         "Terraform",
@@ -660,7 +679,7 @@
         "Scripting en Python",
         "Jenkins"
       ],
-      "cta": "Quiero liberar a mi equipo"
+      "cta": "Quiero recuperar el tiempo de mi equipo"
     }
   }
 }

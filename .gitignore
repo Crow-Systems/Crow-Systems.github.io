@@ -38,3 +38,8 @@ temp/
 
 # Project
 *:Zone.Identifier
+
+# logs
+logs/
+*.log
+.progress

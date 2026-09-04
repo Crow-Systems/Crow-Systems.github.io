@@ -33,25 +33,25 @@
   },
   "pages": {
     "index": {
-      "title": "CROW SYSTEMS - Reliable Technology for Businesses That Want to Grow",
-      "description": "We help local and mid-size businesses get a professional digital presence, reliable systems, and the connectivity they need so more customers find them. No hassle, no lock-in.",
-      "subtitle": "Your business connected to your customers",
+      "title": "CROW SYSTEMS - Your Business Online and Running, Without the Headaches",
+      "description": "We keep the tech behind your business in shape so more customers find you, your systems don't stop, and you never wake up to a panic call. No jargon, no lock-in.",
+      "subtitle": "The quiet plumbing behind your business",
       "hero": {
-        "title": "Get found by the customers<br />already searching for what you sell",
-        "description": "Your business deserves to look professional and be available for your customers at all times. We build the digital presence, connectivity, and systems you need so more people find you and trust you.",
-        "startConsultation": "I want to get found",
-        "exploreServices": "See what I can get"
+        "title": "Get found by more customers,<br />and never wake up to a panic call",
+        "description": "Your website and systems affect how customers see you and whether your business keeps working. We keep them reliable and secure, so you look professional, stay online, and keep growing. No jargon: we'd rather explain things in plain words than impress you.",
+        "startConsultation": "Get my free Tech Review",
+        "exploreServices": "See what we do"
       },
       "stats": {
         "uptime": {
           "value": "99%",
           "label": "Your business always online",
-          "desc": "Systems that don't stop when your customers need you"
+          "desc": "Your lights stay on, even when the rest of the block doesn't"
         },
         "triage": {
           "value": "< 1hr",
           "label": "Response in under 1 hour",
-          "desc": "A senior engineer reviews your case during business hours"
+          "desc": "A real engineer picks up within the hour, not a ticket queue"
         },
         "team": {
           "value": "2 People",
@@ -61,148 +61,167 @@
         "lockin": {
           "value": "Zero Lock-In",
           "label": "Your information is always yours",
-          "desc": "No vendor dependencies or trapping contracts"
+          "desc": "Your keys, your house. No contracts that handcuff you"
         }
       },
       "cta": {
-        "title": "Want more customers<br />to find you online?",
-        "description": "Tell us what you need in your own words: a quick voice note, a short form, or an email. A senior engineer reviews it and gets back to you within one business hour.",
-        "consultation": "Let's start together",
+        "title": "Worried something in your tech<br />is about to break?",
+        "description": "A voice note, a short form, an email. Whatever's easiest. A real engineer reads it within one business hour and shows you where the risks are. No commitments, just answers.",
+        "consultation": "Get my free Tech Review",
         "services": "Meet the team"
       }
     },
     "services": {
       "title": "Services - CROW SYSTEMS",
-      "description": "Technology consulting for local and mid-size businesses: digital presence, connectivity, systems, and support. Real solutions that help more customers find you.",
+      "description": "We find the problems in your systems before they cost you: more customers find you, nothing breaks at the worst moment, and you grow with confidence.",
       "hero": {
         "subtitle": "What you get",
-        "title": "Solutions that make<br />your business work better",
-        "description": "Every service is designed to solve a real problem in your business. We don't sell technology for the sake of it: we build what you need so your customers find you, trust you, and your operations run smoothly."
+        "title": "We keep your tech in shape,<br />so your business runs right",
+        "description": "We don't sell gadgets or make promises we can't keep. We find the weak spots in your systems and fix what matters: so customers find you, trust you, and your days run smoother. Real engineers, plain words, no lock-in."
       },
       "process": {
-        "title": "How you get to your result",
+        "title": "How we get there",
         "steps": [
           {
-            "title": "Tell us what you need",
-            "description": "Share your project through a voice note or quick form. A senior engineer reviews it within one business hour."
+            "title": "Tell us what's nagging you",
+            "description": "In your own words: a voice note, a quick form, an email. A real engineer reads it within one business hour."
           },
           {
-            "title": "We understand your business",
-            "description": "A 30-minute conversation to understand your current situation and what result you want to achieve."
+            "title": "The 15-minute Tech Review",
+            "description": "We walk through your setup with you and point out where trouble likes to hide. No sales pitch, no jargon."
           },
           {
-            "title": "You get a clear plan",
-            "description": "A roadmap with fixed-fee options, delivered in under 2 days, so you know exactly what you'll get."
+            "title": "You get the Tech Plan",
+            "description": "A one-page Tech Plan: what's wrong, what we'd fix, and what it costs, all in under 2 days. You decide from there."
           }
         ]
       },
       "cta": {
-        "title": "Ready for your business<br />to work like it should?",
-        "description": "Tell us what you need in your own words: a quick voice note, a short form, or an email. A senior engineer reviews it and gets back to you within one business hour.",
-        "startConsultation": "Get started now"
+        "title": "Find out what's wrong<br />before it costs you",
+        "description": "Tell us what's bothering you in your own words: a voice note, a short form, an email. A real engineer reads it and shows you where the risks are, within one business hour.",
+        "startConsultation": "Get my free Tech Review"
       },
       "included": "What you get",
-      "idealFor": "Ideal for",
-      "technologies": "Technologies",
+      "idealFor": "Who it fits",
+      "technologies": "What's under the hood",
       "getStarted": "Start with",
       "faq": {
-        "title": "Frequently Asked Questions",
+        "title": "Questions, asked plainly",
         "items": [
           {
             "question": "How fast do you respond?",
-            "answer": "A senior engineer reviews your message and responds within one business hour. If you send a voice note or form outside business hours, we'll get back to you the next business day."
+            "answer": "Within one business hour, from a real engineer, not a bot or a ticket queue. Send a voice note or form after hours, and you'll hear back the next business morning."
           },
           {
             "question": "What do I need to provide to get started?",
-            "answer": "Just tell us what you need in your own words: a voice note, a form, or an email. You don't need technical documents or specifications. We ask the right questions during the conversation."
+            "answer": "Just your own words. A voice note, a one-minute form, or an email. No documents, no specs, no prep. We ask whatever we need during the Tech Review."
           },
           {
             "question": "What if I don't know anything about technology?",
-            "answer": "You don't need to. We speak plain language and take care of translating your needs into a technical solution. Your part is telling us what your business needs; ours is finding the best way to make it happen."
+            "answer": "Perfect. That's our job. You're not here to learn how to use a drill; you're here to hang the picture. We bring the pre-drilled wall with the anchors already in. Tell us what your business needs; we make it happen in plain words."
           },
           {
             "question": "Who actually does the work?",
-            "answer": "The company owners. No account managers, no handoffs: the two people you talk to are the same ones building the solution. You always know who you're working with."
+            "answer": "The two owners. No account managers, no handoffs: the person who takes your call is the person who builds and fixes. You always know who's looking after your house."
           },
           {
             "question": "What happens after the first contact?",
-            "answer": "We review what you shared, propose a 30-minute call to better understand your situation, and deliver a clear roadmap with options in under 2 days."
+            "answer": "We review what you shared, invite you to a 15-minute Tech Review, and hand you a one-page Tech Plan with your options and prices in under 2 days. No commitment. You decide the next step."
           },
           {
             "question": "Do you work with businesses outside Mexico?",
-            "answer": "Yes. We work with businesses in Mexico, the United States, and Canada. Most of our work is done remotely with video call meetings."
+            "answer": "Yes. We work with businesses in Mexico, the United States, and Canada. Almost everything is done remotely over video calls."
           },
           {
             "question": "Can I cancel at any time?",
-            "answer": "Yes. No trapping contracts. Each phase has a clear scope and you decide whether to continue with the next one."
+            "answer": "Yes. No trapping contracts. Each phase has a clear scope and a clear price, and you decide whether to continue with the next one."
           },
           {
             "question": "Is there support after project delivery?",
-            "answer": "Yes. We offer support and maintenance options based on what you need. We don't leave you alone after delivery."
+            "answer": "Yes. We stay on as long as you want us, with support and maintenance that fit how you work. We don't hand you the keys and disappear."
           }
         ]
       },
       "carlosRabago": "Carlos Rabago",
       "carlosRabagoTitle": "Managing Partner, Crow Systems",
-      "carlosRabagoQuote": "I like to find simple solutions for complex problems. Listening, understanding, and building something stable always ends up giving better results."
+      "carlosRabagoQuote": "The best fix is often the simple one. Listening, understanding, and building something that holds up beats clever every time."
     },
     "about": {
       "title": "About - CROW SYSTEMS",
-      "description": "Two technology professionals, company owners, building reliable systems for local and mid-size businesses in Mexico, the United States, and Canada.",
+      "description": "Two engineers who own the company, keeping your technology in shape so your business can grow, in Mexico, the United States, and Canada.",
       "whoWeAre": "Who We Are",
-      "heading": "We're two technology professionals<br />who take the time to understand your business",
-      "description1": "Crow Systems was born from the frustration of watching businesses waste money on expensive consultants and software that doesn't deliver. One engineer specializes in networks, infrastructure, and secure communications. The other builds backend systems, data pipelines, and APIs. Together, we cover everything your business needs: no account managers, no handoffs, just the people who actually do the work.",
-      "description2": "We work directly with business owners who need real engineering expertise without the overhead of a big firm. When you work with us, you work with the owners: two professionals who will treat your business as if it were their own.",
+      "heading": "Two owners who do the work,<br />with no middlemen",
+      "description1": "Crow Systems started out of frustration. We kept watching good businesses overpay for consultants and software that totters and needs constant attention. One of us keeps your systems running: connections, security, and backups. The other builds the tools and records your business runs on. Together that's everything a growing business needs: no account managers, no handoffs, just the two people who actually do the work.",
+      "description2": "We work directly with business owners who want real expertise without the big-firm price tag and handoffs. When you call, you get an owner on the line, someone who treats your systems like their own.",
+      "meetTheTeam": "Meet the team",
+      "teamAnchorId": "team",
+      "meetTheTeamIntro": "Crow Systems is just two people: the owners. Meet them and you'll know exactly who's looking after your business.",
+      "founders": [
+        {
+          "name": "Carlos Cardona",
+          "title": "Managing Partner · Connectivity & Security",
+          "role": "Keeps your systems running: connections, security, and backups. If something fails, he catches it early and resolves it before your customers notice.",
+          "photo": "/carlos-cardona.webp",
+          "linkedin": "https://www.linkedin.com/in/carlos-rabago-0a62b6184/"
+        },
+        {
+          "name": "Christian Camacho",
+          "title": "Managing Partner · Custom Software",
+          "role": "Builds the tools and records your business runs on, tailored to how you actually work.",
+          "photo": "/christian-camacho.png",
+          "linkedin": "https://www.linkedin.com/in/chriscadev/"
+        }
+      ],
       "missionVision": "Mission, Vision & Values",
       "mission": "Mission",
-      "missionText": "To give growing businesses direct access to technology professionals who own the company: no intermediaries, no excuses, just reliable systems built by the people who stand behind them.",
+      "missionText": "Growing businesses deserve direct access to the people who own and build their systems. No waiting room, no middlemen, no excuses.",
       "vision": "Vision",
-      "visionText": "Technology should help businesses, not slow them down. Every company, regardless of size, should have the engineering expertise it needs to grow with confidence.",
+      "visionText": "Technology should be like good plumbing: you never notice it, because it just works. Every business, whatever its size, deserves that.",
       "values": "Values",
       "valueItems": [
         "Trust over contracts",
         "Honest answers, even when it's hard",
-        "Obsessed with what actually works",
+        "Obsessed with what actually holds up",
         "Simple is better than clever",
-        "Radically transparent communication",
+        "You always know what's happening, in plain words",
         "Built to last, not to flip"
       ],
       "expertise": "How we help you",
       "networking": {
-        "title": "Connectivity & Infrastructure",
-        "description": "We build the technology foundation your business needs to stay online and communicate without interruptions.",
+        "title": "Connectivity & Security",
+        "description": "Reliable connections, security, and storage that keep your business reachable, whatever happens.",
         "items": [
-          "Your business always connected and available",
-          "Secure communications between your teams",
-          "Cameras and security systems that work",
-          "Networks designed to grow with your business",
-          "Reliable connections without downtime",
-          "Infrastructure that doesn't give you problems",
-          "Security that protects your information"
+          "You're always reachable: customers, staff, suppliers",
+          "Team conversations that stay between your team",
+          "Cameras and access control that actually do their job",
+          "Setup that grows as you add locations or people",
+          "No surprise outages at the wrong moment",
+          "Quiet, reliable technology you never think about",
+          "Your records protected, not left out in the open"
         ]
       },
       "software": {
-        "title": "Systems & Software",
-        "description": "We build the digital tools your business needs to operate better, without relying on generic software that doesn't fit how you work.",
+        "title": "The Tools You Work In",
+        "description": "The records, dashboards, and customer-facing tools your business runs on, built to fit how you actually work.",
         "items": [
-          "Systems that automate what you do manually",
-          "Tools that fit your business, not the other way around",
-          "Platforms your customers can use easily",
-          "Connections between your systems so you don't waste time",
-          "Software that works without constant failures",
-          "Systems that grow when your business grows",
-          "Tools your team can use without complications"
+          "Repetitive chores that now handle themselves",
+          "Tools built around your real processes",
+          "A simple interface your customers enjoy using",
+          "No re-typing the same thing into three places",
+          "Tools that don't break on a busy Friday",
+          "Room to grow without a rebuild",
+          "Tools your team can use without a manual"
         ]
       }
     },
     "contact": {
       "title": "Contact - CROW SYSTEMS",
-      "description": "Have a project in mind or a problem to solve? Tell us: a senior engineer will get back to you within one business hour.",
+      "description": "Something about your business isn't right? Tell us in your own words. A real engineer responds within one business hour.",
       "getInTouch": "Get In Touch",
       "heading": "Contact Us",
-      "description2": "Not sure what you need? Reach out and we'll help you define the best path for your business.",
+      "description2": "Not sure what's wrong? That's normal. Tell us what's bothering you and we'll help you name it.",
       "startConversation": "Let's talk",
-      "inquiryDescription": "Tell us what you need and a senior engineer will respond within one business hour with a clear proposal.",
+      "inquiryDescription": "Tell us what's nagging you. A real engineer responds within one business hour with a plain answer.",
       "inquiries": "Inquiries",
       "businessHours": "Business Hours",
       "regions": "Regions Served",
@@ -216,7 +235,7 @@
       "subjectRequired": "Subject is required",
       "messageRequired": "Message is required (min 10 characters)",
       "sending": "Sending...",
-      "success": "Thanks! An engineer will review your message and get back to you within one business hour.",
+      "success": "Thanks! A real engineer will review your message and get back to you within one business hour.",
       "failed": "Submission failed. Please try again.",
       "errorKeys": {
         "SUBMISSION_FAILED": "Your message could not be sent. Please try again.",
@@ -233,19 +252,19 @@
       "monFri": "Mon - Fri: 08:00 - 18:00 PDT",
       "sat": "Sat: 10:00 - 14:00 PDT (On-call only)",
       "regionsText": "México, United States & Canada",
-      "consultingHeading": "Prefer a more structured approach?",
-      "consultingLink": "Book a free consultation →"
+      "consultingHeading": "Want the full once-over instead?",
+      "consultingLink": "Start with a free Tech Review →"
     },
     "consulting": {
-      "title": "Consulting - CROW SYSTEMS",
-      "description": "Submit a voice note or complete a quick form. A senior engineer reviews your project and gets back to you within one business hour with a clear plan.",
-      "portal": "Consultation Portal",
-      "heading": "Tell us what you need.<br /><span class=\"text-surface-variant\">We'll make it happen.</span>",
-      "description2": "Describe your project in your own words. Record a quick voice note for the details that are hard to write down, or use the form: whichever works best for you.",
+      "title": "Your Free Tech Review - CROW SYSTEMS",
+      "description": "Tell us what's wrong in your own words: a voice note or a quick form. A real engineer reviews it within one business hour and shows you where the risks are.",
+      "portal": "The Tech Review",
+      "heading": "Tell us what's wrong.<br /><span class=\"text-surface-variant\">We'll find what's hiding.</span>",
+      "description2": "Describe what's bothering you in your own words. Record a quick voice note for the messy details, or use the form. Whichever feels easiest. It's a free 15-minute Tech Review, not an exam.",
       "audioSubmission": "Record a Voice Note",
       "additionalContext": "Anything Else? ",
       "additionalContextOptional": "(Optional)",
-      "placeholder": "Describe any constraints or what specific result you're looking for...",
+      "placeholder": "Describe what's bothering you or what result you're aiming for...",
       "submitAudio": "Send Voice Note",
       "uploading": "Uploading...",
       "submitted": "✓ Submitted!",
@@ -305,26 +324,26 @@
       "problems": [
         "What do you need to solve?",
         "Get found by more customers",
-        "Modernize my infrastructure",
-        "Keep my business running without interruptions",
-        "Automate manual processes",
-        "Build a custom tool",
+        "Update my systems without the headaches",
+        "Stop worrying about going down",
+        "Put the repetitive work on autopilot",
+        "Get a tool that fits my business",
         "Other"
       ],
       "goalsPlaceholder": "What would success look like for your business?",
-      "method": "How you get to your result",
+      "method": "What happens next",
       "steps": [
         {
-          "title": "We review your case",
-          "desc": "A senior engineer reviews what you shared within one business hour."
+          "title": "We take the first look",
+          "desc": "A real engineer reviews what you shared within one business hour."
         },
         {
-          "title": "We understand your business",
-          "desc": "A 30-minute conversation to understand your situation and what you want to achieve."
+          "title": "The 15-minute Tech Review",
+          "desc": "Together we walk your setup and spot where trouble hides. No pitch, no jargon."
         },
         {
-          "title": "You get the plan",
-          "desc": "A clear roadmap with fixed-fee options, delivered in under 2 days."
+          "title": "You get the Tech Plan",
+          "desc": "A one-page Tech Plan with fixed-fee options, in under 2 days. You decide what's next."
         }
       ],
       "officeHours": "Office Hours",
@@ -332,10 +351,10 @@
       "satHours": "Saturday: By appointment",
       "consultingEmail": "letstalk@crowsys.com.mx",
       "securityTitle": "Your information is secure",
-      "securityDesc": "All submissions, including audio files, are encrypted and protected. We prioritize your intellectual property. Standard NDAs available during the discovery phase.",
+      "securityDesc": "Everything you send is encrypted and locked down, voice notes included. Your ideas stay yours. We'll sign a one-page NDA before the Tech Review if you'd like.",
       "marcusThorne": "Christian Camacho",
       "managingPartner": "Managing Partner, Crow Systems",
-      "quote": "We created this process to truly understand what's holding your business back. Conversations help us uncover priorities that rarely show up in a spreadsheet."
+      "quote": "We built this process because the real problem is rarely on the spreadsheet. A short conversation shows us what's actually holding your business back, and it usually surprises you too."
     },
     "privacy": {
       "title": "Privacy Policy - CROW SYSTEMS",
@@ -509,87 +528,87 @@
     },
     "flyer": {
       "title": "CROW SYSTEMS - Corporate Flyer | Technology & Strategy",
-      "description": "Download our digital flyer with software development, cybersecurity, fintech and more.",
+      "description": "Download our one-page flyer: what we do at Crow Systems, explained in plain words.",
       "downloadLabel": "Download as JPG",
       "content": {
-        "tagline": "Technology that works for you",
+        "tagline": "Technology that works while you sleep",
         "hiringBadge": "We're hiring ✦",
-        "eyebrow": "Your business connected",
+        "eyebrow": "Your business, on solid ground",
         "heading": "Technology that makes <em>your business</em> work better",
-        "heroDescription": "Solutions that help more customers find you, your operations run smoothly, and your business grow with confidence.",
-        "cta": "Let's build the future of your business together",
-        "service1Title": "Systems Consulting",
-        "service1Desc": "Eliminate friction between your tools so your team works without wasting time",
-        "service2Title": "IT Infrastructure",
-        "service2Desc": "Your business always online: networks, cloud, and servers that work when your customers need you",
-        "service3Title": "Software Solutions",
-        "service3Desc": "Custom tools that fit how you work, not the other way around",
-        "service4Title": "Technical Strategy",
-        "service4Desc": "Clear technology decisions so you invest wisely with no surprises",
-        "service5Title": "Digital Transformation",
-        "service5Desc": "Modernize what matters and make decisions based on real data, not gut feelings",
-        "service6Title": "Automation Consulting",
-        "service6Desc": "Eliminate repetitive manual work so your team focuses on what really matters",
-        "footerHeadline": "We don't just build solutions.<br>We build sustainable growth.",
-        "footerSubheadline": "Let's talk about growing your business.",
+        "heroDescription": "More customers find you, nothing breaks at the worst moment, and the tech runs quietly in the background.",
+        "cta": "Start with a free 15-minute Tech Review",
+        "service1Title": "Tools That Work Together",
+        "service1Desc": "Your systems share data, so nothing is typed twice. No more lost time",
+        "service2Title": "Always Open",
+        "service2Desc": "Reliable setup with backups and monitoring, so you're never closed when customers show up",
+        "service3Title": "Tools Built to Fit You",
+        "service3Desc": "Software built around your processes, not a generic package",
+        "service4Title": "Smart Tech Choices",
+        "service4Desc": "We evaluate options and costs before you commit. No surprises later",
+        "service5Title": "Modernize What Matters",
+        "service5Desc": "Updated systems and one set of records. Decisions from real numbers, not guesswork",
+        "service6Title": "Put It on Autopilot",
+        "service6Desc": "The repetitive chores run themselves while your team does the thinking",
+        "footerHeadline": "We don't just patch problems.<br>We build systems that hold up.",
+        "footerSubheadline": "Start with a free Tech Review. We'll show you the risks in your systems.",
         "qrLabel": "SCAN ME"
       }
     }
   },
   "services": {
     "systemsConsulting": {
-      "title": "Systems Consulting",
-      "description": "Your team stops wasting time between tools that don't talk to each other.",
-      "fullDescription": "Fragmented tools, disconnected departments, and manual processes that no longer scale cost your business time and money. We audit how you work with technology, identify where things get stuck, and deliver a clear plan to unblock your team. The result: less wasted time, fewer errors, and more time focused on serving your customers.",
+      "title": "Making Your Tools Talk to Each Other",
+      "description": "Your team stops losing time between tools that don't talk to each other.",
+      "fullDescription": "Your business likely runs on pieces that don't talk to each other: the ordering system, the accounting software, the inventory sheet. That's where hours and money quietly disappear. We connect those pieces, remove the manual copying, and automate the repetitive parts. You end up with fewer errors, clearer reporting, and a team that spends its time serving customers instead of maintaining spreadsheets.",
       "features": [
-        "Your team works without losing time between systems",
-        "Tools that connect to each other seamlessly",
-        "Processes that scale when your business grows",
-        "Clarity on which tools you need and which to cut",
-        "Reports that help you make better decisions"
+        "Your team stops re-typing the same things twice",
+        "Your systems are integrated, so data moves without manual copying",
+        "Workflows that keep up as your order volume grows",
+        "A clear view of which tools to keep, upgrade, or remove",
+        "Reliable reporting from consolidated data"
       ],
-      "idealFor": "Businesses spending time and money on manual processes, unintegrated tools, or duplicated effort across teams.",
+      "idealFor": "Businesses where staff re-enter the same data across several tools, teams duplicate each other's work, or reporting depends on stitching spreadsheets together.",
       "technologies": [
-        "Enterprise Architecture",
-        "Process Mining",
         "API Integration",
+        "System Integration",
         "Cloud Migration",
-        "DevOps Practices"
+        "Data & Reporting",
+        "Workflow Automation"
       ],
       "cta": "I want my team to work better"
     },
     "itInfrastructure": {
-      "title": "IT Infrastructure",
-      "description": "Your business always available for your customers, without interruptions.",
-      "fullDescription": "Infrastructure is the foundation everything depends on: if it goes down, your business goes down. We build networks, servers, cloud environments, and recovery plans that keep your business online: even when more customers need you. From AWS to on-prem, we build foundations that grow with your business, not against it.",
+      "title": "Keeping Your Business Online",
+      "description": "Your business stays open through storms, surges, and 3am surprises.",
+      "fullDescription": "Your business depends on servers, networks, storage, and security that most people only notice when they stop working. A surge of customers, a forgotten renewal, or an outage in your region can take you offline at the worst moment. We design and maintain the whole setup: monitoring, automated backups, fast recovery, and security that protects your data. If something does break, we detect it early and fix it before your customers ever notice.",
       "features": [
-        "Your business always online, no downtime",
-        "Your data secure and protected at all times",
-        "Infrastructure that grows when your business grows",
-        "Fast response to any issue",
-        "Constant monitoring to prevent failures"
+        "High availability: your business stays online when it matters",
+        "Encrypted data, secure storage, and controlled access",
+        "Capacity that grows with your business, without rebuilding",
+        "24/7 monitoring with response in under an hour",
+        "Proactive maintenance that prevents failures before they happen"
       ],
-      "idealFor": "Businesses that depend on always being online, handle sensitive data, or are growing and need infrastructure that scales with them.",
+      "idealFor": "Businesses that can't afford downtime even for an afternoon, handle sensitive data, or are growing and need reliable capacity.",
       "technologies": [
         "AWS",
         "Azure",
         "Google Cloud",
         "Linux Administration"
       ],
-      "cta": "I want my business to never stop"
+      "cta": "I never want to turn a customer away"
     },
     "softwareSolutions": {
-      "title": "Software Solutions",
+      "title": "Software That Fits You",
       "description": "Tools that fit your business, not the other way around.",
-      "fullDescription": "Off-the-shelf software often creates more problems than it solves. We build custom applications tailored to how you work: from internal tools and dashboards to platforms your customers can use easily. Every solution is designed to be easy to use, reliable, and work without constant failures.",
+      "fullDescription": "Off-the-shelf software rarely fits the way your business actually works. We build custom web applications and internal tools that match your exact processes: customer portals, dashboards, internal systems, and integrations. We rely on proven, modern technology, so the result is dependable, secure, and easy for both your team and your customers to use.",
       "features": [
-        "Tools that fit how you actually work",
-        "Your customers can interact with you easily",
-        "Automation of tasks you do manually",
-        "Systems that work without constant failures",
-        "Software that grows when your business grows"
+        "Software built around your real processes, not the other way around",
+        "Customer portals and interfaces that are simple to use",
+        "Manual work automated within the system",
+        "Stable systems, tested before every release",
+        "Architecture designed to grow with your usage"
       ],
-      "idealFor": "Businesses with unique processes that generic software can't cover, or that need to replace fragile legacy tools.",
+      "idealFor": "Businesses with unique processes that off-the-shelf tools can't cover, or that need to replace fragile legacy software.",
       "technologies": [
         "TypeScript",
         "React",
@@ -600,59 +619,59 @@
       "cta": "I want a tool that works for me"
     },
     "technicalStrategy": {
-      "title": "Technical Strategy",
-      "description": "Clear technology decisions so you invest wisely with no surprises.",
-      "fullDescription": "Every technology decision has long-term consequences. We help you see clearly and make informed decisions about what to build, what to buy, and where to invest. No sales pitches, no trends: just solid engineering judgment that balances speed with sustainability. We translate your business goals into clear technical plans and make sure you own your own destiny.",
+      "title": "Clear Tech Decisions, No Regrets",
+      "description": "Decide on technology with your eyes open, not a coin flip.",
+      "fullDescription": "Every technology decision has long-term consequences, and most owners make them without all the information. We help you weigh build vs. buy, estimate real costs over time, and avoid tools that box you in. The result is a practical roadmap: what to adopt, what to retire, and where to invest next. Straight recommendations based on engineering experience, not trends or sales pitches.",
       "features": [
-        "You know exactly where to invest and what to avoid",
-        "Clear decisions on build vs. buy",
-        "Avoid costly technology surprises",
-        "Your systems are ready to grow",
-        "You choose the right tools for your business"
+        "You know where to invest and where spending leads nowhere",
+        "Direct recommendations on build, buy, or keep as is",
+        "Fewer costly surprises down the road",
+        "Decisions that leave room to grow instead of locking you in",
+        "Tools selected for your actual situation, not for the sales pitch"
       ],
-      "idealFor": "Business owners and leaders who need to make technology decisions without a full in-house technical team.",
+      "idealFor": "Owners and leaders who make technology decisions without a full in-house technical team.",
       "technologies": [
-        "System Design",
-        "Microservices",
-        "Event-Driven Architecture",
-        "Data Strategy",
-        "Platform Engineering"
+        "Technology Roadmaps",
+        "Vendor & Tool Evaluation",
+        "Build vs. Buy Analysis",
+        "Total Cost of Ownership",
+        "Data Architecture"
       ],
-      "cta": "I want to make better tech decisions"
+      "cta": "I want to stop guessing on tech"
     },
     "digitalTransformation": {
-      "title": "Digital Transformation",
-      "description": "Modernize what matters and make decisions based on real data.",
-      "fullDescription": "Digital transformation gets a bad name because it usually means 'replace everything.' We do it differently: we modernize the systems that matter most and connect your data into a single source of truth. The result is dashboards you can trust, reports that actually help, and a team that makes decisions in hours instead of weeks. No unnecessary disruption, just practical progress.",
+      "title": "Modernizing What Matters",
+      "description": "Modernize what matters and make decisions based on real numbers.",
+      "fullDescription": "Modernizing doesn't have to mean replacing everything at once. We modernize the systems that matter most and consolidate your data into a single reliable source, so your reports reflect reality and decisions happen in hours instead of weeks. We work in phases, keep risk low, and keep your operations running throughout.",
       "features": [
-        "You make decisions based on data, not guesses",
-        "Clear reports that help you understand your business",
-        "Modern systems that don't slow your operations",
-        "Your team has the information they need, when they need it",
-        "Less time searching for data, more time using it"
+        "Decisions backed by consolidated, accurate data",
+        "Reports that everyone can trust and understand",
+        "Data sources connected in one place, no more hunting across tools",
+        "The right information reaches the right people on time",
+        "Less time gathering data, more time acting on it"
       ],
-      "idealFor": "Established businesses with aging systems looking to modernize, unlock data insights, and improve decision-making speed.",
+      "idealFor": "Established businesses with aging systems that want to modernize and consolidate data without disrupting operations.",
       "technologies": [
-        "ETL Pipelines",
+        "Data Warehousing",
         "dbt",
         "Looker",
         "Apache Airflow",
         "Snowflake"
       ],
-      "cta": "I want decisions based on real data"
+      "cta": "I want decisions from real numbers"
     },
     "automationConsulting": {
-      "title": "Automation Consulting",
-      "description": "Eliminate repetitive manual work so your team focuses on what really matters.",
-      "fullDescription": "Repetitive manual work is a silent killer of productivity. We identify the highest-impact opportunities to eliminate it: from deployment pipelines to data entry. The result: your team is freed from repetitive tasks and can focus on the creative, strategic work that really moves the needle for your business.",
+      "title": "Repetitive Work on Autopilot",
+      "description": "Put the repetitive work on autopilot, so your team thinks, not copies.",
+      "fullDescription": "Many teams lose hours every week to repetitive work: data entry, file processing, reporting, and manual handoffs between tools. We identify the tasks worth automating and build reliable automated workflows with proven tooling. Your team gets freed from busywork and focuses on the customers and decisions that actually move the business.",
       "features": [
-        "Your team stops losing hours to repetitive tasks",
-        "Fewer human errors in important processes",
-        "Deployments and updates without stress",
-        "Data flows automatically between systems",
-        "Your team focuses on value work, not mechanical tasks"
+        "Hours returned to your week",
+        "Fewer human errors in critical processes",
+        "Deployments and updates that run smoothly, automatically",
+        "Data recorded once and synchronized across your systems",
+        "Your team focuses on judgment and customer work, not data entry"
       ],
-      "idealFor": "Businesses with teams spending excessive time on repetitive tasks, or that want to scale without hiring proportionally more staff.",
+      "idealFor": "Teams spending excessive hours on repetitive tasks, or businesses that want to grow without hiring proportionally more staff.",
       "technologies": [
         "GitHub Actions",
         "Terraform",
@@ -660,7 +679,7 @@
         "Python Scripting",
         "Jenkins"
       ],
-      "cta": "I want to free my team"
+      "cta": "I want my team's time back"
     }
   }
 }
