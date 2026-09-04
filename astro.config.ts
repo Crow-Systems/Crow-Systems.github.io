@@ -9,18 +9,22 @@ const routes = getRoutes();
 
 const stripSlash = (p: string) => (p.length > 1 && p.endsWith('/') ? p.slice(0, -1) : p);
 
+const withSlash = (p: string) => (p.length > 1 && !p.endsWith('/') ? `${p}/` : p);
+
 const hreflangByPath = new Map<string, { url: string; lang: string }[]>();
 for (const key of Object.keys(routes.en)) {
   const links = [
-    { url: `${SITE_URL}${routes.es[key]}`, lang: 'es' },
-    { url: `${SITE_URL}${routes.en[key]}`, lang: 'en' },
+    { url: `${SITE_URL}${withSlash(routes.es[key])}`, lang: 'es' },
+    { url: `${SITE_URL}${withSlash(routes.en[key])}`, lang: 'en' },
+    { url: `${SITE_URL}${withSlash(routes.es[key])}`, lang: 'x-default' },
   ];
   hreflangByPath.set(stripSlash(routes.es[key]), links);
   hreflangByPath.set(stripSlash(routes.en[key]), links);
 }
 const corporate = [
-  { url: `${SITE_URL}/folleto/corporate`, lang: 'es' },
-  { url: `${SITE_URL}/en/flyer/corporate`, lang: 'en' },
+  { url: `${SITE_URL}/folleto/corporate/`, lang: 'es' },
+  { url: `${SITE_URL}/en/flyer/corporate/`, lang: 'en' },
+  { url: `${SITE_URL}/folleto/corporate/`, lang: 'x-default' },
 ];
 hreflangByPath.set('/folleto/corporate', corporate);
 hreflangByPath.set('/en/flyer/corporate', corporate);
