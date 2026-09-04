@@ -7,7 +7,7 @@ const data = getLocaleData(locale);
 const messages = data.pages["404"];
 ---
 
-<DefaultLayout title={messages.title} locale={locale}>
+<DefaultLayout title={messages.title} description={messages.description} locale={locale}>
   <main style="height: 80vh;">
     <div class="flex-1 flex items-center justify-center pt-28 px-6">
       <div class="text-center max-w-2xl mx-auto">

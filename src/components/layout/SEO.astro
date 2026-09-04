@@ -1,0 +1,57 @@
+---
+import type { Locale } from "src/locales";
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  locale: string;
+  ogType?: string;
+  schema?: object | object[];
+}
+
+const { title, description, ogImage, locale, ogType = "website", schema } = Astro.props;
+
+const siteName = "CROW SYSTEMS";
+const siteUrl = (Astro.site?.href ?? "https://crow-systems.github.io").replace(/\/$/, "");
+const defaultImage = `${siteUrl}/og-image.jpg`;
+const image = ogImage ?? defaultImage;
+
+const ogLocale = locale === "en" ? "en_US" : "es_MX";
+const ogLocaleAlternate = locale === "en" ? "es_MX" : "en_US";
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: siteName,
+  url: siteUrl,
+  logo: `${siteUrl}/apple-touch-icon.png`,
+  sameAs: [
+    "https://www.linkedin.com/company/crowsysmx",
+    "https://www.x.com/crowsysmx",
+    "https://www.instagram.com/crowsysmx",
+  ],
+};
+
+const schemas = schema ? [organizationSchema, ...(Array.isArray(schema) ? schema : [schema])] : organizationSchema;
+const schemaJson = JSON.stringify(schemas).replace(/</g, "\\u003c");
+---
+
+<link rel="canonical" href={Astro.url} />
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:title" content={title} />
+{description && <meta property="og:description" content={description} />}
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:image" content={image} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content={ogLocale} />
+<meta property="og:locale:alternate" content={ogLocaleAlternate} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+{description && <meta name="twitter:description" content={description} />}
+<meta name="twitter:image" content={image} />
+<script type="application/ld+json" is:inline set:html={schemaJson} />

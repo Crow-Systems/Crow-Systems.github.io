@@ -1,5 +1,6 @@
 ---
 import LanguageSwitcher from "../ui/LanguageSwitcher.astro";
+import SEO from "./SEO.astro";
 import { getLocaleData, getRoutes } from "src/locales";
 
 interface Props {
@@ -14,7 +15,6 @@ const { title, description, activeNav = "", ogImage, locale } = Astro.props;
 const data = getLocaleData(locale);
 const routes = getRoutes();
 const pageUrl = Astro.url.pathname;
-const canonicalUrl = new URL(pageUrl, Astro.site).href;
 
 const umamiWebsiteId = import.meta.env.UMAMI_WEBSITE_ID;
 const umamiUrl = import.meta.env.PUBLIC_UMAMI_URL || "https://cloud.umami.is/script.js";
@@ -42,28 +42,27 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
     <meta name="google-site-verification" content="e0CYivTL-sbhZAX7g7aUGMI6tPHKgqCS3SF73fKU4No" />
-    <link rel="canonical" href={canonicalUrl} />
+    <SEO
+      title={title}
+      description={description}
+      ogImage={ogImage}
+      locale={locale}
+    />
     <link
       rel="alternate"
       hreflang="en"
-      href={`https://crow-systems.github.io${canonicalEn}`}
+      href={new URL(canonicalEn, Astro.site)}
     />
     <link
       rel="alternate"
       hreflang="es"
-      href={`https://crow-systems.github.io${canonicalEs}`}
+      href={new URL(canonicalEs, Astro.site)}
     />
     <link
       rel="alternate"
       hreflang="x-default"
-      href="https://crow-systems.github.io"
+      href={Astro.site}
     />
-    <meta property="og:title" content={title} />
-    {description && <meta property="og:description" content={description} />}
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalUrl} />
-    {ogImage && <meta property="og:image" content={ogImage} />}
-    <title>{title}</title>
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://cloud.umami.is https://latitudem2m-analytics.chrislabs.net 'unsafe-inline' 'unsafe-hashes' 'unsafe-eval'; img-src 'self' https://images.unsplash.com data:; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; media-src 'self' blob:; connect-src 'self' https://crowsys.chrislabs.net https://latitudem2m-analytics.chrislabs.net; object-src 'none'; base-uri 'self';" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="manifest" href="/site.webmanifest" />
