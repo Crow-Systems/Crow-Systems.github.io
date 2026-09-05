@@ -2,6 +2,8 @@
 import LanguageSwitcher from "../ui/LanguageSwitcher.astro";
 import SEO from "./SEO.astro";
 import { getLocaleData, getRoutes } from "src/locales";
+import "@fontsource-variable/inter/wght.css";
+import "@fontsource-variable/space-grotesk/wght.css";
 
 interface Props {
   title: string;
@@ -51,6 +53,7 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
       ogImage={ogImage}
       locale={locale}
     />
+    <link rel="preload" as="image" href="/crow-electricity.webp" fetchpriority="high" />
     <link
       rel="alternate"
       hreflang="en"
@@ -83,10 +86,6 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
       type="image/png"
       sizes="512x512"
       href="/android-chrome-512x512.png"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
     />
     {
       umamiWebsiteId && (

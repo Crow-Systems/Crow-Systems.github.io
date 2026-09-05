@@ -40,8 +40,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        heading: ['Space Grotesk', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        heading: ['Space Grotesk Variable', 'Space Grotesk', 'sans-serif'],
+        body: ['Inter Variable', 'Inter', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
       fontSize: {

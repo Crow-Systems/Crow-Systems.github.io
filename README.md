@@ -68,6 +68,17 @@ bun run build
 bun run preview
 ```
 
+## Performance measurement
+
+Measure FCP/LCP of the built site under throttled, repeatable conditions:
+
+```bash
+bun run measure
+```
+
+An LCP/FCP improvement workflow and Unlighthouse usage are documented in
+`docs/how-to/measure-performance.md` and `docs/reference/performance-script.md`.
+
 ## Deployment
 
 Production deployment target: GitHub Pages (static)
