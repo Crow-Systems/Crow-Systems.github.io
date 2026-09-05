@@ -11,7 +11,38 @@
   },
   "common": {
     "changeLanguage": "Cambiar idioma",
-    "selectLanguage": "Seleccionar idioma"
+    "selectLanguage": "Seleccionar idioma",
+    "whatsappMessage": "Hola, quiero que mi negocio trabaje mejor y sin sustos: más clientes, menos errores y dormir tranquilo. ¿Me pueden ayudar?",
+    "whatsappLabel": "Escríbenos por WhatsApp",
+    "whatsappSend": "Enviar por WhatsApp",
+    "whatsappPlaceholder": "Escribe tu mensaje…",
+    "whatsappQuestion": "¿Sobre qué quieres platicar?",
+    "whatsappSuggestions": [
+      {
+        "label": "🙌 Nada de doble trabajo",
+        "message": "Hola, quiero nada de doble trabajo: mis sistemas no se hablan entre sí y mi equipo captura lo mismo dos veces. Quiero que los datos fluyan solos y que mi gente se dedique a atender clientes."
+      },
+      {
+        "label": "😴 Dormir tranquilo",
+        "message": "Hola, quiero dormir tranquilo sin preocuparme de que mi negocio se quede sin servicio un día. Necesito que todo siga funcionando sin sustos."
+      },
+      {
+        "label": "🛠️ A nuestra manera",
+        "message": "Hola, quiero trabajar a nuestra manera: la herramienta que uso ahora me obliga a hacerlo a su forma y me estorba. Necesito algo que se adapte a cómo trabajamos."
+      },
+      {
+        "label": "🧭 Decidir sin adivinar",
+        "message": "Hola, quiero decidir sin adivinar: estoy a punto de tomar decisiones de tecnología y no quiero gastar de más ni quedarme atrapado. Necesito saber exactamente dónde conviene invertir."
+      },
+      {
+        "label": "🚀 Modernizar sin detener nada",
+        "message": "Hola, quiero modernizar sin detener nada: mis sistemas se sienten viejos y lentos, pero no quiero parar mi negocio para cambiarlos. Quiero avanzar por etapas sin frenar la operación."
+      },
+      {
+        "label": "⏳ Recuperar el tiempo perdido",
+        "message": "Hola, quiero recuperar el tiempo perdido: mi equipo pierde horas en tareas repetitivas que nadie debería hacer a mano. Necesito que el negocio crezca sin contratar de más."
+      }
+    ]
   },
   "nav": {
     "services": "Servicios",

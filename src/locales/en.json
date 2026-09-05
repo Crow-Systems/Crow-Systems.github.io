@@ -11,7 +11,38 @@
   },
   "common": {
     "changeLanguage": "Change Language",
-    "selectLanguage": "Select Language"
+    "selectLanguage": "Select Language",
+    "whatsappMessage": "Hi, I want my business to run better without surprises: more customers, fewer errors, and a good night's sleep. Can you help me?",
+    "whatsappLabel": "Chat with us on WhatsApp",
+    "whatsappSend": "Send via WhatsApp",
+    "whatsappPlaceholder": "Type your message…",
+    "whatsappQuestion": "What would you like to talk about?",
+    "whatsappSuggestions": [
+      {
+        "label": "🙌 No double work",
+        "message": "Hi, I want no double work: my systems don't talk to each other and my team types the same thing twice. I want data to flow on its own so my people can focus on customers."
+      },
+      {
+        "label": "😴 Sleep easy",
+        "message": "Hi, I want to sleep easy without worrying that my business will go down one day. I need everything to keep working without surprises."
+      },
+      {
+        "label": "🛠️ Our way of working",
+        "message": "Hi, I want to work our way: the tool I use now makes me work its way, and it's in the way. I need something that fits how we work."
+      },
+      {
+        "label": "🧭 Decide without guessing",
+        "message": "Hi, I want to decide without guessing: I'm about to make technology decisions and I don't want to overspend or get locked in. I need to know exactly where it's worth investing."
+      },
+      {
+        "label": "🚀 Modernize without downtime",
+        "message": "Hi, I want to modernize without downtime: my systems feel old and slow, but I don't want to stop my business to change them. I want to move forward in stages without slowing things down."
+      },
+      {
+        "label": "⏳ Get your time back",
+        "message": "Hi, I want to get our time back: my team wastes hours on repetitive tasks that shouldn't be done by hand. I need the business to grow without hiring more."
+      }
+    ]
   },
   "nav": {
     "services": "Services",
