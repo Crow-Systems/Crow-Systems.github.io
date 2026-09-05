@@ -18,6 +18,9 @@ const pageUrl = Astro.url.pathname;
 
 const umamiWebsiteId = import.meta.env.UMAMI_WEBSITE_ID;
 const umamiUrl = import.meta.env.PUBLIC_UMAMI_URL || "https://cloud.umami.is/script.js";
+const umamiRecorderWebsiteId =
+  import.meta.env.UMAMI_RECORDER_WEBSITE_ID ||
+  "230d6bff-1c5c-4a19-934f-476709d63f33";
 
 const normalizedPath = pageUrl.replace(/\/$/, "") || "/";
 let currentRouteKey: string | null = null;
@@ -92,6 +95,15 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
           src={umamiUrl}
           data-website-id={umamiWebsiteId}
           data-performance="true"
+        />
+      )
+    }
+    {
+      umamiWebsiteId && (
+        <script
+          defer
+          src="https://latitudem2m-analytics.chrislabs.net/recorder.js"
+          data-website-id={umamiRecorderWebsiteId}
         />
       )
     }
