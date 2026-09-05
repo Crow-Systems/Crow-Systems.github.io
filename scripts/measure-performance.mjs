@@ -1,4 +1,5 @@
 import { chromium } from 'playwright-core';
+import { spawnSync } from 'node:child_process';
 import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { extname, join, normalize } from 'node:path';
@@ -35,7 +36,17 @@ const server = createServer(async (req, res) => {
 await new Promise(r => server.listen(PORT, r));
 
 // ponytail: single-run deterministic proxy for a slow mobile connection.
-const browser = await chromium.launch({ executablePath: CHROME, args: ['--no-sandbox'] });
+const CLI = fileURLToPath(new URL('../node_modules/playwright-core/cli.js', import.meta.url));
+async function ensureBrowser() {
+  try {
+    return await chromium.launch({ executablePath: CHROME, args: ['--no-sandbox'] });
+  } catch {
+    if (CHROME) throw new Error('launch failed with explicit CHROME path');
+    spawnSync(process.execPath, [CLI, 'install', 'chromium'], { stdio: 'inherit' });
+    return await chromium.launch({ executablePath: CHROME, args: ['--no-sandbox'] });
+  }
+}
+const browser = await ensureBrowser();
 const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
 const cdp = await page.context().newCDPSession(page);
 await cdp.send('Network.enable');

@@ -19,6 +19,9 @@ Fast, single-metric probe. Runs in Chromium under a fixed network throttle
 | `PORT` | `4173` | Static server port |
 
 Chromium resolution order: `CHROME`, then `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH`, then Playwright's cache.
+If no binary is found (no `CHROME`/`PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` set and the cache is missing the revision),
+the script runs `node node_modules/playwright-core/cli.js install chromium` and retries the launch.
+With an explicit `CHROME`, a failed launch is fatal — the script does not download a fallback.
 
 **Output** (`bun run measure` or `node scripts/measure-performance.mjs`)
 

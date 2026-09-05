@@ -9,16 +9,11 @@ every run so before/after numbers are comparable.
 ## Prerequisites
 
 - The site builds (`bun run build`).
-- A Chromium executable is available. The script looks for one in, in order:
-  1. the `CHROME` environment variable
-  2. the `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` environment variable
-  3. Playwright's default browser cache (`~/.cache/ms-playwright`)
-
-If you don't have a browser, install one:
-
-```bash
-bunx playwright install chromium-headless-shell
-```
+- Chromium, unless you point at your own binary. The script resolves one in
+  order: `CHROME`, `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH`, then Playwright's
+  browser cache (`~/.cache/ms-playwright`). If the browser is missing, the
+  script installs it automatically into the cache and retries — no manual
+  install step needed.
 
 ## Steps
 
