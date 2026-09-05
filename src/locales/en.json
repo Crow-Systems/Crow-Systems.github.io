@@ -68,7 +68,7 @@
       "description": "We keep the tech behind your business in shape so more customers find you, your systems don't stop, and you never wake up to a panic call. No jargon, no lock-in.",
       "subtitle": "The quiet plumbing behind your business",
       "hero": {
-        "title": "Get found by more customers,<br />and never wake up to a panic call",
+        "title": "Get found by more customers, and never wake up to a panic call",
         "description": "Your website and systems affect how customers see you and whether your business keeps working. We keep them reliable and secure, so you look professional, stay online, and keep growing. No jargon: we'd rather explain things in plain words than impress you.",
         "startConsultation": "Get my free Tech Review",
         "exploreServices": "See what we do"
@@ -96,7 +96,7 @@
         }
       },
       "cta": {
-        "title": "Worried something in your tech<br />is about to break?",
+        "title": "Worried something in your <br />tech stack is about to break?",
         "description": "A voice note, a short form, an email. Whatever's easiest. A real engineer reads it within one business hour and shows you where the risks are. No commitments, just answers.",
         "consultation": "Get my free Tech Review",
         "services": "Meet the team"
@@ -107,7 +107,7 @@
       "description": "We find the problems in your systems before they cost you: more customers find you, nothing breaks at the worst moment, and you grow with confidence.",
       "hero": {
         "subtitle": "What you get",
-        "title": "We keep your tech in shape,<br />so your business runs right",
+        "title": "We keep your tech in shape, so your business runs right",
         "description": "We don't sell gadgets or make promises we can't keep. We find the weak spots in your systems and fix what matters: so customers find you, trust you, and your days run smoother. Real engineers, plain words, no lock-in."
       },
       "process": {
@@ -290,7 +290,7 @@
       "title": "Your Free Tech Review - CROW SYSTEMS",
       "description": "Tell us what's wrong in your own words: a voice note or a quick form. A real engineer reviews it within one business hour and shows you where the risks are.",
       "portal": "The Tech Review",
-      "heading": "Tell us what's wrong.<br /><span class=\"text-surface-variant\">We'll find what's hiding.</span>",
+      "heading": "Tell us what's wrong. We'll find what's hiding.",
       "description2": "Describe what's bothering you in your own words. Record a quick voice note for the messy details, or use the form. Whichever feels easiest. It's a free 15-minute Tech Review, not an exam.",
       "audioSubmission": "Record a Voice Note",
       "additionalContext": "Anything Else? ",
