@@ -6,6 +6,8 @@ import { sanitizeHtml } from "../scripts/sanitize";
 const locale = Astro.url.pathname.split("/")[1] === "en" ? "en" : "es";
 const data = getLocaleData(locale);
 
+const mailtoHref = `mailto:${data.pages.consulting.consultingEmail}?subject=${encodeURIComponent(data.pages.consulting.consultingSubject)}&body=${encodeURIComponent(data.pages.consulting.consultingBody)}`;
+
 const includedLabel = data.pages.services.included;
 const idealForLabel = data.pages.services.idealFor;
 const techLabel = data.pages.services.technologies;
@@ -293,8 +295,7 @@ const services = serviceKeys.map((key) => data.services[key]);
                 d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"></path></svg
             >
             <p class="text-on-surface-variant text-sm">
-              <a
-                href={`mailto:${data.pages.consulting.consultingEmail}`}
+              <a href={mailtoHref}
               >{data.pages.consulting.consultingEmail}</a>
             </p>
           </div>

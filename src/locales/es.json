@@ -379,6 +379,8 @@
       "monFriHours": "Lun - Vie: 9:00 AM - 6:00 PM",
       "satHours": "Sábado: Por cita",
       "consultingEmail": "crow.systemsmx@gmail.com",
+      "consultingSubject": "Solicitud de Tech Review",
+      "consultingBody": "Hola, me gustaría agendar el Tech Review gratuito. Mi nombre es [nombre], mi empresa es [empresa], y me gustaría hablar sobre [describe brevemente tu situación].",
       "securityTitle": "Tu información está segura",
       "securityDesc": "Todo lo que envías va cifrado y bajo llave, audios incluidos. Tus ideas son tuyas. Firmamos un NDA de una página antes de la revisión si lo prefieres.",
       "marcusThorne": "Christian Camacho",
