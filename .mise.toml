@@ -2,3 +2,6 @@
 run = """. ./.env.prod && docker build \
   --build-arg PUBLIC_UMAMI_HOST="$PUBLIC_UMAMI_HOST" \
   ."""
+
+[tasks.deploy]
+run = "mise run build && docker compose up -d --build"
