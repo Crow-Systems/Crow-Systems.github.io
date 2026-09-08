@@ -649,7 +649,8 @@ function ConsultingFormInner({ locale }: Props) {
 
       <button
         type="submit"
-        onClick={() => window.umami?.track("consulting-form-submit", { mode })}
+        data-umami-event="consulting-form-submit"
+        data-umami-event-mode={mode}
         disabled={submitting}
         className="w-full md:w-auto md:px-12 bg-primary text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all hover:bg-primary/90 shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed md:mx-auto"
       >

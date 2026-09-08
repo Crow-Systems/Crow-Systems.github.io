@@ -308,6 +308,7 @@ const services = serviceKeys.map((key) => data.services[key]);
             >
             <p class="text-on-surface-variant text-sm">
               <a href={mailtoHref}
+              data-umami-event="services-office-email"
               >{data.pages.consulting.consultingEmail}</a>
             </p>
           </div>
@@ -403,14 +404,6 @@ const services = serviceKeys.map((key) => data.services[key]);
   pills.forEach((pill) => {
     const tip = pill.querySelector(".pill-term-pointer");
     if (!tip) return;
-    const toggle = () => {
-      const isOpen = pill.classList.toggle("term-open");
-      if (isOpen) {
-        closeTerms(pill);
-        tip.classList.remove("hidden");
-        tip.classList.add("inline-block");
-      }
-    };
     pill.addEventListener("click", (e) => {
       e.stopPropagation();
       const willOpen = !pill.classList.contains("term-open");
@@ -419,6 +412,7 @@ const services = serviceKeys.map((key) => data.services[key]);
         pill.classList.add("term-open");
         tip.classList.remove("hidden");
         tip.classList.add("inline-block");
+        window.umami?.track("service-tech-pill", { term: pill.dataset.pillTerm });
       }
     });
   });

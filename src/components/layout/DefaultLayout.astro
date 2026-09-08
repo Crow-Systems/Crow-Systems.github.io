@@ -165,6 +165,7 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
                 <button
                   type="button"
                   data-services-toggle
+                  data-umami-event="nav-services-toggle"
                   aria-expanded="false"
                   aria-controls="services-submenu"
                   aria-label={`${data.nav.services} (${data.nav.allServices})`}
@@ -203,7 +204,7 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
                         <a
                           href={`${data.routes.services}#${(data.anchors as Record<string, string>)["service-" + key]}`}
                           data-services-link
-                          data-umami-event="nav-services-item"
+                          data-umami-event="nav-service-item"
                           data-umami-event-key={key}
                           class="block px-3 py-2 rounded-lg text-sm text-on-surface-variant hover:text-primary hover:bg-primary/10 transition-colors"
                           >{s.shortTitle}</a
@@ -264,6 +265,7 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
               <button
                 type="button"
                 data-mobile-services-toggle
+                data-umami-event="mobile-nav-services-toggle"
                 aria-expanded="false"
                 aria-controls="mobile-services-submenu"
                 aria-label={`${data.nav.services} (${data.nav.allServices})`}
@@ -492,6 +494,7 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
                 type="button"
                 data-whatsapp-suggestion={s.message}
                 data-whatsapp-label={s.label}
+                data-umami-event="whatsapp-suggestion"
                 aria-pressed="false"
                 class="flex items-center gap-1.5 text-xs p-2 rounded-full border border-outline-variant/40 bg-surface-container-low hover:bg-primary/10 hover:text-primary transition-colors"
               >
@@ -529,6 +532,7 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
           href={`https://wa.me/526645492359?text=${encodeURIComponent(data.common.whatsappMessage)}`}
           target="_blank"
           rel="noopener noreferrer"
+          data-umami-event="whatsapp-send"
           class="w-full block text-center bg-[#25D366] text-white font-bold rounded-lg py-2 text-sm hover:bg-[#1fb958] transition-colors mt-3"
         >
           {data.common.whatsappSend}
@@ -541,6 +545,7 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
         aria-expanded="false"
         aria-haspopup="dialog"
         aria-controls="whatsapp-card"
+        data-umami-event="whatsapp-fab"
         class="relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg hover:scale-110 active:scale-95 transition-transform"
         ><span
           id="whatsapp-badge"
