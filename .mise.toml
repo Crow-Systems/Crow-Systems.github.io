@@ -1,5 +1,5 @@
 [tasks.build]
-run = """. ./.env.prod && docker build \
+run = """set -a && . ./.env.prod && set +a && docker build \
   --build-arg SITE_URL="$SITE_URL" \
   --build-arg PUBLIC_UMAMI_HOST="$PUBLIC_UMAMI_HOST" \
   --build-arg UMAMI_WEBSITE_ID="$UMAMI_WEBSITE_ID" \
@@ -7,4 +7,4 @@ run = """. ./.env.prod && docker build \
   ."""
 
 [tasks.deploy]
-run = """. ./.env.prod && docker compose up -d --build"""
+run = """set -a && source ./.env.prod && set +a && docker compose up -d --build"""
