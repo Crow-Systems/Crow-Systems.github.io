@@ -17,7 +17,7 @@ interface ImportMetaEnv {
   readonly PUBLIC_AUDIO_UPLOAD_ENDPOINT: string;
   readonly UMAMI_WEBSITE_ID?: string;
   readonly UMAMI_RECORDER_WEBSITE_ID?: string;
-  readonly PUBLIC_UMAMI_URL?: string;
+  readonly PUBLIC_UMAMI_HOST?: string;
 }
 
 interface ImportMeta {
