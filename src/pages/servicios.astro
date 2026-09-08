@@ -71,7 +71,7 @@ const services = serviceKeys.map((key) => data.services[key]);
       {
         services.map((service, si) => (
           <div
-            id={`service-${serviceKeys[si]}`}
+            id={(data.anchors as Record<string, string>)["service-" + serviceKeys[si]]}
             class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm hover:border-primary/50 transition-all duration-300 hover:shadow-md scroll-mt-28"
             aria-label={service.title}
           >

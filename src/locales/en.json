@@ -9,6 +9,15 @@
     "terms": "/en/terms",
     "flyer": "/en/flyer"
   },
+  "anchors": {
+    "team": "team",
+    "service-systemsConsulting": "connect-your-systems",
+    "service-itInfrastructure": "systems-always-online",
+    "service-softwareSolutions": "custom-software",
+    "service-technicalStrategy": "clear-tech-decisions",
+    "service-digitalTransformation": "modernization",
+    "service-automationConsulting": "automation"
+  },
   "common": {
     "changeLanguage": "Change Language",
     "selectLanguage": "Select Language",
@@ -186,7 +195,6 @@
       "description1": "Crow Systems started out of frustration. We kept watching good businesses overpay for consultants and software that totters and needs constant attention. One of us keeps your systems running: connections, security, and backups. The other builds the tools and records your business runs on. Together that's everything a growing business needs: no account managers, no handoffs, just the two people who actually do the work.",
       "description2": "We work directly with business owners who want real expertise without the big-firm price tag and handoffs. When you call, you get an owner on the line, someone who treats your systems like their own.",
       "meetTheTeam": "Meet the team",
-      "teamAnchorId": "team",
       "meetTheTeamIntro": "Crow Systems is just two people: the owners. Meet them and you'll know exactly who's looking after your business.",
       "founders": [
         {

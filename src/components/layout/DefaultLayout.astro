@@ -201,7 +201,7 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
                       if (!s) return null;
                       return (
                         <a
-                          href={`${data.routes.services}#service-${key}`}
+                          href={`${data.routes.services}#${(data.anchors as Record<string, string>)["service-" + key]}`}
                           data-services-link
                           data-umami-event="nav-services-item"
                           data-umami-event-key={key}
@@ -299,7 +299,7 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
                   if (!s) return null;
                   return (
                     <a
-                      href={`${data.routes.services}#service-${key}`}
+                      href={`${data.routes.services}#${(data.anchors as Record<string, string>)["service-" + key]}`}
                       data-mobile-services-link
                       data-umami-event="mobile-nav-service-item"
                       data-umami-event-key={key}

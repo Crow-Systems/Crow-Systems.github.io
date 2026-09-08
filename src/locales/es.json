@@ -9,6 +9,15 @@
     "terms": "/terminos",
     "flyer": "/folleto"
   },
+  "anchors": {
+    "team": "equipo",
+    "service-systemsConsulting": "conectar-tus-sistemas",
+    "service-itInfrastructure": "sistemas-en-linea",
+    "service-softwareSolutions": "software-a-tu-medida",
+    "service-technicalStrategy": "decisiones-claras",
+    "service-digitalTransformation": "modernizacion",
+    "service-automationConsulting": "automatizacion"
+  },
   "common": {
     "changeLanguage": "Cambiar idioma",
     "selectLanguage": "Seleccionar idioma",
@@ -186,7 +195,6 @@
       "description1": "Crow Systems nació de la frustración. Veíamos negocios buenos pagar de más por consultores y software que se tambalea y necesita atención constante. Uno de nosotros mantiene tus sistemas funcionando: conexiones, seguridad y respaldos. El otro construye las herramientas y los registros sobre los que corre tu negocio. Juntos, eso es todo lo que un negocio en crecimiento necesita: sin gerentes de cuenta, sin traspasos, solo las dos personas que realmente hacen el trabajo.",
       "description2": "Trabajamos directo con dueños de negocio que quieren experiencia real, sin el costo ni las vueltas de una gran firma. Cuando llamas, hablas con un dueño, alguien que cuida tus sistemas como si fueran suyos.",
       "meetTheTeam": "Conoce al equipo",
-      "teamAnchorId": "equipo",
       "meetTheTeamIntro": "Crow Systems son solo dos personas: los dueños. Conócelos y sabrás exactamente quién cuida tu negocio.",
       "founders": [
         {
