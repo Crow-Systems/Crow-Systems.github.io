@@ -1,0 +1,4 @@
+[tasks.build]
+run = """. ./.env.prod && docker build \
+  --build-arg PUBLIC_UMAMI_HOST="$PUBLIC_UMAMI_HOST" \
+  ."""

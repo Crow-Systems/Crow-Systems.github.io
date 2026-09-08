@@ -1,4 +1,5 @@
 FROM oven/bun:1 AS build
+ARG PUBLIC_UMAMI_HOST
 WORKDIR /app
 COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile
