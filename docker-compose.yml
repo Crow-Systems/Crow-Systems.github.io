@@ -1,7 +1,13 @@
 name: crowsystems
 services:
   app:
-    build: .
+    build:
+      context: .
+      args:
+        SITE_URL: ${SITE_URL:-}
+        PUBLIC_UMAMI_HOST: ${PUBLIC_UMAMI_HOST:-}
+        UMAMI_WEBSITE_ID: ${UMAMI_WEBSITE_ID:-}
+        UMAMI_RECORDER_WEBSITE_ID: ${UMAMI_RECORDER_WEBSITE_ID:-}
     restart: unless-stopped
     expose:
       - 80
