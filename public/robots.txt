@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
-Sitemap: https://crow-systems.github.io/sitemap-index.xml
+Sitemap: https://crowsystems.com.mx/sitemap.xml

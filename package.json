@@ -7,7 +7,7 @@
     "dev": "astro dev",
     "dev:clean": "bun run clean:cache && astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro check && astro build && node scripts/sitemap-flatten.mjs",
     "preview": "astro preview",
     "measure": "astro build && node scripts/measure-performance.mjs",
     "clean:cache": "rm -rf .astro node_modules/.vite",
