@@ -7,4 +7,4 @@ run = """set -a && . ./.env.prod && set +a && docker build \
   ."""
 
 [tasks.deploy]
-run = """set -a && source ./.env.prod && set +a && docker compose up -d --build"""
+run = """set -a && . ./.env.prod && set +a && docker compose up -d --build"""
