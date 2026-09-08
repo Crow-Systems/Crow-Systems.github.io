@@ -46,6 +46,7 @@
   },
   "nav": {
     "services": "Servicios",
+    "allServices": "Ver todos los servicios",
     "about": "Nosotros",
     "consulting": "Consultoría",
     "contact": "Contacto",
@@ -108,7 +109,7 @@
       "hero": {
         "subtitle": "Qué obtienes",
         "title": "Mantenemos tu tecnología en forma,<br />para que tu negocio funcione bien",
-        "description": "No vendemos artilugios ni promesas vacías. Encontramos los puntos débiles de tus sistemas y arreglamos lo que importa: para que los clientes te encuentren, confíen en ti y tus días fluyan mejor. Ingenieros de verdad, palabras sencillas, sin ataduras."
+        "description": "No vendemos artilugios ni promesas vacías. Encontramos los puntos débiles de tus sistemas y arreglamos lo que importa: para que los clientes te encuentren, confíen en ti y trabajes sin fricción. Ingenieros de verdad, palabras sencillas, sin ataduras."
       },
       "process": {
         "title": "Cómo lo logramos",
@@ -149,11 +150,11 @@
           },
           {
             "question": "¿Y si no sé nada de tecnología?",
-            "answer": "Perfecto. Ese es nuestro trabajo. No estás aquí para aprender a usar un taladro; estás aquí para colgar el cuadro. Nosotros llevamos la pared ya perforada, con los taquetes puestos. Cuéntanos qué necesita tu negocio y lo hacemos realidad en palabras sencillas."
+            "answer": "Perfecto. Ese es nuestro trabajo. No necesitas saber de tecnología: nosotros nos encargamos de la parte técnica y te lo explicamos en palabras sencillas. Cuéntanos qué necesita tu negocio y lo hacemos realidad."
           },
           {
             "question": "¿Quién hace el trabajo real?",
-            "answer": "Los dos dueños. Sin gerentes de cuenta, sin traspasos: la persona que toma tu llamada es la misma que construye y arregla. Siempre sabes quién cuida tu casa."
+            "answer": "Los dos dueños. Sin gerentes de cuenta, sin traspasos: la persona que toma tu llamada es la misma que construye y arregla. Siempre sabes quién se encarga de tu tecnología."
           },
           {
             "question": "¿Qué pasa después del primer contacto?",
@@ -165,11 +166,11 @@
           },
           {
             "question": "¿Puedo cancelar en cualquier momento?",
-            "answer": "Sí. Sin contratos que atrapen. Cada fase tiene un alcance y un precio claros, y tú decides si quieres continuar con la siguiente."
+            "answer": "Sí. Sin cláusulas de permanencia ni compromisos ocultos: cada fase tiene un alcance y un precio claros, y tú decides si quieres continuar con la siguiente."
           },
           {
             "question": "¿Hay soporte después de que se entregue el proyecto?",
-            "answer": "Sí. Nos quedamos contigo el tiempo que quieras, con soporte y mantenimiento que se ajustan a tu forma de trabajar. No te entregamos las llaves y desaparecemos."
+            "answer": "Sí. Nos quedamos contigo el tiempo que quieras, con soporte y mantenimiento que se ajustan a tu forma de trabajar. No terminamos el proyecto y desaparecemos."
           }
         ]
       },
@@ -181,7 +182,7 @@
       "title": "Nosotros - CROW SYSTEMS",
       "description": "Dos ingenieros dueños de la empresa, manteniendo tu tecnología en forma para que tu negocio crezca, en México, Estados Unidos y Canadá.",
       "whoWeAre": "Quiénes Somos",
-      "heading": "Dos dueños que hacen el trabajo,<br />sin intermediarios",
+      "heading": "Dos dueños que hacen el trabajo, sin intermediarios",
       "description1": "Crow Systems nació de la frustración. Veíamos negocios buenos pagar de más por consultores y software que se tambalea y necesita atención constante. Uno de nosotros mantiene tus sistemas funcionando: conexiones, seguridad y respaldos. El otro construye las herramientas y los registros sobre los que corre tu negocio. Juntos, eso es todo lo que un negocio en crecimiento necesita: sin gerentes de cuenta, sin traspasos, solo las dos personas que realmente hacen el trabajo.",
       "description2": "Trabajamos directo con dueños de negocio que quieren experiencia real, sin el costo ni las vueltas de una gran firma. Cuando llamas, hablas con un dueño, alguien que cuida tus sistemas como si fueran suyos.",
       "meetTheTeam": "Conoce al equipo",
@@ -248,7 +249,7 @@
     "contact": {
       "title": "Contacto - CROW SYSTEMS",
       "description": "¿Algo de tu negocio no está bien? Cuéntanoslo con tus propias palabras. Un ingeniero de verdad responde en una hora hábil.",
-      "getInTouch": "Contáctenos",
+      "getInTouch": "Lo leemos",
       "heading": "Contáctenos",
       "description2": "¿No sabes qué está mal? Es normal. Cuéntanos qué te molesta y te ayudamos a ponerle nombre.",
       "startConversation": "Conversemos",
@@ -591,6 +592,7 @@
   "services": {
     "systemsConsulting": {
       "title": "Hacer que tus herramientas hablen entre sí",
+      "shortTitle": "Conectar tus sistemas",
       "description": "Tu equipo deja de perder tiempo entre herramientas que no se hablan entre sí.",
       "fullDescription": "Tu negocio seguramente corre con piezas que no se comunican entre sí: el sistema de pedidos, el software de contabilidad, el inventario en una hoja de cálculo. Ahí es donde se van las horas y el dinero. Conectamos esas piezas, eliminamos la captura manual y automatizamos lo repetitivo. El resultado: menos errores, reportes claros y un equipo que atiende clientes en lugar de mantener hojas de cálculo.",
       "features": [
@@ -602,16 +604,32 @@
       ],
       "idealFor": "Negocios donde el personal captura los mismos datos en varias herramientas, los equipos duplican el trabajo o los reportes dependen de unir hojas de cálculo.",
       "technologies": [
-        "Integración API",
-        "Integración de Sistemas",
-        "Migración a la Nube",
-        "Reportes y Datos",
-        "Automatización de Procesos"
+        {
+          "label": "Sistemas que se comunican entre sí",
+          "term": "Integración de sistemas y APIs"
+        },
+        {
+          "label": "Tareas que se hacen solas",
+          "term": "Automatización de Procesos"
+        },
+        {
+          "label": "Sin captura manual de datos",
+          "term": "Integración de Datos"
+        },
+        {
+          "label": "En la nube, no en tu oficina",
+          "term": "Migración a la Nube"
+        },
+        {
+          "label": "Reportes confiables",
+          "term": "Reportes y Analítica de Datos"
+        }
       ],
       "cta": "Quiero que mi equipo trabaje mejor"
     },
     "itInfrastructure": {
       "title": "Mantener tu negocio en línea",
+      "shortTitle": "Sistemas en línea",
       "description": "Tu negocio permanece abierto, entre tormentas, oleadas y sorpresas de las 3 de la mañana.",
       "fullDescription": "Tu negocio depende de servidores, redes, almacenamiento y seguridad que la mayoría solo nota cuando dejan de funcionar. Una oleada de clientes, un recibo olvidado o una caída en tu región pueden dejarte sin servicio en el peor momento. Diseñamos y mantenemos todo el conjunto: monitoreo, copias de respaldo automáticas, recuperación rápida y seguridad que protege tus datos. Si algo falla, lo detectamos temprano y lo resolvemos antes de que tus clientes lo noten.",
       "features": [
@@ -623,15 +641,28 @@
       ],
       "idealFor": "Negocios que no pueden darse el lujo de dejar de operar ni una tarde, que manejan datos sensibles o que están creciendo y necesitan capacidad confiable.",
       "technologies": [
-        "AWS",
-        "Azure",
-        "Google Cloud",
-        "Administración de Linux"
+        {
+          "label": "Siempre en línea",
+          "term": "Servidores AWS, Azure o Google Cloud"
+        },
+        {
+          "label": "Resguardado de caídas",
+          "term": "Respaldos y Recuperación (Backup y DR)"
+        },
+        {
+          "label": "Protegido contra ataques",
+          "term": "Ciberseguridad y Monitoreo"
+        },
+        {
+          "label": "Servidores confiables",
+          "term": "Administración de Linux"
+        }
       ],
       "cta": "No quiero cerrar ni un solo día"
     },
     "softwareSolutions": {
       "title": "Software a tu medida",
+      "shortTitle": "Software a tu medida",
       "description": "Herramientas a la medida de tu negocio, no al revés.",
       "fullDescription": "El software genérico rara vez se ajusta a cómo funciona tu negocio. Construimos aplicaciones web y herramientas internas a la medida de tus procesos: portales para clientes, tableros, sistemas internos e integraciones. Usamos tecnología moderna y comprobada para que el resultado sea confiable, seguro y fácil de usar para tu equipo y tus clientes.",
       "features": [
@@ -643,16 +674,28 @@
       ],
       "idealFor": "Negocios con procesos únicos que el software de paquete no cubre, o que necesitan reemplazar sistemas viejos y frágiles.",
       "technologies": [
-        "TypeScript",
-        "React",
-        "Node.js",
-        "PostgreSQL",
-        "Python"
+        {
+          "label": "Aplicaciones web a tu medida",
+          "term": "TypeScript y React"
+        },
+        {
+          "label": "Portales para tus clientes",
+          "term": "Aplicaciones web con Node.js"
+        },
+        {
+          "label": "Datos bien guardados",
+          "term": "Base de datos PostgreSQL"
+        },
+        {
+          "label": "Procesos potentes detrás",
+          "term": "Python"
+        }
       ],
       "cta": "Quiero una herramienta que funcione para mí"
     },
     "technicalStrategy": {
       "title": "Decisiones claras, sin arrepentimientos",
+      "shortTitle": "Decisiones claras",
       "description": "Decide sobre tecnología con los ojos abiertos, no con un volado.",
       "fullDescription": "Cada decisión de tecnología tiene consecuencias a largo plazo, y la mayoría de los dueños las toman sin tener toda la información. Te ayudamos a comparar construir vs. comprar, estimar el costo real a lo largo del tiempo y evitar herramientas que te dejen atrapado. El resultado es un plan práctico: qué adoptar, qué retirar y en qué conviene invertir. Recomendaciones directas basadas en experiencia real de ingeniería, no en modas ni discursos de venta.",
       "features": [
@@ -664,16 +707,32 @@
       ],
       "idealFor": "Dueños y líderes que toman decisiones de tecnología sin un equipo técnico completo en la empresa.",
       "technologies": [
-        "Hoja de Ruta Tecnológica",
-        "Evaluación de Herramientas",
-        "Análisis Construir vs. Comprar",
-        "Costo Total de Propiedad",
-        "Arquitectura de Datos"
+        {
+          "label": "Un plan claro para tu tecnología",
+          "term": "Hoja de Ruta Tecnológica"
+        },
+        {
+          "label": "Elegir bien entre opciones",
+          "term": "Evaluación de Herramientas"
+        },
+        {
+          "label": "Construir o comprar, sin arriesgar",
+          "term": "Análisis Construir vs. Comprar"
+        },
+        {
+          "label": "Saber cuánto cuesta de verdad",
+          "term": "Costo Total de Propiedad"
+        },
+        {
+          "label": "Datos organizados y accesibles",
+          "term": "Arquitectura de Datos"
+        }
       ],
       "cta": "Quiero dejar de adivinar en tecnología"
     },
     "digitalTransformation": {
       "title": "Modernizar lo que importa",
+      "shortTitle": "Modernización",
       "description": "Moderniza lo que importa y toma decisiones con números reales.",
       "fullDescription": "Modernizar no tiene que significar reemplazar todo de golpe. Modernizamos los sistemas que más importan y consolidamos tus datos en una sola fuente confiable, para que tus informes reflejen la realidad y las decisiones se tomen en horas, no en semanas. Trabajamos por fases, con riesgo bajo y sin detener tu operación.",
       "features": [
@@ -685,16 +744,28 @@
       ],
       "idealFor": "Negocios establecidos con sistemas envejecidos que quieren modernizar y consolidar sus datos sin detener la operación.",
       "technologies": [
-        "Almacén de Datos",
-        "dbt",
-        "Looker",
-        "Apache Airflow",
-        "Snowflake"
+        {
+          "label": "Tus datos en un solo lugar",
+          "term": "Almacén de Datos"
+        },
+        {
+          "label": "Informes que se generan solos",
+          "term": "Looker y dbt"
+        },
+        {
+          "label": "Datos que fluyen al día",
+          "term": "Apache Airflow"
+        },
+        {
+          "label": "Cómputo y almacenamiento en la nube",
+          "term": "Snowflake"
+        }
       ],
       "cta": "Quiero decidir con números reales"
     },
     "automationConsulting": {
       "title": "El trabajo repetitivo en piloto automático",
+      "shortTitle": "Automatización",
       "description": "Pon el trabajo repetitivo en piloto automático, para que tu equipo piense, no copie.",
       "fullDescription": "Muchos equipos pierden horas cada semana en trabajo repetitivo: captura de datos, procesamiento de archivos, informes y traslados manuales entre herramientas. Identificamos qué tareas vale la pena automatizar y construimos flujos automáticos confiables con herramientas comprobadas. Tu equipo se libera de la rutina y se enfoca en los clientes y decisiones que de verdad mueven el negocio.",
       "features": [
@@ -706,11 +777,18 @@
       ],
       "idealFor": "Equipos que dedican demasiadas horas a tareas repetitivas, o negocios que quieren crecer sin contratar más personal en la misma proporción.",
       "technologies": [
-        "GitHub Actions",
-        "Terraform",
-        "Ansible",
-        "Scripting en Python",
-        "Jenkins"
+        {
+          "label": "Tareas que se automatizan",
+          "term": "Scripting en Python"
+        },
+        {
+          "label": "Actualizaciones sin fricción",
+          "term": "GitHub Actions y Jenkins"
+        },
+        {
+          "label": "Infraestructura que se mantiene sola",
+          "term": "Terraform y Ansible"
+        }
       ],
       "cta": "Quiero recuperar el tiempo de mi equipo"
     }

@@ -46,6 +46,7 @@
   },
   "nav": {
     "services": "Services",
+    "allServices": "All services",
     "about": "About",
     "consulting": "Consulting",
     "contact": "Contact",
@@ -108,7 +109,7 @@
       "hero": {
         "subtitle": "What you get",
         "title": "We keep your tech in shape, so your business runs right",
-        "description": "We don't sell gadgets or make promises we can't keep. We find the weak spots in your systems and fix what matters: so customers find you, trust you, and your days run smoother. Real engineers, plain words, no lock-in."
+        "description": "We don't sell gadgets or make promises we can't keep. We find the weak spots in your systems and fix what matters: so customers find you, trust you, and your work runs more smoothly. Real engineers, plain words, no lock-in."
       },
       "process": {
         "title": "How we get there",
@@ -149,11 +150,11 @@
           },
           {
             "question": "What if I don't know anything about technology?",
-            "answer": "Perfect. That's our job. You're not here to learn how to use a drill; you're here to hang the picture. We bring the pre-drilled wall with the anchors already in. Tell us what your business needs; we make it happen in plain words."
+            "answer": "Perfect. That's our job. You don't need to understand technology: we handle the technical side and explain it in plain words. Tell us what your business needs; we make it happen."
           },
           {
             "question": "Who actually does the work?",
-            "answer": "The two owners. No account managers, no handoffs: the person who takes your call is the person who builds and fixes. You always know who's looking after your house."
+            "answer": "The two owners. No account managers, no handoffs: the person who takes your call is the person who builds and fixes. You always know who's in charge of your technology."
           },
           {
             "question": "What happens after the first contact?",
@@ -165,11 +166,11 @@
           },
           {
             "question": "Can I cancel at any time?",
-            "answer": "Yes. No trapping contracts. Each phase has a clear scope and a clear price, and you decide whether to continue with the next one."
+            "answer": "Yes. No retention clauses or hidden commitments: each phase has a clear scope and a clear price, and you decide whether to continue with the next one."
           },
           {
             "question": "Is there support after project delivery?",
-            "answer": "Yes. We stay on as long as you want us, with support and maintenance that fit how you work. We don't hand you the keys and disappear."
+            "answer": "Yes. We stay on as long as you want us, with support and maintenance that fit how you work. We don't finish the project and disappear."
           }
         ]
       },
@@ -181,7 +182,7 @@
       "title": "About - CROW SYSTEMS",
       "description": "Two engineers who own the company, keeping your technology in shape so your business can grow, in Mexico, the United States, and Canada.",
       "whoWeAre": "Who We Are",
-      "heading": "Two owners who do the work,<br />with no middlemen",
+      "heading": "Two owners who do the work, with no middlemen",
       "description1": "Crow Systems started out of frustration. We kept watching good businesses overpay for consultants and software that totters and needs constant attention. One of us keeps your systems running: connections, security, and backups. The other builds the tools and records your business runs on. Together that's everything a growing business needs: no account managers, no handoffs, just the two people who actually do the work.",
       "description2": "We work directly with business owners who want real expertise without the big-firm price tag and handoffs. When you call, you get an owner on the line, someone who treats your systems like their own.",
       "meetTheTeam": "Meet the team",
@@ -591,6 +592,7 @@
   "services": {
     "systemsConsulting": {
       "title": "Making Your Tools Talk to Each Other",
+      "shortTitle": "Connect Your Systems",
       "description": "Your team stops losing time between tools that don't talk to each other.",
       "fullDescription": "Your business likely runs on pieces that don't talk to each other: the ordering system, the accounting software, the inventory sheet. That's where hours and money quietly disappear. We connect those pieces, remove the manual copying, and automate the repetitive parts. You end up with fewer errors, clearer reporting, and a team that spends its time serving customers instead of maintaining spreadsheets.",
       "features": [
@@ -602,16 +604,32 @@
       ],
       "idealFor": "Businesses where staff re-enter the same data across several tools, teams duplicate each other's work, or reporting depends on stitching spreadsheets together.",
       "technologies": [
-        "API Integration",
-        "System Integration",
-        "Cloud Migration",
-        "Data & Reporting",
-        "Workflow Automation"
+        {
+          "label": "Systems that talk to each other",
+          "term": "System integration and APIs"
+        },
+        {
+          "label": "Tasks that run themselves",
+          "term": "Process Automation"
+        },
+        {
+          "label": "No manual data entry",
+          "term": "Data Integration"
+        },
+        {
+          "label": "In the cloud, not in your office",
+          "term": "Cloud Migration"
+        },
+        {
+          "label": "Reports you can trust",
+          "term": "Data Reporting & Analytics"
+        }
       ],
       "cta": "I want my team to work better"
     },
     "itInfrastructure": {
       "title": "Keeping Your Business Online",
+      "shortTitle": "Systems Always Online",
       "description": "Your business stays open through storms, surges, and 3am surprises.",
       "fullDescription": "Your business depends on servers, networks, storage, and security that most people only notice when they stop working. A surge of customers, a forgotten renewal, or an outage in your region can take you offline at the worst moment. We design and maintain the whole setup: monitoring, automated backups, fast recovery, and security that protects your data. If something does break, we detect it early and fix it before your customers ever notice.",
       "features": [
@@ -623,15 +641,28 @@
       ],
       "idealFor": "Businesses that can't afford downtime even for an afternoon, handle sensitive data, or are growing and need reliable capacity.",
       "technologies": [
-        "AWS",
-        "Azure",
-        "Google Cloud",
-        "Linux Administration"
+        {
+          "label": "Always online",
+          "term": "AWS, Azure, or Google Cloud servers"
+        },
+        {
+          "label": "Protected from outages",
+          "term": "Backup and Disaster Recovery"
+        },
+        {
+          "label": "Protected from attacks",
+          "term": "Cybersecurity and Monitoring"
+        },
+        {
+          "label": "Reliable servers",
+          "term": "Linux Administration"
+        }
       ],
       "cta": "I never want to turn a customer away"
     },
     "softwareSolutions": {
       "title": "Software That Fits You",
+      "shortTitle": "Custom Software",
       "description": "Tools that fit your business, not the other way around.",
       "fullDescription": "Off-the-shelf software rarely fits the way your business actually works. We build custom web applications and internal tools that match your exact processes: customer portals, dashboards, internal systems, and integrations. We rely on proven, modern technology, so the result is dependable, secure, and easy for both your team and your customers to use.",
       "features": [
@@ -643,16 +674,28 @@
       ],
       "idealFor": "Businesses with unique processes that off-the-shelf tools can't cover, or that need to replace fragile legacy software.",
       "technologies": [
-        "TypeScript",
-        "React",
-        "Node.js",
-        "PostgreSQL",
-        "Python"
+        {
+          "label": "Custom web applications",
+          "term": "TypeScript and React"
+        },
+        {
+          "label": "Portals for your customers",
+          "term": "Web applications with Node.js"
+        },
+        {
+          "label": "Data kept safe",
+          "term": "PostgreSQL database"
+        },
+        {
+          "label": "Powerful processes behind the scenes",
+          "term": "Python"
+        }
       ],
       "cta": "I want a tool that works for me"
     },
     "technicalStrategy": {
       "title": "Clear Tech Decisions, No Regrets",
+      "shortTitle": "Clear Tech Decisions",
       "description": "Decide on technology with your eyes open, not a coin flip.",
       "fullDescription": "Every technology decision has long-term consequences, and most owners make them without all the information. We help you weigh build vs. buy, estimate real costs over time, and avoid tools that box you in. The result is a practical roadmap: what to adopt, what to retire, and where to invest next. Straight recommendations based on engineering experience, not trends or sales pitches.",
       "features": [
@@ -664,16 +707,32 @@
       ],
       "idealFor": "Owners and leaders who make technology decisions without a full in-house technical team.",
       "technologies": [
-        "Technology Roadmaps",
-        "Vendor & Tool Evaluation",
-        "Build vs. Buy Analysis",
-        "Total Cost of Ownership",
-        "Data Architecture"
+        {
+          "label": "A clear plan for your technology",
+          "term": "Technology Roadmap"
+        },
+        {
+          "label": "Choosing well between options",
+          "term": "Tool Evaluation"
+        },
+        {
+          "label": "Build or buy, without the risk",
+          "term": "Build vs. Buy Analysis"
+        },
+        {
+          "label": "Knowing what it really costs",
+          "term": "Total Cost of Ownership"
+        },
+        {
+          "label": "Data organized and accessible",
+          "term": "Data Architecture"
+        }
       ],
       "cta": "I want to stop guessing on tech"
     },
     "digitalTransformation": {
       "title": "Modernizing What Matters",
+      "shortTitle": "Modernization",
       "description": "Modernize what matters and make decisions based on real numbers.",
       "fullDescription": "Modernizing doesn't have to mean replacing everything at once. We modernize the systems that matter most and consolidate your data into a single reliable source, so your reports reflect reality and decisions happen in hours instead of weeks. We work in phases, keep risk low, and keep your operations running throughout.",
       "features": [
@@ -685,16 +744,28 @@
       ],
       "idealFor": "Established businesses with aging systems that want to modernize and consolidate data without disrupting operations.",
       "technologies": [
-        "Data Warehousing",
-        "dbt",
-        "Looker",
-        "Apache Airflow",
-        "Snowflake"
+        {
+          "label": "All your data in one place",
+          "term": "Data Warehousing"
+        },
+        {
+          "label": "Reports that build themselves",
+          "term": "Looker and dbt"
+        },
+        {
+          "label": "Data that stays current",
+          "term": "Apache Airflow"
+        },
+        {
+          "label": "Cloud compute and storage",
+          "term": "Snowflake"
+        }
       ],
       "cta": "I want decisions from real numbers"
     },
     "automationConsulting": {
       "title": "Repetitive Work on Autopilot",
+      "shortTitle": "Automation",
       "description": "Put the repetitive work on autopilot, so your team thinks, not copies.",
       "fullDescription": "Many teams lose hours every week to repetitive work: data entry, file processing, reporting, and manual handoffs between tools. We identify the tasks worth automating and build reliable automated workflows with proven tooling. Your team gets freed from busywork and focuses on the customers and decisions that actually move the business.",
       "features": [
@@ -706,11 +777,18 @@
       ],
       "idealFor": "Teams spending excessive hours on repetitive tasks, or businesses that want to grow without hiring proportionally more staff.",
       "technologies": [
-        "GitHub Actions",
-        "Terraform",
-        "Ansible",
-        "Python Scripting",
-        "Jenkins"
+        {
+          "label": "Tasks that automate themselves",
+          "term": "Python scripting"
+        },
+        {
+          "label": "Updates without friction",
+          "term": "GitHub Actions and Jenkins"
+        },
+        {
+          "label": "Infrastructure that maintains itself",
+          "term": "Terraform and Ansible"
+        }
       ],
       "cta": "I want my team's time back"
     }

@@ -32,7 +32,7 @@ const services = serviceKeys.map((key) => data.services[key]);
   locale={locale}
 >
   <section
-    class="pt-32 pb-20 px-6 max-w-7xl mx-auto"
+    class="pb-20 px-6 max-w-7xl mx-auto"
     aria-labelledby="services-hero-heading"
   >
     <div class="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
@@ -69,9 +69,10 @@ const services = serviceKeys.map((key) => data.services[key]);
     <h2 id="services-heading" class="sr-only">Our Services</h2>
     <div id="services-grid" class="grid grid-cols-1 gap-8">
       {
-        services.map((service) => (
+        services.map((service, si) => (
           <div
-            class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm hover:border-primary/50 transition-all duration-300 hover:shadow-md"
+            id={`service-${serviceKeys[si]}`}
+            class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm hover:border-primary/50 transition-all duration-300 hover:shadow-md scroll-mt-28"
             aria-label={service.title}
           >
             <div class="p-8 flex flex-col">
@@ -120,10 +121,21 @@ const services = serviceKeys.map((key) => data.services[key]);
                     {techLabel}
                   </h4>
                   <div class="flex flex-wrap gap-2 mt-1">
-                    {service.technologies.map((t: string) => (
-                      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-accent/10 text-accent border border-accent/20">
-                        {t}
-                      </span>
+                    {service.technologies.map((t: { label: string; term: string }) => (
+                      <button
+                        type="button"
+                        data-pill-term={t.term}
+                        title={t.term}
+                        aria-label={`${t.label} (${t.term})`}
+                        class="group relative inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-accent/10 text-accent border border-accent/20 hover:bg-accent/20 transition-colors"
+                      >
+                        {t.label}
+                        <span
+                          class="pill-term-pointer pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-full mb-2 z-10 w-max max-w-[220px] hidden group-hover:inline-block bg-surface text-on-surface text-[11px] font-medium px-2 py-1 rounded-md border border-outline-variant/40 shadow-md"
+                        >
+                          {t.term}
+                        </span>
+                      </button>
                     ))}
                   </div>
                 </div>
@@ -380,5 +392,38 @@ const services = serviceKeys.map((key) => data.services[key]);
         });
       }
     });
+  });
+
+  const pills = document.querySelectorAll("[data-pill-term]");
+  const closeTerms = (except) => {
+    pills.forEach((p) => {
+      if (p !== except) p.classList.remove("term-open");
+    });
+  };
+  pills.forEach((pill) => {
+    const tip = pill.querySelector(".pill-term-pointer");
+    if (!tip) return;
+    const toggle = () => {
+      const isOpen = pill.classList.toggle("term-open");
+      if (isOpen) {
+        closeTerms(pill);
+        tip.classList.remove("hidden");
+        tip.classList.add("inline-block");
+      }
+    };
+    pill.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const willOpen = !pill.classList.contains("term-open");
+      closeTerms();
+      if (willOpen) {
+        pill.classList.add("term-open");
+        tip.classList.remove("hidden");
+        tip.classList.add("inline-block");
+      }
+    });
+  });
+  document.addEventListener("click", () => closeTerms());
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeTerms();
   });
 </script>

@@ -18,6 +18,15 @@ const data = getLocaleData(locale);
 const routes = getRoutes();
 const pageUrl = Astro.url.pathname;
 
+const serviceKeys = [
+  "systemsConsulting",
+  "itInfrastructure",
+  "softwareSolutions",
+  "technicalStrategy",
+  "digitalTransformation",
+  "automationConsulting",
+] as const;
+
 const umamiWebsiteId = import.meta.env.UMAMI_WEBSITE_ID;
 const umamiUrl = import.meta.env.PUBLIC_UMAMI_URL || "https://cloud.umami.is/script.js";
 const umamiRecorderWebsiteId =
@@ -144,12 +153,67 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
             aria-label="Crow Systems Home">CROW SYSTEMS</a
           >
           <div class="hidden md:flex items-center gap-6">
-            <a
-              href={data.routes.services}
-              data-umami-event="nav-services"
-              class={`text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-sm ${activeNav === data.nav.services ? "text-primary font-bold border-b-2 border-primary pb-1" : ""}`}
-              >{data.nav.services}</a
-            >
+            <div class="relative" data-services-menu>
+              <div class="flex items-center gap-0.5" data-services-area>
+                <a
+                  href={data.routes.services}
+                  data-services-word
+                  data-umami-event="nav-services"
+                  class={`font-medium transition-colors duration-300 text-sm hover:text-primary ${activeNav === data.nav.services ? "text-primary font-bold border-b-2 border-primary pb-1" : "text-on-surface-variant"}`}
+                  >{data.nav.services}</a
+                >
+                <button
+                  type="button"
+                  data-services-toggle
+                  aria-expanded="false"
+                  aria-controls="services-submenu"
+                  aria-label={`${data.nav.services} (${data.nav.allServices})`}
+                  class={`flex items-center p-1 transition-colors duration-300 hover:text-primary ${activeNav === data.nav.services ? "text-primary" : "text-on-surface-variant"}`}
+                >
+                  <svg
+                    class="w-3.5 h-3.5 transition-transform duration-200 data-[expanded=true]:rotate-180"
+                    data-chevron
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    aria-hidden="true"
+                    ><polyline points="6 9 12 15 18 9"></polyline></svg
+                  >
+                </button>
+              </div>
+              <div
+                id="services-submenu"
+                hidden
+                class="absolute left-0 top-full pt-2 w-72 rounded-lg"
+              >
+                <div class="bg-surface border border-outline-variant/30 shadow-lg rounded-xl p-2">
+                  <a
+                    href={data.routes.services}
+                    data-services-link
+                    data-umami-event="nav-services-all"
+                    class="block px-3 py-2 rounded-lg text-sm text-on-surface-variant hover:text-primary hover:bg-primary/10 transition-colors font-bold"
+                    >{data.nav.allServices}</a
+                  >
+                  {
+                    serviceKeys.map((key) => {
+                      const s = data.services[key];
+                      if (!s) return null;
+                      return (
+                        <a
+                          href={`${data.routes.services}#service-${key}`}
+                          data-services-link
+                          data-umami-event="nav-services-item"
+                          data-umami-event-key={key}
+                          class="block px-3 py-2 rounded-lg text-sm text-on-surface-variant hover:text-primary hover:bg-primary/10 transition-colors"
+                          >{s.shortTitle}</a
+                        >
+                      );
+                    })
+                  }
+                </div>
+              </div>
+            </div>
             <a
               href={data.routes.consulting}
               data-umami-event="nav-consulting"
@@ -189,12 +253,64 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
         class="md:hidden hidden border-t border-outline-variant/30 bg-surface"
       >
         <div class="px-6 py-4 space-y-3">
-          <a
-            href={data.routes.services}
-            data-umami-event="mobile-nav-services"
-            class={`block text-on-surface-variant hover:text-primary text-sm font-medium py-1 ${activeNav === data.nav.services ? "text-primary font-bold" : ""}`}
-            >{data.nav.services}</a
-          >
+          <div data-mobile-services>
+            <div class="flex items-center justify-between">
+              <a
+                href={data.routes.services}
+                data-umami-event="mobile-nav-services"
+                class={`block text-sm font-medium py-1 pr-3 ${activeNav === data.nav.services ? "text-primary font-bold" : "text-on-surface-variant hover:text-primary"}`}
+                >{data.nav.services}</a
+              >
+              <button
+                type="button"
+                data-mobile-services-toggle
+                aria-expanded="false"
+                aria-controls="mobile-services-submenu"
+                aria-label={`${data.nav.services} (${data.nav.allServices})`}
+                class={`p-2 -mr-2 transition-colors w-full flex items-end ${activeNav === data.nav.services ? "text-primary" : "text-on-surface-variant hover:text-primary"}`}
+              >
+                <svg
+                  data-chevron
+                  class="w-3.5 h-3.5 transition-transform duration-200 data-[expanded=true]:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  aria-hidden="true"
+                  ><polyline points="6 9 12 15 18 9"></polyline></svg
+                >
+              </button>
+            </div>
+            <div
+              id="mobile-services-submenu"
+              hidden
+              class="pl-4 mt-1 space-y-1 border-l border-outline-variant/30"
+            >
+              <a
+                href={data.routes.services}
+                data-mobile-services-link
+                data-umami-event="mobile-nav-services-all"
+                class="block text-sm font-medium py-1 text-on-surface-variant hover:text-primary"
+                >{data.nav.allServices}</a
+              >
+              {
+                serviceKeys.map((key) => {
+                  const s = data.services[key];
+                  if (!s) return null;
+                  return (
+                    <a
+                      href={`${data.routes.services}#service-${key}`}
+                      data-mobile-services-link
+                      data-umami-event="mobile-nav-service-item"
+                      data-umami-event-key={key}
+                      class="block text-sm text-on-surface-variant py-1 hover:text-primary"
+                      >{s.shortTitle}</a
+                    >
+                  );
+                })
+              }
+            </div>
+          </div>
           <a
             href={data.routes.consulting}
             data-umami-event="mobile-nav-consulting"
@@ -298,6 +414,65 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
             menu.classList.add("hidden");
           });
         });
+
+        const servicesMenu = document.querySelector("[data-services-menu]");
+        if (servicesMenu) {
+          const toggle = servicesMenu.querySelector("[data-services-toggle]");
+          const panel = servicesMenu.querySelector("#services-submenu");
+          const chevron = servicesMenu.querySelector("[data-chevron]");
+          let hoverTimer = null;
+          const open = () => {
+            toggle.setAttribute("aria-expanded", "true");
+            chevron?.setAttribute("data-expanded", "true");
+            panel.hidden = false;
+          };
+          const close = () => {
+            toggle.setAttribute("aria-expanded", "false");
+            chevron?.removeAttribute("data-expanded");
+            panel.hidden = true;
+          };
+          servicesMenu.addEventListener("pointerenter", (e) => {
+            if (e.target.closest("[data-services-word]")) return;
+            if (hoverTimer) clearTimeout(hoverTimer);
+            open();
+          });
+          servicesMenu.addEventListener("pointerleave", () => {
+            if (hoverTimer) clearTimeout(hoverTimer);
+            hoverTimer = setTimeout(close, 120);
+          });
+          toggle.addEventListener("click", () => {
+            if (panel.hidden) open();
+            else close();
+          });
+          const area = servicesMenu.querySelector("[data-services-area]");
+          area?.addEventListener("click", (e) => {
+            if (e.target.closest("a, button")) return;
+            open();
+          });
+          document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && !panel.hidden) {
+              close();
+              toggle.focus();
+            }
+          });
+          document.addEventListener("click", (e) => {
+            if (!panel.hidden && !servicesMenu.contains(e.target)) close();
+          });
+        }
+
+        const mMenu = document.querySelector("[data-mobile-services]");
+        if (mMenu) {
+          const mToggle = mMenu.querySelector("[data-mobile-services-toggle]");
+          const mPanel = mMenu.querySelector("#mobile-services-submenu");
+          const mChevron = mMenu.querySelector("[data-chevron]");
+          mToggle.addEventListener("click", () => {
+            const opening = mPanel.hidden;
+            mPanel.hidden = !opening;
+            mToggle.setAttribute("aria-expanded", String(opening));
+            if (opening) mChevron?.setAttribute("data-expanded", "true");
+            else mChevron?.removeAttribute("data-expanded");
+          });
+        }
       })();
     </script>
   <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
