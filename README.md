@@ -81,5 +81,13 @@ An LCP/FCP improvement workflow and Unlighthouse usage are documented in
 
 ## Deployment
 
-Production deployment target: GitHub Pages (static)
-Run `bun run build` to generate static output in `dist/`.
+Production target: static files served by Caddy in Docker behind a Cloudflare
+Tunnel at `https://crowsystems.com.mx`. Run `bun run build` for local output
+in `dist/`; see `docs/how-to/deploy-to-production.md` for the full deploy.
+
+This repo is `Crow-Systems/Crow-Systems.github.io` (an org special-name repo),
+and it additionally hosts a **GitHub Pages redirect bridge**: the Pages site
+serves only 301-equivalent redirects from the old `crow-systems.github.io`
+URLs to `.com.mx` (`scripts/generate-redirects.mjs` +
+`.github/workflows/deploy.yml`). The real site is never served from Pages. See
+`docs/explanation/site-hosting-architecture.md`.

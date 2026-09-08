@@ -4,7 +4,7 @@ import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 import { getRoutes } from './src/locales';
 
-const SITE_URL = process.env.SITE_URL || 'https://crow-systems.github.io';
+const SITE_URL = process.env.SITE_URL || 'https://crowsystems.com.mx';
 const routes = getRoutes();
 
 const stripSlash = (p: string) => (p.length > 1 && p.endsWith('/') ? p.slice(0, -1) : p);
