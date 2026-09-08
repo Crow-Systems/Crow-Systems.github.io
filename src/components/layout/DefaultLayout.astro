@@ -28,10 +28,10 @@ const serviceKeys = [
 ] as const;
 
 const umamiWebsiteId = import.meta.env.UMAMI_WEBSITE_ID;
-const umamiUrl = import.meta.env.PUBLIC_UMAMI_URL || "https://cloud.umami.is/script.js";
-const umamiRecorderWebsiteId =
-  import.meta.env.UMAMI_RECORDER_WEBSITE_ID ||
-  "230d6bff-1c5c-4a19-934f-476709d63f33";
+const umamiHost = import.meta.env.PUBLIC_UMAMI_HOST || "https://cloud.umami.is";
+const umamiScriptUrl = `${umamiHost}/script.js`;
+const umamiRecorderUrl = `${umamiHost}/recorder.js`;
+const umamiRecorderWebsiteId = import.meta.env.UMAMI_RECORDER_WEBSITE_ID;
 
 const normalizedPath = pageUrl.replace(/\/$/, "") || "/";
 let currentRouteKey: string | null = null;
@@ -100,7 +100,7 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
       umamiWebsiteId && (
         <script
           defer
-          src={umamiUrl}
+          src={umamiScriptUrl}
           data-website-id={umamiWebsiteId}
           data-performance="true"
         />
@@ -110,7 +110,7 @@ const canonicalEs = routeKey ? routes.es[routeKey] || "/" : "/";
       umamiWebsiteId && (
         <script
           defer
-          src="https://latitudem2m-analytics.chrislabs.net/recorder.js"
+          src={umamiRecorderUrl}
           data-website-id={umamiRecorderWebsiteId}
         />
       )
