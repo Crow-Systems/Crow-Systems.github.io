@@ -15,7 +15,7 @@ const FORM_FIELDS = data.pages.contact;
   activeNav={data.nav.contact}
   locale={locale}
 >
-  <div
+  <section
     class="pb-24 px-6 max-w-7xl mx-auto"
     aria-labelledby="contact-heading"
   >
@@ -43,6 +43,8 @@ const FORM_FIELDS = data.pages.contact;
         <img
           src="/plane-sm.webp"
           alt=""
+          width="700"
+          height="466"
           class="rounded-xl w-full h-auto object-cover opacity-70 md:[-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_35%,black_100%)] md:[mask-image:linear-gradient(to_right,transparent_0%,black_35%,black_100%)]"
         />
       </div>
@@ -181,6 +183,6 @@ const FORM_FIELDS = data.pages.contact;
         <ContactForm locale={data.pages.contact} client:load />
       </div>
     </div>
-  </div>
+  </section>
 </DefaultLayout>
 

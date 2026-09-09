@@ -22,7 +22,7 @@ const data = getLocaleData(locale);
     <div class="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
       <div class="max-w-2xl flex-1">
         <span
-          class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block"
+          class="text-accent font-bold uppercase tracking-widest text-xs mb-2 block"
           >{data.pages.index.subtitle}</span
         >
         <h1
@@ -46,7 +46,7 @@ const data = getLocaleData(locale);
           <a
             href={data.routes.services}
             data-umami-event="hero-explore-services"
-            class="border border-primary text-primary font-bold px-8 py-4 rounded-xl hover:bg-primary/10 transition-all active:scale-[0.98] text-center text-sm"
+            class="border border-primary text-primary-dark font-bold px-8 py-4 rounded-xl hover:bg-primary/10 transition-all active:scale-[0.98] text-center text-sm"
           >
             {data.pages.index.hero.exploreServices}
           </a>
@@ -119,13 +119,13 @@ const data = getLocaleData(locale);
         <a
           href={`${data.routes.about}#${data.anchors.team}`}
           data-umami-event="cta-banner-about"
-          class="bg-secondary text-white font-bold px-8 py-4 rounded-xl hover:brightness-110 transition-all text-center text-sm"
+          class="bg-white text-primary-dark font-bold px-8 py-4 rounded-xl hover:bg-white/90 transition-all text-center text-sm"
           >{data.pages.index.cta.services}</a
         >
         <a
           href={data.routes.consulting}
           data-umami-event="cta-banner-consultation"
-          class="border border-on-primary text-white px-8 py-4 rounded-xl hover:bg-on-primary/10 transition-all text-center text-sm font-bold"
+          class="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 transition-all text-center text-sm"
           >{data.pages.index.cta.consultation}</a
         >
       </div>

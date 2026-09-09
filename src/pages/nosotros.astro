@@ -203,9 +203,8 @@ const data = getLocaleData(locale);
     </h2>
     <p
       class="text-on-surface-variant font-body text-center text-lg mb-12 max-w-2xl mx-auto"
-    >
-      {data.pages.about.meetTheTeamIntro}
-    </p>
+      set:html={data.pages.about.meetTheTeamIntro}
+    />
     <div class="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto">
       {
         data.pages.about.founders.map((founder) => (
@@ -236,7 +235,7 @@ const data = getLocaleData(locale);
               href={founder.linkedin}
               target="_blank"
               data-umami-event="team-linkedin"
-              class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+              class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary-dark hover:underline"
             >
               <svg
                 width="16"

@@ -6,6 +6,7 @@ import {
 } from 'react';
 
 import WaveformBars from './WaveformBars';
+import { useConfirm } from '../hooks/useConfirm';
 
 interface Props {
   recordStartLabel: string;
@@ -15,8 +16,13 @@ interface Props {
   audioNoBlob: string;
   audioDeleteFail: string;
   micError: string;
+  playError: string;
   discardRecording: string;
-  onAudioChange: (blob: Blob | null) => void;
+  confirmDiscard: string;
+  cancel: string;
+  initialBlob?: Blob | null;
+  initialDuration?: number;
+  onAudioChange: (blob: Blob | null, duration?: number) => void;
 }
 
 function formatTime(s: number) {
@@ -31,9 +37,15 @@ export default function AudioRecorder({
   audioNoBlob,
   audioDeleteFail,
   micError,
+  playError,
   discardRecording,
+  confirmDiscard,
+  cancel,
+  initialBlob,
+  initialDuration,
   onAudioChange,
 }: Props) {
+  const { confirm, confirmDialog } = useConfirm();
   const [audioBlob, setAudioBlob] = useState<Blob | null>(null);
   const [audioUrl, setAudioUrl] = useState<string | null>(null);
   const [recording, setRecording] = useState(false);
@@ -53,6 +65,7 @@ export default function AudioRecorder({
   const mediaRecorder = useRef<MediaRecorder | null>(null);
   const chunks = useRef<Blob[]>([]);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const durationRef = useRef(0);
   const audioEl = useRef<HTMLAudioElement | null>(null);
   const audioCtxRef = useRef<AudioContext | null>(null);
   const analyserRef = useRef<AnalyserNode | null>(null);
@@ -62,12 +75,20 @@ export default function AudioRecorder({
 
   async function ensureAudioCtx() {
     if (!audioCtxRef.current || audioCtxRef.current.state === "closed") {
-      audioCtxRef.current = new AudioContext();
-      analyserRef.current = audioCtxRef.current.createAnalyser();
-      analyserRef.current.fftSize = 32;
+      try {
+        audioCtxRef.current = new AudioContext();
+        analyserRef.current = audioCtxRef.current.createAnalyser();
+        analyserRef.current.fftSize = 32;
+      } catch {
+        return null;
+      }
     }
     if (audioCtxRef.current.state === "suspended") {
-      await audioCtxRef.current.resume();
+      try {
+        await audioCtxRef.current.resume();
+      } catch {
+        // ctx stays suspended: callers must play natively, without the WebAudio graph
+      }
     }
     return audioCtxRef.current;
   }
@@ -130,6 +151,31 @@ export default function AudioRecorder({
     };
   }, [audioUrl]);
 
+  const restoreApplied = useRef(false);
+  useEffect(() => {
+    if (!initialBlob || restoreApplied.current) return;
+    restoreApplied.current = true;
+    const url = URL.createObjectURL(initialBlob);
+    setAudioBlob(initialBlob);
+    setAudioUrl(url);
+    durationRef.current = initialDuration ?? 0;
+    if (durationRef.current > 0) setDuration(durationRef.current);
+    onAudioChange(initialBlob, durationRef.current);
+    // fallback for older drafts without a persisted duration: probe metadata
+    const probe = new Audio();
+    probe.preload = "metadata";
+    const readDuration = () => {
+      const d = probe.duration;
+      if (Number.isFinite(d) && d > 0 && durationRef.current === 0) {
+        durationRef.current = Math.floor(d);
+        setDuration(durationRef.current);
+      }
+    };
+    probe.addEventListener("loadedmetadata", readDuration);
+    probe.addEventListener("durationchange", readDuration);
+    probe.src = url;
+  }, [initialBlob, initialDuration, onAudioChange]);
+
   const clearRecording = useCallback(() => {
     if (audioEl.current) {
       audioEl.current.pause();
@@ -152,24 +198,32 @@ export default function AudioRecorder({
     if (audioUrl) URL.revokeObjectURL(audioUrl);
     setAudioUrl(null);
     setDuration(0);
+    durationRef.current = 0;
     setPlaying(false);
     setPlaybackPosition(0);
     setRecording(false);
     onAudioChange(null);
   }, [audioUrl, onAudioChange]);
 
-  const handleDelete = useCallback(() => {
+  const handleDelete = useCallback(async () => {
     if (!audioBlob && !recording) {
       showFeedback(audioDeleteFail);
       return;
     }
-    if (!globalThis.confirm(discardRecording)) return;
+    if (!(await confirm(discardRecording, {
+      confirmLabel: confirmDiscard,
+      cancelLabel: cancel,
+      danger: true,
+    }))) return;
     clearRecording();
-  }, [audioBlob, recording, discardRecording, audioDeleteFail, showFeedback, clearRecording]);
+  }, [audioBlob, recording, discardRecording, confirmDiscard, cancel, audioDeleteFail, showFeedback, confirm, clearRecording]);
 
   const startRecording = useCallback(async () => {
     if (audioBlob || playing) {
-      if (!globalThis.confirm(discardRecording)) return;
+      if (!(await confirm(discardRecording, {
+        confirmLabel: confirmDiscard,
+        cancelLabel: cancel,
+      }))) return;
       clearRecording();
     }
     try {
@@ -186,8 +240,12 @@ export default function AudioRecorder({
       if (elementSourceRef.current) elementSourceRef.current.disconnect();
       if (analyserRef.current) analyserRef.current.disconnect();
       const ctx = await ensureAudioCtx();
-      mediaSourceRef.current = ctx.createMediaStreamSource(stream);
-      mediaSourceRef.current.connect(analyserRef.current!);
+      if (ctx) {
+        // WebAudio is only used for the live levels; the recording itself
+        // comes straight from the stream, so it works without the context.
+        mediaSourceRef.current = ctx.createMediaStreamSource(stream);
+        mediaSourceRef.current.connect(analyserRef.current!);
+      }
 
       mr.ondataavailable = (e) => {
         if (e.data.size > 0) chunks.current.push(e.data);
@@ -206,7 +264,7 @@ export default function AudioRecorder({
           mediaSourceRef.current = null;
         }
         stream.getTracks().forEach((t) => t.stop());
-        onAudioChange(blob);
+        onAudioChange(blob, durationRef.current);
       };
 
       mr.start();
@@ -216,6 +274,7 @@ export default function AudioRecorder({
       timerRef.current = setInterval(() => {
         setDuration((prev) => {
           const next = prev + 1;
+          durationRef.current = next;
           if (next >= 300) {
             mr.stop();
             if (timerRef.current) clearInterval(timerRef.current);
@@ -236,6 +295,9 @@ export default function AudioRecorder({
     clearRecording,
     showFeedback,
     discardRecording,
+    confirmDiscard,
+    cancel,
+    confirm,
     micError,
   ]);
 
@@ -283,16 +345,33 @@ export default function AudioRecorder({
       }
       if (analyserRef.current) analyserRef.current.disconnect();
       const ctx = await ensureAudioCtx();
-      elementSourceRef.current = ctx.createMediaElementSource(audioEl.current);
-      elementSourceRef.current.connect(analyserRef.current!);
-      analyserRef.current!.connect(ctx.destination);
+      // Only route the element through the WebAudio graph when the context is
+      // actually running; a suspended context would mute the playback while
+      // the clock still advances. Fall back to native output otherwise.
+      if (ctx?.state === "running") {
+        try {
+          elementSourceRef.current = ctx.createMediaElementSource(audioEl.current);
+          elementSourceRef.current.connect(analyserRef.current!);
+          analyserRef.current!.connect(ctx.destination);
+        } catch {
+          elementSourceRef.current?.disconnect();
+          elementSourceRef.current = null;
+        }
+      }
     }
     audioEl.current.src = audioUrl;
-    await audioEl.current.play();
+    try {
+      await audioEl.current.play();
+    } catch {
+      showFeedback(playError);
+      window.umami?.track("audio-playback-error", { reason: "not-supported" });
+      return;
+    }
     setPlaybackPosition(0);
     setPlaying(true);
-    startLevelLoop();
-  }, [audioUrl, playing, showFeedback, audioNoBlob, duration]);
+    if (elementSourceRef.current) startLevelLoop();
+    else stopLevelLoop();
+  }, [audioUrl, playing, showFeedback, audioNoBlob, playError, duration]);
 
   return (
     <div className="relative bg-surface rounded-xl p-4 md:p-8 border border-outline-variant/30 mb-4 flex flex-col items-center justify-center text-center">
@@ -351,8 +430,8 @@ export default function AudioRecorder({
         </button>
       </div>
       <p className="mt-4 font-mono text-sm">
-        <span className={playing ? "text-primary" : "text-on-surface-variant"}>
-          {playing ? formatTime(playbackPosition) : formatTime(duration)}
+        <span className={playing ? "text-primary-dark" : "text-on-surface-variant"}>
+          {recording ? formatTime(duration) : formatTime(playbackPosition)}
         </span>
         <span className="text-on-surface-variant">
           {" / "}
@@ -367,6 +446,7 @@ export default function AudioRecorder({
           {feedback}
         </div>
       )}
+      {confirmDialog}
     </div>
   );
 }

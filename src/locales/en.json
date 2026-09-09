@@ -277,6 +277,8 @@
       "sending": "Sending...",
       "success": "Thanks! A real engineer will review your message and get back to you within one business hour.",
       "failed": "Submission failed. Please try again.",
+      "draftRestored": "Saved on this device. Resume where you left off anytime.",
+      "draftClear": "Clear draft",
       "errorKeys": {
         "SUBMISSION_FAILED": "Your message could not be sent. Please try again.",
         "SERVER_INTERNAL_ERROR": "Something went wrong. Please try again in a few moments.",
@@ -317,7 +319,12 @@
       "audioNoBlob": "Please record audio first.",
       "audioDeleteFail": "Nothing to delete.",
       "micError": "Microphone access denied.",
+      "playError": "This recording couldn't be played on this browser. Please record a new one.",
       "discardRecording": "Discard current recording and start a new one?",
+      "confirmDiscard": "Discard",
+      "cancel": "Cancel",
+      "draftRestored": "Saved on this device. Resume where you left off anytime.",
+      "draftClear": "Clear draft",
       "consultForm": {
         "heading": "Tell us what you want to achieve",
         "fullName": "Full Name",

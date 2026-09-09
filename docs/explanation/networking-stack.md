@@ -59,6 +59,26 @@ the canonical signal; see
 [Site hosting architecture](./site-hosting-architecture.md) for why a single
 canonical is the whole point).
 
+## Development traffic reaches the API through a proxy
+
+Production forms call the backend **directly, cross-origin** — the browser
+talks to `crowsys.chrislabs.net` and the origin echoes the expected CORS
+headers. In development this path breaks: the tunnel only echoes
+`Access-Control-Allow-Origin` for the site's own hostnames, so a browser page
+served from `http://localhost:4321` gets no CORS approval and its API calls
+fail before leaving the page.
+
+The dev server solves this by moving the cross-origin hop **server-side**.
+`astro.config.ts` sets a Vite proxy (`/api/v1` → the tunnel URL) and
+`.env.development` makes `PUBLIC_API_BASE_URL=/api/v1`, so browser requests are
+same-origin. The dev server forwards them to the backend, and CORS never
+applies. The production bundle is untouched: the proxy is dev-only and the
+build keeps the absolute URL.
+
+This matters to tests because the e2e suite exercises real form submissions
+through this dev proxy — verification of the sales path, not of the tunnel's
+CORS behavior. See [How to run the API locally](../how-to/run-api-locally.md).
+
 ## Authority
 
 The zone `crowsystems.com.mx` is hosted on Cloudflare nameservers

@@ -16,7 +16,7 @@ const mailtoHref = `mailto:${data.pages.consulting.consultingEmail}?subject=${en
   activeNav={data.nav.consulting}
   locale={locale}
 >
-  <div
+  <section
     class="pb-24 px-6 max-w-7xl mx-auto"
     aria-labelledby="consulting-heading"
   >
@@ -44,6 +44,8 @@ const mailtoHref = `mailto:${data.pages.consulting.consultingEmail}?subject=${en
         <img
           src="/clarity-sm.webp"
           alt=""
+          width="700"
+          height="526"
           class="rounded-xl w-full h-auto object-cover md:[-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_35%,black_100%)] md:[mask-image:linear-gradient(to_right,transparent_0%,black_35%,black_100%)]"
         />
       </div>
@@ -78,7 +80,7 @@ const mailtoHref = `mailto:${data.pages.consulting.consultingEmail}?subject=${en
                 return (
                   <div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 text-center hover:border-primary/50 transition-all hover:shadow-md">
                     <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                      <span class="font-heading text-base font-bold text-primary">
+                      <span class="font-heading text-base font-bold text-primary-dark">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                     </div>
@@ -200,5 +202,5 @@ const mailtoHref = `mailto:${data.pages.consulting.consultingEmail}?subject=${en
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </DefaultLayout>

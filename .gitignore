@@ -14,6 +14,8 @@ build/
 .env.*.local
 .env.production
 .env.prod
+.env.development
+.env.dev
 
 # IDE
 .vscode/*
@@ -36,6 +38,7 @@ coverage/
 *.tsbuildinfo
 next-types
 temp/
+test-results/
 
 # Project
 *:Zone.Identifier

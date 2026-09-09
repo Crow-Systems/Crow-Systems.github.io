@@ -195,7 +195,7 @@
       "description1": "Crow Systems nació de la frustración. Veíamos negocios buenos pagar de más por consultores y software que se tambalea y necesita atención constante. Uno de nosotros mantiene tus sistemas funcionando: conexiones, seguridad y respaldos. El otro construye las herramientas y los registros sobre los que corre tu negocio. Juntos, eso es todo lo que un negocio en crecimiento necesita: sin gerentes de cuenta, sin traspasos, solo las dos personas que realmente hacen el trabajo.",
       "description2": "Trabajamos directo con dueños de negocio que quieren experiencia real, sin el costo ni las vueltas de una gran firma. Cuando llamas, hablas con un dueño, alguien que cuida tus sistemas como si fueran suyos.",
       "meetTheTeam": "Conoce al equipo",
-      "meetTheTeamIntro": "Crow Systems son solo dos personas: los dueños.<br/>Conócelos y sabrás exactamente quién cuida tu negocio.",
+      "meetTheTeamIntro": "Crow Systems son solo dos personas: los dueños.<br>Conócelos y sabrás exactamente quién cuida tu negocio.",
       "founders": [
         {
           "name": "Carlos Cardona",
@@ -277,6 +277,8 @@
       "sending": "Enviando...",
       "success": "¡Gracias! Un ingeniero de verdad revisará tu mensaje y te responderá en una hora hábil.",
       "failed": "Error al enviar. Por favor, inténtelo de nuevo.",
+      "draftRestored": "Guardado en este dispositivo. Continúa donde lo dejaste cuando quieras.",
+      "draftClear": "Borrar borrador",
       "errorKeys": {
         "SUBMISSION_FAILED": "No se pudo enviar tu mensaje. Por favor, inténtalo de nuevo.",
         "SERVER_INTERNAL_ERROR": "Algo salió mal. Por favor, inténtalo de nuevo en unos momentos.",
@@ -315,7 +317,12 @@
       "playLabel": "Reproducir grabación",
       "audioDeleteFail": "No hay nada que eliminar.",
       "micError": "Acceso al micrófono denegado.",
+      "playError": "Esta grabación no se pudo reproducir en este navegador. Graba una nueva, por favor.",
       "discardRecording": "¿Descartar grabación actual y comenzar una nueva?",
+      "confirmDiscard": "Descartar",
+      "cancel": "Cancelar",
+      "draftRestored": "Guardado en este dispositivo. Continúa donde lo dejaste cuando quieras.",
+      "draftClear": "Borrar borrador",
       "consultForm": {
         "heading": "Cuéntanos qué quieres lograr",
         "fullName": "Nombre Completo",

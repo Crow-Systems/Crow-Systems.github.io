@@ -38,7 +38,7 @@ const services = serviceKeys.map((key) => data.services[key]);
     <div class="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
       <div class="flex-1 max-w-3xl">
         <span
-          class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block"
+          class="text-accent font-bold uppercase tracking-widest text-xs mb-2 block"
           >{data.pages.services.hero.subtitle}</span
         >
         <h1
@@ -56,6 +56,8 @@ const services = serviceKeys.map((key) => data.services[key]);
         <img
           src="/measurement-sm.webp"
           alt=""
+          width="700"
+          height="526"
           class="rounded-xl w-full h-auto object-cover md:[-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_20%,black_80%,transparent_100%)] md:[mask-image:linear-gradient(to_bottom,transparent_0%,black_20%,black_80%,transparent_100%)]"
         />
       </div>
@@ -144,7 +146,7 @@ const services = serviceKeys.map((key) => data.services[key]);
                     href={data.routes.consulting}
                     data-umami-event="service-card-start"
                     data-umami-event-service={service.title}
-                    class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:text-accent transition-colors group"
+                    class="inline-flex items-center gap-2 text-primary-dark font-bold text-sm hover:text-accent transition-colors group"
                   >
                     {getStartedLabel} {service.title}
                     <svg

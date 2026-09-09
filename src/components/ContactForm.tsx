@@ -3,7 +3,10 @@ import { z } from "zod";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useSubmitContact } from "../scripts/api-hooks";
 import { ApiError } from "../scripts/api";
+import { loadDraft } from "../scripts/form-draft";
+import { useDraft } from "../hooks/useDraft";
 import FormField from "./FormField";
+import DraftNotice from "./DraftNotice";
 import { useFormFields } from "../hooks/useFormFields";
 
 const queryClient = new QueryClient();
@@ -21,6 +24,8 @@ interface ContactLocale {
   sending: string;
   success: string;
   failed: string;
+  draftRestored: string;
+  draftClear: string;
   errorKeys: Record<string, string>;
 }
 
@@ -61,6 +66,8 @@ function resolveErrorKey(key: string, locale: ContactLocale): string {
 }
 
 function ContactFormInner({ locale }: Props) {
+  const [draft] = useState(() => loadDraft("contact-draft"));
+  const [draftDismissed, setDraftDismissed] = useState(false);
   const {
     values,
     setValue,
@@ -80,7 +87,10 @@ function ContactFormInner({ locale }: Props) {
     email: "",
     subject: "",
     message: "",
+    ...(draft?.values ?? {}),
   });
+
+  const { clear } = useDraft("contact-draft", { values }, null, 0);
 
   const submitMutation = useSubmitContact();
   const [errorDisplay, setErrorDisplay] = useState<ErrorDisplay | null>(null);
@@ -160,6 +170,8 @@ function ContactFormInner({ locale }: Props) {
       const email = (values.email ?? "").trim();
       if (email) window.umami?.identify(email);
       setSuccess(locale.success);
+      setDraftDismissed(true);
+      clear();
       reset(["name", "email", "subject", "message"]);
     };
 
@@ -325,6 +337,18 @@ function ContactFormInner({ locale }: Props) {
             </svg>
           </button>
         </div>
+      )}
+      {draft && !draftDismissed && (
+        <DraftNotice
+          message={locale.draftRestored}
+          clearLabel={locale.draftClear}
+          className="mb-6"
+          onClear={() => {
+            setDraftDismissed(true);
+            reset(["name", "email", "subject", "message"]);
+            clear();
+          }}
+        />
       )}
       {success && (
         <div

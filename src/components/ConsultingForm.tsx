@@ -14,12 +14,15 @@ import {
 } from '@tanstack/react-query';
 
 import { useFormFields } from '../hooks/useFormFields';
+import { useDraft } from '../hooks/useDraft';
+import { loadDraft, type DraftPayload } from '../scripts/form-draft';
 import { ApiError } from '../scripts/api';
 import {
   useSubmitConsultation,
   useUploadAudio,
 } from '../scripts/api-hooks';
 import AudioRecorder from './AudioRecorder';
+import DraftNotice from './DraftNotice';
 import FormField from './FormField';
 import PhoneInput from './PhoneInput';
 
@@ -70,7 +73,12 @@ interface ConsultingLocale {
   audioNoBlob: string;
   audioDeleteFail: string;
   micError: string;
+  playError: string;
   discardRecording: string;
+  confirmDiscard: string;
+  cancel: string;
+  draftRestored: string;
+  draftClear: string;
 }
 
 interface Props {
@@ -110,6 +118,8 @@ function resolveErrorKey(key: string, locale: ConsultingLocale): string {
 }
 
 function ConsultingFormInner({ locale }: Props) {
+  const [draft, setDraft] = useState<DraftPayload | null>(null);
+  const [draftDismissed, setDraftDismissed] = useState(false);
   const {
     values,
     setValue,
@@ -134,7 +144,25 @@ function ConsultingFormInner({ locale }: Props) {
 
   const [mode, setMode] = useState<"audio" | "text">("audio");
   const [audioBlob, setAudioBlob] = useState<Blob | null>(null);
+  const [audioDuration, setAudioDuration] = useState(0);
   const [recorderKey, setRecorderKey] = useState(0);
+
+  useEffect(() => {
+    const saved = loadDraft("consulting-draft");
+    if (!saved) return;
+    setDraft(saved);
+    if (saved.mode) setMode(saved.mode);
+    for (const [key, value] of Object.entries(saved.values)) {
+      setValue(key, value);
+    }
+  }, [setValue]);
+
+  const { draftAudio, draftDuration, clear } = useDraft(
+    "consulting-draft",
+    { mode, values },
+    audioBlob,
+    audioDuration,
+  );
 
   const submitMutation = useSubmitConsultation();
   const uploadMutation = useUploadAudio();
@@ -229,8 +257,11 @@ function ConsultingFormInner({ locale }: Props) {
       setSuccess(
         mode === "audio" ? locale.audioSuccess : locale.consultSuccess,
       );
+      clear();
+      setDraftDismissed(true);
       reset(["name", "phone", "email", "company", "description"]);
       setAudioBlob(null);
+      setAudioDuration(0);
       setRecorderKey((k) => k + 1);
     };
 
@@ -430,6 +461,20 @@ function ConsultingFormInner({ locale }: Props) {
           </button>
         </div>
       )}
+      {draft && !draftDismissed && (
+        <DraftNotice
+          message={locale.draftRestored}
+          clearLabel={locale.draftClear}
+          onClear={() => {
+            setDraftDismissed(true);
+            setAudioBlob(null);
+            setAudioDuration(0);
+            setRecorderKey((k) => k + 1);
+            reset(["name", "phone", "email", "company", "description"]);
+            clear();
+          }}
+        />
+      )}
       {success && (
         <div
           className="p-4 bg-green-50 text-green-700 rounded-lg text-sm font-bold"
@@ -559,8 +604,16 @@ function ConsultingFormInner({ locale }: Props) {
               audioNoBlob={locale.audioNoBlob}
               audioDeleteFail={locale.audioDeleteFail}
               micError={locale.micError}
+              playError={locale.playError}
               discardRecording={locale.discardRecording}
-              onAudioChange={(blob) => setAudioBlob(blob)}
+              confirmDiscard={locale.confirmDiscard}
+              cancel={locale.cancel}
+              initialBlob={audioBlob ?? draftAudio}
+              initialDuration={audioBlob ? audioDuration : draftDuration}
+              onAudioChange={(blob, duration) => {
+                setAudioBlob(blob);
+                setAudioDuration(duration ?? 0);
+              }}
             />
             <div className="space-y-4">
               <label htmlFor="cf-audio-context" className={labelClass}>

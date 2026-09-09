@@ -47,6 +47,13 @@ export default defineConfig({
   ],
   output: 'static',
   vite: {
+    server: {
+      proxy: {
+        // dev-only: route API calls same-origin (Cloudflare tunnel CORS-blocks
+        // non-{crowsystems.com.mx,www}crowsys.chrislabs.net origins)
+        '/api/v1': 'https://crowsys.chrislabs.net',
+      },
+    },
     build: {
       sourcemap: false,
       cssCodeSplit: true,
