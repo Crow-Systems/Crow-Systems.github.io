@@ -14,6 +14,7 @@ COPY . .
 RUN bun run build
 
 FROM caddy:2.11.4-alpine
+RUN adduser -D -u 1000 caddy
 COPY --from=build /app/dist /srv
 COPY deploy/Caddyfile /etc/caddy/Caddyfile
 USER caddy
