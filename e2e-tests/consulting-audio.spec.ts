@@ -1,5 +1,5 @@
 import { test, expect, type Page } from '@playwright/test';
-import { clearDrafts } from './helpers';
+import { clearDrafts, waitForHydration } from './helpers';
 
 declare global {
   interface Window {
@@ -67,6 +67,7 @@ test('recorded audio persists and plays back after a reload', async ({ page }) =
   await page.goto('/consultoria/');
   await clearDrafts(page);
   await page.goto('/consultoria/');
+  await waitForHydration(page);
 
   // elapsed ticks while recording (not just during playback)
   await page.click(RECORD_TOGGLE);
@@ -114,6 +115,7 @@ test('tab switch (audio -> text -> audio) keeps the recording', async ({ page })
   await page.goto('/consultoria/');
   await clearDrafts(page);
   await page.goto('/consultoria/');
+  await waitForHydration(page);
 
   await page.click(RECORD_TOGGLE);
   await expect
@@ -139,6 +141,7 @@ test('playback works after reload while audio was playing', async ({ page }) => 
   await page.goto('/consultoria/');
   await clearDrafts(page);
   await page.goto('/consultoria/');
+  await waitForHydration(page);
 
   await page.click(RECORD_TOGGLE);
   await expect
@@ -195,6 +198,7 @@ test('playback still works when AudioContext cannot resume (autoplay blocked)', 
   await page.goto('/consultoria/');
   await clearDrafts(page);
   await page.goto('/consultoria/');
+  await waitForHydration(page);
 
   await page.click(RECORD_TOGGLE);
   await expect

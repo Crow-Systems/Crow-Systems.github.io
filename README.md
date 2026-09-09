@@ -68,6 +68,18 @@ bun run build
 bun run preview
 ```
 
+## Testing
+
+Two suites guard the project:
+
+```bash
+bun run test       # unit tests (vitest, no network)
+bun run test:e2e   # end-to-end tests (Playwright, real browser + backend)
+```
+
+See `docs/how-to/run-tests.md` for how to run individual suites, watch mode,
+and the prerequisites for e2e (the backend API).
+
 ## Performance measurement
 
 Measure FCP/LCP of the built site under throttled, repeatable conditions:

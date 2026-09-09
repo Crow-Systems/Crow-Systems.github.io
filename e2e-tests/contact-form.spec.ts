@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { clearDrafts } from './helpers';
+import { clearDrafts, waitForHydration } from './helpers';
 
 const SUBMIT = '[data-umami-event="contact-form-submit"]';
 
@@ -12,6 +12,7 @@ test('valid submission reaches the backend, shows success and clears fields and 
   await page.goto('/contacto/');
   await clearDrafts(page);
   await page.goto('/contacto/');
+  await waitForHydration(page);
 
   const name = `E2E Contacto ${Date.now()}`;
   const email = `e2e-contact-${Date.now()}@example.com`;
@@ -51,6 +52,7 @@ test('empty submit shows a field error for every field and focuses the first one
   await page.goto('/contacto/');
   await clearDrafts(page);
   await page.goto('/contacto/');
+  await waitForHydration(page);
 
   await page.click(SUBMIT);
 
@@ -64,6 +66,7 @@ test('invalid email errors on blur and clears when corrected', async ({ page }) 
   await page.goto('/contacto/');
   await clearDrafts(page);
   await page.goto('/contacto/');
+  await waitForHydration(page);
 
   await page.fill('#cnt-email', 'no-es-un-correo');
   await page.locator('#cnt-email').blur();
@@ -79,6 +82,7 @@ test('draft persists across a reload and can be cleared', async ({ page }) => {
   await page.goto('/contacto/');
   await clearDrafts(page);
   await page.goto('/contacto/');
+  await waitForHydration(page);
 
   await page.fill('#cnt-name', 'Borrador E2E');
   await page.fill('#cnt-email', 'borrador@example.com');

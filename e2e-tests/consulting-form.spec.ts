@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { clearDrafts } from './helpers';
+import { clearDrafts, waitForHydration } from './helpers';
 
 const SUBMIT = '[data-umami-event="consulting-form-submit"]';
 const WRITE_MODE = '[data-umami-event="consulting-mode-toggle"][data-umami-event-mode="write"]';
@@ -14,6 +14,7 @@ test('text mode submission reaches the backend, shows success and clears the for
   await page.goto('/consultoria/');
   await clearDrafts(page);
   await page.goto('/consultoria/');
+  await waitForHydration(page);
 
   await page.click(WRITE_MODE);
 
@@ -58,6 +59,7 @@ test('text mode validation catches empty name, phone and short description', asy
   await page.goto('/consultoria/');
   await clearDrafts(page);
   await page.goto('/consultoria/');
+  await waitForHydration(page);
 
   await page.click(WRITE_MODE);
   await page.fill('#cf-description', 'corto');
@@ -83,6 +85,7 @@ test('audio mode submission reaches the backend, shows success and resets record
   await page.goto('/consultoria/');
   await clearDrafts(page);
   await page.goto('/consultoria/');
+  await waitForHydration(page);
 
   await page.click(RECORD_TOGGLE);
   await page.waitForTimeout(2_000);
@@ -115,6 +118,7 @@ test('audio mode submit without a recording shows the audio-required alert', asy
   await page.goto('/consultoria/');
   await clearDrafts(page);
   await page.goto('/consultoria/');
+  await waitForHydration(page);
 
   await page.fill('#cf-name', 'Sin Audio E2E');
   await page.fill('#cf-phone', '+52 55 1234 5678');

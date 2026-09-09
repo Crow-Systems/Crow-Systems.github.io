@@ -9,3 +9,10 @@ export async function clearDrafts(page: Page) {
     });
   });
 }
+
+// React islands hydrate lazily; Astro stamps client-render-time only after
+// hydration. Waiting for it prevents native form submission / dead clicks
+// when an action fires before the onSubmit handler is bound.
+export async function waitForHydration(page: Page, timeout = 20_000) {
+  await page.waitForSelector('astro-island[client-render-time]', { timeout });
+}

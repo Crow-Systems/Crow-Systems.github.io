@@ -13,7 +13,7 @@ export function loadDraft(key: string): DraftPayload | null {
     const raw = localStorage.getItem(key);
     if (!raw) return null;
     const { payload } = JSON.parse(raw) as DraftEnvelope;
-    return payload;
+    return payload ?? null;
   } catch {
     return null;
   }
