@@ -195,20 +195,20 @@
       "description1": "Crow Systems nació de la frustración. Veíamos negocios buenos pagar de más por consultores y software que se tambalea y necesita atención constante. Uno de nosotros mantiene tus sistemas funcionando: conexiones, seguridad y respaldos. El otro construye las herramientas y los registros sobre los que corre tu negocio. Juntos, eso es todo lo que un negocio en crecimiento necesita: sin gerentes de cuenta, sin traspasos, solo las dos personas que realmente hacen el trabajo.",
       "description2": "Trabajamos directo con dueños de negocio que quieren experiencia real, sin el costo ni las vueltas de una gran firma. Cuando llamas, hablas con un dueño, alguien que cuida tus sistemas como si fueran suyos.",
       "meetTheTeam": "Conoce al equipo",
-      "meetTheTeamIntro": "Crow Systems son solo dos personas: los dueños. Conócelos y sabrás exactamente quién cuida tu negocio.",
+      "meetTheTeamIntro": "Crow Systems son solo dos personas: los dueños.<br/>Conócelos y sabrás exactamente quién cuida tu negocio.",
       "founders": [
         {
           "name": "Carlos Cardona",
           "title": "Socio Gerente · Conectividad y Seguridad",
           "role": "Mantiene tus sistemas funcionando: conexiones, seguridad y respaldos. Si algo falla, lo detecta temprano y lo resuelve antes de que tus clientes lo noten.",
-          "photo": "/carlos-cardona.webp",
+          "photo": "/carlos-cardona-lg.webp",
           "linkedin": "https://www.linkedin.com/in/carlos-rabago-0a62b6184/"
         },
         {
           "name": "Christian Camacho",
           "title": "Socio Gerente · Software a la medida",
           "role": "Construye las herramientas y los registros sobre los que corre tu negocio, a la medida de cómo trabajas de verdad.",
-          "photo": "/christian-camacho.png",
+          "photo": "/christian-camacho-lg.webp",
           "linkedin": "https://www.linkedin.com/in/chriscadev/"
         }
       ],
