@@ -1,7 +1,7 @@
 [tasks.build]
 run = """set -a && . ./.env.prod && set +a && docker build \
   --build-arg SITE_URL="$SITE_URL" \
-  --build-arg PUBLIC_UMAMI_HOST="$PUBLIC_UMAMI_HOST" \
+  --build-arg PUBLIC_UMAMI_BASE="$PUBLIC_UMAMI_BASE" \
   --build-arg UMAMI_WEBSITE_ID="$UMAMI_WEBSITE_ID" \
   --build-arg UMAMI_RECORDER_WEBSITE_ID="$UMAMI_RECORDER_WEBSITE_ID" \
   ."""
