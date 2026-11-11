@@ -16,14 +16,27 @@ export default defineConfig({
   use: {
     baseURL: externalBaseURL ?? 'http://localhost:4321',
     trace: 'retain-on-failure',
-    launchOptions: {
-      args: [
-        '--use-fake-ui-for-media-stream',
-        '--use-fake-device-for-media-stream',
-      ],
-    },
-    permissions: ['microphone'],
   },
+  projects: [
+    {
+      name: 'chromium',
+      use: {
+        // Fake-microphone plumbing for the recorder tests is Chromium-only
+        // CLI launch flags; @chromium-only tagged tests are skipped in Firefox.
+        launchOptions: {
+          args: [
+            '--use-fake-ui-for-media-stream',
+            '--use-fake-device-for-media-stream',
+          ],
+        },
+        permissions: ['microphone'],
+      },
+    },
+    {
+      name: 'firefox',
+      grepInvert: /@chromium-only/,
+    },
+  ],
   webServer: externalBaseURL
     ? undefined
     : {
