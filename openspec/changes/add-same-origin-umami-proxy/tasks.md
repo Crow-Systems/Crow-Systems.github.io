@@ -31,12 +31,17 @@
 
 ## 6. Deploy and server reconciliation
 
-- [ ] 6.1 Audit `git status` on the server's `mx.com.crowsys/web` checkout; discard the uncommitted `deploy/Caddyfile` hotfix (superseded by 3.1/3.2) and note any other dirty trees found across `~/services/*` for their owners
-- [ ] 6.2 Update server `.env.prod`: remove `PUBLIC_UMAMI_HOST`, set `PUBLIC_UMAMI_BASE=/umami`
-- [ ] 6.3 `git pull` and `mise run deploy` on the server; confirm the running container was rebuilt from the committed Caddyfile
-- [ ] 6.4 Production checks: browser console shows zero CSP violations for tracker/recorder/ingest; dashboard receives live pageviews and named events from `crowsystems.com.mx`; verify rollback path by confirming the single-revert plan is documented in design.md
+- [x] 6.1 Audit `git status` on the server's `mx.com.crowsys/web` checkout; discard the uncommitted `deploy/Caddyfile` hotfix (superseded by 3.1/3.2) and note any other dirty trees found across `~/services/*` for their owners
+- [x] 6.2 Update server `.env.prod`: remove `PUBLIC_UMAMI_HOST`, set `PUBLIC_UMAMI_BASE=/umami`
+- [x] 6.3 `git pull` and `mise run deploy` on the server; confirm the running container was rebuilt from the committed Caddyfile
+- [x] 6.4 Production checks: browser console shows zero CSP violations for tracker/recorder/ingest; dashboard receives live pageviews and named events from `crowsystems.com.mx`; verify rollback path by confirming the single-revert plan is documented in design.md
 
 ## Workflow follow-up
 
 - Implement via `/opsx-apply` in a fresh session (explore/propose created planning artifacts only)
 - After deploy verification (6.4) passes, archive the change so `analytics-delivery` lands in the main specs
+
+## 7. Regression tests (post-deploy follow-up)
+
+- [x] 7.1 Add `.env.dev` (copy of `.env.example` values; gitignored) and start the e2e webServer with `--mode dev` so Vite loads it; `PLAYWRIGHT_BASE_URL` points the suite at a deployment and skips the local webServer
+- [x] 7.2 Add `e2e-tests/analytics-delivery.spec.ts`: zero-CSP-violation page load, meta/header analytics-host hygiene, tracker-URL/policy mode agreement, same-origin `/umami/api/send` ingest probe, `data-umami-event` taxonomy render — skips cleanly in dev without a tracker ID, all 5 pass against production
