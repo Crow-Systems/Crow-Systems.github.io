@@ -8,3 +8,14 @@ run = """set -a && . ./.env.prod && set +a && docker build \
 
 [tasks.deploy]
 run = """set -a && . ./.env.prod && set +a && docker compose up -d --build --force-recreate www www_cloudflare"""
+
+# Playwright suite in both engines (chromium + firefox). The three happy-path
+# form tests need a live backend reachable by the CORS preflight; see
+# docs/how-to/run-tests.md.
+[tasks."test:e2e"]
+run = "bun run test:e2e"
+
+# Analytics-delivery differential against the deployed site, both engines:
+# zero CSP violations, meta/header hygiene, same-origin /umami ingest.
+[tasks."test:e2e:prod"]
+run = """PLAYWRIGHT_BASE_URL=https://crowsystems.com.mx bunx playwright test e2e-tests/analytics-delivery.spec.ts"""
