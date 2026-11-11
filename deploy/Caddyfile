@@ -7,7 +7,11 @@
 	encode zstd gzip
 	file_server
 
-	handle_path /umami/* {
+	# Same-origin analytics: Umami's script, recorder, and ingest endpoints
+	# served from this site's own root. Moving the upstream host touches only
+	# the proxy target below -- no CSP change is ever needed.
+	@analytics path /script.js /recorder.js /api/send /api/websites/*
+	handle @analytics {
 		reverse_proxy https://da.chrislabs.net {
 			header_up Host da.chrislabs.net
 		}
@@ -21,7 +25,7 @@
 	header {
 		X-Content-Type-Options nosniff
 		Referrer-Policy strict-origin-when-cross-origin
-		# Analytics arrive same-origin via the /umami/* proxy above, so no
+		# Analytics arrive same-origin via the @analytics proxy above, so no
 		# analytics hostname is needed here. Moving the Umami upstream is a
 		# proxy-block edit only.
 		Content-Security-Policy "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://static.cloudflareinsights.com 'unsafe-inline' 'unsafe-hashes' 'unsafe-eval'; img-src 'self' https://images.unsplash.com data:; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; media-src 'self' blob:; connect-src 'self' https://crowsys.chrislabs.net; object-src 'none'; base-uri 'self';"

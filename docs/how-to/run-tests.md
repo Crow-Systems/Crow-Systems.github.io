@@ -9,6 +9,8 @@ backend). Each suite guards a different layer, so run both before merging.
 ## Prerequisites
 
 - Dependencies installed (`bun install`).
+- For e2e only: Playwright browsers for both engines —
+  `bunx playwright install chromium firefox` (run once per machine).
 - For e2e only: the backend reachable through the dev server. Happy-path form
   tests POST real leads, so bring the API up first — see
   [How to run the API locally](run-api-locally.md).
@@ -42,7 +44,13 @@ bun run test:e2e
 ```
 
 Playwright starts `astro dev` on port 4321 itself (or reuses one already
-running). The suite lives in `e2e-tests/`:
+running) and runs every test in **two engines**: `chromium` and `firefox`
+(`bun run test:e2e:chromium` / `bun run test:e2e:firefox` for a single one).
+Fake-microphone recording tests are tagged `@chromium-only` and are skipped in
+Firefox, since only Chromium supports the fake-device launch flags. To run the
+suite against a deployed environment instead of the dev server, set
+`PLAYWRIGHT_BASE_URL=https://<site>` (the dev server is not started then).
+The suite lives in `e2e-tests/`:
 
 - **Form flows** — contact and consulting (text + audio) submission,
   validation, draft persistence, and error banners.
@@ -50,6 +58,10 @@ running). The suite lives in `e2e-tests/`:
   WhatsApp chat card.
 - **Audio recorder** — recording, playback, reload persistence, and corrupted
   blob handling.
+- **Analytics delivery** — CSP hygiene and the same-origin ingest chain
+  (`/script.js` + `/api/send` served from the site root; see
+  `analytics-delivery.spec.ts`; the ingest probe runs against a deployment
+  via `PLAYWRIGHT_BASE_URL`).
 
 ### 4. Run a single spec
 

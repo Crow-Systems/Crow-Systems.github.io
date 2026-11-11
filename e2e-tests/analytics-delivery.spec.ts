@@ -120,7 +120,7 @@ test.describe("analytics delivery", () => {
   }) => {
     test.skip(
       !process.env.PLAYWRIGHT_BASE_URL,
-      "requires a deployment serving the /umami proxy (run with PLAYWRIGHT_BASE_URL)"
+      "requires a deployment serving the analytics proxy (run with PLAYWRIGHT_BASE_URL)"
     );
     await page.addInitScript(collectCspViolations);
     await page.goto("/");

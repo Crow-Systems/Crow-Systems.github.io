@@ -28,10 +28,14 @@ const serviceKeys = [
 ] as const;
 
 const umamiWebsiteId = import.meta.env.UMAMI_WEBSITE_ID;
-// Analytics base: a same-origin path prefix (e.g. "/umami", proxied by the
-// deploy Caddyfile) or an absolute origin (cross-origin mode). Unset defaults
-// to the hosted cloud service.
-const umamiBase = import.meta.env.PUBLIC_UMAMI_BASE || "https://cloud.umami.is";
+// Analytics base: a same-origin path prefix ("/umami", or "/" for the site
+// root), or an absolute origin (cross-origin mode). Unset defaults to the
+// hosted cloud service.
+// Trailing-slash normalization lets "/" compose as root: `${base}/script.js`
+// becomes "/script.js", and Umami derives its ingest from the script's own
+// directory, so beacons land on "/api/send" -- all same-origin, with no
+// analytics product name visible in any URL.
+const umamiBase = (import.meta.env.PUBLIC_UMAMI_BASE || "https://cloud.umami.is").replace(/\/+$/, "");
 const umamiScriptUrl = `${umamiBase}/script.js`;
 const umamiRecorderUrl = `${umamiBase}/recorder.js`;
 // CSP tokens: an absolute base must be allowed as an origin in script-src and

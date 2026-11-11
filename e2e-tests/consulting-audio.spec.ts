@@ -60,7 +60,7 @@ async function elapsedTime(page: Page) {
   return `${String(Math.floor(seconds / 60)).padStart(2, '0')}:${String(seconds % 60).padStart(2, '0')}`;
 }
 
-test('recorded audio persists and plays back after a reload', async ({ page }) => {
+test('recorded audio persists and plays back after a reload @chromium-only', async ({ page }) => {
   const pageErrors: string[] = [];
   page.on('pageerror', (err) => pageErrors.push(err.message));
 
@@ -108,7 +108,7 @@ test('recorded audio persists and plays back after a reload', async ({ page }) =
   expect(pageErrors).toEqual([]);
 });
 
-test('tab switch (audio -> text -> audio) keeps the recording', async ({ page }) => {
+test('tab switch (audio -> text -> audio) keeps the recording @chromium-only', async ({ page }) => {
   const pageErrors: string[] = [];
   page.on('pageerror', (err) => pageErrors.push(err.message));
 
@@ -134,7 +134,7 @@ test('tab switch (audio -> text -> audio) keeps the recording', async ({ page })
   expect(pageErrors).toEqual([]);
 });
 
-test('playback works after reload while audio was playing', async ({ page }) => {
+test('playback works after reload while audio was playing @chromium-only', async ({ page }) => {
   const pageErrors: string[] = [];
   page.on('pageerror', (err) => pageErrors.push(err.message));
 
@@ -174,7 +174,7 @@ test('playback works after reload while audio was playing', async ({ page }) => 
   expect(pageErrors).toEqual([]);
 });
 
-test('playback still works when AudioContext cannot resume (autoplay blocked)', async ({ page }) => {
+test('playback still works when AudioContext cannot resume (autoplay blocked) @chromium-only', async ({ page }) => {
   // Simulates the documented Chrome/WebKit failure where AudioContext.resume()
   // rejects/stays suspended after a reload, which would mute an element that is
   // routed through the WebAudio graph. Playback must fall back to native output.

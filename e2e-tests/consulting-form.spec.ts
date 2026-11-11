@@ -76,7 +76,7 @@ test('text mode validation catches empty name, phone and short description', asy
   );
 });
 
-test('audio mode submission reaches the backend, shows success and resets recorder', async ({
+test('audio mode submission reaches the backend, shows success and resets recorder @chromium-only', async ({
   page,
 }) => {
   const pageErrors: string[] = [];

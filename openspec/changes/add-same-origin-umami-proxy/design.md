@@ -62,6 +62,17 @@ Header and meta lose `cloud.umami.is` and `da.chrislabs.net` entries in producti
 ### D5: Reconcile the uncommitted server hotfix by superseding it
 The committed Caddyfile (with proxy + pruned CSP) replaces the same lines the hotfix touched. Deploy procedure: on the server, `git stash drop`/discard the dirty `deploy/Caddyfile`, `git pull`, then `mise run deploy`. A `git status` audit across `~/services/*` repos runs at deploy time to catch other orphaned fixes (observed during exploration; only crowsys is in this change's blast radius).
 
+### D6 (2026-11-11, post-deploy follow-up): base value `/` serves analytics from the site root
+`PUBLIC_UMAMI_BASE=/` (trailing slash normalized in `DefaultLayout`) places
+script, recorder, and ingest at `/script.js`, `/recorder.js`, `/api/send`,
+`/api/websites/*` — no analytics product name appears in any visitor-visible
+URL, closing the naming-signature exposure that EasyPrivacy demonstrates for
+`/_vercel/insights/*`. Caddy moves from `handle_path /umami/*` (prefix strip)
+to an `@analytics path` matcher with pass-through routes; the layout, the
+capability spec (written prefix-neutral), and the e2e ingest locator
+(`endsWith("/api/send")`) required no logic change. Rollback to D1: set the
+base back to `/umami` and restore the `handle_path` block.
+
 ## Risks / Trade-offs
 
 - [Proxy adds a hop through the public internet per script fetch and per beacon; CF bot protection on the Umami origin could challenge Caddy's server-side requests] → Validate `curl` through the proxy from the container during tasks; if challenged, allow-list the edge IP or use Umami's tunnel directly (private-network `service:` URL in ingress) instead of the public hostname.
